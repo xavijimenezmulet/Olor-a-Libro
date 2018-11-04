@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividad.Designer.cs">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibreria.Designer.cs">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPuntuaciónAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPuntuaciónAdmin.Designer.cs">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormActividad.resx">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibreria.resx">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPuntuaciónAdmin.resx">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
