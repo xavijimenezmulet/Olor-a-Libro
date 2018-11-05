@@ -26,10 +26,11 @@ namespace Olor_a_Libro
         {
 
         }
+       
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -50,6 +51,51 @@ namespace Olor_a_Libro
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        public void archivoToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            archivoToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        public void archivoToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            archivoToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void libreriasToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            libreriasToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void libreriasToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            libreriasToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void actividadesToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            actividadesToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void actividadesToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            actividadesToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void usuariosToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            usuariosToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void usuariosToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            usuariosToolStripMenuItem.ForeColor = Color.White;
         }
     }
 }

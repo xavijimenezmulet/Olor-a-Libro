@@ -53,6 +53,7 @@
             this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +66,14 @@
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(769, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -80,37 +83,39 @@
             this.toolStripSeparator3,
             this.salirToolStripMenuItem1});
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.archivoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.archivoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.DropDownClosed += new System.EventHandler(this.archivoToolStripMenuItem_DropDownClosed);
+            this.archivoToolStripMenuItem.DropDownOpened += new System.EventHandler(this.archivoToolStripMenuItem_DropDownOpened);
             this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Guardar";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // salirToolStripMenuItem1
             // 
             this.salirToolStripMenuItem1.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem1.Text = "Salir";
             // 
             // libreriasToolStripMenuItem
@@ -122,13 +127,15 @@
             this.libreriasToolStripMenuItem.Name = "libreriasToolStripMenuItem";
             this.libreriasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.libreriasToolStripMenuItem.Text = "Librerias";
+            this.libreriasToolStripMenuItem.DropDownClosed += new System.EventHandler(this.libreriasToolStripMenuItem_DropDownClosed);
+            this.libreriasToolStripMenuItem.DropDownOpened += new System.EventHandler(this.libreriasToolStripMenuItem_DropDownOpened);
             this.libreriasToolStripMenuItem.Click += new System.EventHandler(this.libreriasToolStripMenuItem_Click);
             // 
             // verLibreriaToolStripMenuItem
             // 
             this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
-            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
             this.verLibreriaToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
             // 
@@ -136,7 +143,7 @@
             // 
             this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
-            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
             // 
             // actividadesToolStripMenuItem
@@ -147,6 +154,8 @@
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.actividadesToolStripMenuItem.Text = "Actividades";
+            this.actividadesToolStripMenuItem.DropDownClosed += new System.EventHandler(this.actividadesToolStripMenuItem_DropDownClosed);
+            this.actividadesToolStripMenuItem.DropDownOpened += new System.EventHandler(this.actividadesToolStripMenuItem_DropDownOpened);
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
             // verActividadesToolStripMenuItem
@@ -165,6 +174,8 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.DropDownClosed += new System.EventHandler(this.usuariosToolStripMenuItem_DropDownClosed);
+            this.usuariosToolStripMenuItem.DropDownOpened += new System.EventHandler(this.usuariosToolStripMenuItem_DropDownOpened);
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // verUsuariosToolStripMenuItem
@@ -276,6 +287,13 @@
             this.toolStripButtonSalir.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonSalir.Text = "Salir";
             // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +347,7 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
     }
 }
 
