@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividad.Designer.cs">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEstadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEstadisticas.Designer.cs">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibreria.Designer.cs">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaActividades.cs">
       <SubType>Form</SubType>
@@ -63,6 +75,12 @@
     </Compile>
     <Compile Include="FormListaLibrerias.Designer.cs">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPuntuaciónAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPuntuaciónAdmin.Designer.cs">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
@@ -93,14 +111,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormActividad.resx">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEstadisticas.resx">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibreria.resx">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaActividades.resx">
       <DependentUpon>FormListaActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaLibrerias.resx">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPuntuaciónAdmin.resx">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
@@ -187,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
