@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstadisticas.Designer.cs">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaActividades.Designer.cs">
+      <DependentUpon>FormListaActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaLibrerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaLibrerias.Designer.cs">
+      <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEstadisticas.resx">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaActividades.resx">
+      <DependentUpon>FormListaActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaLibrerias.resx">
+      <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
