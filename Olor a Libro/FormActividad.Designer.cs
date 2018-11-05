@@ -55,11 +55,13 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxHoraAct = new System.Windows.Forms.TextBox();
+            this.labelHoraAct = new System.Windows.Forms.Label();
+            this.textBoxDescripcionAct = new System.Windows.Forms.TextBox();
+            this.comboBoxLibreria = new System.Windows.Forms.ComboBox();
+            this.labelDescripcionAct = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelLibreria = new System.Windows.Forms.Label();
             this.dateTimePickerDiaAct = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxLugarAct = new System.Windows.Forms.TextBox();
@@ -69,8 +71,8 @@
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelTipoAct = new System.Windows.Forms.Label();
+            this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBoxDatosAct.SuspendLayout();
@@ -91,7 +93,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(648, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,14 +141,14 @@
             // 
             this.verLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreríasToolStripMenuItem.Name = "verLibreríasToolStripMenuItem";
-            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.verLibreríasToolStripMenuItem.Text = "Ver Librerías";
             // 
             // añadirLibreríasToolStripMenuItem
             // 
             this.añadirLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríasToolStripMenuItem.Name = "añadirLibreríasToolStripMenuItem";
-            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.añadirLibreríasToolStripMenuItem.Text = "Añadir Librerías";
             // 
             // actividadesToolStripMenuItem
@@ -163,13 +165,13 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             // 
             // añadirActividadesToolStripMenuItem
             // 
             this.añadirActividadesToolStripMenuItem.Name = "añadirActividadesToolStripMenuItem";
-            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.añadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
             // 
             // usuariosToolStripMenuItem
@@ -186,14 +188,14 @@
             // 
             this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
             this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.verUsuariosToolStripMenuItem.Text = "Ver Usuarios";
             // 
             // añadirUsuariosToolStripMenuItem
             // 
             this.añadirUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
             this.añadirUsuariosToolStripMenuItem.Name = "añadirUsuariosToolStripMenuItem";
-            this.añadirUsuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.añadirUsuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.añadirUsuariosToolStripMenuItem.Text = "Añadir Usuarios";
             // 
             // estadísticasToolStripMenuItem
@@ -226,7 +228,7 @@
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(623, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(648, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -301,76 +303,96 @@
             // 
             // groupBoxDatosAct
             // 
-            this.groupBoxDatosAct.Controls.Add(this.textBox3);
-            this.groupBoxDatosAct.Controls.Add(this.label6);
-            this.groupBoxDatosAct.Controls.Add(this.textBox2);
-            this.groupBoxDatosAct.Controls.Add(this.comboBox1);
-            this.groupBoxDatosAct.Controls.Add(this.label5);
+            this.groupBoxDatosAct.Controls.Add(this.comboBoxTipoAct);
+            this.groupBoxDatosAct.Controls.Add(this.labelTipoAct);
+            this.groupBoxDatosAct.Controls.Add(this.textBoxHoraAct);
+            this.groupBoxDatosAct.Controls.Add(this.labelHoraAct);
+            this.groupBoxDatosAct.Controls.Add(this.textBoxDescripcionAct);
+            this.groupBoxDatosAct.Controls.Add(this.comboBoxLibreria);
+            this.groupBoxDatosAct.Controls.Add(this.labelDescripcionAct);
             this.groupBoxDatosAct.Controls.Add(this.textBox1);
-            this.groupBoxDatosAct.Controls.Add(this.label4);
+            this.groupBoxDatosAct.Controls.Add(this.labelLibreria);
             this.groupBoxDatosAct.Controls.Add(this.dateTimePickerDiaAct);
             this.groupBoxDatosAct.Controls.Add(this.label3);
             this.groupBoxDatosAct.Controls.Add(this.textBoxLugarAct);
             this.groupBoxDatosAct.Controls.Add(this.label2);
             this.groupBoxDatosAct.Controls.Add(this.textBoxNomAct);
             this.groupBoxDatosAct.Controls.Add(this.label1);
-            this.groupBoxDatosAct.Location = new System.Drawing.Point(174, 63);
-            this.groupBoxDatosAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDatosAct.Location = new System.Drawing.Point(176, 67);
+            this.groupBoxDatosAct.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDatosAct.Name = "groupBoxDatosAct";
-            this.groupBoxDatosAct.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 224);
+            this.groupBoxDatosAct.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 263);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
             // 
-            // textBox2
+            // textBoxHoraAct
             // 
-            this.textBox2.Location = new System.Drawing.Point(77, 189);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBoxHoraAct.Location = new System.Drawing.Point(77, 158);
+            this.textBoxHoraAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxHoraAct.Name = "textBoxHoraAct";
+            this.textBoxHoraAct.Size = new System.Drawing.Size(344, 20);
+            this.textBoxHoraAct.TabIndex = 12;
             // 
-            // comboBox1
+            // labelHoraAct
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(77, 156);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 21);
-            this.comboBox1.TabIndex = 9;
+            this.labelHoraAct.AutoSize = true;
+            this.labelHoraAct.Location = new System.Drawing.Point(5, 158);
+            this.labelHoraAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelHoraAct.Name = "labelHoraAct";
+            this.labelHoraAct.Size = new System.Drawing.Size(33, 13);
+            this.labelHoraAct.TabIndex = 11;
+            this.labelHoraAct.Text = "Hora:";
             // 
-            // label5
+            // textBoxDescripcionAct
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 189);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Descripción:";
+            this.textBoxDescripcionAct.Location = new System.Drawing.Point(77, 221);
+            this.textBoxDescripcionAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDescripcionAct.Name = "textBoxDescripcionAct";
+            this.textBoxDescripcionAct.Size = new System.Drawing.Size(344, 20);
+            this.textBoxDescripcionAct.TabIndex = 10;
+            // 
+            // comboBoxLibreria
+            // 
+            this.comboBoxLibreria.FormattingEnabled = true;
+            this.comboBoxLibreria.Location = new System.Drawing.Point(77, 188);
+            this.comboBoxLibreria.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxLibreria.Name = "comboBoxLibreria";
+            this.comboBoxLibreria.Size = new System.Drawing.Size(344, 21);
+            this.comboBoxLibreria.TabIndex = 9;
+            // 
+            // labelDescripcionAct
+            // 
+            this.labelDescripcionAct.AutoSize = true;
+            this.labelDescripcionAct.Location = new System.Drawing.Point(5, 221);
+            this.labelDescripcionAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDescripcionAct.Name = "labelDescripcionAct";
+            this.labelDescripcionAct.Size = new System.Drawing.Size(66, 13);
+            this.labelDescripcionAct.TabIndex = 8;
+            this.labelDescripcionAct.Text = "Descripción:";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(466, 70);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 7;
             // 
-            // label4
+            // labelLibreria
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 159);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Librería/s:";
+            this.labelLibreria.AutoSize = true;
+            this.labelLibreria.Location = new System.Drawing.Point(5, 191);
+            this.labelLibreria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLibreria.Name = "labelLibreria";
+            this.labelLibreria.Size = new System.Drawing.Size(56, 13);
+            this.labelLibreria.TabIndex = 6;
+            this.labelLibreria.Text = "Librería/s:";
             // 
             // dateTimePickerDiaAct
             // 
-            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(61, 93);
-            this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(61, 125);
+            this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDiaAct.Name = "dateTimePickerDiaAct";
             this.dateTimePickerDiaAct.Size = new System.Drawing.Size(360, 20);
             this.dateTimePickerDiaAct.TabIndex = 5;
@@ -378,7 +400,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 93);
+            this.label3.Location = new System.Drawing.Point(5, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
@@ -388,7 +410,7 @@
             // textBoxLugarAct
             // 
             this.textBoxLugarAct.Location = new System.Drawing.Point(61, 58);
-            this.textBoxLugarAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLugarAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLugarAct.Name = "textBoxLugarAct";
             this.textBoxLugarAct.Size = new System.Drawing.Size(360, 20);
             this.textBoxLugarAct.TabIndex = 3;
@@ -406,7 +428,7 @@
             // textBoxNomAct
             // 
             this.textBoxNomAct.Location = new System.Drawing.Point(116, 26);
-            this.textBoxNomAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNomAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomAct.Name = "textBoxNomAct";
             this.textBoxNomAct.Size = new System.Drawing.Size(305, 20);
             this.textBoxNomAct.TabIndex = 1;
@@ -424,8 +446,8 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(140, 306);
-            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAceptar.Location = new System.Drawing.Point(140, 349);
+            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(80, 37);
             this.buttonAceptar.TabIndex = 4;
@@ -435,8 +457,8 @@
             // buttonBorrar
             // 
             this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(355, 306);
-            this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBorrar.Location = new System.Drawing.Point(355, 349);
+            this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(80, 37);
             this.buttonBorrar.TabIndex = 5;
@@ -446,37 +468,39 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 89);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 85);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // labelTipoAct
             // 
-            this.textBox3.Location = new System.Drawing.Point(77, 126);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(344, 20);
-            this.textBox3.TabIndex = 12;
+            this.labelTipoAct.AutoSize = true;
+            this.labelTipoAct.Location = new System.Drawing.Point(5, 94);
+            this.labelTipoAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipoAct.Name = "labelTipoAct";
+            this.labelTipoAct.Size = new System.Drawing.Size(78, 13);
+            this.labelTipoAct.TabIndex = 13;
+            this.labelTipoAct.Text = "Tipo Actividad:";
             // 
-            // label6
+            // comboBoxTipoAct
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 126);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Hora:";
+            this.comboBoxTipoAct.FormattingEnabled = true;
+            this.comboBoxTipoAct.Location = new System.Drawing.Point(81, 91);
+            this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTipoAct.Name = "comboBoxTipoAct";
+            this.comboBoxTipoAct.Size = new System.Drawing.Size(340, 21);
+            this.comboBoxTipoAct.TabIndex = 14;
             // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(623, 354);
+            this.ClientSize = new System.Drawing.Size(648, 421);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.groupBoxDatosAct);
@@ -484,7 +508,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormActividad";
             this.Text = "Olor a Libro: Actividad";
             this.menuStrip1.ResumeLayout(false);
@@ -528,11 +552,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxDatosAct;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxDescripcionAct;
+        private System.Windows.Forms.ComboBox comboBoxLibreria;
+        private System.Windows.Forms.Label labelDescripcionAct;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLibreria;
         private System.Windows.Forms.DateTimePicker dateTimePickerDiaAct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxLugarAct;
@@ -542,7 +566,9 @@
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxHoraAct;
+        private System.Windows.Forms.Label labelHoraAct;
+        private System.Windows.Forms.ComboBox comboBoxTipoAct;
+        private System.Windows.Forms.Label labelTipoAct;
     }
 }
