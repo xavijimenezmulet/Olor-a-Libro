@@ -51,13 +51,15 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewLibrerias = new System.Windows.Forms.DataGridView();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.groupBoxLibrerias = new System.Windows.Forms.GroupBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.groupBoxLibrerias = new System.Windows.Forms.GroupBox();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).BeginInit();
@@ -72,7 +74,8 @@
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(760, 24);
@@ -262,44 +265,11 @@
             this.Nombre,
             this.Direccion,
             this.Contacto});
-            this.dataGridViewLibrerias.Location = new System.Drawing.Point(32, 30);
+            this.dataGridViewLibrerias.Location = new System.Drawing.Point(17, 30);
             this.dataGridViewLibrerias.Name = "dataGridViewLibrerias";
             this.dataGridViewLibrerias.ReadOnly = true;
-            this.dataGridViewLibrerias.Size = new System.Drawing.Size(524, 282);
+            this.dataGridViewLibrerias.Size = new System.Drawing.Size(539, 282);
             this.dataGridViewLibrerias.TabIndex = 3;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(584, 30);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 5;
-            this.buttonAdd.Text = "Añadir";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.Location = new System.Drawing.Point(584, 71);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEliminar.TabIndex = 6;
-            this.buttonEliminar.Text = "Borrar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxLibrerias
-            // 
-            this.groupBoxLibrerias.Controls.Add(this.buttonEliminar);
-            this.groupBoxLibrerias.Controls.Add(this.dataGridViewLibrerias);
-            this.groupBoxLibrerias.Controls.Add(this.buttonAdd);
-            this.groupBoxLibrerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxLibrerias.Location = new System.Drawing.Point(41, 69);
-            this.groupBoxLibrerias.Name = "groupBoxLibrerias";
-            this.groupBoxLibrerias.Size = new System.Drawing.Size(693, 335);
-            this.groupBoxLibrerias.TabIndex = 7;
-            this.groupBoxLibrerias.TabStop = false;
-            this.groupBoxLibrerias.Text = "Librerias";
             // 
             // ID
             // 
@@ -327,6 +297,57 @@
             this.Contacto.HeaderText = "Contacto";
             this.Contacto.Name = "Contacto";
             this.Contacto.ReadOnly = true;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(584, 30);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.Text = "Añadir";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.Location = new System.Drawing.Point(584, 112);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.TabIndex = 6;
+            this.buttonEliminar.Text = "Borrar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxLibrerias
+            // 
+            this.groupBoxLibrerias.Controls.Add(this.buttonEditar);
+            this.groupBoxLibrerias.Controls.Add(this.buttonEliminar);
+            this.groupBoxLibrerias.Controls.Add(this.dataGridViewLibrerias);
+            this.groupBoxLibrerias.Controls.Add(this.buttonAdd);
+            this.groupBoxLibrerias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxLibrerias.Location = new System.Drawing.Point(41, 69);
+            this.groupBoxLibrerias.Name = "groupBoxLibrerias";
+            this.groupBoxLibrerias.Size = new System.Drawing.Size(693, 335);
+            this.groupBoxLibrerias.TabIndex = 7;
+            this.groupBoxLibrerias.TabStop = false;
+            this.groupBoxLibrerias.Text = "Librerias";
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.Location = new System.Drawing.Point(584, 71);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 7;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // FormListaLibrerias
             // 
@@ -383,5 +404,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
     }
 }

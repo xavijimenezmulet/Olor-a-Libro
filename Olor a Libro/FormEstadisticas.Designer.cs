@@ -51,17 +51,18 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewParticipacion = new System.Windows.Forms.DataGridView();
+            this.Actividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Participantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewPuntosUsuario = new System.Windows.Forms.DataGridView();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxEstadisticasAct = new System.Windows.Forms.GroupBox();
             this.groupBoxRank = new System.Windows.Forms.GroupBox();
             this.dataGridViewRank = new System.Windows.Forms.DataGridView();
-            this.Actividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Participantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PuntosTotales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rango = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParticipacion)).BeginInit();
@@ -79,7 +80,8 @@
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(706, 24);
@@ -274,6 +276,20 @@
             this.dataGridViewParticipacion.Size = new System.Drawing.Size(262, 124);
             this.dataGridViewParticipacion.TabIndex = 4;
             // 
+            // Actividad
+            // 
+            this.Actividad.HeaderText = "Actividad";
+            this.Actividad.Name = "Actividad";
+            this.Actividad.ReadOnly = true;
+            this.Actividad.Width = 80;
+            // 
+            // Participantes
+            // 
+            this.Participantes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Participantes.HeaderText = "Participantes";
+            this.Participantes.Name = "Participantes";
+            this.Participantes.ReadOnly = true;
+            // 
             // dataGridViewPuntosUsuario
             // 
             this.dataGridViewPuntosUsuario.AllowUserToAddRows = false;
@@ -287,6 +303,20 @@
             this.dataGridViewPuntosUsuario.ReadOnly = true;
             this.dataGridViewPuntosUsuario.Size = new System.Drawing.Size(263, 124);
             this.dataGridViewPuntosUsuario.TabIndex = 5;
+            // 
+            // Usuario
+            // 
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Width = 80;
+            // 
+            // Puntos
+            // 
+            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Puntos.HeaderText = "Puntos";
+            this.Puntos.Name = "Puntos";
+            this.Puntos.ReadOnly = true;
             // 
             // groupBoxEstadisticasAct
             // 
@@ -326,34 +356,6 @@
             this.dataGridViewRank.Size = new System.Drawing.Size(548, 125);
             this.dataGridViewRank.TabIndex = 0;
             // 
-            // Actividad
-            // 
-            this.Actividad.HeaderText = "Actividad";
-            this.Actividad.Name = "Actividad";
-            this.Actividad.ReadOnly = true;
-            this.Actividad.Width = 80;
-            // 
-            // Participantes
-            // 
-            this.Participantes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Participantes.HeaderText = "Participantes";
-            this.Participantes.Name = "Participantes";
-            this.Participantes.ReadOnly = true;
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Width = 80;
-            // 
-            // Puntos
-            // 
-            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Puntos.HeaderText = "Puntos";
-            this.Puntos.Name = "Puntos";
-            this.Puntos.ReadOnly = true;
-            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -374,6 +376,13 @@
             this.Rango.HeaderText = "Rango";
             this.Rango.Name = "Rango";
             this.Rango.ReadOnly = true;
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // FormEstadisticas
             // 
@@ -437,5 +446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn PuntosTotales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rango;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
     }
 }

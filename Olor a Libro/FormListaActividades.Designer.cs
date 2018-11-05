@@ -51,15 +51,16 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
-            this.listBoxActividades = new System.Windows.Forms.ListBox();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
@@ -74,7 +75,8 @@
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(766, 24);
@@ -257,27 +259,22 @@
             // 
             // groupBoxActividades
             // 
-            this.groupBoxActividades.Controls.Add(this.listBoxActividades);
+            this.groupBoxActividades.Controls.Add(this.buttonEditar);
             this.groupBoxActividades.Controls.Add(this.buttonEliminar);
+            this.groupBoxActividades.Controls.Add(this.dataGridViewActividades);
             this.groupBoxActividades.Controls.Add(this.buttonAdd);
+            this.groupBoxActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxActividades.Location = new System.Drawing.Point(47, 68);
             this.groupBoxActividades.Name = "groupBoxActividades";
-            this.groupBoxActividades.Size = new System.Drawing.Size(683, 260);
+            this.groupBoxActividades.Size = new System.Drawing.Size(683, 338);
             this.groupBoxActividades.TabIndex = 9;
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades";
             // 
-            // listBoxActividades
-            // 
-            this.listBoxActividades.FormattingEnabled = true;
-            this.listBoxActividades.Location = new System.Drawing.Point(28, 41);
-            this.listBoxActividades.Name = "listBoxActividades";
-            this.listBoxActividades.Size = new System.Drawing.Size(454, 199);
-            this.listBoxActividades.TabIndex = 4;
-            // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(544, 169);
+            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.Location = new System.Drawing.Point(586, 115);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminar.TabIndex = 6;
@@ -286,11 +283,12 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(544, 91);
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(586, 31);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 5;
-            this.buttonAdd.Text = "+";
+            this.buttonAdd.Text = "Añadir";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // dataGridViewActividades
@@ -303,55 +301,69 @@
             this.Descripción,
             this.Lugar,
             this.Fecha});
-            this.dataGridViewActividades.Location = new System.Drawing.Point(47, 341);
+            this.dataGridViewActividades.Location = new System.Drawing.Point(16, 31);
             this.dataGridViewActividades.Name = "dataGridViewActividades";
             this.dataGridViewActividades.ReadOnly = true;
-            this.dataGridViewActividades.Size = new System.Drawing.Size(683, 199);
+            this.dataGridViewActividades.Size = new System.Drawing.Size(551, 282);
             this.dataGridViewActividades.TabIndex = 8;
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 80;
+            this.ID.Width = 60;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
             // 
             // Descripción
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
             this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 200;
+            this.Descripción.Width = 150;
             // 
             // Lugar
             // 
             this.Lugar.HeaderText = "Lugar";
             this.Lugar.Name = "Lugar";
             this.Lugar.ReadOnly = true;
-            this.Lugar.Width = 120;
             // 
             // Fecha
             // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 120;
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.Location = new System.Drawing.Point(586, 74);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 9;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
             // 
             // FormListaActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(766, 608);
+            this.ClientSize = new System.Drawing.Size(766, 418);
             this.Controls.Add(this.groupBoxActividades);
-            this.Controls.Add(this.dataGridViewActividades);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormListaActividades";
@@ -392,10 +404,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.GroupBox groupBoxActividades;
-        private System.Windows.Forms.ListBox listBoxActividades;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.DataGridView dataGridViewActividades;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
+        private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
