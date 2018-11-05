@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividad.Designer.cs">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEstadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEstadisticas.Designer.cs">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibreria.Designer.cs">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaActividades.cs">
       <SubType>Form</SubType>
@@ -64,6 +76,12 @@
     <Compile Include="FormListaLibrerias.Designer.cs">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPuntuaciónAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPuntuaciónAdmin.Designer.cs">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,9 @@
     <Compile Include="FormVerUsuario.Designer.cs">
       <DependentUpon>FormVerUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="SplashInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,14 +111,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormActividad.resx">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEstadisticas.resx">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibreria.resx">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaActividades.resx">
       <DependentUpon>FormListaActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaLibrerias.resx">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPuntuaciónAdmin.resx">
+      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
@@ -121,6 +151,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Olor a Libro.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,6 +211,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título-2 copia %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
