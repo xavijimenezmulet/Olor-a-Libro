@@ -52,6 +52,12 @@
     <Compile Include="FormActividad.Designer.cs">
       <DependentUpon>FormActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormActividadesLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividadesLibreria.Designer.cs">
+      <DependentUpon>FormActividadesLibreria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEstadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="FormLibreria.Designer.cs">
       <DependentUpon>FormLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibros.Designer.cs">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaActividades.cs">
       <SubType>Form</SubType>
@@ -114,11 +126,17 @@
     <EmbeddedResource Include="FormActividad.resx">
       <DependentUpon>FormActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormActividadesLibreria.resx">
+      <DependentUpon>FormActividadesLibreria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEstadisticas.resx">
       <DependentUpon>FormEstadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLibreria.resx">
       <DependentUpon>FormLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibros.resx">
+      <DependentUpon>FormLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaActividades.resx">
       <DependentUpon>FormListaActividades.cs</DependentUpon>
