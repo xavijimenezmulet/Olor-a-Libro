@@ -76,6 +76,9 @@
     <Compile Include="FormVerUsuario.Designer.cs">
       <DependentUpon>FormVerUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="SplashInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +124,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Olor a Libro.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título-2 copia %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
