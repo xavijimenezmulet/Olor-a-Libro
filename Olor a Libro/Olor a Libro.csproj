@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormActividadesLibrerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividadesLibrerias.Designer.cs">
+      <DependentUpon>FormActividadesLibrerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibros.Designer.cs">
+      <DependentUpon>FormLibros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormActividadesLibrerias.resx">
+      <DependentUpon>FormActividadesLibrerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibros.resx">
+      <DependentUpon>FormLibros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
