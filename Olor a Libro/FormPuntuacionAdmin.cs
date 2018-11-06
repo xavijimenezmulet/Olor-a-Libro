@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Olor_a_Libro
 {
-    public partial class FormPuntuaciónAdmin : Form
+    public partial class FormPuntuacionAdmin : Form
     {
-        public FormPuntuaciónAdmin()
+        public FormPuntuacionAdmin()
         {
             InitializeComponent();
         }

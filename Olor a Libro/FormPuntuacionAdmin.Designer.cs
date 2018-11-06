@@ -1,6 +1,6 @@
 ﻿namespace Olor_a_Libro
 {
-    partial class FormPuntuaciónAdmin
+    partial class FormPuntuacionAdmin
     {
         /// <summary>
         /// Required designer variable.

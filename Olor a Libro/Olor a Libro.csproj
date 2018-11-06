@@ -93,11 +93,11 @@
     <Compile Include="FormListaLibrerias.Designer.cs">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPuntuaciónAdmin.cs">
+    <Compile Include="FormPuntuacionAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPuntuaciónAdmin.Designer.cs">
-      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
+    <Compile Include="FormPuntuacionAdmin.Designer.cs">
+      <DependentUpon>FormPuntuacionAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Libreria.cs" />
     <Compile Include="Libro.cs" />
+    <Compile Include="MetodosMenu.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -155,8 +156,8 @@
     <EmbeddedResource Include="FormListaLibrerias.resx">
       <DependentUpon>FormListaLibrerias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPuntuaciónAdmin.resx">
-      <DependentUpon>FormPuntuaciónAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FormPuntuacionAdmin.resx">
+      <DependentUpon>FormPuntuacionAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>

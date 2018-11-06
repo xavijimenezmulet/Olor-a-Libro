@@ -43,6 +43,7 @@
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,7 +54,7 @@
             this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
-            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -149,7 +150,8 @@
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verActividadesToolStripMenuItem});
+            this.verActividadesToolStripMenuItem,
+            this.añadirActividadToolStripMenuItem});
             this.actividadesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
@@ -162,7 +164,7 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             // 
             // usuariosToolStripMenuItem
@@ -198,6 +200,13 @@
             this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.estadísticasToolStripMenuItem.Text = "Estadísticas";
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // toolStrip1
             // 
@@ -287,12 +296,11 @@
             this.toolStripButtonSalir.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonSalir.Text = "Salir";
             // 
-            // puntuaciónToolStripMenuItem
+            // añadirActividadToolStripMenuItem
             // 
-            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
-            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
+            this.añadirActividadToolStripMenuItem.Name = "añadirActividadToolStripMenuItem";
+            this.añadirActividadToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.añadirActividadToolStripMenuItem.Text = "Añadir Actividad";
             // 
             // FormPrincipal
             // 
@@ -348,6 +356,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirActividadToolStripMenuItem;
     }
 }
 
