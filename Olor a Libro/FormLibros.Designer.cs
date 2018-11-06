@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBoxLibros = new System.Windows.Forms.GroupBox();
+            this.listBoxGeneros = new System.Windows.Forms.ListBox();
+            this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.textBoxAnyoEdicion = new System.Windows.Forms.TextBox();
+            this.textBoxAutor = new System.Windows.Forms.TextBox();
+            this.textBoxTitulo = new System.Windows.Forms.TextBox();
+            this.labelGeneros = new System.Windows.Forms.Label();
+            this.labelPrecio = new System.Windows.Forms.Label();
+            this.labelanyoEdicion = new System.Windows.Forms.Label();
+            this.labelAutor = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.pictureBoxLibro = new System.Windows.Forms.PictureBox();
+            this.dataGridViewLibros = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,6 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAnyadir = new System.Windows.Forms.Button();
-            this.pictureBoxLibro = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -75,135 +75,143 @@
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxLibros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibros)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxLibros
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.pictureBoxLibro);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.buttonEditar);
-            this.groupBox1.Controls.Add(this.buttonEliminar);
-            this.groupBox1.Controls.Add(this.buttonAnyadir);
-            this.groupBox1.Location = new System.Drawing.Point(12, 66);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(737, 655);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxLibros.Controls.Add(this.listBoxGeneros);
+            this.groupBoxLibros.Controls.Add(this.textBoxPrecio);
+            this.groupBoxLibros.Controls.Add(this.textBoxAnyoEdicion);
+            this.groupBoxLibros.Controls.Add(this.textBoxAutor);
+            this.groupBoxLibros.Controls.Add(this.textBoxTitulo);
+            this.groupBoxLibros.Controls.Add(this.labelGeneros);
+            this.groupBoxLibros.Controls.Add(this.labelPrecio);
+            this.groupBoxLibros.Controls.Add(this.labelanyoEdicion);
+            this.groupBoxLibros.Controls.Add(this.labelAutor);
+            this.groupBoxLibros.Controls.Add(this.labelTitulo);
+            this.groupBoxLibros.Controls.Add(this.pictureBoxLibro);
+            this.groupBoxLibros.Controls.Add(this.dataGridViewLibros);
+            this.groupBoxLibros.Controls.Add(this.buttonEditar);
+            this.groupBoxLibros.Controls.Add(this.buttonEliminar);
+            this.groupBoxLibros.Controls.Add(this.buttonAnyadir);
+            this.groupBoxLibros.Location = new System.Drawing.Point(12, 66);
+            this.groupBoxLibros.Name = "groupBoxLibros";
+            this.groupBoxLibros.Size = new System.Drawing.Size(737, 655);
+            this.groupBoxLibros.TabIndex = 8;
+            this.groupBoxLibros.TabStop = false;
+            this.groupBoxLibros.Text = "Libros";
             // 
-            // listBox1
+            // listBoxGeneros
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(90, 121);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(312, 108);
-            this.listBox1.TabIndex = 21;
+            this.listBoxGeneros.FormattingEnabled = true;
+            this.listBoxGeneros.Location = new System.Drawing.Point(90, 121);
+            this.listBoxGeneros.Name = "listBoxGeneros";
+            this.listBoxGeneros.Size = new System.Drawing.Size(312, 108);
+            this.listBoxGeneros.TabIndex = 21;
             // 
-            // textBox4
+            // textBoxPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 92);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 20);
-            this.textBox4.TabIndex = 20;
+            this.textBoxPrecio.Location = new System.Drawing.Point(90, 92);
+            this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.Size = new System.Drawing.Size(312, 20);
+            this.textBoxPrecio.TabIndex = 20;
             // 
-            // textBox3
+            // textBoxAnyoEdicion
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 20);
-            this.textBox3.TabIndex = 19;
+            this.textBoxAnyoEdicion.Location = new System.Drawing.Point(90, 66);
+            this.textBoxAnyoEdicion.Name = "textBoxAnyoEdicion";
+            this.textBoxAnyoEdicion.Size = new System.Drawing.Size(312, 20);
+            this.textBoxAnyoEdicion.TabIndex = 19;
             // 
-            // textBox2
+            // textBoxAutor
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 20);
-            this.textBox2.TabIndex = 18;
+            this.textBoxAutor.Location = new System.Drawing.Point(90, 42);
+            this.textBoxAutor.Name = "textBoxAutor";
+            this.textBoxAutor.Size = new System.Drawing.Size(312, 20);
+            this.textBoxAutor.TabIndex = 18;
             // 
-            // textBox1
+            // textBoxTitulo
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 20);
-            this.textBox1.TabIndex = 17;
+            this.textBoxTitulo.Location = new System.Drawing.Point(90, 17);
+            this.textBoxTitulo.Name = "textBoxTitulo";
+            this.textBoxTitulo.Size = new System.Drawing.Size(312, 20);
+            this.textBoxTitulo.TabIndex = 17;
             // 
-            // label5
+            // labelGeneros
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Generos";
+            this.labelGeneros.AutoSize = true;
+            this.labelGeneros.Location = new System.Drawing.Point(10, 121);
+            this.labelGeneros.Name = "labelGeneros";
+            this.labelGeneros.Size = new System.Drawing.Size(47, 13);
+            this.labelGeneros.TabIndex = 16;
+            this.labelGeneros.Text = "Generos";
             // 
-            // label4
+            // labelPrecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Precio";
+            this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Location = new System.Drawing.Point(10, 95);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(37, 13);
+            this.labelPrecio.TabIndex = 15;
+            this.labelPrecio.Text = "Precio";
             // 
-            // label3
+            // labelanyoEdicion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Año de edicion";
+            this.labelanyoEdicion.AutoSize = true;
+            this.labelanyoEdicion.Location = new System.Drawing.Point(6, 69);
+            this.labelanyoEdicion.Name = "labelanyoEdicion";
+            this.labelanyoEdicion.Size = new System.Drawing.Size(78, 13);
+            this.labelanyoEdicion.TabIndex = 14;
+            this.labelanyoEdicion.Text = "Año de edicion";
             // 
-            // label2
+            // labelAutor
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Autor";
+            this.labelAutor.AutoSize = true;
+            this.labelAutor.Location = new System.Drawing.Point(7, 45);
+            this.labelAutor.Name = "labelAutor";
+            this.labelAutor.Size = new System.Drawing.Size(32, 13);
+            this.labelAutor.TabIndex = 13;
+            this.labelAutor.Text = "Autor";
             // 
-            // label1
+            // labelTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Titulo";
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Location = new System.Drawing.Point(7, 20);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(33, 13);
+            this.labelTitulo.TabIndex = 12;
+            this.labelTitulo.Text = "Titulo";
             // 
-            // dataGridView1
+            // pictureBoxLibro
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pictureBoxLibro.Location = new System.Drawing.Point(443, 17);
+            this.pictureBoxLibro.Name = "pictureBoxLibro";
+            this.pictureBoxLibro.Size = new System.Drawing.Size(102, 150);
+            this.pictureBoxLibro.TabIndex = 11;
+            this.pictureBoxLibro.TabStop = false;
+            // 
+            // dataGridViewLibros
+            // 
+            this.dataGridViewLibros.AllowUserToAddRows = false;
+            this.dataGridViewLibros.AllowUserToDeleteRows = false;
+            this.dataGridViewLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Titulo,
             this.Autor,
             this.GeneroPrincipal,
             this.añoEdicion,
             this.precio});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 287);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(567, 341);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridViewLibros.Location = new System.Drawing.Point(13, 284);
+            this.dataGridViewLibros.Name = "dataGridViewLibros";
+            this.dataGridViewLibros.ReadOnly = true;
+            this.dataGridViewLibros.Size = new System.Drawing.Size(567, 341);
+            this.dataGridViewLibros.TabIndex = 3;
             // 
             // ID
             // 
@@ -276,14 +284,6 @@
             this.buttonAnyadir.TabIndex = 4;
             this.buttonAnyadir.Text = "Añadir";
             this.buttonAnyadir.UseVisualStyleBackColor = true;
-            // 
-            // pictureBoxLibro
-            // 
-            this.pictureBoxLibro.Location = new System.Drawing.Point(443, 17);
-            this.pictureBoxLibro.Name = "pictureBoxLibro";
-            this.pictureBoxLibro.Size = new System.Drawing.Size(102, 150);
-            this.pictureBoxLibro.TabIndex = 11;
-            this.pictureBoxLibro.TabStop = false;
             // 
             // toolStrip1
             // 
@@ -506,13 +506,13 @@
             this.ClientSize = new System.Drawing.Size(761, 733);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxLibros);
             this.Name = "FormLibros";
             this.Text = "FormLibros";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxLibros.ResumeLayout(false);
+            this.groupBoxLibros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibros)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -524,19 +524,19 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBoxLibros;
+        private System.Windows.Forms.ListBox listBoxGeneros;
+        private System.Windows.Forms.TextBox textBoxPrecio;
+        private System.Windows.Forms.TextBox textBoxAnyoEdicion;
+        private System.Windows.Forms.TextBox textBoxAutor;
+        private System.Windows.Forms.TextBox textBoxTitulo;
+        private System.Windows.Forms.Label labelGeneros;
+        private System.Windows.Forms.Label labelPrecio;
+        private System.Windows.Forms.Label labelanyoEdicion;
+        private System.Windows.Forms.Label labelAutor;
+        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.PictureBox pictureBoxLibro;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLibros;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
