@@ -34,12 +34,12 @@ namespace Olor_a_Libro
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            guardarJsonlibs();
-            guardarJsonbooks();
-            guardarJsonusers();
-            guardarJsonop();
-            guardarJsonact();
-            guardarJsonviews();
+            Utilitats.guardarJsonlibs();
+            Utilitats.guardarJsonbooks();
+            Utilitats.guardarJsonusers();
+            Utilitats.guardarJsonop();
+            Utilitats.guardarJsonact();
+            Utilitats.guardarJsonviews();
         }
        
 
@@ -176,59 +176,6 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
-        private void guardarJsonlibs()
-        {
-            string arxiulib = "librerias.json";
-            JArray jArrayLibs = (JArray)JToken.FromObject(librerias);
-            StreamWriter file = File.CreateText(arxiulib);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayLibs.WriteTo(writer);
-            writer.Close();
-        }
-        private void guardarJsonbooks()
-        {
-            string arxiubook = "libros.json";
-            JArray jArrayBooks = (JArray)JToken.FromObject(libros);
-            StreamWriter file = File.CreateText(arxiubook);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayBooks.WriteTo(writer);
-            writer.Close();
-        }
-        private void guardarJsonusers()
-        {
-            string arxiuuser = "usuarios.json";
-            JArray jArrayUsers = (JArray)JToken.FromObject(usuarios);
-            StreamWriter file = File.CreateText(arxiuuser);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayUsers.WriteTo(writer);
-            writer.Close();
-        }
-        private void guardarJsonop()
-        {
-            string arxiuop = "opiniones.json";
-            JArray jArrayOps = (JArray)JToken.FromObject(opiniones);
-            StreamWriter file = File.CreateText(arxiuop);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayOps.WriteTo(writer);
-            writer.Close();
-        }
-        private void guardarJsonact()
-        {
-            string arxiuact = "actividades.json";
-            JArray jArrayAct = (JArray)JToken.FromObject(actividades);
-            StreamWriter file = File.CreateText(arxiuact);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayAct.WriteTo(writer);
-            writer.Close();
-        }
-        private void guardarJsonviews()
-        {
-            string arxiuviews = "visitas.json";
-            JArray jArrayViews = (JArray)JToken.FromObject(visitas);
-            StreamWriter file = File.CreateText(arxiuviews);
-            JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayViews.WriteTo(writer);
-            writer.Close();
-        }
+       
     }
 }

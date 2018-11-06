@@ -15,6 +15,7 @@ namespace Olor_a_Libro
         public FormActividad()
         {
             InitializeComponent();
+
         }
     }
 }
