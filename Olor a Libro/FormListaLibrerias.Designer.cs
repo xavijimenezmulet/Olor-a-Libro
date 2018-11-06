@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemGuardar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.libreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verLibreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirLibreríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +43,7 @@
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonUsuarios = new System.Windows.Forms.ToolStripButton();
@@ -56,62 +56,60 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.groupBoxLibrerias = new System.Windows.Forms.GroupBox();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.menuStripMainMenu.SuspendLayout();
+            this.toolStripAccesosDirectos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).BeginInit();
             this.groupBoxLibrerias.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMainMenu
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.estadísticasToolStripMenuItem,
             this.puntuaciónToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(760, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainMenu.Name = "menuStripMainMenu";
+            this.menuStripMainMenu.Size = new System.Drawing.Size(760, 24);
+            this.menuStripMainMenu.TabIndex = 1;
+            this.menuStripMainMenu.Text = "Menu Principal";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem,
+            this.ToolStripMenuItemGuardar,
             this.toolStripSeparator3,
-            this.salirToolStripMenuItem1});
+            this.ToolStripMenuItemSalir});
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.archivoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // salirToolStripMenuItem
+            // ToolStripMenuItemGuardar
             // 
-            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.salirToolStripMenuItem.Text = "Guardar";
+            this.ToolStripMenuItemGuardar.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+            this.ToolStripMenuItemGuardar.Name = "ToolStripMenuItemGuardar";
+            this.ToolStripMenuItemGuardar.Size = new System.Drawing.Size(116, 22);
+            this.ToolStripMenuItemGuardar.Text = "Guardar";
+            this.ToolStripMenuItemGuardar.Click += new System.EventHandler(this.ToolStripMenuItemGuardar_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
-            // salirToolStripMenuItem1
+            // ToolStripMenuItemSalir
             // 
-            this.salirToolStripMenuItem1.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.salirToolStripMenuItem1.Text = "Salir";
+            this.ToolStripMenuItemSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.ToolStripMenuItemSalir.Name = "ToolStripMenuItemSalir";
+            this.ToolStripMenuItemSalir.Size = new System.Drawing.Size(116, 22);
+            this.ToolStripMenuItemSalir.Text = "Salir";
+            this.ToolStripMenuItemSalir.Click += new System.EventHandler(this.ToolStripMenuItemSalir_Click);
             // 
             // libreriasToolStripMenuItem
             // 
@@ -191,10 +189,10 @@
             this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
-            // toolStrip1
+            // toolStripAccesosDirectos
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonLibrerias,
             this.toolStripButtonActividades,
             this.toolStripButtonUsuarios,
@@ -202,11 +200,11 @@
             this.toolStripButtonEstadisticas,
             this.toolStripSeparator2,
             this.toolStripButtonSalir});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(760, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
+            this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(760, 25);
+            this.toolStripAccesosDirectos.TabIndex = 2;
+            this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
             // toolStripButtonLibrerias
             // 
@@ -267,11 +265,7 @@
             // 
             this.dataGridViewLibrerias.AllowUserToAddRows = false;
             this.dataGridViewLibrerias.AllowUserToDeleteRows = false;
-            this.dataGridViewLibrerias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.Direccion,
-            this.Contacto});
+            this.dataGridViewLibrerias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLibrerias.Location = new System.Drawing.Point(17, 30);
             this.dataGridViewLibrerias.Name = "dataGridViewLibrerias";
             this.dataGridViewLibrerias.ReadOnly = true;
@@ -322,36 +316,6 @@
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.FillWeight = 50F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.FillWeight = 80F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Contacto
-            // 
-            this.Contacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Contacto.HeaderText = "Contacto";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.ReadOnly = true;
-            // 
             // FormListaLibrerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,15 +323,16 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 423);
             this.Controls.Add(this.groupBoxLibrerias);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripAccesosDirectos);
+            this.Controls.Add(this.menuStripMainMenu);
             this.Name = "FormListaLibrerias";
             this.Text = "FormListaLibros";
+            this.Activated += new System.EventHandler(this.FormListaLibrerias_Activated);
             this.Load += new System.EventHandler(this.FormListaLibrerias_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuStripMainMenu.ResumeLayout(false);
+            this.menuStripMainMenu.PerformLayout();
+            this.toolStripAccesosDirectos.ResumeLayout(false);
+            this.toolStripAccesosDirectos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).EndInit();
             this.groupBoxLibrerias.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -377,11 +342,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemGuardar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSalir;
         private System.Windows.Forms.ToolStripMenuItem libreriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verLibreriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirLibreríaToolStripMenuItem;
@@ -391,7 +356,7 @@
         private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
         private System.Windows.Forms.ToolStripButton toolStripButtonLibrerias;
         private System.Windows.Forms.ToolStripButton toolStripButtonActividades;
         private System.Windows.Forms.ToolStripButton toolStripButtonUsuarios;
@@ -405,9 +370,5 @@
         private System.Windows.Forms.GroupBox groupBoxLibrerias;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
     }
 }

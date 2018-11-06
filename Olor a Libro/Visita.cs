@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Olor_a_Libro 
 {
-    class Visita : IEquatable<Visita>
+    public class Visita : IEquatable<Visita>
     {
         public Usuario user { get; set; }
         public Actividad activitatvisitada { get; set; }

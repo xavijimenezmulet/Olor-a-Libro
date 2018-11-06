@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Olor_a_Libro
 {
-    class Opinion
+    public class Opinion
     {
         public Usuario user { get; set; }
         public string fecha { get; set; }
