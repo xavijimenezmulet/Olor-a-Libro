@@ -90,7 +90,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(848, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(831, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,19 +109,19 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(120, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(156, 26);
             this.toolStripMenuItem2.Text = "Salir";
             // 
             // libreríasToolStripMenuItem
@@ -225,7 +225,7 @@
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(848, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(831, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -417,6 +417,7 @@
             this.buttonAceptar.Size = new System.Drawing.Size(119, 35);
             this.buttonAceptar.TabIndex = 17;
             this.buttonAceptar.Text = "Aceptar";
+            this.buttonAceptar.UseCompatibleTextRendering = true;
             this.buttonAceptar.UseVisualStyleBackColor = true;
             // 
             // buttonBorrar
@@ -458,7 +459,8 @@
             this.pictureBox1.Location = new System.Drawing.Point(25, 95);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 152);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -467,7 +469,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(848, 495);
+            this.ClientSize = new System.Drawing.Size(831, 495);
             this.Controls.Add(this.buttonActividades);
             this.Controls.Add(this.buttonLibros);
             this.Controls.Add(this.buttonBorrar);
