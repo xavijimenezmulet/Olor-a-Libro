@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Olor_a_Libro : IEquatable<Libro>
+namespace Olor_a_Libro 
 {
-    class Libro
+    class Libro : IEquatable<Libro>
     {
         public int id { get; set; }
         public string titulo { get; set; }

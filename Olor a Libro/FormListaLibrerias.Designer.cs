@@ -42,6 +42,7 @@
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
@@ -51,15 +52,14 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewLibrerias = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.groupBoxLibrerias = new System.Windows.Forms.GroupBox();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).BeginInit();
@@ -184,6 +184,13 @@
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.estadísticasToolStripMenuItem.Text = "Estadísticas";
             // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -268,35 +275,8 @@
             this.dataGridViewLibrerias.Location = new System.Drawing.Point(17, 30);
             this.dataGridViewLibrerias.Name = "dataGridViewLibrerias";
             this.dataGridViewLibrerias.ReadOnly = true;
-            this.dataGridViewLibrerias.Size = new System.Drawing.Size(539, 282);
+            this.dataGridViewLibrerias.Size = new System.Drawing.Size(537, 282);
             this.dataGridViewLibrerias.TabIndex = 3;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 80;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Contacto
-            // 
-            this.Contacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Contacto.HeaderText = "Contacto";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.ReadOnly = true;
             // 
             // buttonAdd
             // 
@@ -342,12 +322,35 @@
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // puntuaciónToolStripMenuItem
+            // ID
             // 
-            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
-            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.FillWeight = 50F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.FillWeight = 80F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Contacto
+            // 
+            this.Contacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Contacto.HeaderText = "Contacto";
+            this.Contacto.Name = "Contacto";
+            this.Contacto.ReadOnly = true;
             // 
             // FormListaLibrerias
             // 
@@ -400,11 +403,11 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.GroupBox groupBoxLibrerias;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contacto;
-        private System.Windows.Forms.Button buttonEditar;
-        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
     }
 }

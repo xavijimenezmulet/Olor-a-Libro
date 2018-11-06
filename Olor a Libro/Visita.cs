@@ -8,9 +8,9 @@ namespace Olor_a_Libro
 {
     class Visita : IEquatable<Visita>
     {
-        public Usuario user { get; set; };
-        public Actividad activitatvisitada { get; set; };
-        public string fecha { get; set; };
+        public Usuario user { get; set; }
+        public Actividad activitatvisitada { get; set; }
+        public string fecha { get; set; }
 
         public bool Equals(Visita v)
         {
