@@ -15,13 +15,7 @@ namespace Olor_a_Libro
 {
     public partial class FormPrincipal : Form
     {
-        List<Libreria> librerias = new List<Libreria>();
-        List<Libro> libros = new List<Libro>();
-        List<Opinion> opiniones = new List<Opinion>();
-        List<Actividad> actividades = new List<Actividad>();
-        List<Usuario> usuarios = new List<Usuario>();
-        List<Visita> visitas = new List<Visita>();
-
+        
         public FormPrincipal()
         {
             InitializeComponent();
@@ -64,56 +58,56 @@ namespace Olor_a_Libro
             if (File.Exists(arxiulib))
             {
                 JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiulib));
-                librerias = jArrayLibs.ToObject<List<Libreria>>();
+                Utilitats.librerias = jArrayLibs.ToObject<List<Libreria>>();
             }
             else
             {
-                librerias = new List<Libreria>();
+                Utilitats.librerias = new List<Libreria>();
             }
             if (File.Exists(arxiubook))
             {
                 JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
-                libros = jArrayBooks.ToObject<List<Libro>>();
+                Utilitats.libros = jArrayBooks.ToObject<List<Libro>>();
             }
             else
             {
-                libros = new List<Libro>();
+                Utilitats.libros = new List<Libro>();
             }
             if (File.Exists(arxiuuser))
             {
                 JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
-                librerias = jArrayusers.ToObject<List<Libreria>>();
+                Utilitats.librerias = jArrayusers.ToObject<List<Libreria>>();
             }
             else
             {
-                usuarios = new List<Usuario>();
+                Utilitats.usuarios = new List<Usuario>();
             }
             if (File.Exists(arxiuop))
             {
                 JArray jArrayops = JArray.Parse(File.ReadAllText(arxiuop));
-                opiniones = jArrayops.ToObject<List<Opinion>>();
+                Utilitats.opiniones = jArrayops.ToObject<List<Opinion>>();
             }
             else
             {
-                opiniones = new List<Opinion>();
+                Utilitats.opiniones = new List<Opinion>();
             }
             if (File.Exists(arxiuact))
             {
                 JArray jArrayacts = JArray.Parse(File.ReadAllText(arxiuact));
-                actividades = jArrayacts.ToObject<List<Actividad>>();
+                Utilitats.actividades = jArrayacts.ToObject<List<Actividad>>();
             }
             else
             {
-                actividades = new List<Actividad>();
+                Utilitats.actividades = new List<Actividad>();
             }
             if (File.Exists(arxiuviews))
             {
                 JArray jArrayviews = JArray.Parse(File.ReadAllText(arxiuviews));
-                visitas = jArrayviews.ToObject<List<Visita>>();
+                Utilitats.visitas = jArrayviews.ToObject<List<Visita>>();
             }
             else
             {
-                visitas = new List<Visita>();
+                Utilitats.visitas = new List<Visita>();
             }
         }
 
@@ -176,6 +170,11 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
-       
+
+        private void toolStripButtonLibrerias_Click(object sender, EventArgs e)
+        {
+            FormListaLibrerias f = new FormListaLibrerias();
+            f.Show();
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Olor_a_Libro 
 {
-    class Libro : IEquatable<Libro>
+    public class Libro : IEquatable<Libro>
     {
         public int id { get; set; }
         public string titulo { get; set; }
