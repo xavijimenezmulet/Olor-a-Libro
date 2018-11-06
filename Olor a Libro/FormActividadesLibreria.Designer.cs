@@ -54,7 +54,7 @@
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +66,7 @@
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -284,7 +284,7 @@
             // 
             // groupBoxActividades
             // 
-            this.groupBoxActividades.Controls.Add(this.dataGridView1);
+            this.groupBoxActividades.Controls.Add(this.dataGridViewActividades);
             this.groupBoxActividades.Location = new System.Drawing.Point(12, 106);
             this.groupBoxActividades.Name = "groupBoxActividades";
             this.groupBoxActividades.Size = new System.Drawing.Size(583, 275);
@@ -292,23 +292,23 @@
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades";
             // 
-            // dataGridView1
+            // dataGridViewActividades
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewActividades.AllowUserToAddRows = false;
+            this.dataGridViewActividades.AllowUserToDeleteRows = false;
+            this.dataGridViewActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Titulo,
             this.Descripcion,
             this.lugar,
             this.fechaYHora});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 256);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridViewActividades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewActividades.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewActividades.Name = "dataGridViewActividades";
+            this.dataGridViewActividades.ReadOnly = true;
+            this.dataGridViewActividades.Size = new System.Drawing.Size(577, 256);
+            this.dataGridViewActividades.TabIndex = 4;
             // 
             // ID
             // 
@@ -391,7 +391,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxActividades.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +425,7 @@
         private System.Windows.Forms.ToolStripMenuItem añadirUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBoxActividades;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewActividades;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
