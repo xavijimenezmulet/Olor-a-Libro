@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,17 +44,19 @@
             this.añadirUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonUsuarios = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
+            this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
+            this.labelTipoAct = new System.Windows.Forms.Label();
             this.textBoxHoraAct = new System.Windows.Forms.TextBox();
             this.labelHoraAct = new System.Windows.Forms.Label();
             this.textBoxDescripcionAct = new System.Windows.Forms.TextBox();
@@ -71,35 +73,35 @@
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelTipoAct = new System.Windows.Forms.Label();
-            this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMainMenu.SuspendLayout();
+            this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMainMenu
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.libreríasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.estadísticasToolStripMenuItem,
             this.puntuaciónToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(648, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainMenu.Name = "menuStripMainMenu";
+            this.menuStripMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(648, 24);
+            this.menuStripMainMenu.TabIndex = 0;
+            this.menuStripMainMenu.Text = "Menu Principal";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
             this.guardarToolStripMenuItem,
             this.toolStripSeparator1,
             this.salirToolStripMenuItem});
@@ -112,19 +114,19 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // libreríasToolStripMenuItem
@@ -165,13 +167,13 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             // 
             // añadirActividadesToolStripMenuItem
             // 
             this.añadirActividadesToolStripMenuItem.Name = "añadirActividadesToolStripMenuItem";
-            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.añadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
             // 
             // usuariosToolStripMenuItem
@@ -212,94 +214,94 @@
             this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
-            // toolStrip1
+            // toolStripAccesosDirectos
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonInicio,
             this.toolStripSeparator2,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
+            this.toolStripButtonLibrerias,
+            this.toolStripButtonActividades,
+            this.toolStripButtonUsuarios,
             this.toolStripSeparator3,
-            this.toolStripButton5,
+            this.toolStripButtonEstadisticas,
             this.toolStripSeparator4,
-            this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(648, 27);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripButtonSalir});
+            this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
+            this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(648, 27);
+            this.toolStripAccesosDirectos.TabIndex = 1;
+            this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
-            // toolStripButton1
+            // toolStripButtonInicio
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonInicio.Name = "toolStripButtonInicio";
+            this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonInicio.Text = "Inicio";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton2
+            // toolStripButtonLibrerias
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::Olor_a_Libro.Properties.Resources.books;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButtonLibrerias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
+            this.toolStripButtonLibrerias.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLibrerias.Name = "toolStripButtonLibrerias";
+            this.toolStripButtonLibrerias.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonLibrerias.Text = "Ver Librerias";
             // 
-            // toolStripButton3
+            // toolStripButtonActividades
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::Olor_a_Libro.Properties.Resources.reading;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
+            this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonActividades.Name = "toolStripButtonActividades";
+            this.toolStripButtonActividades.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonActividades.Text = "Ver Actividades";
             // 
-            // toolStripButton4
+            // toolStripButtonUsuarios
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButtonUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+            this.toolStripButtonUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUsuarios.Name = "toolStripButtonUsuarios";
+            this.toolStripButtonUsuarios.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonUsuarios.Text = "Ver Usuarios";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton5
+            // toolStripButtonEstadisticas
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButtonEstadisticas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
+            this.toolStripButtonEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonEstadisticas.Name = "toolStripButtonEstadisticas";
+            this.toolStripButtonEstadisticas.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonEstadisticas.Text = "Ver Estadisticas";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton6
+            // toolStripButtonSalir
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButtonSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.toolStripButtonSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSalir.Name = "toolStripButtonSalir";
+            this.toolStripButtonSalir.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonSalir.Text = "Salir";
             // 
             // groupBoxDatosAct
             // 
@@ -325,6 +327,25 @@
             this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 263);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
+            // 
+            // comboBoxTipoAct
+            // 
+            this.comboBoxTipoAct.FormattingEnabled = true;
+            this.comboBoxTipoAct.Location = new System.Drawing.Point(81, 91);
+            this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTipoAct.Name = "comboBoxTipoAct";
+            this.comboBoxTipoAct.Size = new System.Drawing.Size(340, 21);
+            this.comboBoxTipoAct.TabIndex = 14;
+            // 
+            // labelTipoAct
+            // 
+            this.labelTipoAct.AutoSize = true;
+            this.labelTipoAct.Location = new System.Drawing.Point(5, 94);
+            this.labelTipoAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipoAct.Name = "labelTipoAct";
+            this.labelTipoAct.Size = new System.Drawing.Size(78, 13);
+            this.labelTipoAct.TabIndex = 13;
+            this.labelTipoAct.Text = "Tipo Actividad:";
             // 
             // textBoxHoraAct
             // 
@@ -476,24 +497,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // labelTipoAct
+            // inicioToolStripMenuItem
             // 
-            this.labelTipoAct.AutoSize = true;
-            this.labelTipoAct.Location = new System.Drawing.Point(5, 94);
-            this.labelTipoAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTipoAct.Name = "labelTipoAct";
-            this.labelTipoAct.Size = new System.Drawing.Size(78, 13);
-            this.labelTipoAct.TabIndex = 13;
-            this.labelTipoAct.Text = "Tipo Actividad:";
-            // 
-            // comboBoxTipoAct
-            // 
-            this.comboBoxTipoAct.FormattingEnabled = true;
-            this.comboBoxTipoAct.Location = new System.Drawing.Point(81, 91);
-            this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTipoAct.Name = "comboBoxTipoAct";
-            this.comboBoxTipoAct.Size = new System.Drawing.Size(340, 21);
-            this.comboBoxTipoAct.TabIndex = 14;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // FormActividad
             // 
@@ -505,16 +514,16 @@
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.groupBoxDatosAct);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.toolStripAccesosDirectos);
+            this.Controls.Add(this.menuStripMainMenu);
+            this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormActividad";
             this.Text = "Olor a Libro: Actividad";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuStripMainMenu.ResumeLayout(false);
+            this.menuStripMainMenu.PerformLayout();
+            this.toolStripAccesosDirectos.ResumeLayout(false);
+            this.toolStripAccesosDirectos.PerformLayout();
             this.groupBoxDatosAct.ResumeLayout(false);
             this.groupBoxDatosAct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -525,7 +534,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem libreríasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
@@ -540,16 +549,16 @@
         private System.Windows.Forms.ToolStripMenuItem añadirActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
+        private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButtonLibrerias;
+        private System.Windows.Forms.ToolStripButton toolStripButtonActividades;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUsuarios;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButtonEstadisticas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxDatosAct;
         private System.Windows.Forms.TextBox textBoxDescripcionAct;
@@ -570,5 +579,6 @@
         private System.Windows.Forms.Label labelHoraAct;
         private System.Windows.Forms.ComboBox comboBoxTipoAct;
         private System.Windows.Forms.Label labelTipoAct;
+        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
     }
 }

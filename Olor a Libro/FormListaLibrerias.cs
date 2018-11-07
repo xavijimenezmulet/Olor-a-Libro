@@ -46,7 +46,7 @@ namespace Olor_a_Libro
             dataGridViewLibrerias.Columns[3].HeaderText = "Contacto";
             //dataGridViewLibrerias.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
-
+        //CHECK
         private void ToolStripMenuItemGuardar_Click(object sender, EventArgs e)
         {
             Utilitats.guardarJsonlibs();

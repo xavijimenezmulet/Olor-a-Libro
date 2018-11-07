@@ -170,7 +170,6 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
-
         private void toolStripButtonLibrerias_Click(object sender, EventArgs e)
         {
             FormListaLibrerias f = new FormListaLibrerias();
