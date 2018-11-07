@@ -33,7 +33,7 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.libreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verLibreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirLibreríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +81,7 @@
             this.inicioToolStripMenuItem,
             this.guardarToolStripMenuItem,
             this.toolStripSeparator3,
-            this.salirToolStripMenuItem1});
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.archivoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
@@ -111,12 +111,12 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
-            // salirToolStripMenuItem1
+            // salirToolStripMenuItem
             // 
-            this.salirToolStripMenuItem1.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // libreriasToolStripMenuItem
             // 
@@ -135,7 +135,7 @@
             // 
             this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
-            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
             this.verLibreriaToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
-            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
             // 
             // actividadesToolStripMenuItem
@@ -333,7 +333,7 @@
         private System.Windows.Forms.ToolStripMenuItem verLibreriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirLibreríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirUsuarioToolStripMenuItem;
