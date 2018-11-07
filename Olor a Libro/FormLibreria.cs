@@ -16,5 +16,15 @@ namespace Olor_a_Libro
         {
             InitializeComponent();
         }
+
+        private void toolStripButtonInicio_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.Inicio();
+        }
+
+        private void FormLibreria_Deactivate(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
