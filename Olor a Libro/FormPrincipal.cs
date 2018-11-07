@@ -113,22 +113,17 @@ namespace Olor_a_Libro
 
         private void libreriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            MetodosMenu.VerLibrerias();
         }
 
         private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            MetodosMenu.VerActividades();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            MetodosMenu.verUsuarios();
         }
 
         public void archivoToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
@@ -170,10 +165,40 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
+        //ACCESO A LOS FORMULARIOS
         private void toolStripButtonLibrerias_Click(object sender, EventArgs e)
         {
-            FormListaLibrerias f = new FormListaLibrerias();
-            f.Show();
+            MetodosMenu.VerLibrerias();
         }
+        /*
+        private void toolStripButtonSalir_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void toolStripButtonEstadisticas_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void toolStripButtonUsuarios_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void toolStripButtonActividades_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void añadirLibreríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }
