@@ -21,12 +21,7 @@ namespace Olor_a_Libro
             InitializeComponent();
         }
 
-        private void verLibreriaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MetodosMenu.VerLibrerias();
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilitats.guardarJsonlibs();
             Utilitats.guardarJsonbooks();
@@ -36,12 +31,6 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
         }
        
-
-        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -111,26 +100,6 @@ namespace Olor_a_Libro
             }
         }
 
-        private void libreriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         public void archivoToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
         {
             archivoToolStripMenuItem.ForeColor = Color.Black;
@@ -170,40 +139,41 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
-        private void toolStripButtonLibrerias_Click(object sender, EventArgs e)
+
+        //ACCESO A LOS FORMULARIOS
+               
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void verLibreriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MetodosMenu.VerLibrerias();
-            
         }
-
-        private void toolStripButtonActividades_Click(object sender, EventArgs e)
+        private void añadirLibreríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirLibreria();
+        }
+        private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MetodosMenu.VerActividades();
         }
-
-        private void toolStripButtonUsuarios_Click(object sender, EventArgs e)
+        private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MetodosMenu.verUsuarios();
         }
-
-        private void toolStripButtonEstadisticas_Click(object sender, EventArgs e)
+        private void añadirUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirUsuarios();
+        }
+        private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MetodosMenu.Estadisticas();
         }
 
-        private void toolStripButtonSalir_Click(object sender, EventArgs e)
+        private void puntuaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void añadirLibreríaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MetodosMenu.AnyadirLibreria();
+            MetodosMenu.PuntosAdmin();
         }
     }
 }

@@ -246,7 +246,6 @@
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
             this.toolStripButtonInicio.Text = "Inicio";
-            this.toolStripButtonInicio.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
             // toolStripSeparator2
             // 
@@ -492,8 +491,7 @@
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLibreria";
-            this.Text = "Olor a Libro: Librerías ";
-            this.Deactivate += new System.EventHandler(this.FormLibreria_Deactivate);
+            this.Text = "Olor a Libro: Librería";
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
             this.toolStripAccesosDirectos.ResumeLayout(false);
