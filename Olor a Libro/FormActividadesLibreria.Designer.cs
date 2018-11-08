@@ -63,6 +63,7 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonAnyadir = new System.Windows.Forms.Button();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.menuStripMainMenu.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
@@ -165,7 +166,8 @@
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(607, 24);
@@ -189,26 +191,26 @@
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // libreriasToolStripMenuItem
@@ -225,14 +227,14 @@
             // 
             this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
-            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
             // 
             // añadirLibreríaToolStripMenuItem
             // 
             this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
-            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
             // 
             // actividadesToolStripMenuItem
@@ -353,6 +355,7 @@
             this.buttonEliminar.TabIndex = 15;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonEditar
             // 
@@ -362,6 +365,7 @@
             this.buttonEditar.TabIndex = 14;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonAnyadir
             // 
@@ -371,12 +375,20 @@
             this.buttonAnyadir.TabIndex = 13;
             this.buttonAnyadir.Text = "Añadir";
             this.buttonAnyadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // FormActividadesLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(607, 392);
             this.Controls.Add(this.groupBoxActividades);
             this.Controls.Add(this.buttonEliminar);
@@ -434,5 +446,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonAnyadir;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
     }
 }

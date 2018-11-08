@@ -1,4 +1,7 @@
-﻿namespace Olor_a_Libro
+﻿using System;
+using System.Windows.Forms;
+
+namespace Olor_a_Libro
 {
     partial class FormPrincipal
     {
@@ -319,6 +322,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
