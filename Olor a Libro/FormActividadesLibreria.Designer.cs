@@ -387,6 +387,7 @@
             this.buttonEliminar.TabIndex = 15;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonEditar
             // 
@@ -396,6 +397,7 @@
             this.buttonEditar.TabIndex = 14;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonAnyadir
             // 
@@ -405,12 +407,20 @@
             this.buttonAnyadir.TabIndex = 13;
             this.buttonAnyadir.Text = "Añadir";
             this.buttonAnyadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // FormActividadesLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(607, 392);
             this.Controls.Add(this.groupBoxActividades);
             this.Controls.Add(this.buttonEliminar);

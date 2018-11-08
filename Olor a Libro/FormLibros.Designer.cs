@@ -266,6 +266,7 @@
             this.buttonEditar.TabIndex = 5;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonEliminar
             // 
@@ -276,6 +277,7 @@
             this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonAnyadir
             // 
@@ -286,6 +288,7 @@
             this.buttonAnyadir.TabIndex = 4;
             this.buttonAnyadir.Text = "Añadir";
             this.buttonAnyadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
             // 
             // toolStripAccesosDirectos
             // 
@@ -537,7 +540,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(761, 733);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
