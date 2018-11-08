@@ -177,14 +177,14 @@ namespace Olor_a_Libro
         {
             this.Hide();
             MetodosMenu.PuntosAdmin();
-            this.Close();
+            //this.Close();
         }
 
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.AnyadirAct();
-            this.Close();
+            //this.Close();
         }
         //GUARDAR TODO
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
