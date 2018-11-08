@@ -30,6 +30,7 @@
         {
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.salirtoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,6 @@
             this.buttonLibros = new System.Windows.Forms.Button();
             this.buttonActividades = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxLlibreria.SuspendLayout();
@@ -107,23 +107,30 @@
             this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem1.Text = "Archivo";
             // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
             // salirtoolStripMenuItem
             // 
             this.salirtoolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirtoolStripMenuItem.Name = "salirtoolStripMenuItem";
-            this.salirtoolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.salirtoolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.salirtoolStripMenuItem.Text = "Salir";
             // 
             // libreríasToolStripMenuItem
@@ -466,13 +473,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
             // FormLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -491,7 +491,7 @@
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLibreria";
-            this.Text = "Olor a Libro: Librerías ";
+            this.Text = "Olor a Libro: Librería";
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
             this.toolStripAccesosDirectos.ResumeLayout(false);
