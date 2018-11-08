@@ -39,7 +39,7 @@
             this.añadirLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anyadirActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,7 +161,7 @@
             // 
             this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verActividadesToolStripMenuItem,
-            this.añadirActividadesToolStripMenuItem});
+            this.anyadirActividadesToolStripMenuItem});
             this.actividadesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
@@ -174,11 +174,12 @@
             this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             // 
-            // añadirActividadesToolStripMenuItem
+            // anyadirActividadesToolStripMenuItem
             // 
-            this.añadirActividadesToolStripMenuItem.Name = "añadirActividadesToolStripMenuItem";
-            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
-            this.añadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
+            this.anyadirActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+            this.anyadirActividadesToolStripMenuItem.Name = "anyadirActividadesToolStripMenuItem";
+            this.anyadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.anyadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -545,7 +546,7 @@
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.Button buttonLibros;
         private System.Windows.Forms.Button buttonActividades;
-        private System.Windows.Forms.ToolStripMenuItem añadirActividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anyadirActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
     }

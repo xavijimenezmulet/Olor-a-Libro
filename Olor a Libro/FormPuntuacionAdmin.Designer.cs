@@ -30,6 +30,7 @@
         {
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +39,7 @@
             this.añadirLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anyadirActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +67,6 @@
             this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,13 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // guardarToolStripMenuItem
             // 
@@ -148,7 +155,7 @@
             // 
             this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verActividadesToolStripMenuItem,
-            this.añadirActividadesToolStripMenuItem});
+            this.anyadirActividadToolStripMenuItem});
             this.actividadesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
@@ -158,14 +165,15 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             // 
-            // añadirActividadesToolStripMenuItem
+            // anyadirActividadToolStripMenuItem
             // 
-            this.añadirActividadesToolStripMenuItem.Name = "añadirActividadesToolStripMenuItem";
-            this.añadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.añadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
+            this.anyadirActividadToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+            this.anyadirActividadToolStripMenuItem.Name = "anyadirActividadToolStripMenuItem";
+            this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.anyadirActividadToolStripMenuItem.Text = "Añadir Actividad";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -405,14 +413,7 @@
             this.toolStripButtonSalir.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonSalir.Text = "Salir";
             // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // FormPuntuaciónAdmin
+            // FormPuntuacionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -434,7 +435,7 @@
             this.Controls.Add(this.menuStripMainMenu);
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormPuntuaciónAdmin";
+            this.Name = "FormPuntuacionAdmin";
             this.Text = "Olor a Libro: Puntuación administrador";
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
@@ -460,7 +461,7 @@
         private System.Windows.Forms.ToolStripMenuItem verLibreríasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirLibreríasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verActividadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem añadirActividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirToolStripMenuItem;
         private System.Windows.Forms.Label label1;
