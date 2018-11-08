@@ -89,5 +89,10 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonact();
             Utilitats.guardarJsonviews();
         }
+
+        private void FormListaActividades_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
     }
 }

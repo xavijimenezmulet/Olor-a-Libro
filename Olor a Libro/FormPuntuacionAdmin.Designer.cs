@@ -105,7 +105,7 @@
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
@@ -113,20 +113,20 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             // 
             this.verLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreríasToolStripMenuItem.Name = "verLibreríasToolStripMenuItem";
-            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.verLibreríasToolStripMenuItem.Text = "Ver Librerías";
             this.verLibreríasToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
             // 
@@ -152,7 +152,7 @@
             // 
             this.añadirLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríasToolStripMenuItem.Name = "añadirLibreríasToolStripMenuItem";
-            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.añadirLibreríasToolStripMenuItem.Text = "Añadir Librerías";
             this.añadirLibreríasToolStripMenuItem.Click += new System.EventHandler(this.añadirLibreríaToolStripMenuItem_Click);
             // 
@@ -170,7 +170,7 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             this.verActividadesToolStripMenuItem.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
@@ -178,7 +178,7 @@
             // 
             this.anyadirActividadToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.anyadirActividadToolStripMenuItem.Name = "anyadirActividadToolStripMenuItem";
-            this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.anyadirActividadToolStripMenuItem.Text = "Añadir Actividad";
             this.anyadirActividadToolStripMenuItem.Click += new System.EventHandler(this.anyadirActividadToolStripMenuItem_Click);
             // 
@@ -196,7 +196,7 @@
             // 
             this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
             this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.verUsuariosToolStripMenuItem.Text = "Ver Usuarios";
             this.verUsuariosToolStripMenuItem.Click += new System.EventHandler(this.verUsuariosToolStripMenuItem_Click);
             // 
@@ -204,7 +204,7 @@
             // 
             this.añadirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.añadirToolStripMenuItem.Text = "Añadir Usuarios";
             this.añadirToolStripMenuItem.Click += new System.EventHandler(this.añadirUsuarioToolStripMenuItem_Click);
             // 
@@ -452,7 +452,9 @@
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPuntuacionAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Puntuación administrador";
+            this.Load += new System.EventHandler(this.FormPuntuacionAdmin_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
             this.toolStripAccesosDirectos.ResumeLayout(false);

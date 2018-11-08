@@ -127,6 +127,11 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonact();
             Utilitats.guardarJsonviews();
         }
+
+        private void FormLibros_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
     }
-    }
+    
 }

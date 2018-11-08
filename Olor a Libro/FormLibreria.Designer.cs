@@ -111,7 +111,7 @@
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
@@ -119,20 +119,20 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
             // salirtoolStripMenuItem
             // 
             this.salirtoolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirtoolStripMenuItem.Name = "salirtoolStripMenuItem";
-            this.salirtoolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.salirtoolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.salirtoolStripMenuItem.Text = "Salir";
             this.salirtoolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -508,7 +508,9 @@
             this.MainMenuStrip = this.menuStripMainMenu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLibreria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Librería";
+            this.Load += new System.EventHandler(this.FormLibreria_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
             this.toolStripAccesosDirectos.ResumeLayout(false);

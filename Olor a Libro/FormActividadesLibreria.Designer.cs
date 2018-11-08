@@ -236,7 +236,7 @@
             // 
             this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
-            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
             this.verLibreriaToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
             // 
@@ -244,7 +244,7 @@
             // 
             this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
-            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
             this.añadirLibreríaToolStripMenuItem.Click += new System.EventHandler(this.añadirLibreríaToolStripMenuItem_Click);
             // 
@@ -409,13 +409,6 @@
             this.buttonAnyadir.UseVisualStyleBackColor = true;
             this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
             // 
-            // puntuaciónToolStripMenuItem
-            // 
-            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
-            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
-            // 
             // FormActividadesLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,7 +422,9 @@
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
             this.Name = "FormActividadesLibreria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividades de la libreria";
+            this.Load += new System.EventHandler(this.FormActividadesLibreria_Load);
             this.toolStripAccesosDirectos.ResumeLayout(false);
             this.toolStripAccesosDirectos.PerformLayout();
             this.menuStripMainMenu.ResumeLayout(false);
