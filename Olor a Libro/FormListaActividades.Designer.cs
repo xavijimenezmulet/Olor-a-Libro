@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.libreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verLibreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirLibreríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,75 +42,81 @@
             this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonUsuarios = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
-            this.listBoxActividades = new System.Windows.Forms.ListBox();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMainMenu.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
+            this.toolStripAccesosDirectos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMainMenu
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.libreriasToolStripMenuItem,
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(766, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
+            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainMenu.Name = "menuStripMainMenu";
+            this.menuStripMainMenu.Size = new System.Drawing.Size(766, 24);
+            this.menuStripMainMenu.TabIndex = 2;
+            this.menuStripMainMenu.Text = "Menu Principal";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem,
+            this.inicioToolStripMenuItem,
+            this.guardarToolStripMenuItem,
             this.toolStripSeparator3,
-            this.salirToolStripMenuItem1});
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.archivoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // salirToolStripMenuItem
+            // guardarToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.salirToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
-            // salirToolStripMenuItem1
+            // salirToolStripMenuItem
             // 
-            this.salirToolStripMenuItem1.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // libreriasToolStripMenuItem
             // 
@@ -183,115 +189,46 @@
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.estadísticasToolStripMenuItem.Text = "Estadísticas";
             // 
-            // toolStrip1
+            // puntuaciónToolStripMenuItem
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonLibrerias,
-            this.toolStripButtonActividades,
-            this.toolStripButtonUsuarios,
-            this.toolStripSeparator1,
-            this.toolStripButtonEstadisticas,
-            this.toolStripSeparator2,
-            this.toolStripButtonSalir});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(766, 25);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButtonLibrerias
-            // 
-            this.toolStripButtonLibrerias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
-            this.toolStripButtonLibrerias.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonLibrerias.Name = "toolStripButtonLibrerias";
-            this.toolStripButtonLibrerias.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonLibrerias.Text = "Ver Librerias";
-            // 
-            // toolStripButtonActividades
-            // 
-            this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
-            this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonActividades.Name = "toolStripButtonActividades";
-            this.toolStripButtonActividades.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonActividades.Text = "Ver Actividades";
-            // 
-            // toolStripButtonUsuarios
-            // 
-            this.toolStripButtonUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
-            this.toolStripButtonUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonUsuarios.Name = "toolStripButtonUsuarios";
-            this.toolStripButtonUsuarios.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonUsuarios.Text = "Ver Usuarios";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButtonEstadisticas
-            // 
-            this.toolStripButtonEstadisticas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
-            this.toolStripButtonEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonEstadisticas.Name = "toolStripButtonEstadisticas";
-            this.toolStripButtonEstadisticas.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonEstadisticas.Text = "Ver Estadísticas";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButtonSalir
-            // 
-            this.toolStripButtonSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.toolStripButtonSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSalir.Name = "toolStripButtonSalir";
-            this.toolStripButtonSalir.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonSalir.Text = "Salir";
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             // 
             // groupBoxActividades
             // 
-            this.groupBoxActividades.Controls.Add(this.listBoxActividades);
+            this.groupBoxActividades.Controls.Add(this.buttonEditar);
             this.groupBoxActividades.Controls.Add(this.buttonEliminar);
+            this.groupBoxActividades.Controls.Add(this.dataGridViewActividades);
             this.groupBoxActividades.Controls.Add(this.buttonAdd);
+            this.groupBoxActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxActividades.Location = new System.Drawing.Point(47, 68);
             this.groupBoxActividades.Name = "groupBoxActividades";
-            this.groupBoxActividades.Size = new System.Drawing.Size(683, 260);
+            this.groupBoxActividades.Size = new System.Drawing.Size(683, 338);
             this.groupBoxActividades.TabIndex = 9;
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades";
             // 
-            // listBoxActividades
+            // buttonEditar
             // 
-            this.listBoxActividades.FormattingEnabled = true;
-            this.listBoxActividades.Location = new System.Drawing.Point(28, 41);
-            this.listBoxActividades.Name = "listBoxActividades";
-            this.listBoxActividades.Size = new System.Drawing.Size(454, 199);
-            this.listBoxActividades.TabIndex = 4;
+            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.Location = new System.Drawing.Point(586, 74);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 9;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(544, 169);
+            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.Location = new System.Drawing.Point(586, 115);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "Borrar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(544, 91);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 5;
-            this.buttonAdd.Text = "+";
-            this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // dataGridViewActividades
             // 
@@ -303,10 +240,10 @@
             this.Descripción,
             this.Lugar,
             this.Fecha});
-            this.dataGridViewActividades.Location = new System.Drawing.Point(47, 341);
+            this.dataGridViewActividades.Location = new System.Drawing.Point(16, 31);
             this.dataGridViewActividades.Name = "dataGridViewActividades";
             this.dataGridViewActividades.ReadOnly = true;
-            this.dataGridViewActividades.Size = new System.Drawing.Size(683, 199);
+            this.dataGridViewActividades.Size = new System.Drawing.Size(551, 282);
             this.dataGridViewActividades.TabIndex = 8;
             // 
             // ID
@@ -314,54 +251,156 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 80;
+            this.ID.Width = 60;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
             // 
             // Descripción
             // 
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.Name = "Descripción";
             this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 200;
+            this.Descripción.Width = 150;
             // 
             // Lugar
             // 
             this.Lugar.HeaderText = "Lugar";
             this.Lugar.Name = "Lugar";
             this.Lugar.ReadOnly = true;
-            this.Lugar.Width = 120;
             // 
             // Fecha
             // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 120;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(586, 31);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.Text = "Añadir";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // toolStripAccesosDirectos
+            // 
+            this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonInicio,
+            this.toolStripSeparator4,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripSeparator5,
+            this.toolStripButton4,
+            this.toolStripSeparator6,
+            this.toolStripButton5});
+            this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
+            this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(766, 25);
+            this.toolStripAccesosDirectos.TabIndex = 11;
+            this.toolStripAccesosDirectos.Text = "Accesos Directos";
+            // 
+            // toolStripButtonInicio
+            // 
+            this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+            this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonInicio.Name = "toolStripButtonInicio";
+            this.toolStripButtonInicio.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonInicio.Text = "Inicio";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::Olor_a_Libro.Properties.Resources.books;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Ver Librerias";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::Olor_a_Libro.Properties.Resources.reading;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Ver Actividades";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Ver Usuarios";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "Ver Estadísticas";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "Salir";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // FormListaActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(766, 608);
+            this.ClientSize = new System.Drawing.Size(766, 418);
+            this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.groupBoxActividades);
-            this.Controls.Add(this.dataGridViewActividades);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStripMainMenu);
             this.Name = "FormListaActividades";
             this.Text = "FormListaActividades";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuStripMainMenu.ResumeLayout(false);
+            this.menuStripMainMenu.PerformLayout();
             this.groupBoxActividades.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).EndInit();
+            this.toolStripAccesosDirectos.ResumeLayout(false);
+            this.toolStripAccesosDirectos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,11 +408,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem libreriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verLibreriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirLibreríaToolStripMenuItem;
@@ -383,23 +422,27 @@
         private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButtonLibrerias;
-        private System.Windows.Forms.ToolStripButton toolStripButtonActividades;
-        private System.Windows.Forms.ToolStripButton toolStripButtonUsuarios;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButtonEstadisticas;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.GroupBox groupBoxActividades;
-        private System.Windows.Forms.ListBox listBoxActividades;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.DataGridView dataGridViewActividades;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
+        private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
+        private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
     }
 }

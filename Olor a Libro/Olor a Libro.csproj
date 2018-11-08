@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividad.cs" />
+    <Compile Include="FormActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividad.Designer.cs">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActividadesLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividadesLibreria.Designer.cs">
+      <DependentUpon>FormActividadesLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstadisticas.Designer.cs">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibreria.Designer.cs">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibros.Designer.cs">
+      <DependentUpon>FormLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaActividades.Designer.cs">
+      <DependentUpon>FormListaActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaLibrerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaLibrerias.Designer.cs">
+      <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPuntuacionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPuntuacionAdmin.Designer.cs">
+      <DependentUpon>FormPuntuacionAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +111,13 @@
     <Compile Include="FormVerUsuario.Designer.cs">
       <DependentUpon>FormVerUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libreria.cs" />
+    <Compile Include="Libro.cs" />
+    <Compile Include="MetodosMenu.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Opinion.cs" />
     <Compile Include="SplashInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +132,33 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Utilitats.cs" />
+    <Compile Include="Visita.cs" />
+    <EmbeddedResource Include="FormActividad.resx">
+      <DependentUpon>FormActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActividadesLibreria.resx">
+      <DependentUpon>FormActividadesLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEstadisticas.resx">
+      <DependentUpon>FormEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibreria.resx">
+      <DependentUpon>FormLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibros.resx">
+      <DependentUpon>FormLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaActividades.resx">
+      <DependentUpon>FormListaActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaLibrerias.resx">
+      <DependentUpon>FormListaLibrerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPuntuacionAdmin.resx">
+      <DependentUpon>FormPuntuacionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +181,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Olor a Libro.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.config" />
+    <None Include="bin\Debug\Olor a Libro.vshost.exe.manifest" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,6 +242,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título-2 copia %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
