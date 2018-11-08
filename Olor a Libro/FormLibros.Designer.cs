@@ -520,7 +520,7 @@
             this.Controls.Add(this.menuStripMainMenu);
             this.Controls.Add(this.groupBoxLibros);
             this.Name = "FormLibros";
-            this.Text = "FormLibros";
+            this.Text = "Olor a Libro: Libros";
             this.groupBoxLibros.ResumeLayout(false);
             this.groupBoxLibros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).EndInit();

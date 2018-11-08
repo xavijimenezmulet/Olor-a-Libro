@@ -397,7 +397,7 @@
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
             this.Name = "FormActividadesLibreria";
-            this.Text = "FormActividadesLibreria";
+            this.Text = "Olor a Libro: Actividades de la libreria";
             this.toolStripAccesosDirectos.ResumeLayout(false);
             this.toolStripAccesosDirectos.PerformLayout();
             this.menuStripMainMenu.ResumeLayout(false);

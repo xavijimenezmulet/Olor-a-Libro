@@ -50,6 +50,11 @@ namespace Olor_a_Libro
             FormUsuarios fUsuarios = new FormUsuarios();
             fUsuarios.ShowDialog();
         }
+        public static void AnyadirUsuarios()
+        {
+            FormVerUsuario fUsuarios = new FormVerUsuario();
+            fUsuarios.ShowDialog();
+        }
 
         public static void Estadisticas()
         {
