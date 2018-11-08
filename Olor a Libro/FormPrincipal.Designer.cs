@@ -172,6 +172,7 @@
             this.anyadirActividadToolStripMenuItem.Name = "anyadirActividadToolStripMenuItem";
             this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.anyadirActividadToolStripMenuItem.Text = "Añadir Actividad";
+            this.anyadirActividadToolStripMenuItem.Click += new System.EventHandler(this.anyadirActividadToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 

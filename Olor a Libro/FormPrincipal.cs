@@ -21,16 +21,6 @@ namespace Olor_a_Libro
             InitializeComponent();
         }
 
-        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
-        }
-       
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -148,32 +138,64 @@ namespace Olor_a_Libro
         }
         private void verLibreriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.VerLibrerias();
+            this.Close();
         }
         private void añadirLibreríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.AnyadirLibreria();
+            this.Close();
         }
         private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.VerActividades();
+            this.Close();
         }
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.verUsuarios();
+            this.Close();
         }
         private void añadirUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.AnyadirUsuarios();
+            this.Close();
         }
         private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.Estadisticas();
+            this.Close();
         }
 
         private void puntuaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MetodosMenu.PuntosAdmin();
+            this.Close();
         }
+
+        private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MetodosMenu.AnyadirAct();
+            this.Close();
+        }
+        //GUARDAR TODO
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilitats.guardarJsonlibs();
+            Utilitats.guardarJsonbooks();
+            Utilitats.guardarJsonusers();
+            Utilitats.guardarJsonop();
+            Utilitats.guardarJsonact();
+            Utilitats.guardarJsonviews();
+        }
+       
     }
 }

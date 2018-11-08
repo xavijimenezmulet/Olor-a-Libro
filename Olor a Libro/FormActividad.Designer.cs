@@ -28,33 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anyadirActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonUsuarios = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
             this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
             this.labelTipoAct = new System.Windows.Forms.Label();
@@ -74,242 +47,38 @@
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStripMainMenu.SuspendLayout();
-            this.toolStripAccesosDirectos.SuspendLayout();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.libreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirLibreríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anyadirActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
+            this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonLibrerias = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonActividades = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStripMainMenu.SuspendLayout();
+            this.toolStripAccesosDirectos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStripMainMenu
-            // 
-            this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.libreríasToolStripMenuItem,
-            this.actividadesToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.estadísticasToolStripMenuItem,
-            this.puntuaciónToolStripMenuItem});
-            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStripMainMenu.Size = new System.Drawing.Size(648, 24);
-            this.menuStripMainMenu.TabIndex = 0;
-            this.menuStripMainMenu.Text = "Menu Principal";
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.guardarToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.salirToolStripMenuItem});
-            this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // libreríasToolStripMenuItem
-            // 
-            this.libreríasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verLibreríasToolStripMenuItem,
-            this.añadirLibreríasToolStripMenuItem});
-            this.libreríasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.libreríasToolStripMenuItem.Name = "libreríasToolStripMenuItem";
-            this.libreríasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.libreríasToolStripMenuItem.Text = "Librerías";
-            // 
-            // verLibreríasToolStripMenuItem
-            // 
-            this.verLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
-            this.verLibreríasToolStripMenuItem.Name = "verLibreríasToolStripMenuItem";
-            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.verLibreríasToolStripMenuItem.Text = "Ver Librerías";
-            // 
-            // añadirLibreríasToolStripMenuItem
-            // 
-            this.añadirLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
-            this.añadirLibreríasToolStripMenuItem.Name = "añadirLibreríasToolStripMenuItem";
-            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.añadirLibreríasToolStripMenuItem.Text = "Añadir Librerías";
-            // 
-            // actividadesToolStripMenuItem
-            // 
-            this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verActividadesToolStripMenuItem,
-            this.anyadirActividadesToolStripMenuItem});
-            this.actividadesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.actividadesToolStripMenuItem.Text = "Actividades";
-            // 
-            // verActividadesToolStripMenuItem
-            // 
-            this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
-            this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
-            this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
-            // 
-            // anyadirActividadesToolStripMenuItem
-            // 
-            this.anyadirActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
-            this.anyadirActividadesToolStripMenuItem.Name = "anyadirActividadesToolStripMenuItem";
-            this.anyadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
-            this.anyadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verUsuariosToolStripMenuItem,
-            this.añadirUsuariosToolStripMenuItem});
-            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            // 
-            // verUsuariosToolStripMenuItem
-            // 
-            this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
-            this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.verUsuariosToolStripMenuItem.Text = "Ver Usuarios";
-            // 
-            // añadirUsuariosToolStripMenuItem
-            // 
-            this.añadirUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
-            this.añadirUsuariosToolStripMenuItem.Name = "añadirUsuariosToolStripMenuItem";
-            this.añadirUsuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.añadirUsuariosToolStripMenuItem.Text = "Añadir Usuarios";
-            // 
-            // estadísticasToolStripMenuItem
-            // 
-            this.estadísticasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
-            this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.estadísticasToolStripMenuItem.Text = "Estadísticas";
-            // 
-            // puntuaciónToolStripMenuItem
-            // 
-            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
-            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
-            // 
-            // toolStripAccesosDirectos
-            // 
-            this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonInicio,
-            this.toolStripSeparator2,
-            this.toolStripButtonLibrerias,
-            this.toolStripButtonActividades,
-            this.toolStripButtonUsuarios,
-            this.toolStripSeparator3,
-            this.toolStripButtonEstadisticas,
-            this.toolStripSeparator4,
-            this.toolStripButtonSalir});
-            this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
-            this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
-            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(648, 27);
-            this.toolStripAccesosDirectos.TabIndex = 1;
-            this.toolStripAccesosDirectos.Text = "Accesos Directos";
-            // 
-            // toolStripButtonInicio
-            // 
-            this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonInicio.Name = "toolStripButtonInicio";
-            this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonInicio.Text = "Inicio";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButtonLibrerias
-            // 
-            this.toolStripButtonLibrerias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
-            this.toolStripButtonLibrerias.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonLibrerias.Name = "toolStripButtonLibrerias";
-            this.toolStripButtonLibrerias.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonLibrerias.Text = "Ver Librerias";
-            // 
-            // toolStripButtonActividades
-            // 
-            this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
-            this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonActividades.Name = "toolStripButtonActividades";
-            this.toolStripButtonActividades.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonActividades.Text = "Ver Actividades";
-            // 
-            // toolStripButtonUsuarios
-            // 
-            this.toolStripButtonUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
-            this.toolStripButtonUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonUsuarios.Name = "toolStripButtonUsuarios";
-            this.toolStripButtonUsuarios.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonUsuarios.Text = "Ver Usuarios";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButtonEstadisticas
-            // 
-            this.toolStripButtonEstadisticas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
-            this.toolStripButtonEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonEstadisticas.Name = "toolStripButtonEstadisticas";
-            this.toolStripButtonEstadisticas.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonEstadisticas.Text = "Ver Estadisticas";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButtonSalir
-            // 
-            this.toolStripButtonSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
-            this.toolStripButtonSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSalir.Name = "toolStripButtonSalir";
-            this.toolStripButtonSalir.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButtonSalir.Text = "Salir";
             // 
             // groupBoxDatosAct
             // 
@@ -505,6 +274,253 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.guardarToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // libreríasToolStripMenuItem
+            // 
+            this.libreríasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verLibreríasToolStripMenuItem,
+            this.añadirLibreríasToolStripMenuItem});
+            this.libreríasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.libreríasToolStripMenuItem.Name = "libreríasToolStripMenuItem";
+            this.libreríasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.libreríasToolStripMenuItem.Text = "Librerías";
+            // 
+            // verLibreríasToolStripMenuItem
+            // 
+            this.verLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
+            this.verLibreríasToolStripMenuItem.Name = "verLibreríasToolStripMenuItem";
+            this.verLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.verLibreríasToolStripMenuItem.Text = "Ver Librerías";
+            this.verLibreríasToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
+            // 
+            // añadirLibreríasToolStripMenuItem
+            // 
+            this.añadirLibreríasToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+            this.añadirLibreríasToolStripMenuItem.Name = "añadirLibreríasToolStripMenuItem";
+            this.añadirLibreríasToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.añadirLibreríasToolStripMenuItem.Text = "Añadir Librerías";
+            this.añadirLibreríasToolStripMenuItem.Click += new System.EventHandler(this.añadirLibreríaToolStripMenuItem_Click);
+            // 
+            // actividadesToolStripMenuItem
+            // 
+            this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verActividadesToolStripMenuItem,
+            this.anyadirActividadesToolStripMenuItem});
+            this.actividadesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.actividadesToolStripMenuItem.Text = "Actividades";
+            // 
+            // verActividadesToolStripMenuItem
+            // 
+            this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
+            this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
+            this.verActividadesToolStripMenuItem.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
+            // 
+            // anyadirActividadesToolStripMenuItem
+            // 
+            this.anyadirActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+            this.anyadirActividadesToolStripMenuItem.Name = "anyadirActividadesToolStripMenuItem";
+            this.anyadirActividadesToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.anyadirActividadesToolStripMenuItem.Text = "Añadir Actividades";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verUsuariosToolStripMenuItem,
+            this.añadirUsuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // verUsuariosToolStripMenuItem
+            // 
+            this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+            this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
+            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.verUsuariosToolStripMenuItem.Text = "Ver Usuarios";
+            this.verUsuariosToolStripMenuItem.Click += new System.EventHandler(this.verUsuariosToolStripMenuItem_Click);
+            // 
+            // añadirUsuariosToolStripMenuItem
+            // 
+            this.añadirUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
+            this.añadirUsuariosToolStripMenuItem.Name = "añadirUsuariosToolStripMenuItem";
+            this.añadirUsuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.añadirUsuariosToolStripMenuItem.Text = "Añadir Usuarios";
+            this.añadirUsuariosToolStripMenuItem.Click += new System.EventHandler(this.añadirUsuarioToolStripMenuItem_Click);
+            // 
+            // estadísticasToolStripMenuItem
+            // 
+            this.estadísticasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
+            this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.estadísticasToolStripMenuItem.Text = "Estadísticas";
+            this.estadísticasToolStripMenuItem.Click += new System.EventHandler(this.estadísticasToolStripMenuItem_Click);
+            // 
+            // puntuaciónToolStripMenuItem
+            // 
+            this.puntuaciónToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.puntuaciónToolStripMenuItem.Name = "puntuaciónToolStripMenuItem";
+            this.puntuaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.puntuaciónToolStripMenuItem.Text = "Puntuación";
+            this.puntuaciónToolStripMenuItem.Click += new System.EventHandler(this.puntuaciónToolStripMenuItem_Click);
+            // 
+            // menuStripMainMenu
+            // 
+            this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.libreríasToolStripMenuItem,
+            this.actividadesToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.estadísticasToolStripMenuItem,
+            this.puntuaciónToolStripMenuItem});
+            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainMenu.Name = "menuStripMainMenu";
+            this.menuStripMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(648, 24);
+            this.menuStripMainMenu.TabIndex = 0;
+            this.menuStripMainMenu.Text = "Menu Principal";
+            // 
+            // toolStripButtonInicio
+            // 
+            this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonInicio.Name = "toolStripButtonInicio";
+            this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonInicio.Text = "Inicio";
+            this.toolStripButtonInicio.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButtonLibrerias
+            // 
+            this.toolStripButtonLibrerias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
+            this.toolStripButtonLibrerias.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLibrerias.Name = "toolStripButtonLibrerias";
+            this.toolStripButtonLibrerias.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonLibrerias.Text = "Ver Librerias";
+            this.toolStripButtonLibrerias.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
+            // 
+            // toolStripButtonActividades
+            // 
+            this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
+            this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonActividades.Name = "toolStripButtonActividades";
+            this.toolStripButtonActividades.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonActividades.Text = "Ver Actividades";
+            this.toolStripButtonActividades.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
+            // 
+            // toolStripButtonUsuarios
+            // 
+            this.toolStripButtonUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+            this.toolStripButtonUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUsuarios.Name = "toolStripButtonUsuarios";
+            this.toolStripButtonUsuarios.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonUsuarios.Text = "Ver Usuarios";
+            this.toolStripButtonUsuarios.Click += new System.EventHandler(this.verUsuariosToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButtonEstadisticas
+            // 
+            this.toolStripButtonEstadisticas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
+            this.toolStripButtonEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonEstadisticas.Name = "toolStripButtonEstadisticas";
+            this.toolStripButtonEstadisticas.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonEstadisticas.Text = "Ver Estadisticas";
+            this.toolStripButtonEstadisticas.Click += new System.EventHandler(this.estadísticasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButtonSalir
+            // 
+            this.toolStripButtonSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+            this.toolStripButtonSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSalir.Name = "toolStripButtonSalir";
+            this.toolStripButtonSalir.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButtonSalir.Text = "Salir";
+            this.toolStripButtonSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // toolStripAccesosDirectos
+            // 
+            this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonInicio,
+            this.toolStripSeparator2,
+            this.toolStripButtonLibrerias,
+            this.toolStripButtonActividades,
+            this.toolStripButtonUsuarios,
+            this.toolStripSeparator3,
+            this.toolStripButtonEstadisticas,
+            this.toolStripSeparator4,
+            this.toolStripButtonSalir});
+            this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
+            this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(648, 27);
+            this.toolStripAccesosDirectos.TabIndex = 1;
+            this.toolStripAccesosDirectos.Text = "Accesos Directos";
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,45 +537,19 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormActividad";
             this.Text = "Olor a Libro: Actividad";
+            this.groupBoxDatosAct.ResumeLayout(false);
+            this.groupBoxDatosAct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
             this.toolStripAccesosDirectos.ResumeLayout(false);
             this.toolStripAccesosDirectos.PerformLayout();
-            this.groupBoxDatosAct.ResumeLayout(false);
-            this.groupBoxDatosAct.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStripMainMenu;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libreríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verLibreríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem añadirLibreríasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verActividadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anyadirActividadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem añadirUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
-        private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButtonLibrerias;
-        private System.Windows.Forms.ToolStripButton toolStripButtonActividades;
-        private System.Windows.Forms.ToolStripButton toolStripButtonUsuarios;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButtonEstadisticas;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxDatosAct;
         private System.Windows.Forms.TextBox textBoxDescripcionAct;
@@ -575,11 +565,36 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonBorrar;
-        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxHoraAct;
         private System.Windows.Forms.Label labelHoraAct;
         private System.Windows.Forms.ComboBox comboBoxTipoAct;
         private System.Windows.Forms.Label labelTipoAct;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem libreríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verLibreríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirLibreríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verActividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anyadirActividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadísticasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStripMainMenu;
+        private System.Windows.Forms.ToolStripButton toolStripButtonInicio;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonLibrerias;
+        private System.Windows.Forms.ToolStripButton toolStripButtonActividades;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUsuarios;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButtonEstadisticas;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
+        private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
     }
 }
