@@ -12,6 +12,7 @@ namespace Olor_a_Libro
 {
     public partial class FormLibreria : Form
     {
+        List<Libreria> librerias;
         public FormLibreria()
         {
             InitializeComponent();
@@ -93,7 +94,71 @@ namespace Olor_a_Libro
 
         private void FormLibreria_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;    
+        }
+
+        private static Boolean repetido(Libreria lib)
+        {
+            Boolean encontrado = false;
+
+           
+
+            return encontrado;   
+        }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            String nombre = textBoxNombreLib.Text;
+            String direccion = textBoxDirccionLib.Text;
+            String telefono = textBoxTelefonoLib.Text;
+            String contacto = textBoxContactoLib.Text;
+            String dirWeb = textBoxDirecWebLib.Text;
+
+            if (nombre != "" && direccion != "" && telefono != "" && contacto != "" && dirWeb != "")
+            {
+                Libreria lib = new Libreria();
+
+                lib.nombre = nombre;
+                lib.direccion = direccion;
+                lib.contacto = int.Parse(contacto);
+
+                Boolean encontrado = repetido(lib);
+
+                if (encontrado)
+                {
+                    librerias.Add(lib);
+                    MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+                else
+                {
+                    MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+                }
+            }
+            else
+            {
+                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (nombre == "")
+                {
+                    this.Focus();
+                }
+                else if (direccion == "")
+                {
+                    this.Focus();
+                }
+                else if (telefono == "")
+                {
+                    this.Focus();
+                }
+                else if (contacto == "")
+                {
+                    this.Focus();
+                }
+                else
+                {
+                    this.Focus();
+                }
+            }
+
         }
     }
 }

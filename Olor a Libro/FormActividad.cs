@@ -190,6 +190,10 @@ namespace Olor_a_Libro
                     //act.IDlibrerias.Add(item)
                 }
             }
+            else
+            {
+                
+            }
 
             
         }
