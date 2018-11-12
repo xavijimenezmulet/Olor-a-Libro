@@ -74,6 +74,7 @@
             this.dataGridViewLibrerias.Location = new System.Drawing.Point(17, 30);
             this.dataGridViewLibrerias.Name = "dataGridViewLibrerias";
             this.dataGridViewLibrerias.ReadOnly = true;
+            this.dataGridViewLibrerias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLibrerias.Size = new System.Drawing.Size(537, 282);
             this.dataGridViewLibrerias.TabIndex = 3;
             // 
