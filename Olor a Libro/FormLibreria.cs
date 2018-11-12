@@ -12,9 +12,16 @@ namespace Olor_a_Libro
 {
     public partial class FormLibreria : Form
     {
+        Libreria lib1;
         public FormLibreria()
         {
             InitializeComponent();
+        }
+        
+        public FormLibreria(Libreria lib1)
+        {
+            InitializeComponent();
+            this.lib1 = lib1;
         }
 
         //ACCESO A LOS FORMULARIOS
@@ -95,5 +102,37 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+        //AÑADIR / EDITAR LIBRERIA
+        /*
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            if (lib1 == null)
+            {
+                Libreria l = new Libreria();
+                l.nombre = textBoxNombre.Text;
+                p.director = textBoxDirector.Text;
+                p.any = int.Parse(textBoxAnyo.Text);
+                p.tema = new List<string>();
+
+                foreach (string item in listBoxTemas.SelectedItems)
+                {
+                    p.tema.Add(item);
+                }
+
+                if (pelis.Contains(p))
+                {
+                    MessageBox.Show("La pelicula ja existeix", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    pelis.Add(p);
+                }
+            }
+            else
+            {
+
+            }
+            this.Close();
+        }*/
     }
 }

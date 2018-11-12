@@ -55,16 +55,16 @@
             this.toolStripButtonestadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxContacto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxWeb = new System.Windows.Forms.TextBox();
             this.groupBoxLlibreria = new System.Windows.Forms.GroupBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
@@ -324,13 +324,13 @@
             this.toolStripButtonSalir.Text = "Salir";
             this.toolStripButtonSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 21);
-            this.textBox1.TabIndex = 5;
+            this.textBoxNombre.Location = new System.Drawing.Point(149, 29);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(289, 21);
+            this.textBoxNombre.TabIndex = 5;
             // 
             // label1
             // 
@@ -352,13 +352,13 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Dirección";
             // 
-            // textBox2
+            // textBoxDireccion
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 21);
-            this.textBox2.TabIndex = 7;
+            this.textBoxDireccion.Location = new System.Drawing.Point(149, 55);
+            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(289, 21);
+            this.textBoxDireccion.TabIndex = 7;
             // 
             // label3
             // 
@@ -370,13 +370,13 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Contacto";
             // 
-            // textBox3
+            // textBoxContacto
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 82);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(289, 21);
-            this.textBox3.TabIndex = 9;
+            this.textBoxContacto.Location = new System.Drawing.Point(149, 82);
+            this.textBoxContacto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxContacto.Name = "textBoxContacto";
+            this.textBoxContacto.Size = new System.Drawing.Size(289, 21);
+            this.textBoxContacto.TabIndex = 9;
             // 
             // label4
             // 
@@ -388,13 +388,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Teléfono";
             // 
-            // textBox4
+            // textBoxTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(149, 107);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 21);
-            this.textBox4.TabIndex = 11;
+            this.textBoxTelefono.Location = new System.Drawing.Point(149, 107);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(289, 21);
+            this.textBoxTelefono.TabIndex = 11;
             // 
             // label5
             // 
@@ -406,24 +406,24 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Dirección web";
             // 
-            // textBox5
+            // textBoxWeb
             // 
-            this.textBox5.Location = new System.Drawing.Point(149, 134);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 21);
-            this.textBox5.TabIndex = 13;
+            this.textBoxWeb.Location = new System.Drawing.Point(149, 134);
+            this.textBoxWeb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxWeb.Name = "textBoxWeb";
+            this.textBoxWeb.Size = new System.Drawing.Size(289, 21);
+            this.textBoxWeb.TabIndex = 13;
             // 
             // groupBoxLlibreria
             // 
-            this.groupBoxLlibreria.Controls.Add(this.textBox3);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxContacto);
             this.groupBoxLlibreria.Controls.Add(this.label5);
-            this.groupBoxLlibreria.Controls.Add(this.textBox1);
-            this.groupBoxLlibreria.Controls.Add(this.textBox5);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxNombre);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxWeb);
             this.groupBoxLlibreria.Controls.Add(this.label1);
             this.groupBoxLlibreria.Controls.Add(this.label4);
-            this.groupBoxLlibreria.Controls.Add(this.textBox2);
-            this.groupBoxLlibreria.Controls.Add(this.textBox4);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxDireccion);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxTelefono);
             this.groupBoxLlibreria.Controls.Add(this.label2);
             this.groupBoxLlibreria.Controls.Add(this.label3);
             this.groupBoxLlibreria.Location = new System.Drawing.Point(199, 81);
@@ -549,16 +549,16 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDireccion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxContacto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxWeb;
         private System.Windows.Forms.GroupBox groupBoxLlibreria;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonBorrar;

@@ -12,10 +12,15 @@ namespace Olor_a_Libro
 {
     public partial class FormActividad : Form
     {
+        Actividad act1;
         public FormActividad()
         {
             InitializeComponent();
-
+        }
+        public FormActividad(Actividad act1)
+        {
+            InitializeComponent();
+            this.act1 = act1;
         }
         //ACCESO A LOS FORMULARIOS
 
