@@ -55,16 +55,16 @@
             this.toolStripButtonestadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNombreLib = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDirccionLib = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCorreoLib = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonoLib = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxDirecWebLib = new System.Windows.Forms.TextBox();
             this.groupBoxLlibreria = new System.Windows.Forms.GroupBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
@@ -324,13 +324,13 @@
             this.toolStripButtonSalir.Text = "Salir";
             this.toolStripButtonSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // textBox1
+            // textBoxNombreLib
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 21);
-            this.textBox1.TabIndex = 5;
+            this.textBoxNombreLib.Location = new System.Drawing.Point(149, 29);
+            this.textBoxNombreLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNombreLib.Name = "textBoxNombreLib";
+            this.textBoxNombreLib.Size = new System.Drawing.Size(289, 21);
+            this.textBoxNombreLib.TabIndex = 5;
             // 
             // label1
             // 
@@ -352,31 +352,32 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Dirección";
             // 
-            // textBox2
+            // textBoxDirccionLib
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 21);
-            this.textBox2.TabIndex = 7;
+            this.textBoxDirccionLib.Location = new System.Drawing.Point(149, 55);
+            this.textBoxDirccionLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxDirccionLib.Name = "textBoxDirccionLib";
+            this.textBoxDirccionLib.Size = new System.Drawing.Size(289, 21);
+            this.textBoxDirccionLib.TabIndex = 7;
             // 
             // label3
             // 
+            this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Contacto";
+            this.label3.Text = "Correo";
             // 
-            // textBox3
+            // textBoxCorreoLib
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 82);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(289, 21);
-            this.textBox3.TabIndex = 9;
+            this.textBoxCorreoLib.Location = new System.Drawing.Point(149, 82);
+            this.textBoxCorreoLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCorreoLib.Name = "textBoxCorreoLib";
+            this.textBoxCorreoLib.Size = new System.Drawing.Size(289, 21);
+            this.textBoxCorreoLib.TabIndex = 9;
             // 
             // label4
             // 
@@ -388,13 +389,13 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Teléfono";
             // 
-            // textBox4
+            // textBoxTelefonoLib
             // 
-            this.textBox4.Location = new System.Drawing.Point(149, 107);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 21);
-            this.textBox4.TabIndex = 11;
+            this.textBoxTelefonoLib.Location = new System.Drawing.Point(149, 107);
+            this.textBoxTelefonoLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTelefonoLib.Name = "textBoxTelefonoLib";
+            this.textBoxTelefonoLib.Size = new System.Drawing.Size(289, 21);
+            this.textBoxTelefonoLib.TabIndex = 11;
             // 
             // label5
             // 
@@ -406,24 +407,24 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Dirección web";
             // 
-            // textBox5
+            // textBoxDirecWebLib
             // 
-            this.textBox5.Location = new System.Drawing.Point(149, 134);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 21);
-            this.textBox5.TabIndex = 13;
+            this.textBoxDirecWebLib.Location = new System.Drawing.Point(149, 134);
+            this.textBoxDirecWebLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxDirecWebLib.Name = "textBoxDirecWebLib";
+            this.textBoxDirecWebLib.Size = new System.Drawing.Size(289, 21);
+            this.textBoxDirecWebLib.TabIndex = 13;
             // 
             // groupBoxLlibreria
             // 
-            this.groupBoxLlibreria.Controls.Add(this.textBox3);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxCorreoLib);
             this.groupBoxLlibreria.Controls.Add(this.label5);
-            this.groupBoxLlibreria.Controls.Add(this.textBox1);
-            this.groupBoxLlibreria.Controls.Add(this.textBox5);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxNombreLib);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxDirecWebLib);
             this.groupBoxLlibreria.Controls.Add(this.label1);
             this.groupBoxLlibreria.Controls.Add(this.label4);
-            this.groupBoxLlibreria.Controls.Add(this.textBox2);
-            this.groupBoxLlibreria.Controls.Add(this.textBox4);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxDirccionLib);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxTelefonoLib);
             this.groupBoxLlibreria.Controls.Add(this.label2);
             this.groupBoxLlibreria.Controls.Add(this.label3);
             this.groupBoxLlibreria.Location = new System.Drawing.Point(199, 81);
@@ -445,6 +446,7 @@
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseCompatibleTextRendering = true;
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonBorrar
             // 
@@ -549,16 +551,16 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNombreLib;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDirccionLib;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCorreoLib;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTelefonoLib;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxDirecWebLib;
         private System.Windows.Forms.GroupBox groupBoxLlibreria;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonBorrar;

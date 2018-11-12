@@ -12,9 +12,10 @@ namespace Olor_a_Libro
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string lugar { get; set; }
-        public string fecha { get; set; }
-        public string hora { get; set; }
-        public List<Libreria> librerias { get; set; }
+        public string fecha { get; set; } //DataTime
+        public string hora { get; set; } //DataTime
+        //public List<Libreria> librerias { get; set; }
+        public List<int> IDlibrerias { get; set; }
         public List<Opinion> opiniones { get; set; }
 
         public bool Equals(Actividad a)

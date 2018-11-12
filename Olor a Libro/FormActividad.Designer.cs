@@ -34,7 +34,6 @@
             this.textBoxHoraAct = new System.Windows.Forms.TextBox();
             this.labelHoraAct = new System.Windows.Forms.Label();
             this.textBoxDescripcionAct = new System.Windows.Forms.TextBox();
-            this.comboBoxLibreria = new System.Windows.Forms.ComboBox();
             this.labelDescripcionAct = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelLibreria = new System.Windows.Forms.Label();
@@ -74,6 +73,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
+            this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMainMenu.SuspendLayout();
@@ -82,12 +82,12 @@
             // 
             // groupBoxDatosAct
             // 
+            this.groupBoxDatosAct.Controls.Add(this.listBoxLibreriasAct);
             this.groupBoxDatosAct.Controls.Add(this.comboBoxTipoAct);
             this.groupBoxDatosAct.Controls.Add(this.labelTipoAct);
             this.groupBoxDatosAct.Controls.Add(this.textBoxHoraAct);
             this.groupBoxDatosAct.Controls.Add(this.labelHoraAct);
             this.groupBoxDatosAct.Controls.Add(this.textBoxDescripcionAct);
-            this.groupBoxDatosAct.Controls.Add(this.comboBoxLibreria);
             this.groupBoxDatosAct.Controls.Add(this.labelDescripcionAct);
             this.groupBoxDatosAct.Controls.Add(this.textBox1);
             this.groupBoxDatosAct.Controls.Add(this.labelLibreria);
@@ -97,21 +97,21 @@
             this.groupBoxDatosAct.Controls.Add(this.label2);
             this.groupBoxDatosAct.Controls.Add(this.textBoxNomAct);
             this.groupBoxDatosAct.Controls.Add(this.label1);
-            this.groupBoxDatosAct.Location = new System.Drawing.Point(176, 67);
+            this.groupBoxDatosAct.Location = new System.Drawing.Point(191, 69);
             this.groupBoxDatosAct.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDatosAct.Name = "groupBoxDatosAct";
             this.groupBoxDatosAct.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 263);
+            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 300);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
             // 
             // comboBoxTipoAct
             // 
             this.comboBoxTipoAct.FormattingEnabled = true;
-            this.comboBoxTipoAct.Location = new System.Drawing.Point(81, 91);
+            this.comboBoxTipoAct.Location = new System.Drawing.Point(103, 91);
             this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTipoAct.Name = "comboBoxTipoAct";
-            this.comboBoxTipoAct.Size = new System.Drawing.Size(340, 21);
+            this.comboBoxTipoAct.Size = new System.Drawing.Size(318, 21);
             this.comboBoxTipoAct.TabIndex = 14;
             // 
             // labelTipoAct
@@ -126,10 +126,10 @@
             // 
             // textBoxHoraAct
             // 
-            this.textBoxHoraAct.Location = new System.Drawing.Point(77, 158);
+            this.textBoxHoraAct.Location = new System.Drawing.Point(103, 158);
             this.textBoxHoraAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHoraAct.Name = "textBoxHoraAct";
-            this.textBoxHoraAct.Size = new System.Drawing.Size(344, 20);
+            this.textBoxHoraAct.Size = new System.Drawing.Size(318, 20);
             this.textBoxHoraAct.TabIndex = 12;
             // 
             // labelHoraAct
@@ -144,25 +144,16 @@
             // 
             // textBoxDescripcionAct
             // 
-            this.textBoxDescripcionAct.Location = new System.Drawing.Point(77, 221);
+            this.textBoxDescripcionAct.Location = new System.Drawing.Point(103, 193);
             this.textBoxDescripcionAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDescripcionAct.Name = "textBoxDescripcionAct";
-            this.textBoxDescripcionAct.Size = new System.Drawing.Size(344, 20);
+            this.textBoxDescripcionAct.Size = new System.Drawing.Size(318, 20);
             this.textBoxDescripcionAct.TabIndex = 10;
-            // 
-            // comboBoxLibreria
-            // 
-            this.comboBoxLibreria.FormattingEnabled = true;
-            this.comboBoxLibreria.Location = new System.Drawing.Point(77, 188);
-            this.comboBoxLibreria.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxLibreria.Name = "comboBoxLibreria";
-            this.comboBoxLibreria.Size = new System.Drawing.Size(344, 21);
-            this.comboBoxLibreria.TabIndex = 9;
             // 
             // labelDescripcionAct
             // 
             this.labelDescripcionAct.AutoSize = true;
-            this.labelDescripcionAct.Location = new System.Drawing.Point(5, 221);
+            this.labelDescripcionAct.Location = new System.Drawing.Point(5, 193);
             this.labelDescripcionAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescripcionAct.Name = "labelDescripcionAct";
             this.labelDescripcionAct.Size = new System.Drawing.Size(66, 13);
@@ -180,7 +171,7 @@
             // labelLibreria
             // 
             this.labelLibreria.AutoSize = true;
-            this.labelLibreria.Location = new System.Drawing.Point(5, 191);
+            this.labelLibreria.Location = new System.Drawing.Point(5, 229);
             this.labelLibreria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLibreria.Name = "labelLibreria";
             this.labelLibreria.Size = new System.Drawing.Size(56, 13);
@@ -189,10 +180,10 @@
             // 
             // dateTimePickerDiaAct
             // 
-            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(61, 125);
+            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(103, 125);
             this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDiaAct.Name = "dateTimePickerDiaAct";
-            this.dateTimePickerDiaAct.Size = new System.Drawing.Size(360, 20);
+            this.dateTimePickerDiaAct.Size = new System.Drawing.Size(318, 20);
             this.dateTimePickerDiaAct.TabIndex = 5;
             // 
             // label3
@@ -207,10 +198,10 @@
             // 
             // textBoxLugarAct
             // 
-            this.textBoxLugarAct.Location = new System.Drawing.Point(61, 58);
+            this.textBoxLugarAct.Location = new System.Drawing.Point(103, 58);
             this.textBoxLugarAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLugarAct.Name = "textBoxLugarAct";
-            this.textBoxLugarAct.Size = new System.Drawing.Size(360, 20);
+            this.textBoxLugarAct.Size = new System.Drawing.Size(318, 20);
             this.textBoxLugarAct.TabIndex = 3;
             // 
             // label2
@@ -225,10 +216,10 @@
             // 
             // textBoxNomAct
             // 
-            this.textBoxNomAct.Location = new System.Drawing.Point(116, 26);
+            this.textBoxNomAct.Location = new System.Drawing.Point(103, 26);
             this.textBoxNomAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomAct.Name = "textBoxNomAct";
-            this.textBoxNomAct.Size = new System.Drawing.Size(305, 20);
+            this.textBoxNomAct.Size = new System.Drawing.Size(318, 20);
             this.textBoxNomAct.TabIndex = 1;
             // 
             // label1
@@ -244,18 +235,19 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(140, 349);
+            this.buttonAceptar.Location = new System.Drawing.Point(164, 383);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(80, 37);
             this.buttonAceptar.TabIndex = 4;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonBorrar
             // 
             this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(355, 349);
+            this.buttonBorrar.Location = new System.Drawing.Point(379, 383);
             this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(80, 37);
@@ -266,7 +258,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 87);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 160);
@@ -285,6 +277,8 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.DropDownClosed += new System.EventHandler(this.archivoToolStripMenuItem_DropDownClosed);
+            this.archivoToolStripMenuItem.DropDownOpened += new System.EventHandler(this.archivoToolStripMenuItem_DropDownOpened);
             // 
             // inicioToolStripMenuItem
             // 
@@ -324,6 +318,8 @@
             this.libreríasToolStripMenuItem.Name = "libreríasToolStripMenuItem";
             this.libreríasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.libreríasToolStripMenuItem.Text = "Librerías";
+            this.libreríasToolStripMenuItem.DropDownClosed += new System.EventHandler(this.libreríasToolStripMenuItem_DropDownClosed);
+            this.libreríasToolStripMenuItem.DropDownOpened += new System.EventHandler(this.libreríasToolStripMenuItem_DropDownOpened);
             // 
             // verLibreríasToolStripMenuItem
             // 
@@ -350,6 +346,8 @@
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.actividadesToolStripMenuItem.Text = "Actividades";
+            this.actividadesToolStripMenuItem.DropDownClosed += new System.EventHandler(this.actividadesToolStripMenuItem_DropDownClosed);
+            this.actividadesToolStripMenuItem.DropDownOpened += new System.EventHandler(this.actividadesToolStripMenuItem_DropDownOpened);
             // 
             // verActividadesToolStripMenuItem
             // 
@@ -375,6 +373,8 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.DropDownClosed += new System.EventHandler(this.usuariosToolStripMenuItem_DropDownClosed);
+            this.usuariosToolStripMenuItem.DropDownOpened += new System.EventHandler(this.usuariosToolStripMenuItem_DropDownOpened);
             // 
             // verUsuariosToolStripMenuItem
             // 
@@ -521,12 +521,20 @@
             this.toolStripAccesosDirectos.TabIndex = 1;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
+            // listBoxLibreriasAct
+            // 
+            this.listBoxLibreriasAct.FormattingEnabled = true;
+            this.listBoxLibreriasAct.Location = new System.Drawing.Point(103, 229);
+            this.listBoxLibreriasAct.Name = "listBoxLibreriasAct";
+            this.listBoxLibreriasAct.Size = new System.Drawing.Size(318, 56);
+            this.listBoxLibreriasAct.TabIndex = 15;
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(648, 421);
+            this.ClientSize = new System.Drawing.Size(648, 430);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.groupBoxDatosAct);
@@ -555,7 +563,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBoxDatosAct;
         private System.Windows.Forms.TextBox textBoxDescripcionAct;
-        private System.Windows.Forms.ComboBox comboBoxLibreria;
         private System.Windows.Forms.Label labelDescripcionAct;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelLibreria;
@@ -598,5 +605,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
+        private System.Windows.Forms.ListBox listBoxLibreriasAct;
     }
 }

@@ -11,7 +11,8 @@ namespace Olor_a_Libro
         public int id { get; set; }
         public string nombre { get; set; }
         public string direccion { get; set; }
-        public int contacto { get; set; }
+        public string Correo { get; set; }
+        public int telefono { get; set; }
         public List<Libro> libros { get; set; }
         public List<Actividad> actividades { get; set; }
 

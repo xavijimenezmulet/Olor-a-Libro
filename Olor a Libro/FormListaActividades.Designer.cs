@@ -245,6 +245,7 @@
             this.buttonEditar.TabIndex = 9;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonEliminar
             // 
@@ -255,6 +256,7 @@
             this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "Borrar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // dataGridViewActividades
             // 
@@ -314,6 +316,7 @@
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Añadir";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // toolStripAccesosDirectos
             // 

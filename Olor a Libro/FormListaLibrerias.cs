@@ -44,7 +44,8 @@ namespace Olor_a_Libro
             dataGridViewLibrerias.Columns[0].HeaderText = "ID";
             dataGridViewLibrerias.Columns[1].HeaderText = "Nombre";
             dataGridViewLibrerias.Columns[2].HeaderText = "Dirección";
-            dataGridViewLibrerias.Columns[3].HeaderText = "Contacto";
+            dataGridViewLibrerias.Columns[3].HeaderText = "Correo";
+            dataGridViewLibrerias.Columns[4].HeaderText = "Telefono";
             //dataGridViewLibrerias.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         
@@ -122,7 +123,39 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
         }
 
+        //ABRIR FORM PARA AÑADIR LIBRERIA
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirLibreria();
+        }
+        //ABRIR FORM PARA EDITAR LIBRERIA
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLibrerias.SelectedRows.Count > 0)
+            {
+                Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
+                FormLibreria fLibreria = new FormLibreria(l);
+                fLibreria.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
 
-
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLibrerias.SelectedRows.Count > 0)
+            {
+                Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
+                Utilitats.librerias.Remove(l);
+                dataGridViewLibrerias.DataSource = null;
+                dataGridViewLibrerias.DataSource = Utilitats.librerias;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

@@ -94,5 +94,39 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+        //ABRIR FORM PARA AÑADIR ACTIVIDAD
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirLibreria();
+        }
+        //ABRIR FORM PARA EDITAR ACTIVIDAD
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewActividades.SelectedRows.Count > 0)
+            {
+                Actividad a = (Actividad)dataGridViewActividades.SelectedRows[0].DataBoundItem;
+                FormActividad fActividad = new FormActividad(a);
+                fActividad.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una Actividad", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewActividades.SelectedRows.Count > 0)
+            {
+                Actividad a = (Actividad)dataGridViewActividades.SelectedRows[0].DataBoundItem;
+                Utilitats.actividades.Remove(a);
+                dataGridViewActividades.DataSource = null;
+                dataGridViewActividades.DataSource = Utilitats.actividades;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
