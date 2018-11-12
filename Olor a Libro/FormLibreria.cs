@@ -126,11 +126,12 @@ namespace Olor_a_Libro
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
             String dirWeb = textBoxDirecWebLib.Text;
-
+            
             if (lib == null)
             {
                 if (nombre != null && direccion != "" && telefono != "" && correo != "" && dirWeb != "")
                 {
+                    lib = new Libreria();
                     lib.nombre = nombre;
                     lib.direccion = direccion;
                     lib.Correo = correo;
@@ -177,8 +178,8 @@ namespace Olor_a_Libro
             {
 
             }
-            
 
+            this.Close();
             
 
         }

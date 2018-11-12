@@ -44,7 +44,8 @@ namespace Olor_a_Libro
             dataGridViewLibrerias.Columns[0].HeaderText = "ID";
             dataGridViewLibrerias.Columns[1].HeaderText = "Nombre";
             dataGridViewLibrerias.Columns[2].HeaderText = "Dirección";
-            dataGridViewLibrerias.Columns[3].HeaderText = "Contacto";
+            dataGridViewLibrerias.Columns[3].HeaderText = "Correo";
+            dataGridViewLibrerias.Columns[4].HeaderText = "Telefono";
             //dataGridViewLibrerias.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         
