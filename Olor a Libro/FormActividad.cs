@@ -16,10 +16,15 @@ namespace Olor_a_Libro
     {
         List<Actividad> actividad = new List<Actividad>();
         List<Libreria> lib;
+        Actividad act1;
         public FormActividad()
         {
             InitializeComponent();
-
+        }
+        public FormActividad(Actividad act1)
+        {
+            InitializeComponent();
+            this.act1 = act1;
         }
         //ACCESO A LOS FORMULARIOS
 
