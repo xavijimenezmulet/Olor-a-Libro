@@ -66,15 +66,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.groupBoxLlibreria = new System.Windows.Forms.GroupBox();
+            this.buttonBuscarImg = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonLibros = new System.Windows.Forms.Button();
             this.buttonActividades = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImgLib = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxImgLib = new System.Windows.Forms.TextBox();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxLlibreria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgLib)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -401,7 +404,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 33);
+            this.label5.Location = new System.Drawing.Point(28, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 14;
@@ -418,6 +421,9 @@
             // 
             // groupBoxLlibreria
             // 
+            this.groupBoxLlibreria.Controls.Add(this.label6);
+            this.groupBoxLlibreria.Controls.Add(this.buttonBuscarImg);
+            this.groupBoxLlibreria.Controls.Add(this.textBoxImgLib);
             this.groupBoxLlibreria.Controls.Add(this.textBoxCorreoLib);
             this.groupBoxLlibreria.Controls.Add(this.label5);
             this.groupBoxLlibreria.Controls.Add(this.textBoxNombreLib);
@@ -428,13 +434,23 @@
             this.groupBoxLlibreria.Controls.Add(this.textBoxTelefonoLib);
             this.groupBoxLlibreria.Controls.Add(this.label2);
             this.groupBoxLlibreria.Controls.Add(this.label3);
-            this.groupBoxLlibreria.Location = new System.Drawing.Point(199, 81);
+            this.groupBoxLlibreria.Location = new System.Drawing.Point(205, 81);
             this.groupBoxLlibreria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxLlibreria.Name = "groupBoxLlibreria";
             this.groupBoxLlibreria.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxLlibreria.Size = new System.Drawing.Size(445, 173);
+            this.groupBoxLlibreria.Size = new System.Drawing.Size(455, 198);
             this.groupBoxLlibreria.TabIndex = 15;
             this.groupBoxLlibreria.TabStop = false;
+            // 
+            // buttonBuscarImg
+            // 
+            this.buttonBuscarImg.Location = new System.Drawing.Point(413, 154);
+            this.buttonBuscarImg.Name = "buttonBuscarImg";
+            this.buttonBuscarImg.Size = new System.Drawing.Size(26, 23);
+            this.buttonBuscarImg.TabIndex = 23;
+            this.buttonBuscarImg.Text = "...";
+            this.buttonBuscarImg.UseVisualStyleBackColor = true;
+            this.buttonBuscarImg.Click += new System.EventHandler(this.buttonBuscarImg_Click);
             // 
             // buttonAceptar
             // 
@@ -464,7 +480,7 @@
             // buttonLibros
             // 
             this.buttonLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLibros.Location = new System.Drawing.Point(129, 286);
+            this.buttonLibros.Location = new System.Drawing.Point(162, 333);
             this.buttonLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLibros.Name = "buttonLibros";
             this.buttonLibros.Size = new System.Drawing.Size(119, 35);
@@ -475,7 +491,7 @@
             // buttonActividades
             // 
             this.buttonActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonActividades.Location = new System.Drawing.Point(465, 286);
+            this.buttonActividades.Location = new System.Drawing.Point(498, 333);
             this.buttonActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonActividades.Name = "buttonActividades";
             this.buttonActividades.Size = new System.Drawing.Size(119, 35);
@@ -483,16 +499,34 @@
             this.buttonActividades.Text = "Actividades";
             this.buttonActividades.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureBoxImgLib
             // 
-            this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 95);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImgLib.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.pictureBoxImgLib.Location = new System.Drawing.Point(25, 95);
+            this.pictureBoxImgLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxImgLib.Name = "pictureBoxImgLib";
+            this.pictureBoxImgLib.Size = new System.Drawing.Size(160, 160);
+            this.pictureBoxImgLib.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxImgLib.TabIndex = 4;
+            this.pictureBoxImgLib.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Imagen";
+            // 
+            // textBoxImgLib
+            // 
+            this.textBoxImgLib.Location = new System.Drawing.Point(150, 155);
+            this.textBoxImgLib.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxImgLib.Name = "textBoxImgLib";
+            this.textBoxImgLib.Size = new System.Drawing.Size(257, 21);
+            this.textBoxImgLib.TabIndex = 21;
             // 
             // FormLibreria
             // 
@@ -505,7 +539,7 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.groupBoxLlibreria);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxImgLib);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -513,7 +547,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Olor a Libro: Librería";
+            this.Text = "...";
             this.Load += new System.EventHandler(this.FormLibreria_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
@@ -521,7 +555,7 @@
             this.toolStripAccesosDirectos.PerformLayout();
             this.groupBoxLlibreria.ResumeLayout(false);
             this.groupBoxLlibreria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImgLib)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,7 +586,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonestadisticas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxImgLib;
         private System.Windows.Forms.TextBox textBoxNombreLib;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -571,5 +605,8 @@
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxImgLib;
+        private System.Windows.Forms.Button buttonBuscarImg;
     }
 }

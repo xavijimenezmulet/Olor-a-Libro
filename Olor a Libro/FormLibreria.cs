@@ -111,6 +111,8 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(lib.imagen);
+                textBoxImgLib.Text = lib.imagen;
             }
         }
 
@@ -133,7 +135,7 @@ namespace Olor_a_Libro
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
-
+            String img = textBoxImgLib.Text;
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
@@ -146,7 +148,9 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
+                    lib.imagen = img;
 
+                    
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -191,7 +195,7 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
-
+                    lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -228,6 +232,16 @@ namespace Olor_a_Libro
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonBuscarImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                textBoxImgLib.Text = openFileDialog.FileName;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(textBoxImgLib.Text);
+            }
         }
     }
 }
