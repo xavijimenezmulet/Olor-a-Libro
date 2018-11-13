@@ -14,17 +14,15 @@ namespace Olor_a_Libro
 {
     public partial class FormActividad : Form
     {
-        List<Actividad> actividad = new List<Actividad>();
-        List<Libreria> lib;
-        Actividad act1;
+        Actividad act;
         public FormActividad()
         {
             InitializeComponent();
         }
-        public FormActividad(Actividad act1)
+        public FormActividad(Actividad act)
         {
             InitializeComponent();
-            this.act1 = act1;
+            this.act = act;
         }
         //ACCESO A LOS FORMULARIOS
 
@@ -103,6 +101,12 @@ namespace Olor_a_Libro
         private void FormActividad_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            /*if (act != null)
+            {
+                textBoxID.Text = act.id.ToString();
+                textBoxNomAct.Text = act.nombre;
+
+            }*/
             omplirListBox();
         }
 

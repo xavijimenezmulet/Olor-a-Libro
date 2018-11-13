@@ -120,8 +120,8 @@ namespace Olor_a_Libro
             {
                 Actividad a = (Actividad)dataGridViewActividades.SelectedRows[0].DataBoundItem;
                 Utilitats.actividades.Remove(a);
-                dataGridViewActividades.DataSource = null;
                 dataGridViewActividades.DataSource = Utilitats.actividades;
+                dataGridViewActividades.Refresh();
             }
             else
             {
