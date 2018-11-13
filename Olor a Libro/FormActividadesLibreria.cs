@@ -12,28 +12,25 @@ namespace Olor_a_Libro
 {
     public partial class FormActividadesLibreria : Form
     {
-        List<Actividad> a = new List<Actividad>();
+       
         public FormActividadesLibreria()
         {
-            a = Utilitats.actividades;
             InitializeComponent();
             dataGridViewActividades.DataSource = null;
-            dataGridViewActividades.DataSource = a;
+            dataGridViewActividades.DataSource = Utilitats.actividades;
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            a.RemoveAt(dataGridViewActividades.SelectedRows[0].Index);
+            Utilitats.actividades.RemoveAt(dataGridViewActividades.SelectedRows[0].Index);
 
             dataGridViewActividades.DataSource = null;
-            dataGridViewActividades.DataSource = a;
+            dataGridViewActividades.DataSource = Utilitats.actividades;
         }
 
         private void buttonAnyadir_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.AnyadirAct();
-            this.Close();
+            
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)

@@ -12,47 +12,42 @@ namespace Olor_a_Libro
 {
     public partial class FormLibros : Form
     {
-        List<Libro> l = new List<Libro>();
-
-        
         public FormLibros()
         {
             InitializeComponent();
-            l = Utilitats.libros;
-
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = l;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonAnyadir_Click(object sender, EventArgs e)
         {
-            Libro libro = new Libro();
+            Libro l = new Libro();
 
-            libro.titulo = textBoxTitulo.Text;
-            libro.autor = textBoxTitulo.Text;
-            libro.anyo = int.Parse(textBoxAnyoEdicion.Text);
-            libro.precio = int.Parse(textBoxPrecio.Text);
+            l.titulo = textBoxTitulo.Text;
+            l.autor = textBoxTitulo.Text;
+            l.anyo = int.Parse(textBoxAnyoEdicion.Text);
+            l.precio = int.Parse(textBoxPrecio.Text);
             foreach (string item in listBoxGeneros.SelectedItems)
             {
-                libro.genero.Add(item);
+                l.genero.Add(item);
             }
 
-            l.Add(libro);
+            Utilitats.libros.Add(l);
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = l;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            l.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
+            Utilitats.libros.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
 
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = l;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            
+
         }
         //ACCESO A LOS FORMULARIOS
 

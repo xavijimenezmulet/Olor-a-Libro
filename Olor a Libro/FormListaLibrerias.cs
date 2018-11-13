@@ -28,24 +28,24 @@ namespace Olor_a_Libro
             if (File.Exists(arxiu))
             {
                 JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiu));
-                Utilitats.librerias = jArrayLibs.ToObject<List<Libreria>>();
+                Utilitats.librerias = jArrayLibs.ToObject<BindingList<Libreria>>();
             }
             else
             {
-                Utilitats.librerias = new List<Libreria>();
+                Utilitats.librerias = new BindingList<Libreria>();
             }
             dataGridViewLibrerias.DataSource = Utilitats.librerias;
         }
         private void FormListaLibrerias_Activated(object sender, EventArgs e)
         {
-            dataGridViewLibrerias.DataSource = null;
+            //dataGridViewLibrerias.DataSource = null;
             dataGridViewLibrerias.DataSource = Utilitats.librerias;
-
+            /*
             dataGridViewLibrerias.Columns[0].HeaderText = "ID";
             dataGridViewLibrerias.Columns[1].HeaderText = "Nombre";
             dataGridViewLibrerias.Columns[2].HeaderText = "Dirección";
             dataGridViewLibrerias.Columns[3].HeaderText = "Correo";
-            dataGridViewLibrerias.Columns[4].HeaderText = "Telefono";
+            dataGridViewLibrerias.Columns[4].HeaderText = "Telefono";*/
             //dataGridViewLibrerias.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         
