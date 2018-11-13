@@ -114,6 +114,8 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(lib.imagen);
+                textBoxImgLib.Text = lib.imagen;
             }
         }
 
@@ -149,7 +151,9 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
+                   // lib.imagen = img;
 
+                    
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -194,7 +198,7 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
-
+                   // lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -209,19 +213,19 @@ namespace Olor_a_Libro
                 }
                 else
                 {
-                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (nombre == "")
-                    {
-                        textBoxNombreLib.Focus();
-                    }
-                    else if (direccion == "")
-                    {
-                        textBoxDirccionLib.Focus();
-                    }
-                    else if (telefono == "")
-                    {
-                        textBoxTelefonoLib.Focus();
-                    }
+                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (nombre == "")
+                {
+                    textBoxNombreLib.Focus();
+                }
+                else if (direccion == "")
+                {
+                    textBoxDirccionLib.Focus();
+                }
+                else if (telefono == "")
+                {
+                    textBoxTelefonoLib.Focus();
+                }
                 }
             }
         }
@@ -229,6 +233,16 @@ namespace Olor_a_Libro
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonBuscarImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                textBoxImgLib.Text = openFileDialog.FileName;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(textBoxImgLib.Text);
+            }
         }
 
         private void FormLibreria_Activated(object sender, EventArgs e)
