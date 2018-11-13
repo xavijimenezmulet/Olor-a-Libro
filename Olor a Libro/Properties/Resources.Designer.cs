@@ -153,6 +153,16 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OlorALibro {
+            get {
+                object obj = ResourceManager.GetObject("OlorALibro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reading {
             get {
                 object obj = ResourceManager.GetObject("reading", resourceCulture);
