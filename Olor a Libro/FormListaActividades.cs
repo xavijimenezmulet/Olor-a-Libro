@@ -97,7 +97,7 @@ namespace Olor_a_Libro
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            MetodosMenu.AnyadirLibreria();
+            MetodosMenu.AnyadirAct();
         }
         //ABRIR FORM PARA EDITAR ACTIVIDAD
         private void buttonEditar_Click(object sender, EventArgs e)
