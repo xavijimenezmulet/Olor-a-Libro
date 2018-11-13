@@ -414,7 +414,7 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(289, 21);
-            this.textBoxID.TabIndex = 1;
+            this.textBoxID.TabIndex = 0;
             // 
             // groupBoxLlibreria
             // 
@@ -514,6 +514,7 @@
             this.Name = "FormLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Librería";
+            this.Activated += new System.EventHandler(this.FormLibreria_Activated);
             this.Load += new System.EventHandler(this.FormLibreria_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

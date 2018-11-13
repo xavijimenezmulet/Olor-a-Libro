@@ -104,6 +104,7 @@ namespace Olor_a_Libro
         private void FormLibreria_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            
             if(lib != null)
             {
                 textBoxID.Text = lib.id.ToString();
@@ -127,14 +128,15 @@ namespace Olor_a_Libro
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            //Libreria lib = new Libreria();
-            int id = Utilitats.librerias.Count;
+
+            int  id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
+
             String nombre = textBoxNombreLib.Text;
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
 
-            //---------------------------------AÑADIR LIBRERIA------------------------------
+            //---------------------------------AÑADIR LIBRERIA-------------------------------
             if (lib == null)
             {
                 if (nombre != null && direccion != "" && telefono != "")
@@ -183,9 +185,9 @@ namespace Olor_a_Libro
             //---------------------------------EDITAR LIBRERIA------------------------------
             else
             {
-                if (nombre != null && direccion != "" && telefono != "" && correo != "")
+                if (nombre != null && direccion != "" && telefono != "")
                 {
-                    lib.id = id;
+                    //lib.id = id;
                     lib.nombre = nombre;
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
@@ -195,8 +197,7 @@ namespace Olor_a_Libro
 
                     if (!encontrado)
                     {
-                        Utilitats.librerias.Add(lib);
-                        MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.Close();
                     }
                     else
@@ -204,29 +205,33 @@ namespace Olor_a_Libro
                         MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
-                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (nombre == "")
+                else
                 {
-                    textBoxNombreLib.Focus();
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (nombre == "")
+                    {
+                        textBoxNombreLib.Focus();
+                    }
+                    else if (direccion == "")
+                    {
+                        textBoxDirccionLib.Focus();
+                    }
+                    else if (telefono == "")
+                    {
+                        textBoxTelefonoLib.Focus();
+                    }
                 }
-                else if (direccion == "")
-                {
-                    textBoxDirccionLib.Focus();
-                }
-                else if (telefono == "")
-                {
-                    textBoxTelefonoLib.Focus();
-                }
-                /*else
-                {
-                    this.Focus();
-                }*/
             }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormLibreria_Activated(object sender, EventArgs e)
+        {
+            textBoxNombreLib.Focus();
         }
     }
 }

@@ -76,5 +76,25 @@ namespace Olor_a_Libro
             jArrayViews.WriteTo(writer);
             writer.Close();
         }
+
+        //------------------FUNCIO PER GENERAR ID------------------------------------------
+        public static int generarid(BindingList<object> lista)
+        {
+            //Type tipo = lista.First().GetType();
+            
+            int total = lista.Count;
+            int valor;
+            if (total > 0)
+            {
+                valor = (int)lista.First().GetType().GetProperty("id").GetValue(lista[total - 1]);
+                valor = valor + 1;
+                //id = (int)(tipo.GetType().GetProperty("id").GetValue(lista[total - 1])) + 1;
+            }
+            else
+            {
+                valor = 0;
+            }
+            return valor;
+        }
     }
 }
