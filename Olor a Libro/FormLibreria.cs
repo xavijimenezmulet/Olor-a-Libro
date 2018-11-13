@@ -139,7 +139,6 @@ namespace Olor_a_Libro
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
-
                 if (nombre != null && direccion != "" && telefono != "")
                 {
                     lib = new Libreria();

@@ -12,16 +12,11 @@ namespace Olor_a_Libro
 {
     public partial class FormLibros : Form
     {
-        List<Libro> libro = new List<Libro>();
-
-        
         public FormLibros()
         {
             InitializeComponent();
-            libro = Utilitats.libros;
-
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = libro;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonAnyadir_Click(object sender, EventArgs e)
@@ -37,17 +32,17 @@ namespace Olor_a_Libro
                 l.genero.Add(item);
             }
 
-            libro.Add(l);
+            Utilitats.libros.Add(l);
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = libro;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            libro.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
+            Utilitats.libros.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
 
             dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = libro;
+            dataGridViewLibros.DataSource = Utilitats.libros;
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)

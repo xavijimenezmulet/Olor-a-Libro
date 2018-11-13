@@ -15,12 +15,12 @@ namespace Olor_a_Libro
 {
     public static class Utilitats
     {
-        public static List<Libreria> librerias = new List<Libreria>();
-        public static List<Libro> libros = new List<Libro>();
-        public static List<Opinion> opiniones = new List<Opinion>();
-        public static List<Actividad> actividades = new List<Actividad>();
-        public static List<Usuario> usuarios = new List<Usuario>();
-        public static List<Visita> visitas = new List<Visita>();
+        public static BindingList<Libreria> librerias = new BindingList<Libreria>();
+        public static BindingList<Libro> libros = new BindingList<Libro>();
+        public static BindingList<Opinion> opiniones = new BindingList<Opinion>();
+        public static BindingList<Actividad> actividades = new BindingList<Actividad>();
+        public static BindingList<Usuario> usuarios = new BindingList<Usuario>();
+        public static BindingList<Visita> visitas = new BindingList<Visita>();
 
         public static void guardarJsonlibs()
         {
