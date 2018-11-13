@@ -114,8 +114,16 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(lib.imagen);
-                textBoxImgLib.Text = lib.imagen;
+                String ruta = "";
+                ruta = CargarImagenes.buscarImagen(lib);
+                
+                    pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
+                    textBoxImgLib.Text = lib.imagen;
+               
+                
+               
+                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
         }
 
@@ -237,12 +245,18 @@ namespace Olor_a_Libro
 
         private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog()==DialogResult.OK)
+
+            String ruta = "";
+            ruta=CargarImagenes.cargarImagen();
+
+            if (ruta != "")
             {
-                textBoxImgLib.Text = openFileDialog.FileName;
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(textBoxImgLib.Text);
+                textBoxImgLib.Text = ruta;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
+                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
             }
+            
         }
 
         private void FormLibreria_Activated(object sender, EventArgs e)

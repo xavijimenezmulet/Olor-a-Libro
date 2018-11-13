@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actividad.cs" />
+    <Compile Include="CargarImagenes.cs" />
     <Compile Include="FormActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +245,7 @@
     <None Include="Resources\Sin título-2 copia %281%291.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Imagenes\OlorALibro.PNG" />
     <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
   </ItemGroup>
   <ItemGroup>
