@@ -37,56 +37,56 @@ namespace Olor_a_Libro
             if (File.Exists(arxiulib))
             {
                 JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiulib));
-                Utilitats.librerias = jArrayLibs.ToObject<List<Libreria>>();
+                Utilitats.librerias = jArrayLibs.ToObject<BindingList<Libreria>>();
             }
             else
             {
-                Utilitats.librerias = new List<Libreria>();
+                Utilitats.librerias = new BindingList<Libreria>();
             }
             if (File.Exists(arxiubook))
             {
                 JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
-                Utilitats.libros = jArrayBooks.ToObject<List<Libro>>();
+                Utilitats.libros = jArrayBooks.ToObject<BindingList<Libro>>();
             }
             else
             {
-                Utilitats.libros = new List<Libro>();
+                Utilitats.libros = new BindingList<Libro>();
             }
             if (File.Exists(arxiuuser))
             {
                 JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
-                Utilitats.librerias = jArrayusers.ToObject<List<Libreria>>();
+                Utilitats.librerias = jArrayusers.ToObject<BindingList<Libreria>>();
             }
             else
             {
-                Utilitats.usuarios = new List<Usuario>();
+                Utilitats.usuarios = new BindingList<Usuario>();
             }
             if (File.Exists(arxiuop))
             {
                 JArray jArrayops = JArray.Parse(File.ReadAllText(arxiuop));
-                Utilitats.opiniones = jArrayops.ToObject<List<Opinion>>();
+                Utilitats.opiniones = jArrayops.ToObject<BindingList<Opinion>>();
             }
             else
             {
-                Utilitats.opiniones = new List<Opinion>();
+                Utilitats.opiniones = new BindingList<Opinion>();
             }
             if (File.Exists(arxiuact))
             {
                 JArray jArrayacts = JArray.Parse(File.ReadAllText(arxiuact));
-                Utilitats.actividades = jArrayacts.ToObject<List<Actividad>>();
+                Utilitats.actividades = jArrayacts.ToObject<BindingList<Actividad>>();
             }
             else
             {
-                Utilitats.actividades = new List<Actividad>();
+                Utilitats.actividades = new BindingList<Actividad>();
             }
             if (File.Exists(arxiuviews))
             {
                 JArray jArrayviews = JArray.Parse(File.ReadAllText(arxiuviews));
-                Utilitats.visitas = jArrayviews.ToObject<List<Visita>>();
+                Utilitats.visitas = jArrayviews.ToObject<BindingList<Visita>>();
             }
             else
             {
-                Utilitats.visitas = new List<Visita>();
+                Utilitats.visitas = new BindingList<Visita>();
             }
         }
 
