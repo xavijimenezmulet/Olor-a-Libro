@@ -41,12 +41,6 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.pictureBoxLibro = new System.Windows.Forms.PictureBox();
             this.dataGridViewLibros = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GeneroPrincipal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.añoEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAnyadir = new System.Windows.Forms.Button();
@@ -111,9 +105,19 @@
             // listBoxGeneros
             // 
             this.listBoxGeneros.FormattingEnabled = true;
+            this.listBoxGeneros.Items.AddRange(new object[] {
+            "Accion",
+            "Ciencia-Ficcion",
+            "Fantasia",
+            "Aventuras",
+            "Drama",
+            "Romance",
+            "Terror",
+            "Historica"});
             this.listBoxGeneros.Location = new System.Drawing.Point(90, 121);
             this.listBoxGeneros.Name = "listBoxGeneros";
-            this.listBoxGeneros.Size = new System.Drawing.Size(312, 108);
+            this.listBoxGeneros.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBoxGeneros.Size = new System.Drawing.Size(312, 121);
             this.listBoxGeneros.TabIndex = 21;
             // 
             // textBoxPrecio
@@ -202,60 +206,14 @@
             this.dataGridViewLibros.AllowUserToAddRows = false;
             this.dataGridViewLibros.AllowUserToDeleteRows = false;
             this.dataGridViewLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Titulo,
-            this.Autor,
-            this.GeneroPrincipal,
-            this.añoEdicion,
-            this.precio});
             this.dataGridViewLibros.Location = new System.Drawing.Point(13, 284);
+            this.dataGridViewLibros.MultiSelect = false;
             this.dataGridViewLibros.Name = "dataGridViewLibros";
             this.dataGridViewLibros.ReadOnly = true;
+            this.dataGridViewLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLibros.Size = new System.Drawing.Size(567, 341);
             this.dataGridViewLibros.TabIndex = 3;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Titulo
-            // 
-            this.Titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            // 
-            // Autor
-            // 
-            this.Autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Autor.HeaderText = "Autor";
-            this.Autor.Name = "Autor";
-            this.Autor.ReadOnly = true;
-            // 
-            // GeneroPrincipal
-            // 
-            this.GeneroPrincipal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GeneroPrincipal.HeaderText = "Genero Principal";
-            this.GeneroPrincipal.Name = "GeneroPrincipal";
-            this.GeneroPrincipal.ReadOnly = true;
-            // 
-            // añoEdicion
-            // 
-            this.añoEdicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.añoEdicion.HeaderText = "Año Edicion";
-            this.añoEdicion.Name = "añoEdicion";
-            this.añoEdicion.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
+            this.dataGridViewLibros.SelectionChanged += new System.EventHandler(this.dataGridViewLibros_SelectionChanged);
             // 
             // buttonEditar
             // 
@@ -577,12 +535,6 @@
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.PictureBox pictureBoxLibro;
         private System.Windows.Forms.DataGridView dataGridViewLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GeneroPrincipal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn añoEdicion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAnyadir;

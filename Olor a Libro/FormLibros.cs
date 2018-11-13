@@ -15,8 +15,7 @@ namespace Olor_a_Libro
         public FormLibros()
         {
             InitializeComponent();
-            dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = Utilitats.libros;
+            refrescarGrid();
         }
 
         private void buttonAnyadir_Click(object sender, EventArgs e)
@@ -24,25 +23,24 @@ namespace Olor_a_Libro
             Libro l = new Libro();
 
             l.titulo = textBoxTitulo.Text;
-            l.autor = textBoxTitulo.Text;
+            l.autor = textBoxAutor.Text;
             l.anyo = int.Parse(textBoxAnyoEdicion.Text);
             l.precio = int.Parse(textBoxPrecio.Text);
+            l.genero = new List<String>();
             foreach (string item in listBoxGeneros.SelectedItems)
             {
                 l.genero.Add(item);
             }
 
             Utilitats.libros.Add(l);
-            dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = Utilitats.libros;
+            refrescarGrid();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             Utilitats.libros.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
 
-            dataGridViewLibros.DataSource = null;
-            dataGridViewLibros.DataSource = Utilitats.libros;
+            refrescarGrid();
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -126,6 +124,23 @@ namespace Olor_a_Libro
         private void FormLibros_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        // Metodos Del Formulario
+        private void refrescarGrid()
+        {
+            dataGridViewLibros.DataSource = null;
+            dataGridViewLibros.DataSource = Utilitats.libros;
+        }
+
+        private void dataGridViewLibros_SelectionChanged(object sender, EventArgs e)
+        {
+            Libro l = (Libro)dataGridViewLibros.SelectedRows[0].DataBoundItem;
+
+            textBoxTitulo.Text = l.titulo;
+            textBoxAutor.Text = l.autor;
+            textBoxAnyoEdicion.Text = l.anyo.ToString();
+            textBoxPrecio.Text = l.precio.ToString();
         }
     }
     
