@@ -111,13 +111,10 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
-                String ruta = "";
-                ruta = CargarImagenes.buscarImagen(lib);
-                
-                    pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
-                    textBoxImgLib.Text = lib.imagen;
-               
-                
+                String archivo = "";
+                archivo = CargarImagenes.buscarImagen(lib.imagen);
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
+                textBoxImgLib.Text = archivo;
                
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
@@ -137,13 +134,12 @@ namespace Olor_a_Libro
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            //Libreria lib = new Libreria();
             int id = Utilitats.librerias.Count;
             String nombre = textBoxNombreLib.Text;
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
-            String img = textBoxImgLib.Text;
+            String img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
@@ -253,6 +249,12 @@ namespace Olor_a_Libro
                 pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
+                textBoxNombreArchivo.Text = CargarImagenes.quitarRuta(ruta);
+                String y = CargarImagenes.path + "\\";
+                String x1 = y.Substring(6);
+                int x = x1.Length;
+                textBoxIntAQuitar.Text = x1;
+
             }
             
         }
