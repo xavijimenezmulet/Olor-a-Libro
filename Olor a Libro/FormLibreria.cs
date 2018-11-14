@@ -114,14 +114,11 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
-                String ruta = "";
-                ruta = CargarImagenes.buscarImagen(lib);
+                String archivo = "";
+                archivo = CargarImagenes.buscarImagen(lib.imagen);
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
+                textBoxImgLib.Text = archivo;
                 
-                    pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
-                    textBoxImgLib.Text = lib.imagen;
-               
-                
-               
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
@@ -147,8 +144,8 @@ namespace Olor_a_Libro
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
-
-            //---------------------------------AÑADIR LIBRERIA-------------------------------
+            String img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
+            //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
                 if (nombre != null && direccion != "" && telefono != "")
@@ -206,7 +203,7 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
-                   // lib.imagen = img; 
+                    lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)

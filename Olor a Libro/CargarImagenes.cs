@@ -21,54 +21,47 @@ namespace Olor_a_Libro
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ruta = openFileDialog.FileName;
-                archivo = recortarRuta(ruta);
+                archivo = ruta;
             }
             
                      
             return archivo;
         }
 
-        public static String recortarRuta(String imagen) {
+        public static String quitarRuta(String imagen) {
 
             String ruta = "";
             String archivo = "";
             String toRemove = path + "\\";
-
-            string result = string.Empty;
-            int i = ruta.IndexOf(toRemove);
-            if (i >= 0)
-            {
-                archivo = ruta.Remove(i, toRemove.Length);
-            }
-
+            String y = toRemove.Substring(6);
+            ruta = imagen.Substring(y.Length);
+            
             return ruta;
         }
 
         public static String ponerRuta(String imagen)
         {
             String ruta = "";
-            
-            ruta = path + "\\" + imagen;
+            String y = path.Substring(6);
+            ruta = y + "\\" + imagen;
 
             return ruta;
         }
 
-        public static String buscarImagen(Libreria lib)
+        public static String buscarImagen(String rutaImg)
         {
-            String archivo = "";
+            String archivo = ponerRuta(rutaImg);
             String ruta = "";
-
-
-            ruta = ponerRuta(lib.imagen);
-            //if (openFileDialog.CheckFileExists=ruta))
-            //{
-            //    ruta = archivo;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se ha encontrado la imagen", "ERROR AL CARGAR IMAGEN", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    ruta = path + "\\OlorALibro.png";
-            //}
+            
+            if (System.IO.File.Exists(archivo))
+            {
+                ruta = archivo;
+            }
+            else
+            {
+                MessageBox.Show("No se ha encontrado la imagen", "ERROR AL CARGAR IMAGEN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ruta = path.Substring(6) + "\\OlorALibro.png";
+            }
 
             return ruta;
         }
