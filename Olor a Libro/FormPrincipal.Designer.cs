@@ -58,6 +58,7 @@ namespace Olor_a_Libro
             this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
+            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,8 @@ namespace Olor_a_Libro
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.estadísticasToolStripMenuItem,
-            this.puntuaciónToolStripMenuItem});
+            this.puntuaciónToolStripMenuItem,
+            this.librosToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(769, 24);
@@ -314,6 +316,13 @@ namespace Olor_a_Libro
             this.toolStripButtonSalir.Text = "Salir";
             this.toolStripButtonSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // librosToolStripMenuItem
+            // 
+            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
+            this.librosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.librosToolStripMenuItem.Text = "Libros";
+            this.librosToolStripMenuItem.Click += new System.EventHandler(this.librosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,6 +383,7 @@ namespace Olor_a_Libro
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
+        private ToolStripMenuItem librosToolStripMenuItem;
     }
 }
 
