@@ -40,6 +40,7 @@ namespace Olor_a_Libro
         {
             //dataGridViewLibrerias.DataSource = null;
             dataGridViewLibrerias.DataSource = Utilitats.librerias;
+            dataGridViewLibrerias.Refresh();
             /*
             dataGridViewLibrerias.Columns[0].HeaderText = "ID";
             dataGridViewLibrerias.Columns[1].HeaderText = "Nombre";

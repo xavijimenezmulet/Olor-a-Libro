@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
+            this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
             this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
             this.labelTipoAct = new System.Windows.Forms.Label();
             this.textBoxHoraAct = new System.Windows.Forms.TextBox();
@@ -73,7 +74,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
-            this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMainMenu.SuspendLayout();
@@ -82,6 +84,8 @@
             // 
             // groupBoxDatosAct
             // 
+            this.groupBoxDatosAct.Controls.Add(this.textBoxID);
+            this.groupBoxDatosAct.Controls.Add(this.label4);
             this.groupBoxDatosAct.Controls.Add(this.listBoxLibreriasAct);
             this.groupBoxDatosAct.Controls.Add(this.comboBoxTipoAct);
             this.groupBoxDatosAct.Controls.Add(this.labelTipoAct);
@@ -101,23 +105,31 @@
             this.groupBoxDatosAct.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDatosAct.Name = "groupBoxDatosAct";
             this.groupBoxDatosAct.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 300);
+            this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 310);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
+            // 
+            // listBoxLibreriasAct
+            // 
+            this.listBoxLibreriasAct.FormattingEnabled = true;
+            this.listBoxLibreriasAct.Location = new System.Drawing.Point(103, 246);
+            this.listBoxLibreriasAct.Name = "listBoxLibreriasAct";
+            this.listBoxLibreriasAct.Size = new System.Drawing.Size(318, 56);
+            this.listBoxLibreriasAct.TabIndex = 7;
             // 
             // comboBoxTipoAct
             // 
             this.comboBoxTipoAct.FormattingEnabled = true;
-            this.comboBoxTipoAct.Location = new System.Drawing.Point(103, 91);
+            this.comboBoxTipoAct.Location = new System.Drawing.Point(103, 108);
             this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTipoAct.Name = "comboBoxTipoAct";
             this.comboBoxTipoAct.Size = new System.Drawing.Size(318, 21);
-            this.comboBoxTipoAct.TabIndex = 14;
+            this.comboBoxTipoAct.TabIndex = 3;
             // 
             // labelTipoAct
             // 
             this.labelTipoAct.AutoSize = true;
-            this.labelTipoAct.Location = new System.Drawing.Point(5, 94);
+            this.labelTipoAct.Location = new System.Drawing.Point(5, 111);
             this.labelTipoAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTipoAct.Name = "labelTipoAct";
             this.labelTipoAct.Size = new System.Drawing.Size(78, 13);
@@ -126,38 +138,38 @@
             // 
             // textBoxHoraAct
             // 
-            this.textBoxHoraAct.Location = new System.Drawing.Point(103, 158);
+            this.textBoxHoraAct.Location = new System.Drawing.Point(103, 175);
             this.textBoxHoraAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHoraAct.Name = "textBoxHoraAct";
             this.textBoxHoraAct.Size = new System.Drawing.Size(318, 20);
-            this.textBoxHoraAct.TabIndex = 12;
+            this.textBoxHoraAct.TabIndex = 5;
             // 
             // labelHoraAct
             // 
             this.labelHoraAct.AutoSize = true;
-            this.labelHoraAct.Location = new System.Drawing.Point(5, 158);
+            this.labelHoraAct.Location = new System.Drawing.Point(5, 179);
             this.labelHoraAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHoraAct.Name = "labelHoraAct";
             this.labelHoraAct.Size = new System.Drawing.Size(33, 13);
-            this.labelHoraAct.TabIndex = 11;
+            this.labelHoraAct.TabIndex = 15;
             this.labelHoraAct.Text = "Hora:";
             // 
             // textBoxDescripcionAct
             // 
-            this.textBoxDescripcionAct.Location = new System.Drawing.Point(103, 193);
+            this.textBoxDescripcionAct.Location = new System.Drawing.Point(103, 210);
             this.textBoxDescripcionAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDescripcionAct.Name = "textBoxDescripcionAct";
             this.textBoxDescripcionAct.Size = new System.Drawing.Size(318, 20);
-            this.textBoxDescripcionAct.TabIndex = 10;
+            this.textBoxDescripcionAct.TabIndex = 6;
             // 
             // labelDescripcionAct
             // 
             this.labelDescripcionAct.AutoSize = true;
-            this.labelDescripcionAct.Location = new System.Drawing.Point(5, 193);
+            this.labelDescripcionAct.Location = new System.Drawing.Point(5, 214);
             this.labelDescripcionAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescripcionAct.Name = "labelDescripcionAct";
             this.labelDescripcionAct.Size = new System.Drawing.Size(66, 13);
-            this.labelDescripcionAct.TabIndex = 8;
+            this.labelDescripcionAct.TabIndex = 16;
             this.labelDescripcionAct.Text = "Descripción:";
             // 
             // textBox1
@@ -171,52 +183,52 @@
             // labelLibreria
             // 
             this.labelLibreria.AutoSize = true;
-            this.labelLibreria.Location = new System.Drawing.Point(5, 229);
+            this.labelLibreria.Location = new System.Drawing.Point(5, 246);
             this.labelLibreria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLibreria.Name = "labelLibreria";
             this.labelLibreria.Size = new System.Drawing.Size(56, 13);
-            this.labelLibreria.TabIndex = 6;
+            this.labelLibreria.TabIndex = 17;
             this.labelLibreria.Text = "Librería/s:";
             // 
             // dateTimePickerDiaAct
             // 
-            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(103, 125);
+            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(103, 142);
             this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDiaAct.Name = "dateTimePickerDiaAct";
             this.dateTimePickerDiaAct.Size = new System.Drawing.Size(318, 20);
-            this.dateTimePickerDiaAct.TabIndex = 5;
+            this.dateTimePickerDiaAct.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 125);
+            this.label3.Location = new System.Drawing.Point(4, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 14;
             this.label3.Text = "Día:";
             // 
             // textBoxLugarAct
             // 
-            this.textBoxLugarAct.Location = new System.Drawing.Point(103, 58);
+            this.textBoxLugarAct.Location = new System.Drawing.Point(103, 75);
             this.textBoxLugarAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLugarAct.Name = "textBoxLugarAct";
             this.textBoxLugarAct.Size = new System.Drawing.Size(318, 20);
-            this.textBoxLugarAct.TabIndex = 3;
+            this.textBoxLugarAct.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 58);
+            this.label2.Location = new System.Drawing.Point(5, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Lugar:";
             // 
             // textBoxNomAct
             // 
-            this.textBoxNomAct.Location = new System.Drawing.Point(103, 26);
+            this.textBoxNomAct.Location = new System.Drawing.Point(103, 43);
             this.textBoxNomAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNomAct.Name = "textBoxNomAct";
             this.textBoxNomAct.Size = new System.Drawing.Size(318, 20);
@@ -225,11 +237,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 26);
+            this.label1.Location = new System.Drawing.Point(5, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Nombre Actividad:";
             // 
             // buttonAceptar
@@ -239,7 +251,7 @@
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(80, 37);
-            this.buttonAceptar.TabIndex = 4;
+            this.buttonAceptar.TabIndex = 8;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
@@ -251,8 +263,8 @@
             this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(80, 37);
-            this.buttonBorrar.TabIndex = 5;
-            this.buttonBorrar.Text = "Borrar";
+            this.buttonBorrar.TabIndex = 9;
+            this.buttonBorrar.Text = "Cancelar";
             this.buttonBorrar.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -521,13 +533,24 @@
             this.toolStripAccesosDirectos.TabIndex = 1;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
-            // listBoxLibreriasAct
+            // label4
             // 
-            this.listBoxLibreriasAct.FormattingEnabled = true;
-            this.listBoxLibreriasAct.Location = new System.Drawing.Point(103, 229);
-            this.listBoxLibreriasAct.Name = "listBoxLibreriasAct";
-            this.listBoxLibreriasAct.Size = new System.Drawing.Size(318, 56);
-            this.listBoxLibreriasAct.TabIndex = 15;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "ID:";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(103, 15);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(318, 20);
+            this.textBoxID.TabIndex = 0;
             // 
             // FormActividad
             // 
@@ -606,5 +629,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.ToolStrip toolStripAccesosDirectos;
         private System.Windows.Forms.ListBox listBoxLibreriasAct;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

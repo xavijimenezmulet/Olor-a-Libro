@@ -104,6 +104,7 @@ namespace Olor_a_Libro
         private void FormLibreria_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            
             if(lib != null)
             {
                 textBoxID.Text = lib.id.ToString();
@@ -134,7 +135,9 @@ namespace Olor_a_Libro
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            int id = Utilitats.librerias.Count;
+
+            int  id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
+
             String nombre = textBoxNombreLib.Text;
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
@@ -191,9 +194,9 @@ namespace Olor_a_Libro
             //---------------------------------EDITAR LIBRERIA------------------------------
             else
             {
-                if (nombre != null && direccion != "" && telefono != "" && correo != "")
+                if (nombre != null && direccion != "" && telefono != "")
                 {
-                    lib.id = id;
+                    //lib.id = id;
                     lib.nombre = nombre;
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
@@ -203,8 +206,7 @@ namespace Olor_a_Libro
 
                     if (!encontrado)
                     {
-                        Utilitats.librerias.Add(lib);
-                        MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.Close();
                     }
                     else
@@ -212,6 +214,8 @@ namespace Olor_a_Libro
                         MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
+                else
+                {
                 MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (nombre == "")
                 {
@@ -225,10 +229,7 @@ namespace Olor_a_Libro
                 {
                     textBoxTelefonoLib.Focus();
                 }
-                /*else
-                {
-                    this.Focus();
-                }*/
+                }
             }
         }
 
