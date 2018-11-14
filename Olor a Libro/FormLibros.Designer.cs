@@ -116,6 +116,7 @@
             "Historica"});
             this.listBoxGeneros.Location = new System.Drawing.Point(90, 121);
             this.listBoxGeneros.Name = "listBoxGeneros";
+            this.listBoxGeneros.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxGeneros.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxGeneros.Size = new System.Drawing.Size(312, 121);
             this.listBoxGeneros.TabIndex = 21;
