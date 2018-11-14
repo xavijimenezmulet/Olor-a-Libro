@@ -197,11 +197,6 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
         }
 
-        private void librosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormLibros libros = new FormLibros();
 
-            libros.ShowDialog();
-        }
     }
 }

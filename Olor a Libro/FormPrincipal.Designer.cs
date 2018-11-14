@@ -58,7 +58,6 @@ namespace Olor_a_Libro
             this.toolStripButtonEstadisticas = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
-            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.SuspendLayout();
@@ -72,8 +71,7 @@ namespace Olor_a_Libro
             this.actividadesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.estadísticasToolStripMenuItem,
-            this.puntuaciónToolStripMenuItem,
-            this.librosToolStripMenuItem});
+            this.puntuaciónToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(769, 24);
@@ -99,27 +97,27 @@ namespace Olor_a_Libro
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -316,13 +314,6 @@ namespace Olor_a_Libro
             this.toolStripButtonSalir.Text = "Salir";
             this.toolStripButtonSalir.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // librosToolStripMenuItem
-            // 
-            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
-            this.librosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.librosToolStripMenuItem.Text = "Libros";
-            this.librosToolStripMenuItem.Click += new System.EventHandler(this.librosToolStripMenuItem_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,7 +374,6 @@ namespace Olor_a_Libro
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
-        private ToolStripMenuItem librosToolStripMenuItem;
     }
 }
 

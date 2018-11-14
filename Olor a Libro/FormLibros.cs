@@ -12,10 +12,13 @@ namespace Olor_a_Libro
 {
     public partial class FormLibros : Form
     {
-        public FormLibros()
+        Libreria lib;
+        
+
+        public FormLibros(Libreria lib)
         {
-            InitializeComponent();
-            refrescarGrid();
+            this.lib = lib;
+            InitializeComponent();            
         }
 
         
@@ -95,26 +98,41 @@ namespace Olor_a_Libro
 
         private void FormLibros_Load(object sender, EventArgs e)
         {
+            Utilitats.libros = lib.libros;
             this.StartPosition = FormStartPosition.CenterScreen;
+            dataGridViewLibros.DataSource = Utilitats.libros;
+            dataGridViewLibros.Refresh();
         }
 
         // Metodos Del Formulario
 
         private void buttonAnyadir_Click(object sender, EventArgs e)
         {
+            
             Libro l = new Libro();
-
             anyadirLibro(l);
 
             Utilitats.libros.Add(l);
-            refrescarGrid();
+            dataGridViewLibros.Refresh();
         }
-
+        private void anyadirLibro(Libro l)
+        {
+            //int id = Utilitats.generarid(new BindingList<object>(Utilitats.libros.Cast<object>().ToList()));
+            l.id = 1;
+            l.titulo = textBoxTitulo.Text;
+            l.autor = textBoxAutor.Text;
+            l.anyo = int.Parse(textBoxAnyoEdicion.Text);
+            l.precio = int.Parse(textBoxPrecio.Text);
+            l.genero = new List<String>();
+            foreach (string item in listBoxGeneros.SelectedItems)
+            {
+                l.genero.Add(item);
+            }
+        }
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            Utilitats.libros.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
+            lib.libros.RemoveAt(dataGridViewLibros.SelectedRows[0].Index);
 
-            refrescarGrid();
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -123,16 +141,12 @@ namespace Olor_a_Libro
 
             anyadirLibro(l);
 
-            
-
-            refrescarGrid();
         }
 
-        private void refrescarGrid()
+       /* private void refrescarGrid()
         {
-           
-            dataGridViewLibros.DataSource = Utilitats.libros;
-        }
+            dataGridViewLibros.DataSource = lib.libros;
+        }*/
 
         private void dataGridViewLibros_SelectionChanged(object sender, EventArgs e)
         {
@@ -148,19 +162,7 @@ namespace Olor_a_Libro
             }
         }
 
-        private void anyadirLibro(Libro l)
-        {
-            l.id = Utilitats.libros.Count;
-            l.titulo = textBoxTitulo.Text;
-            l.autor = textBoxAutor.Text;
-            l.anyo = int.Parse(textBoxAnyoEdicion.Text);
-            l.precio = int.Parse(textBoxPrecio.Text);
-            l.genero = new List<String>();
-            foreach (string item in listBoxGeneros.SelectedItems)
-            {
-                l.genero.Add(item);
-            }
-        }
+       
     }
     
 }
