@@ -112,7 +112,7 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -255,7 +255,7 @@
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
