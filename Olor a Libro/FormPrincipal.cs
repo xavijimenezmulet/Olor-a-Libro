@@ -24,9 +24,10 @@ namespace Olor_a_Libro
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            
-            //carregar/crear arxius json
 
+            //carregar/crear arxius json
+            //Utilitats.carregarJsons();
+            
             string arxiulib = "librerias.json";
             string arxiubook = "libros.json";
             string arxiuuser = "usuarios.json";

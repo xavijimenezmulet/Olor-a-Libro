@@ -119,7 +119,7 @@
             // toolStripButtonActividades
             // 
             this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
+            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonActividades.Name = "toolStripButtonActividades";
             this.toolStripButtonActividades.Size = new System.Drawing.Size(23, 22);
