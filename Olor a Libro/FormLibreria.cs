@@ -250,12 +250,6 @@ namespace Olor_a_Libro
                 pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
-                textBoxNombreArchivo.Text = CargarImagenes.quitarRuta(ruta);
-                String y = CargarImagenes.path + "\\";
-                String x1 = y.Substring(6);
-                int x = x1.Length;
-                textBoxIntAQuitar.Text = x1;
-
             }
             
         }
