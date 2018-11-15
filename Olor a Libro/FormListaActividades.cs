@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,6 +96,23 @@ namespace Olor_a_Libro
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            string arxiu = "actividades.json";
+
+            if (File.Exists(arxiu))
+            {
+                JArray jArrayActs = JArray.Parse(File.ReadAllText(arxiu));
+                Utilitats.librerias = jArrayActs.ToObject<BindingList<Libreria>>();
+            }
+            else
+            {
+                Utilitats.actividades = new BindingList<Actividad>();
+            }
+            dataGridViewActividades.DataSource = Utilitats.librerias;
+        }
+        private void FormListaActividades_Activated(object sender, EventArgs e)
+        {
+            dataGridViewActividades.DataSource = Utilitats.librerias;
+            dataGridViewActividades.Refresh();
         }
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -128,5 +148,7 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+       
     }
 }

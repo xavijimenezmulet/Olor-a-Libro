@@ -101,13 +101,28 @@ namespace Olor_a_Libro
         private void FormActividad_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            /*if (act != null)
+            listBoxLibreriasAct.DataSource = null;
+            listBoxLibreriasAct.DataSource = Utilitats.librerias;
+            listBoxLibreriasAct.DisplayMember = "nombre";
+            /*for (int i = 0; i < Utilitats.librerias.Count(); i++)
+            {
+                listBoxLibreriasAct.Items.Add(Utilitats.librerias[i].nombre);
+            }*/
+
+            if (act != null)
             {
                 textBoxID.Text = act.id.ToString();
                 textBoxNomAct.Text = act.nombre;
-
-            }*/
-            omplirListBox();
+                textBoxLugarAct.Text = act.lugar;
+                comboBoxTipoAct.Text = act.tipo; 
+                dateTimePickerDiaAct.Value = act.fecha;
+                textBoxHoraAct.Text = act.hora;
+                textBoxDescripcionAct.Text = act.descripcion;
+                foreach (string item in act.librerias)
+                {
+                    listBoxLibreriasAct.SelectedItems.Add(item);
+                }
+            }
         }
 
         private void archivoToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
@@ -149,7 +164,7 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.Black;
         }
-
+        /*
         public static void omplirListBox()
         {
             ListBox listBL = new ListBox();
@@ -171,7 +186,7 @@ namespace Olor_a_Libro
                 listBL.Items.Add(item.nombre);
                 listBL.DisplayMember = item.id.ToString(); 
             }
-        }
+        }*/
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
@@ -186,11 +201,11 @@ namespace Olor_a_Libro
             if (nomAct!="" && lugar != "" && fecha != "" && hora != "" && descripcion != "" && listBoxLibreriasAct.SelectedItems!=null)
             {
                 Actividad act = new Actividad();
-                act.IDlibrerias = new List<int>();
+                //act.librerias = new List<int>();
 
                 act.nombre = nomAct;
                 act.lugar = lugar;
-                act.fecha = fecha;
+               // act.fecha = fecha;
                 act.hora = hora;
                 act.descripcion = descripcion;
 
