@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -118,7 +116,7 @@ namespace Olor_a_Libro
                 archivo = CargarImagenes.buscarImagen(lib.imagen);
                 pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
                 textBoxImgLib.Text = archivo;
-                
+               
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
@@ -156,7 +154,7 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
-                   // lib.imagen = img;
+                    lib.imagen = img;
 
                     
                     Boolean encontrado = repetido(lib);
@@ -254,11 +252,6 @@ namespace Olor_a_Libro
                 pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
             }
             
-        }
-
-        private void FormLibreria_Activated(object sender, EventArgs e)
-        {
-            textBoxNombreLib.Focus();
         }
     }
 }
