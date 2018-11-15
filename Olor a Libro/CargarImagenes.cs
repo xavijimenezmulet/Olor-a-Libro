@@ -31,7 +31,6 @@ namespace Olor_a_Libro
         public static String quitarRuta(String imagen) {
 
             String ruta = "";
-            String archivo = "";
             String toRemove = path + "\\";
             String y = toRemove.Substring(6);
             ruta = imagen.Substring(y.Length);
