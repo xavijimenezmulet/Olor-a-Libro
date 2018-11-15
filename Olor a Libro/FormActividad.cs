@@ -101,11 +101,13 @@ namespace Olor_a_Libro
         private void FormActividad_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            
-            for (int i = 0; i < Utilitats.librerias.Count(); i++)
+            listBoxLibreriasAct.DataSource = null;
+            listBoxLibreriasAct.DataSource = Utilitats.librerias;
+            listBoxLibreriasAct.DisplayMember = "nombre";
+            /*for (int i = 0; i < Utilitats.librerias.Count(); i++)
             {
                 listBoxLibreriasAct.Items.Add(Utilitats.librerias[i].nombre);
-            }
+            }*/
 
             if (act != null)
             {
