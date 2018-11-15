@@ -43,15 +43,15 @@ namespace Olor_a_Libro
             {
                 Utilitats.librerias = new BindingList<Libreria>();
             }
-            if (File.Exists(arxiubook))
-            {
-                JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
-                Utilitats.libros = jArrayBooks.ToObject<BindingList<Libro>>();
-            }
-            else
-            {
-                Utilitats.libros = new BindingList<Libro>();
-            }
+            //if (File.Exists(arxiubook))
+            //{
+            //    JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
+            //    Utilitats.libros = jArrayBooks.ToObject<BindingList<Libro>>();
+            //}
+            //else
+            //{
+            //    Utilitats.libros = new BindingList<Libro>();
+            //}
             if (File.Exists(arxiuuser))
             {
                 JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
