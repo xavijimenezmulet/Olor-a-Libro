@@ -97,14 +97,14 @@ namespace Olor_a_Libro
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+    //        this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // guardarToolStripMenuItem
             // 
-            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+     //       this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
@@ -117,7 +117,7 @@ namespace Olor_a_Libro
             // 
             // salirToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+   //         this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -137,7 +137,7 @@ namespace Olor_a_Libro
             // 
             // verLibreriaToolStripMenuItem
             // 
-            this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
+    //        this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
             this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
@@ -145,7 +145,7 @@ namespace Olor_a_Libro
             // 
             // añadirLibreríaToolStripMenuItem
             // 
-            this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+    //        this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
             this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
@@ -165,7 +165,7 @@ namespace Olor_a_Libro
             // 
             // verActividadesToolStripMenuItem
             // 
-            this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
+   //         this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
             this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
@@ -173,7 +173,7 @@ namespace Olor_a_Libro
             // 
             // anyadirActividadToolStripMenuItem
             // 
-            this.anyadirActividadToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+    //        this.anyadirActividadToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.anyadirActividadToolStripMenuItem.Name = "anyadirActividadToolStripMenuItem";
             this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.anyadirActividadToolStripMenuItem.Text = "Añadir Actividad";
@@ -193,7 +193,7 @@ namespace Olor_a_Libro
             // 
             // verUsuariosToolStripMenuItem
             // 
-            this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+      //      this.verUsuariosToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
             this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
             this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verUsuariosToolStripMenuItem.Text = "Ver Usuarios";
@@ -201,7 +201,7 @@ namespace Olor_a_Libro
             // 
             // añadirUsuarioToolStripMenuItem
             // 
-            this.añadirUsuarioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
+     //       this.añadirUsuarioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add;
             this.añadirUsuarioToolStripMenuItem.Name = "añadirUsuarioToolStripMenuItem";
             this.añadirUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.añadirUsuarioToolStripMenuItem.Text = "Añadir Usuario";
@@ -245,7 +245,7 @@ namespace Olor_a_Libro
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+  //          this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(23, 22);
@@ -259,7 +259,7 @@ namespace Olor_a_Libro
             // toolStripButtonLibrerias
             // 
             this.toolStripButtonLibrerias.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
+    //        this.toolStripButtonLibrerias.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.toolStripButtonLibrerias.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonLibrerias.Name = "toolStripButtonLibrerias";
             this.toolStripButtonLibrerias.Size = new System.Drawing.Size(23, 22);
@@ -269,7 +269,7 @@ namespace Olor_a_Libro
             // toolStripButtonActividades
             // 
             this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
+   //         this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonActividades.Name = "toolStripButtonActividades";
             this.toolStripButtonActividades.Size = new System.Drawing.Size(23, 22);
@@ -279,7 +279,7 @@ namespace Olor_a_Libro
             // toolStripButtonUsuarios
             // 
             this.toolStripButtonUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
+      //      this.toolStripButtonUsuarios.Image = global::Olor_a_Libro.Properties.Resources._038_hired;
             this.toolStripButtonUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonUsuarios.Name = "toolStripButtonUsuarios";
             this.toolStripButtonUsuarios.Size = new System.Drawing.Size(23, 22);
@@ -294,7 +294,7 @@ namespace Olor_a_Libro
             // toolStripButtonEstadisticas
             // 
             this.toolStripButtonEstadisticas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
+    //        this.toolStripButtonEstadisticas.Image = global::Olor_a_Libro.Properties.Resources._025_presentation;
             this.toolStripButtonEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonEstadisticas.Name = "toolStripButtonEstadisticas";
             this.toolStripButtonEstadisticas.Size = new System.Drawing.Size(23, 22);
@@ -309,7 +309,7 @@ namespace Olor_a_Libro
             // toolStripButtonSalir
             // 
             this.toolStripButtonSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
+   //         this.toolStripButtonSalir.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.toolStripButtonSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSalir.Name = "toolStripButtonSalir";
             this.toolStripButtonSalir.Size = new System.Drawing.Size(23, 22);
@@ -328,7 +328,7 @@ namespace Olor_a_Libro
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.Sin_título_1_copia;
+     //       this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.Sin_título_1_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(769, 512);
             this.Controls.Add(this.toolStripAccesosDirectos);
