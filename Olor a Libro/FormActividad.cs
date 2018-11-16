@@ -119,7 +119,7 @@ namespace Olor_a_Libro
                 dateTimePickerDiaAct.Value = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
-                foreach (string item in act.librerias)
+                foreach (Libreria item in act.librerias)
                 {
                     listBoxLibreriasAct.SelectedItems.Add(item);
                 }
@@ -188,36 +188,77 @@ namespace Olor_a_Libro
                 listBL.DisplayMember = item.id.ToString(); 
             }
         }*/
+        public static Boolean repetido(Actividad act)
+        {
+            Boolean encontrado = false;
+
+            foreach (var item in Utilitats.actividades)
+            {
+                encontrado = Utilitats.actividades.Equals(act);
+            }
+            return encontrado;
+        }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+            int id = Utilitats.generarid(new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()));
             String nomAct = textBoxNomAct.Text;
             String lugar = textBoxLugarAct.Text;
-            //String tipo = comboBoxTipoAct.SelectedItem
-            String fecha = dateTimePickerDiaAct.Text;
+            String tipo = comboBoxTipoAct.SelectedItem.ToString();
+            DateTime fecha = dateTimePickerDiaAct.Value;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
-                      
-
-            if (nomAct!="" && lugar != "" && fecha != "" && hora != "" && descripcion != "" && listBoxLibreriasAct.SelectedItems!=null)
+            //listBoxLibreriasAct
+            //---------------------------------AÑADIR ACTIVIDAD-------------------------------
+            if (act == null)
             {
-                Actividad act = new Actividad();
-                //act.librerias = new List<int>();
-
-                act.nombre = nomAct;
-                act.lugar = lugar;
-               // act.fecha = fecha;
-                act.hora = hora;
-                act.descripcion = descripcion;
-
-                foreach (var item in listBoxLibreriasAct.SelectedItems)
+                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
                 {
-                    //act.IDlibrerias.Add(item)
+                    Actividad act = new Actividad();
+                    //act.librerias = new List<int>();
+
+                    act.nombre = nomAct;
+                    act.lugar = lugar;
+                    act.fecha = fecha;
+                    act.hora = hora;
+                    act.descripcion = descripcion;
+                    foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                    {
+                        act.librerias.Add(item);
+                    }
+                    Boolean encontrado = repetido(act);
+
+                    if (!encontrado)
+                    {
+                        Utilitats.actividades.Add(act);
+                        MessageBox.Show("Actividad añadida satisfactoriamente", "Añadir Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
-            }
-            else
-            {
-                
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (nomAct == "")
+                    {
+                        textBoxNomAct.Focus();
+                    }
+                    else if (lugar == "")
+                    {
+                        textBoxLugarAct.Focus();
+                    }
+                    else if (tipo == "")
+                    {
+                        comboBoxTipoAct.Focus();
+                    }
+                    else if (fecha == null)
+                    {
+                        dateTimePickerDiaAct.Focus();
+                    }
+                }
             }
 
             

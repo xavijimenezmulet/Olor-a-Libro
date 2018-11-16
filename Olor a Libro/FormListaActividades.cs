@@ -96,18 +96,6 @@ namespace Olor_a_Libro
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            /*string arxiu = "actividades.json";
-
-            if (File.Exists(arxiu))
-            {
-                JArray jArrayActs = JArray.Parse(File.ReadAllText(arxiu));
-                Utilitats.librerias = jArrayActs.ToObject<BindingList<Libreria>>();
-            }
-            else
-            {
-                Utilitats.actividades = new BindingList<Actividad>();
-            }
-            dataGridViewActividades.DataSource = Utilitats.librerias;*/
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
         {
