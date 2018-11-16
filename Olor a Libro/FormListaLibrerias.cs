@@ -24,7 +24,7 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             //Utilitats.carregarJsons();
-            string arxiu = "librerias.json";
+           /*string arxiu = "librerias.json";
 
             if (File.Exists(arxiu))
             {
@@ -34,8 +34,8 @@ namespace Olor_a_Libro
             else
             {
                 Utilitats.librerias = new BindingList<Libreria>();
-            }
-            dataGridViewLibrerias.DataSource = Utilitats.librerias;
+            }*/
+            //dataGridViewLibrerias.DataSource = Utilitats.librerias;
         }
         private void FormListaLibrerias_Activated(object sender, EventArgs e)
         {

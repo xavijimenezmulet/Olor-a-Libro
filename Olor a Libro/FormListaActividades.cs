@@ -96,7 +96,7 @@ namespace Olor_a_Libro
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            string arxiu = "actividades.json";
+            /*string arxiu = "actividades.json";
 
             if (File.Exists(arxiu))
             {
@@ -107,11 +107,11 @@ namespace Olor_a_Libro
             {
                 Utilitats.actividades = new BindingList<Actividad>();
             }
-            dataGridViewActividades.DataSource = Utilitats.librerias;
+            dataGridViewActividades.DataSource = Utilitats.librerias;*/
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
         {
-            dataGridViewActividades.DataSource = Utilitats.librerias;
+            dataGridViewActividades.DataSource = Utilitats.actividades;
             dataGridViewActividades.Refresh();
         }
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
@@ -148,7 +148,5 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-       
     }
 }
