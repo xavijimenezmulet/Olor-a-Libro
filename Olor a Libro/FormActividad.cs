@@ -165,29 +165,7 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.Black;
         }
-        /*
-        public static void omplirListBox()
-        {
-            ListBox listBL = new ListBox();
-            List<Libreria> lib;
-
-            if (File.Exists("librerias.json"))
-            {
-                JArray jArrayPelis = JArray.Parse(File.ReadAllText("librerias.json"));
-                lib = jArrayPelis.ToObject<List<Libreria>>();
-            }
-            else
-            {
-                lib = new List<Libreria>();
-            }
-
-
-            foreach (var item in lib)
-            {
-                listBL.Items.Add(item.nombre);
-                listBL.DisplayMember = item.id.ToString(); 
-            }
-        }*/
+       
         public static Boolean repetido(Actividad act)
         {
             Boolean encontrado = false;
@@ -208,6 +186,7 @@ namespace Olor_a_Libro
             DateTime fecha = dateTimePickerDiaAct.Value;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
+            BindingList<Libreria> libs = new BindingList<Libreria>();
             //listBoxLibreriasAct
             //---------------------------------AÑADIR ACTIVIDAD-------------------------------
             if (act == null)
@@ -224,8 +203,9 @@ namespace Olor_a_Libro
                     act.descripcion = descripcion;
                     foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
                     {
-                        act.librerias.Add(item);
+                       libs.Add(item);
                     }
+                    act.librerias = libs;
                     Boolean encontrado = repetido(act);
 
                     if (!encontrado)
