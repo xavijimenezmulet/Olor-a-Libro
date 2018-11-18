@@ -15,9 +15,14 @@ namespace Olor_a_Libro
 {
     public partial class FormVerUsuario : Form
     {
+        Usuario user;
         public FormVerUsuario()
         {
             InitializeComponent();
+        }
+        public FormVerUsuario(Usuario user)
+        {
+            this.user = user;
         }
         //ACCESO A LOS FORMULARIOS
 

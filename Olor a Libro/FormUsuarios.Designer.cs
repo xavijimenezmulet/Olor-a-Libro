@@ -59,7 +59,7 @@
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonAñadir = new System.Windows.Forms.Button();
+            this.buttonAnyadir = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -322,7 +322,7 @@
             this.groupBoxUsuarios.Controls.Add(this.buttonSalir);
             this.groupBoxUsuarios.Controls.Add(this.buttonEliminar);
             this.groupBoxUsuarios.Controls.Add(this.buttonEditar);
-            this.groupBoxUsuarios.Controls.Add(this.buttonAñadir);
+            this.groupBoxUsuarios.Controls.Add(this.buttonAnyadir);
             this.groupBoxUsuarios.Controls.Add(this.dataGridViewUsuarios);
             this.groupBoxUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxUsuarios.Location = new System.Drawing.Point(19, 65);
@@ -342,6 +342,7 @@
             this.buttonSalir.TabIndex = 4;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // buttonEliminar
             // 
@@ -352,6 +353,7 @@
             this.buttonEliminar.TabIndex = 3;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonEditar
             // 
@@ -362,16 +364,18 @@
             this.buttonEditar.TabIndex = 2;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
-            // buttonAñadir
+            // buttonAnyadir
             // 
-            this.buttonAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAñadir.Location = new System.Drawing.Point(641, 40);
-            this.buttonAñadir.Name = "buttonAñadir";
-            this.buttonAñadir.Size = new System.Drawing.Size(75, 23);
-            this.buttonAñadir.TabIndex = 1;
-            this.buttonAñadir.Text = "Añadir";
-            this.buttonAñadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnyadir.Location = new System.Drawing.Point(641, 40);
+            this.buttonAnyadir.Name = "buttonAnyadir";
+            this.buttonAnyadir.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnyadir.TabIndex = 1;
+            this.buttonAnyadir.Text = "Añadir";
+            this.buttonAnyadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
             // 
             // dataGridViewUsuarios
             // 
@@ -426,6 +430,8 @@
             this.Name = "FormUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Usuarios";
+            this.Activated += new System.EventHandler(this.FormUsuarios_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuarios_FormClosing);
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
@@ -468,7 +474,7 @@
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonEditar;
-        private System.Windows.Forms.Button buttonAñadir;
+        private System.Windows.Forms.Button buttonAnyadir;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
