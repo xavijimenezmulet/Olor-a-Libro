@@ -16,6 +16,9 @@ namespace Olor_a_Libro
     public partial class FormVerUsuario : Form
     {
         Usuario user;
+        /**
+         * CONSTRUCTORES
+         **/
         public FormVerUsuario()
         {
             InitializeComponent();
@@ -101,6 +104,17 @@ namespace Olor_a_Libro
         private void FormVerUsuario_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+
+        }
+
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFechaNacimiento_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
