@@ -101,6 +101,19 @@ namespace Olor_a_Libro
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            //Utilitats.carregarJsons();
+            string arxiu = "usuarios.json";
+
+            if (File.Exists(arxiu))
+            {
+                JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiu));
+                Utilitats.usuarios = jArrayLibs.ToObject<BindingList<Usuario>>();
+            }
+            else
+            {
+                Utilitats.usuarios = new BindingList<Usuario>();
+            }
+            dataGridViewUsuarios.DataSource = Utilitats.usuarios;
         }
     }
 }
