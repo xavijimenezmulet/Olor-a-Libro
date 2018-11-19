@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +15,9 @@ namespace Olor_a_Libro
 {
     public partial class FormUsuarios : Form
     {
+        /**
+         * CONSTRUCTORES
+         **/
         public FormUsuarios()
         {
             InitializeComponent();
@@ -95,9 +101,118 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
         }
 
+        /**
+         * FORMUSUARIOS_LOAD : NOS CENTRA EL FORMULARIO Y LUEGO MIRA SI EXISTE EL JSON,
+         * SI EXISTE LO CARGA Y SINO CREA UNA LISTA DE USUARIOS Y GUARDA EN LA GRID LOS USUARIOS
+         **/
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            //Utilitats.carregarJsons();
+            String arxiu = "usuarios.json";
+
+            if (File.Exists(arxiu))
+            {
+                JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiu));
+                Utilitats.usuarios = jArrayLibs.ToObject<BindingList<Usuario>>();
+            }
+            else
+            {
+                Utilitats.usuarios = new BindingList<Usuario>();
+            }
+            dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+        }
+        /**
+         * FORMUSUARIOS_ACTIVATED: CADA VEZ QUE SE ABRA EL FORMULARIO NOS REFRESCA LA GRIDVIEW
+         * DE USUARIOS
+         **/
+        private void FormUsuarios_Activated(object sender, EventArgs e)
+        {
+            dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+            dataGridViewUsuarios.Refresh();
+        }
+        /**
+         * BUTTONANYADIR_CLICK: NOS ABRE UN FORMULARIOA FORMVERUSUARIO PARA PODER AÑADIR UN
+         * USUARIO UTILIZANDO LA CLASE METODOSMENU 
+         **/
+        private void buttonAnyadir_Click(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirUsuarios();
+        }
+
+        /**
+         * BUTTONEDITAR_CLICK: NOS EDITA A TRAVÉS DE LA SELECCIÓN EN LA GRIDVIEW UN USUARIO 
+         * ABRIENDO ASÍ EL FORMULARIO PARA EDITAR SI NO SELECCIONAMOS NINGUNO NOS MUESTRA UN MENSAJE
+         * DE ERROR
+         **/
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsuarios.SelectedRows.Count > 0)
+            {
+                Usuario user = (Usuario)dataGridViewUsuarios.SelectedRows[0].DataBoundItem;
+                FormVerUsuario fuser = new FormVerUsuario(user);
+                fuser.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        /**
+         * FORMUSUARIOS_FORMCLOSING: AL CLICKAR LA PESTAÑA DE CERRAR NOS APARECERÁ UN CUADRO DIALOGO
+         * PREGUNTANDO SI SALIR SIN GUARDAR CANCELAR O SEGUIR 
+         **/
+        private void FormUsuarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Preguntar si quiere garbar o no
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("Estás a punto de salir sin guardar, quieres guardar?"
+                , "ADVERTENCIA", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            switch (respuesta)
+            {
+                case DialogResult.Yes:
+                    //consultar compañeros
+                    Utilitats.guardarJsonlibs();
+                    Utilitats.guardarJsonbooks();
+                    Utilitats.guardarJsonusers();
+                    Utilitats.guardarJsonop();
+                    Utilitats.guardarJsonact();
+                    Utilitats.guardarJsonviews();
+                    break;
+                case DialogResult.Cancel:
+                    e.Cancel = true;
+                    break;
+            }
+
+        }
+
+        
+        /**
+         * BUTTONELIMINAR_CLICK: AL CLICKAR NOS ELIMINA UN USUARIO SELECCIONADO DE LA GRIDVIEW
+         * SI NO SELECCIONAMOS NINGUNO NOS SALTA MENSAJE DE ERROR
+         **/
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsuarios.SelectedRows.Count > 0)
+            {
+                Usuario user = (Usuario)dataGridViewUsuarios.SelectedRows[0].DataBoundItem;
+                Utilitats.usuarios.Remove(user);
+                dataGridViewUsuarios.DataSource = null;
+                dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        /**
+         * BUTTONSALIR_CLICK: AL CLICKAR EL EVENTO SE PORDUCE EL EVENTO FORMCLOSING
+         * SIENDO UN ACCESO DIRECTO DE ESTE
+         **/
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

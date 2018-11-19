@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,17 @@ namespace Olor_a_Libro
 {
     public partial class FormVerUsuario : Form
     {
+        Usuario user;
+        /**
+         * CONSTRUCTORES
+         **/
         public FormVerUsuario()
         {
             InitializeComponent();
+        }
+        public FormVerUsuario(Usuario user)
+        {
+            this.user = user;
         }
         //ACCESO A LOS FORMULARIOS
 
@@ -93,6 +104,17 @@ namespace Olor_a_Libro
         private void FormVerUsuario_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+
+        }
+
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFechaNacimiento_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

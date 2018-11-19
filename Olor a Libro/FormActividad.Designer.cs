@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
             this.comboBoxTipoAct = new System.Windows.Forms.ComboBox();
             this.labelTipoAct = new System.Windows.Forms.Label();
@@ -74,8 +76,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMainMenu.SuspendLayout();
@@ -109,17 +109,44 @@
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
             // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(103, 15);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(318, 20);
+            this.textBoxID.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "ID:";
+            // 
             // listBoxLibreriasAct
             // 
             this.listBoxLibreriasAct.FormattingEnabled = true;
             this.listBoxLibreriasAct.Location = new System.Drawing.Point(103, 246);
             this.listBoxLibreriasAct.Name = "listBoxLibreriasAct";
+            this.listBoxLibreriasAct.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxLibreriasAct.Size = new System.Drawing.Size(318, 56);
             this.listBoxLibreriasAct.TabIndex = 7;
             // 
             // comboBoxTipoAct
             // 
             this.comboBoxTipoAct.FormattingEnabled = true;
+            this.comboBoxTipoAct.Items.AddRange(new object[] {
+            "Firma de libros",
+            "Presentacion de libro",
+            "Lectura conjunta",
+            "Tertulia",
+            "Ficha de libro",
+            "Recital de poesia"});
             this.comboBoxTipoAct.Location = new System.Drawing.Point(103, 108);
             this.comboBoxTipoAct.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTipoAct.Name = "comboBoxTipoAct";
@@ -269,7 +296,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.pictureBox1.Location = new System.Drawing.Point(26, 87);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -294,7 +321,7 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -441,7 +468,7 @@
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);
@@ -532,25 +559,6 @@
             this.toolStripAccesosDirectos.Size = new System.Drawing.Size(648, 27);
             this.toolStripAccesosDirectos.TabIndex = 1;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "ID:";
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Location = new System.Drawing.Point(103, 15);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(318, 20);
-            this.textBoxID.TabIndex = 0;
             // 
             // FormActividad
             // 

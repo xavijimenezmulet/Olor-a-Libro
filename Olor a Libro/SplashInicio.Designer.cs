@@ -41,7 +41,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_;
+            this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia_1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(774, 496);
             this.DoubleBuffered = true;

@@ -14,8 +14,9 @@ namespace Olor_a_Libro
         public string direccion { get; set; }
         public string Correo { get; set; }
         public int telefono { get; set; }
-        public BindingList<Libro> libros { get; set; } = new BindingList<Libro>();
-        public BindingList<Actividad> actividades { get; set; } 
+        public string imagen { get; set; }
+        public List<Libro> libros { get; set; }
+        public List<Actividad> actividades { get; set; }
 
         public bool Equals(Libreria l)
         {

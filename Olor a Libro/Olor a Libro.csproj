@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actividad.cs" />
+    <Compile Include="CargarImagenes.cs" />
     <Compile Include="FormActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +119,11 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Opinion.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SplashInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,14 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="bin\Debug\Olor a Libro.exe.config" />
     <None Include="bin\Debug\Olor a Libro.vshost.exe.config" />
     <None Include="bin\Debug\Olor a Libro.vshost.exe.manifest" />
@@ -232,7 +233,7 @@
     <None Include="Resources\Sin título-1 copia.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sin título-2 copia.png" />
+    <None Include="Resources\Sin_título_2_copia.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título-2 copia1.png" />
@@ -244,6 +245,17 @@
     <None Include="Resources\Sin título-2 copia %281%291.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\OlorALibro.png" />
+    <None Include="Resources\Sin_título-2_copia1.png" />
+    <None Include="Resources\Sin_título-2_copia %281%291.png" />
+    <None Include="Resources\Sin_título-2 copia%281%29.png" />
+    <None Include="Resources\floppy_disk.png" />
+    <None Include="Resources\add_file.png" />
+    <None Include="Resources\040_fired.png" />
+    <None Include="Resources\038_hired.png" />
+    <None Include="Resources\025_presentation.png" />
+    <None Include="Resources\025_presentation.bmp" />
+    <None Include="bin\Debug\Imagenes\OlorALibro.PNG" />
     <Content Include="bin\Debug\Olor a Libro.vshost.exe" />
   </ItemGroup>
   <ItemGroup>
