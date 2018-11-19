@@ -241,6 +241,55 @@ namespace Olor_a_Libro
                     }
                 }
             }
+            //---------------------------------EDITAR ACTIVIDAD------------------------------
+            else
+            {
+                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
+                {
+                    act.nombre = nomAct;
+                    act.lugar = lugar;
+                    act.tipo = tipo;
+                    act.fecha = fecha;
+                    act.hora = hora;
+                    act.descripcion = descripcion;
+                    foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                    {
+                        libs.Add(item);
+                    }
+                    act.librerias = libs;
+                    Boolean encontrado = repetido(act);
+
+                    if (!encontrado)
+                    {
+                        MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (nomAct == "")
+                    {
+                        textBoxNomAct.Focus();
+                    }
+                    else if (lugar == "")
+                    {
+                        textBoxLugarAct.Focus();
+                    }
+                    else if (tipo == "")
+                    {
+                        comboBoxTipoAct.Focus();
+                    }
+                    else if (fecha == null)
+                    {
+                        dateTimePickerDiaAct.Focus();
+                    }
+                }
+            }
         }
 
         private void FormActividad_Activated(object sender, EventArgs e)
