@@ -119,9 +119,17 @@ namespace Olor_a_Libro
                 dateTimePickerDiaAct.Value = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
-                foreach (Libreria item in act.librerias)
+                listBoxLibreriasAct.ClearSelected();
+                if (act.librerias != null)
                 {
-                    listBoxLibreriasAct.SelectedItems.Add(item);
+                    foreach (Libreria item in act.librerias)
+                    {
+                        listBoxLibreriasAct.SelectedItems.Add(item);
+                    }
+                }
+                else
+                {
+                    listBoxLibreriasAct.ClearSelected();
                 }
             }
         }
@@ -187,11 +195,10 @@ namespace Olor_a_Libro
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
             BindingList<Libreria> libs = new BindingList<Libreria>();
-            //listBoxLibreriasAct
             //---------------------------------AÑADIR ACTIVIDAD-------------------------------
             if (act == null)
             {
-                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
+                if (nomAct != "" && lugar != "" && tipo != null && fecha != null && descripcion != "")
                 {
                     Actividad act = new Actividad();
                     //act.librerias = new List<int>();
@@ -206,7 +213,10 @@ namespace Olor_a_Libro
                     {
                        libs.Add(item);
                     }
-                    act.librerias = libs;
+                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                    {
+                        act.librerias = libs;
+                    }
                     Boolean encontrado = repetido(act);
 
                     if (!encontrado)
@@ -239,6 +249,10 @@ namespace Olor_a_Libro
                     {
                         dateTimePickerDiaAct.Focus();
                     }
+                    else if (descripcion == null)
+                    {
+                        textBoxDescripcionAct.Focus();
+                    }
                 }
             }
             //---------------------------------EDITAR ACTIVIDAD------------------------------
@@ -252,11 +266,20 @@ namespace Olor_a_Libro
                     act.fecha = fecha;
                     act.hora = hora;
                     act.descripcion = descripcion;
-                    foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                    //libs = null;
+                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
                     {
-                        libs.Add(item);
+                        foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                        {
+                            libs.Add(item);
+                        }
+                    }
+                    else
+                    {
+                        libs = null;
                     }
                     act.librerias = libs;
+                   
                     Boolean encontrado = repetido(act);
 
                     if (!encontrado)
