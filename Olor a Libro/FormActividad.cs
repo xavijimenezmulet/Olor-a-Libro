@@ -195,9 +195,10 @@ namespace Olor_a_Libro
                 {
                     Actividad act = new Actividad();
                     //act.librerias = new List<int>();
-
+                    act.id = id;
                     act.nombre = nomAct;
                     act.lugar = lugar;
+                    act.tipo = tipo;
                     act.fecha = fecha;
                     act.hora = hora;
                     act.descripcion = descripcion;
@@ -240,8 +241,16 @@ namespace Olor_a_Libro
                     }
                 }
             }
+        }
 
-            
+        private void FormActividad_Activated(object sender, EventArgs e)
+        {
+            textBoxNomAct.Focus();
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

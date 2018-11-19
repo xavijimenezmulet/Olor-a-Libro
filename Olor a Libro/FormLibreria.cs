@@ -131,7 +131,7 @@ namespace Olor_a_Libro
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
 
-            int  id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
+            int id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
 
             String nombre = textBoxNombreLib.Text;
             String direccion = textBoxDirccionLib.Text;

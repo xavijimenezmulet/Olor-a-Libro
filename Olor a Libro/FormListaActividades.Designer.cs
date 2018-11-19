@@ -258,8 +258,10 @@
             this.dataGridViewActividades.AllowUserToAddRows = false;
             this.dataGridViewActividades.AllowUserToDeleteRows = false;
             this.dataGridViewActividades.Location = new System.Drawing.Point(16, 31);
+            this.dataGridViewActividades.MultiSelect = false;
             this.dataGridViewActividades.Name = "dataGridViewActividades";
             this.dataGridViewActividades.ReadOnly = true;
+            this.dataGridViewActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActividades.Size = new System.Drawing.Size(551, 282);
             this.dataGridViewActividades.TabIndex = 8;
             // 

@@ -139,6 +139,7 @@
             // 
             // comboBoxTipoAct
             // 
+            this.comboBoxTipoAct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoAct.FormattingEnabled = true;
             this.comboBoxTipoAct.Items.AddRange(new object[] {
             "Firma de libros",
@@ -293,6 +294,7 @@
             this.buttonBorrar.TabIndex = 9;
             this.buttonBorrar.Text = "Cancelar";
             this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
             // pictureBox1
             // 
@@ -577,6 +579,7 @@
             this.Name = "FormActividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividad";
+            this.Activated += new System.EventHandler(this.FormActividad_Activated);
             this.Load += new System.EventHandler(this.FormActividad_Load);
             this.groupBoxDatosAct.ResumeLayout(false);
             this.groupBoxDatosAct.PerformLayout();
