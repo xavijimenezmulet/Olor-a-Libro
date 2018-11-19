@@ -23,6 +23,7 @@ namespace Olor_a_Libro
         private void FormListaLibrerias_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            //Utilitats.carregarJsons();
             string arxiu = "librerias.json";
 
             if (File.Exists(arxiu))

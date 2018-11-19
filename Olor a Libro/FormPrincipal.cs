@@ -11,6 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+* PRIMER PROYECTO DAM2A - OLOR A LIBRO - 
+* WINDOWS FORMS 
+* @authors:
+* @JoelGalimany @AinhoaGarcía @GermanGómez @XavierJimenez
+* Creación:            10/10/2018
+* Ultima modificacióN: 18/11/2018 
+**/
 namespace Olor_a_Libro
 {
     public partial class FormPrincipal : Form
@@ -24,9 +32,10 @@ namespace Olor_a_Libro
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            
-            //carregar/crear arxius json
 
+            //carregar/crear arxius json
+            //Utilitats.carregarJsons();
+            
             string arxiulib = "librerias.json";
             string arxiubook = "libros.json";
             string arxiuuser = "usuarios.json";
