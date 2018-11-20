@@ -119,19 +119,6 @@ namespace Olor_a_Libro
             }
         }
 
-        public static Boolean repetido(Libreria lib)
-        {
-            Boolean encontrado = false;
-            int i = 0;
-            int x = Utilitats.librerias.Count;
-            while (encontrado == false && i < x) //PROBAR
-            {
-                encontrado = Utilitats.librerias[i].Equals(lib);
-                i++;
-            }
-                       
-            return encontrado;   
-        }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
@@ -157,9 +144,7 @@ namespace Olor_a_Libro
                     lib.imagen = img;
 
                     
-                    Boolean encontrado = repetido(lib);
-
-                    if (!encontrado)
+                    if (!Utilitats.librerias.Contains(lib))
                     {
                         Utilitats.librerias.Add(lib);
                         MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -168,6 +153,7 @@ namespace Olor_a_Libro
                     else
                     {
                         MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.lib = null;
                     }
                 }
                 else
@@ -202,9 +188,9 @@ namespace Olor_a_Libro
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
                     lib.imagen = img; 
-                    Boolean encontrado = repetido(lib);
+                   
 
-                    if (encontrado)
+                    if (Utilitats.librerias.Contains(lib))
                     {
                         MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.Close();

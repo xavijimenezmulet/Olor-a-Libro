@@ -121,21 +121,7 @@ namespace Olor_a_Libro
 
         }
 
-        public static Boolean repetido(Usuario user)
-        {
-            Boolean encontrado = false;
-
-
-            foreach (var item in Utilitats.usuarios)
-            {
-                Boolean enc = Utilitats.usuarios.Equals(user);
-                if (enc)
-                {
-                    encontrado = true;
-                }
-            }
-            return encontrado;
-        }
+   
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
@@ -172,7 +158,7 @@ namespace Olor_a_Libro
 
                     
 
-                    if (!repetido(user))
+                    if (!Utilitats.usuarios.Contains(user))
                     {
                         Utilitats.usuarios.Add(user);
                         MessageBox.Show("Usuario añadido satisfactoriamente", "Añadir Usuario", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -181,6 +167,7 @@ namespace Olor_a_Libro
                     else
                     {
                         MessageBox.Show("Este usuario ya fue añadido", "Usuario repetido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.user = null;
                     }
                 }
                 else
