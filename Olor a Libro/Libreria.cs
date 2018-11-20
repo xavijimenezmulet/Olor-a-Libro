@@ -22,7 +22,7 @@ namespace Olor_a_Libro
         {
             bool igual = false;
 
-            if (l.nombre == this.nombre && l.direccion == this.direccion)
+            if (l.nombre == this.nombre && l.direccion == this.direccion && l.Correo==this.Correo)
             {
                 igual = true;
             }
