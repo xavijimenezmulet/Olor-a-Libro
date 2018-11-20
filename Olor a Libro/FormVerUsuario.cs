@@ -205,5 +205,10 @@ namespace Olor_a_Libro
                 }
             }
         }
+
+        private void FormVerUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Utilitats.closeit(sender, e);
+        }
     }
 }

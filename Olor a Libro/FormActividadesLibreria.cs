@@ -92,8 +92,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,6 +110,11 @@ namespace Olor_a_Libro
         private void FormActividadesLibreria_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void FormActividadesLibreria_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // Utilitats.closeit(sender, e);
         }
     }
 }

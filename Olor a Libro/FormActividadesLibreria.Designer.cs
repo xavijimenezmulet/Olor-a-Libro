@@ -57,15 +57,15 @@
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
             this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonAnyadir = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonAnyadir = new System.Windows.Forms.Button();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.menuStripMainMenu.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
@@ -204,7 +204,7 @@
             // 
             // guardarToolStripMenuItem
             // 
-           this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
@@ -346,36 +346,6 @@
             this.dataGridViewActividades.Size = new System.Drawing.Size(577, 256);
             this.dataGridViewActividades.TabIndex = 4;
             // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Location = new System.Drawing.Point(174, 63);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(65, 25);
-            this.buttonEliminar.TabIndex = 15;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
-            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(93, 63);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(65, 25);
-            this.buttonEditar.TabIndex = 14;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
-            // 
-            // buttonAnyadir
-            // 
-            this.buttonAnyadir.Location = new System.Drawing.Point(12, 63);
-            this.buttonAnyadir.Name = "buttonAnyadir";
-            this.buttonAnyadir.Size = new System.Drawing.Size(65, 25);
-            this.buttonAnyadir.TabIndex = 13;
-            this.buttonAnyadir.Text = "Añadir";
-            this.buttonAnyadir.UseVisualStyleBackColor = true;
-            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
-            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -418,6 +388,36 @@
             this.Hora.Name = "Hora";
             this.Hora.ReadOnly = true;
             // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Location = new System.Drawing.Point(174, 63);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(65, 25);
+            this.buttonEliminar.TabIndex = 15;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(93, 63);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(65, 25);
+            this.buttonEditar.TabIndex = 14;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonAnyadir
+            // 
+            this.buttonAnyadir.Location = new System.Drawing.Point(12, 63);
+            this.buttonAnyadir.Name = "buttonAnyadir";
+            this.buttonAnyadir.Size = new System.Drawing.Size(65, 25);
+            this.buttonAnyadir.TabIndex = 13;
+            this.buttonAnyadir.Text = "Añadir";
+            this.buttonAnyadir.UseVisualStyleBackColor = true;
+            this.buttonAnyadir.Click += new System.EventHandler(this.buttonAnyadir_Click);
+            // 
             // FormActividadesLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +433,7 @@
             this.Name = "FormActividadesLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividades de la libreria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormActividadesLibreria_FormClosing);
             this.Load += new System.EventHandler(this.FormActividadesLibreria_Load);
             this.toolStripAccesosDirectos.ResumeLayout(false);
             this.toolStripAccesosDirectos.PerformLayout();

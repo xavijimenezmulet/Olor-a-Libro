@@ -37,12 +37,12 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirLibreria();
             this.Close();
         }
-        private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.VerActividades();
             this.Close();
-        }
+        }*/
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -71,8 +71,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,22 +89,10 @@ namespace Olor_a_Libro
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            string arxiu = "actividades.json";
-
-            if (File.Exists(arxiu))
-            {
-                JArray jArrayActs = JArray.Parse(File.ReadAllText(arxiu));
-                Utilitats.librerias = jArrayActs.ToObject<BindingList<Libreria>>();
-            }
-            else
-            {
-                Utilitats.actividades = new BindingList<Actividad>();
-            }
-            dataGridViewActividades.DataSource = Utilitats.librerias;
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
         {
-            dataGridViewActividades.DataSource = Utilitats.librerias;
+            dataGridViewActividades.DataSource = Utilitats.actividades;
             dataGridViewActividades.Refresh();
         }
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
@@ -144,6 +130,14 @@ namespace Olor_a_Libro
             }
         }
 
-       
+        private void FormListaActividades_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Utilitats.closeit(sender, e);
+        }
+
+        private void anyadirActividadToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirAct();
+        }
     }
 }

@@ -549,9 +549,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Olor a Libro: Librería";
-//            this.Activated += new System.EventHandler(this.FormLibreria_Activated);
             this.Text = "Olor A Libro: Libreria";
+            this.Activated += new System.EventHandler(this.FormLibreria_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLibreria_FormClosing);
             this.Load += new System.EventHandler(this.FormLibreria_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

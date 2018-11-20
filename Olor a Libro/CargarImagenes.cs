@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,12 @@ namespace Olor_a_Libro
     class CargarImagenes
     {
         public static OpenFileDialog openFileDialog = new OpenFileDialog();
-        public static String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)+ "\\Imagenes";
+        public static string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)+ "\\Imagenes";
 
-        public static String cargarImagen()
+        public static string cargarImagen()
         {
-            String ruta="";
-            String archivo = "";
+            string ruta ="";
+            string archivo = "";
 
             openFileDialog.InitialDirectory = path;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -28,29 +29,44 @@ namespace Olor_a_Libro
             return archivo;
         }
 
-        public static String quitarRuta(String imagen) {
+        public static string quitarRuta(string imagen) {
 
-            String ruta = "";
-            String toRemove = path + "\\";
-            String y = toRemove.Substring(6);
-            ruta = imagen.Substring(y.Length);
+            string ruta = "";
+            string toRemove = path + "\\";
+            string y = toRemove.Substring(6);
             
+            if (imagen != "")
+            {
+                if (imagen.Contains(y))
+                {
+                    ruta = imagen.Substring(y.Length);
+                }
+                else
+                {
+                    ruta = imagen;
+                }
+                
+            }
+       
             return ruta;
         }
 
-        public static String ponerRuta(String imagen)
+        public static string ponerRuta(string imagen)
         {
-            String ruta = "";
-            String y = path.Substring(6);
-            ruta = y + "\\" + imagen;
-
+            string ruta = "";
+            string y = path.Substring(6);
+            if (imagen != "")
+            {
+                ruta = y + "\\" + imagen;
+            }
+           
             return ruta;
         }
 
-        public static String buscarImagen(String rutaImg)
+        public static string buscarImagen(string rutaImg)
         {
-            String archivo = ponerRuta(rutaImg);
-            String ruta = "";
+            string archivo = ponerRuta(rutaImg);
+            string ruta = "";
             
             if (System.IO.File.Exists(archivo))
             {
@@ -59,7 +75,6 @@ namespace Olor_a_Libro
             else
             {
                 MessageBox.Show("No se ha encontrado la imagen", "ERROR AL CARGAR IMAGEN", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //ruta = path.Substring(6) + "\\OlorALibro.png";
             }
 
             return ruta;
