@@ -259,5 +259,10 @@ namespace Olor_a_Libro
             FormLibros libros = new FormLibros(lib);
             libros.ShowDialog();
         }
+
+        private void FormLibreria_Activated(object sender, EventArgs e)
+        {
+            textBoxNombreLib.Focus();
+        }
     }
 }
