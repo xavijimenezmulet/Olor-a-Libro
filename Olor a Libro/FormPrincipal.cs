@@ -64,7 +64,7 @@ namespace Olor_a_Libro
             if (File.Exists(arxiuuser))
             {
                 JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
-                Utilitats.librerias = jArrayusers.ToObject<BindingList<Libreria>>();
+                Utilitats.usuarios = jArrayusers.ToObject<BindingList<Usuario>>();
             }
             else
             {

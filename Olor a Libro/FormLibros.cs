@@ -157,15 +157,19 @@ namespace Olor_a_Libro
 
         private void dataGridViewLibros_SelectionChanged(object sender, EventArgs e)
         {
-            Libro l = (Libro)dataGridViewLibros.SelectedRows[0].DataBoundItem;
-
-            textBoxTitulo.Text = l.titulo;
-            textBoxAutor.Text = l.autor;
-            textBoxAnyoEdicion.Text = l.anyo.ToString();
-            textBoxPrecio.Text = l.precio.ToString();
-            foreach (string item in l.genero)
+            if (dataGridViewLibros.SelectedRows.Count > 0)
             {
-                listBoxGeneros.SelectedItems.Add(item);
+                listBoxGeneros.SelectedItems.Clear();
+                Libro l = (Libro)dataGridViewLibros.SelectedRows[0].DataBoundItem;
+
+                textBoxTitulo.Text = l.titulo;
+                textBoxAutor.Text = l.autor;
+                textBoxAnyoEdicion.Text = l.anyo.ToString();
+                textBoxPrecio.Text = l.precio.ToString();
+                foreach (string item in l.genero)
+                {
+                    listBoxGeneros.SelectedItems.Add(item);
+                }
             }
         }
     }
