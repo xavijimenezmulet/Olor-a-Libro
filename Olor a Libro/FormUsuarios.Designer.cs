@@ -144,7 +144,7 @@
             // 
             this.verLibreriaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.books;
             this.verLibreriaToolStripMenuItem.Name = "verLibreriaToolStripMenuItem";
-            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.verLibreriaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.verLibreriaToolStripMenuItem.Text = "Ver Librerias";
             this.verLibreriaToolStripMenuItem.Click += new System.EventHandler(this.verLibreriaToolStripMenuItem_Click);
             // 
@@ -152,7 +152,7 @@
             // 
             this.añadirLibreríaToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.añadirLibreríaToolStripMenuItem.Name = "añadirLibreríaToolStripMenuItem";
-            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.añadirLibreríaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.añadirLibreríaToolStripMenuItem.Text = "Añadir Librería";
             this.añadirLibreríaToolStripMenuItem.Click += new System.EventHandler(this.añadirLibreríaToolStripMenuItem_Click);
             // 
@@ -170,7 +170,7 @@
             // 
             this.verActividadesToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
-            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
             this.verActividadesToolStripMenuItem.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
@@ -178,7 +178,7 @@
             // 
             this.anyadirActividadToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.add_file;
             this.anyadirActividadToolStripMenuItem.Name = "anyadirActividadToolStripMenuItem";
-            this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.anyadirActividadToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.anyadirActividadToolStripMenuItem.Text = "Añadir Actividad";
             this.anyadirActividadToolStripMenuItem.Click += new System.EventHandler(this.anyadirActividadToolStripMenuItem_Click);
             // 
@@ -379,6 +379,8 @@
             // 
             // dataGridViewUsuarios
             // 
+            this.dataGridViewUsuarios.AllowUserToAddRows = false;
+            this.dataGridViewUsuarios.AllowUserToDeleteRows = false;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idUsuario,
@@ -387,6 +389,7 @@
             this.apellidos});
             this.dataGridViewUsuarios.Location = new System.Drawing.Point(16, 40);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
+            this.dataGridViewUsuarios.ReadOnly = true;
             this.dataGridViewUsuarios.Size = new System.Drawing.Size(611, 379);
             this.dataGridViewUsuarios.TabIndex = 0;
             // 
@@ -395,6 +398,7 @@
             this.idUsuario.DataPropertyName = "idUsuario";
             this.idUsuario.HeaderText = "ID";
             this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
             this.idUsuario.Width = 70;
             // 
             // usuario
@@ -403,12 +407,14 @@
             this.usuario.DataPropertyName = "usuario";
             this.usuario.HeaderText = "Usuario ";
             this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
             // 
             // nombre
             // 
             this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Width = 140;
             // 
             // apellidos
@@ -417,6 +423,7 @@
             this.apellidos.DataPropertyName = "apellidos";
             this.apellidos.HeaderText = "Apellidos";
             this.apellidos.Name = "apellidos";
+            this.apellidos.ReadOnly = true;
             // 
             // FormUsuarios
             // 

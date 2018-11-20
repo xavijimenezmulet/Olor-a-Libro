@@ -74,11 +74,9 @@
             this.labelApellidos = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
-            this.pictureBoxLibro = new System.Windows.Forms.PictureBox();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMainMenu
@@ -93,7 +91,7 @@
             this.puntuaciónToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(588, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(438, 24);
             this.menuStripMainMenu.TabIndex = 1;
             this.menuStripMainMenu.Text = "Menu Principal";
             // 
@@ -247,7 +245,7 @@
             this.toolStripButtonSalir});
             this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
             this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
-            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(588, 25);
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(438, 25);
             this.toolStripAccesosDirectos.TabIndex = 3;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
@@ -328,7 +326,6 @@
             // 
             // groupBoxUsuario
             // 
-            this.groupBoxUsuario.Controls.Add(this.pictureBoxLibro);
             this.groupBoxUsuario.Controls.Add(this.textBoxPuntos);
             this.groupBoxUsuario.Controls.Add(this.textBoxDescuento);
             this.groupBoxUsuario.Controls.Add(this.labelDescuento);
@@ -350,7 +347,7 @@
             this.groupBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxUsuario.Location = new System.Drawing.Point(12, 63);
             this.groupBoxUsuario.Name = "groupBoxUsuario";
-            this.groupBoxUsuario.Size = new System.Drawing.Size(567, 309);
+            this.groupBoxUsuario.Size = new System.Drawing.Size(422, 309);
             this.groupBoxUsuario.TabIndex = 4;
             this.groupBoxUsuario.TabStop = false;
             this.groupBoxUsuario.Text = "Usuario";
@@ -384,7 +381,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(482, 55);
+            this.buttonCancelar.Location = new System.Drawing.Point(341, 55);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 9;
@@ -394,7 +391,7 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(482, 18);
+            this.buttonAceptar.Location = new System.Drawing.Point(341, 18);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 8;
@@ -516,20 +513,12 @@
             this.labelUsuario.TabIndex = 0;
             this.labelUsuario.Text = "Usuario";
             // 
-            // pictureBoxLibro
-            // 
-            this.pictureBoxLibro.Location = new System.Drawing.Point(355, 18);
-            this.pictureBoxLibro.Name = "pictureBoxLibro";
-            this.pictureBoxLibro.Size = new System.Drawing.Size(102, 150);
-            this.pictureBoxLibro.TabIndex = 21;
-            this.pictureBoxLibro.TabStop = false;
-            // 
             // FormVerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(588, 384);
+            this.ClientSize = new System.Drawing.Size(438, 384);
             this.Controls.Add(this.groupBoxUsuario);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
@@ -543,7 +532,6 @@
             this.toolStripAccesosDirectos.PerformLayout();
             this.groupBoxUsuario.ResumeLayout(false);
             this.groupBoxUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,6 +585,5 @@
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxPuntos;
-        private System.Windows.Forms.PictureBox pictureBoxLibro;
     }
 }
