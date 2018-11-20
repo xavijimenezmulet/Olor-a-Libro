@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Olor_a_Libro
         public string Correo { get; set; }
         public int telefono { get; set; }
         public List<Libro> libros { get; set; }
-        public List<Actividad> actividades { get; set; }
+        public BindingList<String> actividades { get; set; }
 
         public bool Equals(Libreria l)
         {

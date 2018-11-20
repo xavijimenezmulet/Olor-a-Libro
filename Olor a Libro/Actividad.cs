@@ -16,7 +16,7 @@ namespace Olor_a_Libro
         public string tipo { get; set; }
         public DateTime fecha { get; set; } //DataTime
         public string hora { get; set; } //DataTime
-        public BindingList<Libreria> librerias { get; set; }
+        public BindingList<String> librerias { get; set; }
         //public List<String> librerias { get; set; }
         public BindingList<Opinion> opiniones { get; set; }
 

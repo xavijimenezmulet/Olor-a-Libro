@@ -122,9 +122,15 @@ namespace Olor_a_Libro
                 listBoxLibreriasAct.ClearSelected();
                 if (act.librerias != null)
                 {
-                    foreach (Libreria item in act.librerias)
+                    foreach (String item in act.librerias)
                     {
-                        listBoxLibreriasAct.SelectedItems.Add(item);
+                        for (int i = 0; i < Utilitats.librerias.Count; i++)
+                        {
+                            if (Utilitats.librerias[i].nombre == item)
+                            {
+                                listBoxLibreriasAct.SelectedItems.Add(Utilitats.librerias[i]);
+                            }
+                        }
                     }
                 }
                 else
@@ -194,7 +200,7 @@ namespace Olor_a_Libro
             DateTime fecha = dateTimePickerDiaAct.Value;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
-            BindingList<Libreria> libs = new BindingList<Libreria>();
+            BindingList<String> libs = new BindingList<String>();
             //---------------------------------AÑADIR ACTIVIDAD-------------------------------
             if (act == null)
             {
@@ -211,7 +217,7 @@ namespace Olor_a_Libro
                     act.descripcion = descripcion;
                     foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
                     {
-                       libs.Add(item);
+                       libs.Add(item.nombre);
                     }
                     if (listBoxLibreriasAct.SelectedItems.Count > 0)
                     {
@@ -271,7 +277,7 @@ namespace Olor_a_Libro
                     {
                         foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
                         {
-                            libs.Add(item);
+                            libs.Add(item.nombre);
                         }
                     }
                     else
