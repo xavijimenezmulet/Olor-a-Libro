@@ -109,8 +109,12 @@ namespace Olor_a_Libro
                 textBoxCorreoLib.Text = lib.Correo;
                 String archivo = "";
                 archivo = CargarImagenes.buscarImagen(lib.imagen);
+                if (archivo != "")
+                {
                 pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
                 textBoxImgLib.Text = archivo;
+                }
+               
                
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
@@ -120,11 +124,14 @@ namespace Olor_a_Libro
         public static Boolean repetido(Libreria lib)
         {
             Boolean encontrado = false;
-
-            foreach (var item in Utilitats.librerias)
+            int i = 0;
+            int x = Utilitats.librerias.Count;
+            while (encontrado == false && i < x) //PROBAR
             {
-                encontrado = Utilitats.librerias.Equals(lib);
+                encontrado = Utilitats.librerias[i].Equals(lib);
+                i++;
             }
+                       
             return encontrado;   
         }
 
@@ -133,11 +140,11 @@ namespace Olor_a_Libro
 
             int id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
 
-            String nombre = textBoxNombreLib.Text;
-            String direccion = textBoxDirccionLib.Text;
-            String telefono = textBoxTelefonoLib.Text;
-            String correo = textBoxCorreoLib.Text;
-            String img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
+            string nombre = textBoxNombreLib.Text;
+            string direccion = textBoxDirccionLib.Text;
+            string telefono = textBoxTelefonoLib.Text;
+            string correo = textBoxCorreoLib.Text;
+            string img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
@@ -199,19 +206,20 @@ namespace Olor_a_Libro
                     lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
-                    if (!encontrado)
+                    if (encontrado)
                     {
                         MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
                 MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 if (nombre == "")
                 {
                     textBoxNombreLib.Focus();
@@ -236,7 +244,7 @@ namespace Olor_a_Libro
         private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
 
-            String ruta = "";
+            string ruta = "";
             ruta=CargarImagenes.cargarImagen();
 
             if (ruta != "")
@@ -246,7 +254,6 @@ namespace Olor_a_Libro
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
             }
-            
         }
 
         private void buttonLibros_Click(object sender, EventArgs e)
