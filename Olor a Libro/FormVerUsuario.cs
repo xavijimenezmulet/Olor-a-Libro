@@ -104,7 +104,34 @@ namespace Olor_a_Libro
         private void FormVerUsuario_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            if (this.user != null)
+            {
+                textBoxUsuario.Text     = this.user.username;
+                textBoxNombre.Text      = this.user.nombre;
+                textBoxApellidos.Text   = this.user.apellidos;
+                textBoxCiudad.Text      = this.user.ciudad;
+                textBoxContrasenya.Text = this.user.password;
+                textBoxPuntos.Text      = this.user.puntos.ToString();
+                textBoxRanking.Text     = this.user.rank;
+                textBoxDescuento.Text   = this.user.descuento.ToString();
+            }
 
+        }
+
+        public static Boolean repetido(Usuario user)
+        {
+            Boolean encontrado = false;
+
+
+            foreach (var item in Utilitats.usuarios)
+            {
+                Boolean enc = Utilitats.usuarios.Equals(user);
+                if (enc)
+                {
+                    encontrado = true;
+                }
+            }
+            return encontrado;
         }
 
         private void textBoxUsuario_TextChanged(object sender, EventArgs e)
