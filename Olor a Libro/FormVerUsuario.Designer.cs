@@ -525,7 +525,6 @@
             this.Name = "FormVerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Ver Usuario";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormVerUsuario_FormClosing);
             this.Load += new System.EventHandler(this.FormVerUsuario_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

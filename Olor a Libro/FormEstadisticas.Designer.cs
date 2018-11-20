@@ -448,7 +448,6 @@
             this.Name = "FormEstadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Estadísticas";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEstadisticas_FormClosing);
             this.Load += new System.EventHandler(this.FormEstadisticas_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

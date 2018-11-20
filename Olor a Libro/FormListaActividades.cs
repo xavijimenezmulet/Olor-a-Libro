@@ -130,14 +130,18 @@ namespace Olor_a_Libro
             }
         }
 
-        private void FormListaActividades_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Utilitats.closeit(sender, e);
-        }
-
         private void anyadirActividadToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MetodosMenu.AnyadirAct();
+        }
+        private void FormListaActividades_FormClosing(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormListaActividades_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

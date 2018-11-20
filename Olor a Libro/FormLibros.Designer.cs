@@ -507,7 +507,6 @@
             this.Name = "FormLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Libros";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLibros_FormClosing);
             this.Load += new System.EventHandler(this.FormLibros_Load);
             this.groupBoxLibros.ResumeLayout(false);
             this.groupBoxLibros.PerformLayout();

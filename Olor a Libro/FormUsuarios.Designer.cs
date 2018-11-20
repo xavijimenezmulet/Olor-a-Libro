@@ -385,7 +385,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Usuarios";
             this.Activated += new System.EventHandler(this.FormUsuarios_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuarios_FormClosing);
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();
