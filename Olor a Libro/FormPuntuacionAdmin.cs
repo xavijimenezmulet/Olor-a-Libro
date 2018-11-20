@@ -90,10 +90,6 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        private void FormPuntuacionAdmin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           // Utilitats.closeit(sender, e);
-        }
+        
     }
 }

@@ -382,7 +382,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividades";
             this.Activated += new System.EventHandler(this.FormListaActividades_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormListaActividades_FormClosing);
             this.Load += new System.EventHandler(this.FormListaActividades_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

@@ -433,7 +433,6 @@
             this.Name = "FormActividadesLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividades de la libreria";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormActividadesLibreria_FormClosing);
             this.Load += new System.EventHandler(this.FormActividadesLibreria_Load);
             this.toolStripAccesosDirectos.ResumeLayout(false);
             this.toolStripAccesosDirectos.PerformLayout();

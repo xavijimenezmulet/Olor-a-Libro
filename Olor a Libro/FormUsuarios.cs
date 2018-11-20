@@ -155,12 +155,6 @@ namespace Olor_a_Libro
          * FORMUSUARIOS_FORMCLOSING: AL CLICKAR LA PESTAÑA DE CERRAR NOS APARECERÁ UN CUADRO DIALOGO
          * PREGUNTANDO SI SALIR SIN GUARDAR CANCELAR O SEGUIR 
          **/
-        private void FormUsuarios_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Preguntar si quiere garbar o no
-            Utilitats.closeit(sender, e);
-
-        }
 
         
         /**

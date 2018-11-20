@@ -580,7 +580,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Actividad";
             this.Activated += new System.EventHandler(this.FormActividad_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormActividad_FormClosing);
             this.Load += new System.EventHandler(this.FormActividad_Load);
             this.groupBoxDatosAct.ResumeLayout(false);
             this.groupBoxDatosAct.PerformLayout();

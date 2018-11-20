@@ -98,10 +98,6 @@ namespace Olor_a_Libro
             listBoxLibreriasAct.DataSource = null;
             listBoxLibreriasAct.DataSource = Utilitats.librerias;
             listBoxLibreriasAct.DisplayMember = "nombre";
-            /*for (int i = 0; i < Utilitats.librerias.Count(); i++)
-            {
-                listBoxLibreriasAct.Items.Add(Utilitats.librerias[i].nombre);
-            }*/
 
             if (act != null)
             {
@@ -200,7 +196,6 @@ namespace Olor_a_Libro
                 if (nomAct != "" && lugar != "" && tipo != null && fecha != null && descripcion != "")
                 {
                     Actividad act = new Actividad();
-                    //act.librerias = new List<int>();
                     act.id = id;
                     act.nombre = nomAct;
                     act.lugar = lugar;
@@ -265,7 +260,6 @@ namespace Olor_a_Libro
                     act.fecha = fecha;
                     act.hora = hora;
                     act.descripcion = descripcion;
-                    //libs = null;
                     if (listBoxLibreriasAct.SelectedItems.Count > 0)
                     {
                         foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
@@ -322,11 +316,6 @@ namespace Olor_a_Libro
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FormActividad_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           // Utilitats.closeit(sender, e);
         }
     }
 }
