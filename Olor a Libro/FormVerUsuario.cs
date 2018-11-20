@@ -25,6 +25,7 @@ namespace Olor_a_Libro
         }
         public FormVerUsuario(Usuario user)
         {
+            InitializeComponent();
             this.user = user;
         }
         //ACCESO A LOS FORMULARIOS
@@ -186,6 +187,52 @@ namespace Olor_a_Libro
                         textBoxContrasenya.Focus();
                     }
                     else if(ciudad == "")
+                    {
+                        textBoxCiudad.Focus();
+                    }
+                }
+            }
+           else
+            {
+                if (username != ""
+                    && nombre != ""
+                    && apellidos != ""
+                    && ciudad != "")
+                {
+                    this.user.username = username;
+                    this.user.nombre = nombre;
+                    this.user.apellidos = apellidos;
+                    this.user.ciudad = ciudad;
+
+
+
+                    if (Utilitats.usuarios.Contains(user))
+                    {
+                        MessageBox.Show("Usuario modificado satisfactoriamente", "Modificar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al introducir el usuario", "Usuario no introducido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.user = null;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (username == "")
+                    {
+                        textBoxUsuario.Focus();
+                    }
+                    else if (nombre == "")
+                    {
+                        textBoxNombre.Focus();
+                    }
+                    else if (apellidos == "")
+                    {
+                        textBoxContrasenya.Focus();
+                    }
+                    else if (ciudad == "")
                     {
                         textBoxCiudad.Focus();
                     }

@@ -163,12 +163,17 @@ namespace Olor_a_Libro
          **/
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            
             if (dataGridViewUsuarios.SelectedRows.Count > 0)
             {
                 Usuario user = (Usuario)dataGridViewUsuarios.SelectedRows[0].DataBoundItem;
-                Utilitats.usuarios.Remove(user);
-                dataGridViewUsuarios.DataSource = null;
-                dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+                String username = user.username;
+                if (Utilitats.eliminarForm(sender, e, username ))
+                {
+                    Utilitats.usuarios.Remove(user);
+                    dataGridViewUsuarios.DataSource = null;
+                    dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+                }
             }
             else
             {

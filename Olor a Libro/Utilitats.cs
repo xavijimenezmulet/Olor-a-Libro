@@ -137,6 +137,22 @@ namespace Olor_a_Libro
             return verdadero;
             
         }
+
+        public static Boolean eliminarForm(object sender, EventArgs e, String username)
+        {
+            Boolean verdadero = false;
+            DialogResult respuesta = MessageBox.Show("Estás a punto de eliminar a " + username + " ¿Estás seguro?",
+                                                     "ADVERTENCIA",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                verdadero = true;
+            }
+
+            return verdadero;
+
+        }
         //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
         /*public static void carregarJsons()
         {
