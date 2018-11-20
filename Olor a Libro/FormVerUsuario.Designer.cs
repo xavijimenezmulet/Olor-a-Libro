@@ -66,8 +66,8 @@
             this.textBoxRanking = new System.Windows.Forms.TextBox();
             this.labelRanking = new System.Windows.Forms.Label();
             this.labelPuntos = new System.Windows.Forms.Label();
-            this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.labelContrasenya = new System.Windows.Forms.Label();
@@ -336,8 +336,8 @@
             this.groupBoxUsuario.Controls.Add(this.textBoxRanking);
             this.groupBoxUsuario.Controls.Add(this.labelRanking);
             this.groupBoxUsuario.Controls.Add(this.labelPuntos);
-            this.groupBoxUsuario.Controls.Add(this.textBoxContrasenya);
             this.groupBoxUsuario.Controls.Add(this.textBoxApellidos);
+            this.groupBoxUsuario.Controls.Add(this.textBoxContrasenya);
             this.groupBoxUsuario.Controls.Add(this.textBoxNombre);
             this.groupBoxUsuario.Controls.Add(this.textBoxUsuario);
             this.groupBoxUsuario.Controls.Add(this.labelContrasenya);
@@ -387,6 +387,7 @@
             this.buttonCancelar.TabIndex = 9;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonAceptar
             // 
@@ -397,6 +398,7 @@
             this.buttonAceptar.TabIndex = 8;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // textBoxCiudad
             // 
@@ -442,21 +444,20 @@
             this.labelPuntos.Size = new System.Drawing.Size(40, 13);
             this.labelPuntos.TabIndex = 10;
             this.labelPuntos.Text = "Puntos";
-            this.labelPuntos.Click += new System.EventHandler(this.labelFechaNacimiento_Click);
-            // 
-            // textBoxContrasenya
-            // 
-            this.textBoxContrasenya.Location = new System.Drawing.Point(115, 91);
-            this.textBoxContrasenya.Name = "textBoxContrasenya";
-            this.textBoxContrasenya.Size = new System.Drawing.Size(202, 23);
-            this.textBoxContrasenya.TabIndex = 2;
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(115, 168);
+            this.textBoxApellidos.Location = new System.Drawing.Point(115, 91);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(202, 23);
-            this.textBoxApellidos.TabIndex = 4;
+            this.textBoxApellidos.TabIndex = 2;
+            // 
+            // textBoxContrasenya
+            // 
+            this.textBoxContrasenya.Location = new System.Drawing.Point(115, 168);
+            this.textBoxContrasenya.Name = "textBoxContrasenya";
+            this.textBoxContrasenya.Size = new System.Drawing.Size(202, 23);
+            this.textBoxContrasenya.TabIndex = 4;
             // 
             // textBoxNombre
             // 
@@ -471,7 +472,6 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(202, 23);
             this.textBoxUsuario.TabIndex = 0;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // labelContrasenya
             // 
@@ -567,8 +567,8 @@
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelApellidos;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.TextBox textBoxContrasenya;
         private System.Windows.Forms.TextBox textBoxApellidos;
+        private System.Windows.Forms.TextBox textBoxContrasenya;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.Label labelContrasenya;

@@ -183,14 +183,5 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona un usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-        /**
-         * BUTTONSALIR_CLICK: AL CLICKAR EL EVENTO SE PORDUCE EL EVENTO FORMCLOSING
-         * SIENDO UN ACCESO DIRECTO DE ESTE
-         **/
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
