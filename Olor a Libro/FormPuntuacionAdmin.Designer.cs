@@ -238,7 +238,7 @@
             this.textBoxPuntosAct.Location = new System.Drawing.Point(121, 89);
             this.textBoxPuntosAct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPuntosAct.Name = "textBoxPuntosAct";
-            this.textBoxPuntosAct.Size = new System.Drawing.Size(212, 20);
+            this.textBoxPuntosAct.Size = new System.Drawing.Size(325, 20);
             this.textBoxPuntosAct.TabIndex = 3;
             // 
             // textBoxPuntosLibro
@@ -246,7 +246,7 @@
             this.textBoxPuntosLibro.Location = new System.Drawing.Point(121, 128);
             this.textBoxPuntosLibro.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPuntosLibro.Name = "textBoxPuntosLibro";
-            this.textBoxPuntosLibro.Size = new System.Drawing.Size(212, 20);
+            this.textBoxPuntosLibro.Size = new System.Drawing.Size(325, 20);
             this.textBoxPuntosLibro.TabIndex = 5;
             // 
             // label2
@@ -264,7 +264,7 @@
             this.textBoxPuntosLibreria.Location = new System.Drawing.Point(121, 162);
             this.textBoxPuntosLibreria.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPuntosLibreria.Name = "textBoxPuntosLibreria";
-            this.textBoxPuntosLibreria.Size = new System.Drawing.Size(212, 20);
+            this.textBoxPuntosLibreria.Size = new System.Drawing.Size(325, 20);
             this.textBoxPuntosLibreria.TabIndex = 7;
             // 
             // label3
@@ -282,7 +282,7 @@
             this.textBoxPuntosLogin.Location = new System.Drawing.Point(121, 200);
             this.textBoxPuntosLogin.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPuntosLogin.Name = "textBoxPuntosLogin";
-            this.textBoxPuntosLogin.Size = new System.Drawing.Size(212, 20);
+            this.textBoxPuntosLogin.Size = new System.Drawing.Size(325, 20);
             this.textBoxPuntosLogin.TabIndex = 9;
             // 
             // label4
@@ -298,18 +298,19 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(425, 89);
+            this.buttonAceptar.Location = new System.Drawing.Point(483, 133);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(92, 31);
             this.buttonAceptar.TabIndex = 10;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonBorrar
             // 
             this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(425, 145);
+            this.buttonBorrar.Location = new System.Drawing.Point(483, 189);
             this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(92, 31);
@@ -322,7 +323,7 @@
             this.textBoxPuntosComentar.Location = new System.Drawing.Point(121, 235);
             this.textBoxPuntosComentar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPuntosComentar.Name = "textBoxPuntosComentar";
-            this.textBoxPuntosComentar.Size = new System.Drawing.Size(212, 20);
+            this.textBoxPuntosComentar.Size = new System.Drawing.Size(325, 20);
             this.textBoxPuntosComentar.TabIndex = 13;
             // 
             // label5

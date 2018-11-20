@@ -21,6 +21,7 @@ namespace Olor_a_Libro
         public static BindingList<Actividad> actividades = new BindingList<Actividad>();
         public static BindingList<Usuario> usuarios = new BindingList<Usuario>();
         public static BindingList<Visita> visitas = new BindingList<Visita>();
+        public static Puntuacion puntuacion = new Puntuacion();
 
         public static void guardarJsonlibs()
         {
@@ -76,6 +77,15 @@ namespace Olor_a_Libro
             jArrayViews.WriteTo(writer);
             writer.Close();
         }
+        public static void guardarJsonPuntuacion()
+        {
+            string arxiuviews = "puntuacion.json";
+            JArray jArrayViews = (JArray)JToken.FromObject(visitas);
+            StreamWriter file = File.CreateText(arxiuviews);
+            JsonTextWriter writer = new JsonTextWriter(file);
+            jArrayViews.WriteTo(writer);
+            writer.Close();
+        }
 
         //------------------METODE PER GENERAR ID------------------------------------------
         public static int generarid(BindingList<object> lista)
@@ -120,6 +130,7 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonop();
             Utilitats.guardarJsonact();
             Utilitats.guardarJsonviews();
+            Utilitats.guardarJsonPuntuacion();
         }
             //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
             /*public static void carregarJsons()
