@@ -76,8 +76,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,31 +142,32 @@ namespace Olor_a_Libro
             dataGridViewLibros.Refresh();
         }
 
-       /* private void refrescarGrid()
-        {
-            dataGridViewLibros.DataSource = lib.libros;
-        }*/
+        /* private void refrescarGrid()
+         {
+             dataGridViewLibros.DataSource = lib.libros;
+         }*/
 
         private void dataGridViewLibros_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewLibros.SelectedRows.Count > 0)
             {
                 listBoxGeneros.SelectedItems.Clear();
-            Libro l = (Libro)dataGridViewLibros.SelectedRows[0].DataBoundItem;
+                Libro l = (Libro)dataGridViewLibros.SelectedRows[0].DataBoundItem;
 
-            textBoxTitulo.Text = l.titulo;
-            textBoxAutor.Text = l.autor;
-            textBoxAnyoEdicion.Text = l.anyo.ToString();
-            textBoxPrecio.Text = l.precio.ToString();
-            foreach (string item in l.genero)
-            {
-                listBoxGeneros.SelectedItems.Add(item);
+                textBoxTitulo.Text = l.titulo;
+                textBoxAutor.Text = l.autor;
+                textBoxAnyoEdicion.Text = l.anyo.ToString();
+                textBoxPrecio.Text = l.precio.ToString();
+                foreach (string item in l.genero)
+                {
+                    listBoxGeneros.SelectedItems.Add(item);
+                }
             }
         }
 
         private void FormLibros_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Utilitats.closeit(sender, e);
+           // Utilitats.closeit(sender, e);
         }
     }
     

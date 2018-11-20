@@ -37,12 +37,12 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirLibreria();
             this.Close();
         }
-        private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.VerActividades();
             this.Close();
-        }
+        }*/
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -71,8 +71,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,7 +132,12 @@ namespace Olor_a_Libro
 
         private void FormListaActividades_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Utilitats.closeit(sender, e);
+            //Utilitats.closeit(sender, e);
+        }
+
+        private void anyadirActividadToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirAct();
         }
     }
 }
