@@ -94,7 +94,7 @@
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia__1_1;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(23, 22);
@@ -119,7 +119,7 @@
             // toolStripButtonActividades
             // 
             this.toolStripButtonActividades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.add_file;
+            this.toolStripButtonActividades.Image = global::Olor_a_Libro.Properties.Resources.reading;
             this.toolStripButtonActividades.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonActividades.Name = "toolStripButtonActividades";
             this.toolStripButtonActividades.Size = new System.Drawing.Size(23, 22);
@@ -196,7 +196,7 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -204,7 +204,7 @@
             // 
             // guardarToolStripMenuItem
             // 
-            this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
+           this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";

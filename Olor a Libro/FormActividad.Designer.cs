@@ -298,7 +298,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.pictureBox1.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.pictureBox1.Location = new System.Drawing.Point(26, 87);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -323,7 +323,7 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -470,7 +470,7 @@
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(24, 24);

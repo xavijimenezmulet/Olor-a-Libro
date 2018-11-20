@@ -65,7 +65,7 @@ namespace Olor_a_Libro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _025_presentation {
             get {
-                object obj = ResourceManager.GetObject("025-presentation", resourceCulture);
+                object obj = ResourceManager.GetObject("_025_presentation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace Olor_a_Libro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _038_hired {
             get {
-                object obj = ResourceManager.GetObject("038-hired", resourceCulture);
+                object obj = ResourceManager.GetObject("_038_hired", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace Olor_a_Libro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _040_fired {
             get {
-                object obj = ResourceManager.GetObject("040-fired", resourceCulture);
+                object obj = ResourceManager.GetObject("_040_fired", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace Olor_a_Libro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap add_file {
             get {
-                object obj = ResourceManager.GetObject("add-file", resourceCulture);
+                object obj = ResourceManager.GetObject("add_file", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -145,7 +145,17 @@ namespace Olor_a_Libro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap floppy_disk {
             get {
-                object obj = ResourceManager.GetObject("floppy-disk", resourceCulture);
+                object obj = ResourceManager.GetObject("floppy_disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OlorALibro {
+            get {
+                object obj = ResourceManager.GetObject("OlorALibro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +173,9 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sin_título_1_copia {
+        internal static System.Drawing.Bitmap Sin_titulo_1_copia {
             get {
-                object obj = ResourceManager.GetObject("Sin título-1 copia", resourceCulture);
+                object obj = ResourceManager.GetObject("Sin_titulo_1_copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +183,9 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sin_título_2_copia {
+        internal static System.Drawing.Bitmap Sin_titulo_2_copia {
             get {
-                object obj = ResourceManager.GetObject("Sin título-2 copia", resourceCulture);
+                object obj = ResourceManager.GetObject("Sin_titulo_2_copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +193,9 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sin_título_2_copia__1_ {
+        internal static System.Drawing.Bitmap Sin_titulo_2_copia__1_1 {
             get {
-                object obj = ResourceManager.GetObject("Sin título-2 copia (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("Sin_titulo_2_copia__1_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +203,9 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sin_título_2_copia__1_1 {
+        internal static System.Drawing.Bitmap Sin_titulo_2_copia_1_ {
             get {
-                object obj = ResourceManager.GetObject("Sin título-2 copia (1)1", resourceCulture);
+                object obj = ResourceManager.GetObject("Sin_titulo_2_copia_1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +213,9 @@ namespace Olor_a_Libro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sin_título_2_copia1 {
+        internal static System.Drawing.Bitmap Sin_titulo_2_copia1 {
             get {
-                object obj = ResourceManager.GetObject("Sin título-2 copia1", resourceCulture);
+                object obj = ResourceManager.GetObject("Sin_titulo_2_copia1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

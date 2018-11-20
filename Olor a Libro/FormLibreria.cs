@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,6 +112,13 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
+                String archivo = "";
+                archivo = CargarImagenes.buscarImagen(lib.imagen);
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
+                textBoxImgLib.Text = archivo;
+               
+                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
         }
 
@@ -137,8 +142,8 @@ namespace Olor_a_Libro
             String direccion = textBoxDirccionLib.Text;
             String telefono = textBoxTelefonoLib.Text;
             String correo = textBoxCorreoLib.Text;
-
-            //---------------------------------AÑADIR LIBRERIA-------------------------------
+            String img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
+            //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
                 if (nombre != null && direccion != "" && telefono != "")
@@ -149,7 +154,9 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
+                    lib.imagen = img;
 
+                    
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -194,7 +201,7 @@ namespace Olor_a_Libro
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
                     lib.Correo = correo;
-
+                    lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
                     if (!encontrado)
@@ -209,19 +216,19 @@ namespace Olor_a_Libro
                 }
                 else
                 {
-                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (nombre == "")
-                    {
-                        textBoxNombreLib.Focus();
-                    }
-                    else if (direccion == "")
-                    {
-                        textBoxDirccionLib.Focus();
-                    }
-                    else if (telefono == "")
-                    {
-                        textBoxTelefonoLib.Focus();
-                    }
+                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (nombre == "")
+                {
+                    textBoxNombreLib.Focus();
+                }
+                else if (direccion == "")
+                {
+                    textBoxDirccionLib.Focus();
+                }
+                else if (telefono == "")
+                {
+                    textBoxTelefonoLib.Focus();
+                }
                 }
             }
         }
@@ -231,9 +238,26 @@ namespace Olor_a_Libro
             this.Close();
         }
 
-        private void FormLibreria_Activated(object sender, EventArgs e)
+        private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
-            textBoxNombreLib.Focus();
+
+            String ruta = "";
+            ruta=CargarImagenes.cargarImagen();
+
+            if (ruta != "")
+            {
+                textBoxImgLib.Text = ruta;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
+                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
+            }
+            
+        }
+
+        private void buttonLibros_Click(object sender, EventArgs e)
+        {
+            FormLibros libros = new FormLibros(lib);
+            libros.ShowDialog();
         }
     }
 }

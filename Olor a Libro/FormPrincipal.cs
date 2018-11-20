@@ -11,6 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+* PRIMER PROYECTO DAM2A - OLOR A LIBRO - 
+* WINDOWS FORMS 
+* @authors:
+* @JoelGalimany @AinhoaGarcía @GermanGómez @XavierJimenez
+* Creación:            10/10/2018
+* Ultima modificacióN: 18/11/2018 
+**/
 namespace Olor_a_Libro
 {
     public partial class FormPrincipal : Form
@@ -198,11 +206,6 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
         }
 
-        private void librosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormLibros libros = new FormLibros();
 
-            libros.ShowDialog();
-        }
     }
 }

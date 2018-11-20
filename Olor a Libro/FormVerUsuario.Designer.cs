@@ -56,26 +56,24 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBoxUsuario = new System.Windows.Forms.GroupBox();
-            this.textBoxTelefono = new System.Windows.Forms.TextBox();
-            this.labelTelefono = new System.Windows.Forms.Label();
+            this.textBoxDescuento = new System.Windows.Forms.TextBox();
+            this.labelDescuento = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBoxCiudad = new System.Windows.Forms.TextBox();
             this.labelCiudad = new System.Windows.Forms.Label();
-            this.textBoxDireccion = new System.Windows.Forms.TextBox();
-            this.labelDireccion = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.labelFechaNacimiento = new System.Windows.Forms.Label();
+            this.textBoxRanking = new System.Windows.Forms.TextBox();
+            this.labelRanking = new System.Windows.Forms.Label();
+            this.labelPuntos = new System.Windows.Forms.Label();
             this.textBoxContrasenya = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxId = new System.Windows.Forms.TextBox();
             this.labelContrasenya = new System.Windows.Forms.Label();
             this.labelApellidos = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.labelId = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
+            this.textBoxPuntos = new System.Windows.Forms.TextBox();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxUsuario.SuspendLayout();
@@ -112,9 +110,9 @@
             // 
             // inicioToolStripMenuItem
             // 
-            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia;
+            this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
@@ -122,20 +120,20 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -254,7 +252,7 @@
             // toolStripButtonInicio
             // 
             this.toolStripButtonInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_título_2_copia__1_1;
+            this.toolStripButtonInicio.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia__1_1;
             this.toolStripButtonInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Size = new System.Drawing.Size(23, 22);
@@ -328,25 +326,23 @@
             // 
             // groupBoxUsuario
             // 
-            this.groupBoxUsuario.Controls.Add(this.textBoxTelefono);
-            this.groupBoxUsuario.Controls.Add(this.labelTelefono);
+            this.groupBoxUsuario.Controls.Add(this.textBoxPuntos);
+            this.groupBoxUsuario.Controls.Add(this.textBoxDescuento);
+            this.groupBoxUsuario.Controls.Add(this.labelDescuento);
             this.groupBoxUsuario.Controls.Add(this.buttonSalir);
             this.groupBoxUsuario.Controls.Add(this.buttonAceptar);
             this.groupBoxUsuario.Controls.Add(this.textBoxCiudad);
             this.groupBoxUsuario.Controls.Add(this.labelCiudad);
-            this.groupBoxUsuario.Controls.Add(this.textBoxDireccion);
-            this.groupBoxUsuario.Controls.Add(this.labelDireccion);
-            this.groupBoxUsuario.Controls.Add(this.dateTimePickerFechaNacimiento);
-            this.groupBoxUsuario.Controls.Add(this.labelFechaNacimiento);
+            this.groupBoxUsuario.Controls.Add(this.textBoxRanking);
+            this.groupBoxUsuario.Controls.Add(this.labelRanking);
+            this.groupBoxUsuario.Controls.Add(this.labelPuntos);
             this.groupBoxUsuario.Controls.Add(this.textBoxContrasenya);
             this.groupBoxUsuario.Controls.Add(this.textBoxApellidos);
             this.groupBoxUsuario.Controls.Add(this.textBoxNombre);
             this.groupBoxUsuario.Controls.Add(this.textBoxUsuario);
-            this.groupBoxUsuario.Controls.Add(this.textBoxId);
             this.groupBoxUsuario.Controls.Add(this.labelContrasenya);
             this.groupBoxUsuario.Controls.Add(this.labelApellidos);
             this.groupBoxUsuario.Controls.Add(this.labelNombre);
-            this.groupBoxUsuario.Controls.Add(this.labelId);
             this.groupBoxUsuario.Controls.Add(this.labelUsuario);
             this.groupBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxUsuario.Location = new System.Drawing.Point(12, 63);
@@ -356,22 +352,23 @@
             this.groupBoxUsuario.TabStop = false;
             this.groupBoxUsuario.Text = "Usuario";
             // 
-            // textBoxTelefono
+            // textBoxDescuento
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(115, 274);
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(202, 23);
-            this.textBoxTelefono.TabIndex = 21;
+            this.textBoxDescuento.Location = new System.Drawing.Point(115, 274);
+            this.textBoxDescuento.Name = "textBoxDescuento";
+            this.textBoxDescuento.ReadOnly = true;
+            this.textBoxDescuento.Size = new System.Drawing.Size(202, 23);
+            this.textBoxDescuento.TabIndex = 7;
             // 
-            // labelTelefono
+            // labelDescuento
             // 
-            this.labelTelefono.AutoSize = true;
-            this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelefono.Location = new System.Drawing.Point(21, 284);
-            this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(49, 13);
-            this.labelTelefono.TabIndex = 20;
-            this.labelTelefono.Text = "Teléfono";
+            this.labelDescuento.AutoSize = true;
+            this.labelDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescuento.Location = new System.Drawing.Point(21, 284);
+            this.labelDescuento.Name = "labelDescuento";
+            this.labelDescuento.Size = new System.Drawing.Size(59, 13);
+            this.labelDescuento.TabIndex = 20;
+            this.labelDescuento.Text = "Descuento";
             // 
             // buttonSalir
             // 
@@ -379,7 +376,7 @@
             this.buttonSalir.Location = new System.Drawing.Point(339, 55);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalir.TabIndex = 19;
+            this.buttonSalir.TabIndex = 9;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = true;
             // 
@@ -389,103 +386,90 @@
             this.buttonAceptar.Location = new System.Drawing.Point(339, 18);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAceptar.TabIndex = 16;
+            this.buttonAceptar.TabIndex = 8;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxCiudad
             // 
-            this.textBoxCiudad.Location = new System.Drawing.Point(115, 242);
+            this.textBoxCiudad.Location = new System.Drawing.Point(115, 133);
             this.textBoxCiudad.Name = "textBoxCiudad";
             this.textBoxCiudad.Size = new System.Drawing.Size(202, 23);
-            this.textBoxCiudad.TabIndex = 15;
+            this.textBoxCiudad.TabIndex = 3;
             // 
             // labelCiudad
             // 
             this.labelCiudad.AutoSize = true;
             this.labelCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCiudad.Location = new System.Drawing.Point(21, 252);
+            this.labelCiudad.Location = new System.Drawing.Point(21, 143);
             this.labelCiudad.Name = "labelCiudad";
             this.labelCiudad.Size = new System.Drawing.Size(40, 13);
             this.labelCiudad.TabIndex = 14;
             this.labelCiudad.Text = "Ciudad";
             // 
-            // textBoxDireccion
+            // textBoxRanking
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(115, 212);
-            this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(202, 23);
-            this.textBoxDireccion.TabIndex = 13;
+            this.textBoxRanking.Location = new System.Drawing.Point(115, 243);
+            this.textBoxRanking.Name = "textBoxRanking";
+            this.textBoxRanking.ReadOnly = true;
+            this.textBoxRanking.Size = new System.Drawing.Size(202, 23);
+            this.textBoxRanking.TabIndex = 6;
             // 
-            // labelDireccion
+            // labelRanking
             // 
-            this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccion.Location = new System.Drawing.Point(21, 222);
-            this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(52, 13);
-            this.labelDireccion.TabIndex = 12;
-            this.labelDireccion.Text = "Dirección";
+            this.labelRanking.AutoSize = true;
+            this.labelRanking.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRanking.Location = new System.Drawing.Point(21, 253);
+            this.labelRanking.Name = "labelRanking";
+            this.labelRanking.Size = new System.Drawing.Size(47, 13);
+            this.labelRanking.TabIndex = 12;
+            this.labelRanking.Text = "Ranking";
             // 
-            // dateTimePickerFechaNacimiento
+            // labelPuntos
             // 
-            this.dateTimePickerFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(115, 184);
-            this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
-            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePickerFechaNacimiento.TabIndex = 11;
-            // 
-            // labelFechaNacimiento
-            // 
-            this.labelFechaNacimiento.AutoSize = true;
-            this.labelFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFechaNacimiento.Location = new System.Drawing.Point(21, 191);
-            this.labelFechaNacimiento.Name = "labelFechaNacimiento";
-            this.labelFechaNacimiento.Size = new System.Drawing.Size(93, 13);
-            this.labelFechaNacimiento.TabIndex = 10;
-            this.labelFechaNacimiento.Text = "Fecha Nacimiento";
+            this.labelPuntos.AutoSize = true;
+            this.labelPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPuntos.Location = new System.Drawing.Point(21, 221);
+            this.labelPuntos.Name = "labelPuntos";
+            this.labelPuntos.Size = new System.Drawing.Size(40, 13);
+            this.labelPuntos.TabIndex = 10;
+            this.labelPuntos.Text = "Puntos";
+            this.labelPuntos.Click += new System.EventHandler(this.labelFechaNacimiento_Click);
             // 
             // textBoxContrasenya
             // 
-            this.textBoxContrasenya.Location = new System.Drawing.Point(115, 83);
+            this.textBoxContrasenya.Location = new System.Drawing.Point(115, 91);
             this.textBoxContrasenya.Name = "textBoxContrasenya";
-            this.textBoxContrasenya.ReadOnly = true;
             this.textBoxContrasenya.Size = new System.Drawing.Size(202, 23);
-            this.textBoxContrasenya.TabIndex = 9;
+            this.textBoxContrasenya.TabIndex = 2;
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(115, 151);
+            this.textBoxApellidos.Location = new System.Drawing.Point(115, 168);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(202, 23);
-            this.textBoxApellidos.TabIndex = 8;
+            this.textBoxApellidos.TabIndex = 4;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(115, 117);
+            this.textBoxNombre.Location = new System.Drawing.Point(115, 55);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(202, 23);
-            this.textBoxNombre.TabIndex = 7;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxUsuario
             // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(115, 50);
+            this.textBoxUsuario.Location = new System.Drawing.Point(115, 18);
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(202, 23);
-            this.textBoxUsuario.TabIndex = 6;
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(115, 18);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(202, 23);
-            this.textBoxId.TabIndex = 5;
+            this.textBoxUsuario.TabIndex = 0;
+            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // labelContrasenya
             // 
             this.labelContrasenya.AutoSize = true;
             this.labelContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContrasenya.Location = new System.Drawing.Point(21, 93);
+            this.labelContrasenya.Location = new System.Drawing.Point(21, 178);
             this.labelContrasenya.Name = "labelContrasenya";
             this.labelContrasenya.Size = new System.Drawing.Size(61, 13);
             this.labelContrasenya.TabIndex = 4;
@@ -495,7 +479,7 @@
             // 
             this.labelApellidos.AutoSize = true;
             this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidos.Location = new System.Drawing.Point(21, 161);
+            this.labelApellidos.Location = new System.Drawing.Point(21, 101);
             this.labelApellidos.Name = "labelApellidos";
             this.labelApellidos.Size = new System.Drawing.Size(49, 13);
             this.labelApellidos.TabIndex = 3;
@@ -505,31 +489,29 @@
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(21, 127);
+            this.labelNombre.Location = new System.Drawing.Point(21, 65);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(44, 13);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "Nombre";
             // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(21, 28);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(18, 13);
-            this.labelId.TabIndex = 1;
-            this.labelId.Text = "ID";
-            // 
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuario.Location = new System.Drawing.Point(21, 60);
+            this.labelUsuario.Location = new System.Drawing.Point(21, 28);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(43, 13);
             this.labelUsuario.TabIndex = 0;
             this.labelUsuario.Text = "Usuario";
+            // 
+            // textBoxPuntos
+            // 
+            this.textBoxPuntos.Location = new System.Drawing.Point(115, 211);
+            this.textBoxPuntos.Name = "textBoxPuntos";
+            this.textBoxPuntos.ReadOnly = true;
+            this.textBoxPuntos.Size = new System.Drawing.Size(202, 23);
+            this.textBoxPuntos.TabIndex = 5;
             // 
             // FormVerUsuario
             // 
@@ -582,7 +564,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonSalir;
         private System.Windows.Forms.GroupBox groupBoxUsuario;
-        private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelApellidos;
         private System.Windows.Forms.Label labelNombre;
@@ -590,20 +571,19 @@
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxUsuario;
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label labelContrasenya;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
-        private System.Windows.Forms.Label labelFechaNacimiento;
+        private System.Windows.Forms.Label labelPuntos;
         private System.Windows.Forms.TextBox textBoxCiudad;
         private System.Windows.Forms.Label labelCiudad;
-        private System.Windows.Forms.TextBox textBoxDireccion;
-        private System.Windows.Forms.Label labelDireccion;
+        private System.Windows.Forms.TextBox textBoxRanking;
+        private System.Windows.Forms.Label labelRanking;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonSalir;
-        private System.Windows.Forms.TextBox textBoxTelefono;
-        private System.Windows.Forms.Label labelTelefono;
+        private System.Windows.Forms.TextBox textBoxDescuento;
+        private System.Windows.Forms.Label labelDescuento;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxPuntos;
     }
 }
