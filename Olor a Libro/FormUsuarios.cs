@@ -93,12 +93,7 @@ namespace Olor_a_Libro
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
         /**
@@ -165,24 +160,7 @@ namespace Olor_a_Libro
         private void FormUsuarios_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Preguntar si quiere garbar o no
-            DialogResult respuesta;
-            respuesta = MessageBox.Show("Estás a punto de salir sin guardar, quieres guardar?"
-                , "ADVERTENCIA", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            switch (respuesta)
-            {
-                case DialogResult.Yes:
-                    //consultar compañeros
-                    Utilitats.guardarJsonlibs();
-                    Utilitats.guardarJsonbooks();
-                    Utilitats.guardarJsonusers();
-                    Utilitats.guardarJsonop();
-                    Utilitats.guardarJsonact();
-                    Utilitats.guardarJsonviews();
-                    break;
-                case DialogResult.Cancel:
-                    e.Cancel = true;
-                    break;
-            }
+            Utilitats.closeit(sender, e);
 
         }
 
