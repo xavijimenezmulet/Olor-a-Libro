@@ -126,9 +126,9 @@ namespace Olor_a_Libro
             Boolean encontrado = false;
             int i = 0;
             int x = Utilitats.librerias.Count;
-            while (encontrado==false || i< x) //PROBAR
+            while (encontrado == false && i < x) //PROBAR
             {
-                encontrado = Utilitats.librerias.Equals(lib);
+                encontrado = Utilitats.librerias[i].Equals(lib);
                 i++;
             }
                        
@@ -206,31 +206,32 @@ namespace Olor_a_Libro
                     lib.imagen = img; 
                     Boolean encontrado = repetido(lib);
 
-                    if (!encontrado)
+                    if (encontrado)
                     {
                         MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (nombre == "")
-                {
-                    textBoxNombreLib.Focus();
-                }
-                else if (direccion == "")
-                {
-                    textBoxDirccionLib.Focus();
-                }
-                else if (telefono == "")
-                {
-                    textBoxTelefonoLib.Focus();
-                }
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    if (nombre == "")
+                    {
+                        textBoxNombreLib.Focus();
+                    }
+                    else if (direccion == "")
+                    {
+                        textBoxDirccionLib.Focus();
+                    }
+                    else if (telefono == "")
+                    {
+                        textBoxTelefonoLib.Focus();
+                    }
                 }
             }
         }

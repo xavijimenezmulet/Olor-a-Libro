@@ -75,9 +75,6 @@ namespace Olor_a_Libro
             else
             {
                 MessageBox.Show("No se ha encontrado la imagen", "ERROR AL CARGAR IMAGEN", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //ruta = path.Substring(6) + "\\OlorALibro.png";
-                //ruta = Path.Combine(Application.StartupPath, "Resource\\OlorALibro.png");
-                //ruta = "OlorALibro.png";
             }
 
             return ruta;
