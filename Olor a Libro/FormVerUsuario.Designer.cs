@@ -56,9 +56,10 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.groupBoxUsuario = new System.Windows.Forms.GroupBox();
+            this.textBoxPuntos = new System.Windows.Forms.TextBox();
             this.textBoxDescuento = new System.Windows.Forms.TextBox();
             this.labelDescuento = new System.Windows.Forms.Label();
-            this.buttonSalir = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBoxCiudad = new System.Windows.Forms.TextBox();
             this.labelCiudad = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@
             this.labelApellidos = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
-            this.textBoxPuntos = new System.Windows.Forms.TextBox();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
             this.groupBoxUsuario.SuspendLayout();
@@ -91,7 +91,7 @@
             this.puntuaciónToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(461, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(438, 24);
             this.menuStripMainMenu.TabIndex = 1;
             this.menuStripMainMenu.Text = "Menu Principal";
             // 
@@ -112,7 +112,7 @@
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
@@ -120,20 +120,20 @@
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -245,7 +245,7 @@
             this.toolStripButtonSalir});
             this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
             this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
-            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(461, 25);
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(438, 25);
             this.toolStripAccesosDirectos.TabIndex = 3;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
@@ -329,7 +329,7 @@
             this.groupBoxUsuario.Controls.Add(this.textBoxPuntos);
             this.groupBoxUsuario.Controls.Add(this.textBoxDescuento);
             this.groupBoxUsuario.Controls.Add(this.labelDescuento);
-            this.groupBoxUsuario.Controls.Add(this.buttonSalir);
+            this.groupBoxUsuario.Controls.Add(this.buttonCancelar);
             this.groupBoxUsuario.Controls.Add(this.buttonAceptar);
             this.groupBoxUsuario.Controls.Add(this.textBoxCiudad);
             this.groupBoxUsuario.Controls.Add(this.labelCiudad);
@@ -347,10 +347,18 @@
             this.groupBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxUsuario.Location = new System.Drawing.Point(12, 63);
             this.groupBoxUsuario.Name = "groupBoxUsuario";
-            this.groupBoxUsuario.Size = new System.Drawing.Size(439, 309);
+            this.groupBoxUsuario.Size = new System.Drawing.Size(422, 309);
             this.groupBoxUsuario.TabIndex = 4;
             this.groupBoxUsuario.TabStop = false;
             this.groupBoxUsuario.Text = "Usuario";
+            // 
+            // textBoxPuntos
+            // 
+            this.textBoxPuntos.Location = new System.Drawing.Point(115, 211);
+            this.textBoxPuntos.Name = "textBoxPuntos";
+            this.textBoxPuntos.ReadOnly = true;
+            this.textBoxPuntos.Size = new System.Drawing.Size(202, 23);
+            this.textBoxPuntos.TabIndex = 5;
             // 
             // textBoxDescuento
             // 
@@ -370,20 +378,20 @@
             this.labelDescuento.TabIndex = 20;
             this.labelDescuento.Text = "Descuento";
             // 
-            // buttonSalir
+            // buttonCancelar
             // 
-            this.buttonSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalir.Location = new System.Drawing.Point(339, 55);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalir.TabIndex = 9;
-            this.buttonSalir.Text = "Salir";
-            this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(341, 55);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 9;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonAceptar
             // 
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(339, 18);
+            this.buttonAceptar.Location = new System.Drawing.Point(341, 18);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 8;
@@ -505,20 +513,12 @@
             this.labelUsuario.TabIndex = 0;
             this.labelUsuario.Text = "Usuario";
             // 
-            // textBoxPuntos
-            // 
-            this.textBoxPuntos.Location = new System.Drawing.Point(115, 211);
-            this.textBoxPuntos.Name = "textBoxPuntos";
-            this.textBoxPuntos.ReadOnly = true;
-            this.textBoxPuntos.Size = new System.Drawing.Size(202, 23);
-            this.textBoxPuntos.TabIndex = 5;
-            // 
             // FormVerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(461, 384);
+            this.ClientSize = new System.Drawing.Size(438, 384);
             this.Controls.Add(this.groupBoxUsuario);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
@@ -578,7 +578,7 @@
         private System.Windows.Forms.TextBox textBoxRanking;
         private System.Windows.Forms.Label labelRanking;
         private System.Windows.Forms.Button buttonAceptar;
-        private System.Windows.Forms.Button buttonSalir;
+        private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.TextBox textBoxDescuento;
         private System.Windows.Forms.Label labelDescuento;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;

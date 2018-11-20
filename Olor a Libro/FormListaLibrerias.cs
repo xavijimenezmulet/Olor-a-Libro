@@ -24,18 +24,6 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             //Utilitats.carregarJsons();
-            string arxiu = "librerias.json";
-
-            if (File.Exists(arxiu))
-            {
-                JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiu));
-                Utilitats.librerias = jArrayLibs.ToObject<BindingList<Libreria>>();
-            }
-            else
-            {
-                Utilitats.librerias = new BindingList<Libreria>();
-            }
-            dataGridViewLibrerias.DataSource = Utilitats.librerias;
         }
         private void FormListaLibrerias_Activated(object sender, EventArgs e)
         {
@@ -117,12 +105,7 @@ namespace Olor_a_Libro
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
         //ABRIR FORM PARA AÑADIR LIBRERIA

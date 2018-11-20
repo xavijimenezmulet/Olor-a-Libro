@@ -85,33 +85,16 @@ namespace Olor_a_Libro
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            string arxiu = "actividades.json";
-
-            if (File.Exists(arxiu))
-            {
-                JArray jArrayActs = JArray.Parse(File.ReadAllText(arxiu));
-                Utilitats.librerias = jArrayActs.ToObject<BindingList<Libreria>>();
-            }
-            else
-            {
-                Utilitats.actividades = new BindingList<Actividad>();
-            }
-            dataGridViewActividades.DataSource = Utilitats.librerias;
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
         {
-            dataGridViewActividades.DataSource = Utilitats.librerias;
+            dataGridViewActividades.DataSource = Utilitats.actividades;
             dataGridViewActividades.Refresh();
         }
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
@@ -148,7 +131,5 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-       
     }
 }
