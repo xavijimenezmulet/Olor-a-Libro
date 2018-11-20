@@ -89,7 +89,7 @@ namespace Olor_a_Libro
             }
             else
             {
-                valor = 0;
+                valor = 1;
             }
             return valor;
         }

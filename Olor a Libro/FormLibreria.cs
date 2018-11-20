@@ -98,7 +98,7 @@ namespace Olor_a_Libro
 
         private void FormLibreria_Load(object sender, EventArgs e)
         {
-           // this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;
             
             if(lib != null)
             {
@@ -111,10 +111,10 @@ namespace Olor_a_Libro
                 archivo = CargarImagenes.buscarImagen(lib.imagen);
                 if (archivo != "")
                 {
-                    pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
-                    textBoxImgLib.Text = archivo;
+                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
+                textBoxImgLib.Text = archivo;
                 }
-                
+               
                
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
@@ -218,20 +218,20 @@ namespace Olor_a_Libro
                 }
                 else
                 {
-                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    if (nombre == "")
-                    {
-                        textBoxNombreLib.Focus();
-                    }
-                    else if (direccion == "")
-                    {
-                        textBoxDirccionLib.Focus();
-                    }
-                    else if (telefono == "")
-                    {
-                        textBoxTelefonoLib.Focus();
-                    }
+                if (nombre == "")
+                {
+                    textBoxNombreLib.Focus();
+                }
+                else if (direccion == "")
+                {
+                    textBoxDirccionLib.Focus();
+                }
+                else if (telefono == "")
+                {
+                    textBoxTelefonoLib.Focus();
+                }
                 }
             }
         }
