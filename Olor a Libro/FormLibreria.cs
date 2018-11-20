@@ -93,12 +93,7 @@ namespace Olor_a_Libro
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
         private void FormLibreria_Load(object sender, EventArgs e)
@@ -143,7 +138,7 @@ namespace Olor_a_Libro
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
 
-            int  id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
+            int id = Utilitats.generarid(new BindingList <object>(Utilitats.librerias.Cast<object>().ToList()));
 
             string nombre = textBoxNombreLib.Text;
             string direccion = textBoxDirccionLib.Text;
@@ -264,6 +259,11 @@ namespace Olor_a_Libro
         {
             FormLibros libros = new FormLibros(lib);
             libros.ShowDialog();
+        }
+
+        private void FormLibreria_Activated(object sender, EventArgs e)
+        {
+            textBoxNombreLib.Focus();
         }
     }
 }

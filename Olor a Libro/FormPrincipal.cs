@@ -64,7 +64,7 @@ namespace Olor_a_Libro
             if (File.Exists(arxiuuser))
             {
                 JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
-                Utilitats.librerias = jArrayusers.ToObject<BindingList<Libreria>>();
+                Utilitats.usuarios = jArrayusers.ToObject<BindingList<Usuario>>();
             }
             else
             {
@@ -98,7 +98,7 @@ namespace Olor_a_Libro
                 Utilitats.visitas = new BindingList<Visita>();
             }
         }
-
+        
         public void archivoToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
         {
             archivoToolStripMenuItem.ForeColor = Color.Black;
@@ -198,12 +198,7 @@ namespace Olor_a_Libro
         //GUARDAR TODO
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
 

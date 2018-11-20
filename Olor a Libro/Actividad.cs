@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,9 @@ namespace Olor_a_Libro
         public string tipo { get; set; }
         public DateTime fecha { get; set; } //DataTime
         public string hora { get; set; } //DataTime
-        //public List<Libreria> librerias { get; set; }
-        public List<String> librerias { get; set; }
-        public List<Opinion> opiniones { get; set; }
+        public BindingList<String> librerias { get; set; }
+        //public List<String> librerias { get; set; }
+        public BindingList<Opinion> opiniones { get; set; }
 
         public bool Equals(Actividad a)
         {

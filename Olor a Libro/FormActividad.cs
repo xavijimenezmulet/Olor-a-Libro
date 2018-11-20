@@ -91,12 +91,7 @@ namespace Olor_a_Libro
  
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilitats.guardarJsonlibs();
-            Utilitats.guardarJsonbooks();
-            Utilitats.guardarJsonusers();
-            Utilitats.guardarJsonop();
-            Utilitats.guardarJsonact();
-            Utilitats.guardarJsonviews();
+            Utilitats.guardarTodo();
         }
 
         private void FormActividad_Load(object sender, EventArgs e)
@@ -119,9 +114,23 @@ namespace Olor_a_Libro
                 dateTimePickerDiaAct.Value = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
-                foreach (string item in act.librerias)
+                listBoxLibreriasAct.ClearSelected();
+                if (act.librerias != null)
                 {
-                    listBoxLibreriasAct.SelectedItems.Add(item);
+                    foreach (String item in act.librerias)
+                    {
+                        for (int i = 0; i < Utilitats.librerias.Count; i++)
+                        {
+                            if (Utilitats.librerias[i].nombre == item)
+                            {
+                                listBoxLibreriasAct.SelectedItems.Add(Utilitats.librerias[i]);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    listBoxLibreriasAct.ClearSelected();
                 }
             }
         }
@@ -165,62 +174,156 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.Black;
         }
-        /*
-        public static void omplirListBox()
+       
+        public static Boolean repetido(Actividad act)
         {
-            ListBox listBL = new ListBox();
-            List<Libreria> lib;
+            Boolean encontrado = false;
 
-            if (File.Exists("librerias.json"))
+            foreach (var item in Utilitats.actividades)
             {
-                JArray jArrayPelis = JArray.Parse(File.ReadAllText("librerias.json"));
-                lib = jArrayPelis.ToObject<List<Libreria>>();
+                encontrado = Utilitats.actividades.Equals(act);
             }
-            else
-            {
-                lib = new List<Libreria>();
-            }
-
-
-            foreach (var item in lib)
-            {
-                listBL.Items.Add(item.nombre);
-                listBL.DisplayMember = item.id.ToString(); 
-            }
-        }*/
+            return encontrado;
+        }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+            int id = Utilitats.generarid(new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()));
             String nomAct = textBoxNomAct.Text;
             String lugar = textBoxLugarAct.Text;
-            //String tipo = comboBoxTipoAct.SelectedItem
-            String fecha = dateTimePickerDiaAct.Text;
+            String tipo = comboBoxTipoAct.SelectedItem.ToString();
+            DateTime fecha = dateTimePickerDiaAct.Value;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
-                      
-
-            if (nomAct!="" && lugar != "" && fecha != "" && hora != "" && descripcion != "" && listBoxLibreriasAct.SelectedItems!=null)
+            BindingList<String> libs = new BindingList<String>();
+            //---------------------------------AÑADIR ACTIVIDAD-------------------------------
+            if (act == null)
             {
-                Actividad act = new Actividad();
-                //act.librerias = new List<int>();
-
-                act.nombre = nomAct;
-                act.lugar = lugar;
-               // act.fecha = fecha;
-                act.hora = hora;
-                act.descripcion = descripcion;
-
-                foreach (var item in listBoxLibreriasAct.SelectedItems)
+                if (nomAct != "" && lugar != "" && tipo != null && fecha != null && descripcion != "")
                 {
-                    //act.IDlibrerias.Add(item)
+                    Actividad act = new Actividad();
+                    //act.librerias = new List<int>();
+                    act.id = id;
+                    act.nombre = nomAct;
+                    act.lugar = lugar;
+                    act.tipo = tipo;
+                    act.fecha = fecha;
+                    act.hora = hora;
+                    act.descripcion = descripcion;
+                    foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                    {
+                       libs.Add(item.nombre);
+                    }
+                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                    {
+                        act.librerias = libs;
+                    }
+                    Boolean encontrado = repetido(act);
+
+                    if (!encontrado)
+                    {
+                        Utilitats.actividades.Add(act);
+                        MessageBox.Show("Actividad añadida satisfactoriamente", "Añadir Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (nomAct == "")
+                    {
+                        textBoxNomAct.Focus();
+                    }
+                    else if (lugar == "")
+                    {
+                        textBoxLugarAct.Focus();
+                    }
+                    else if (tipo == "")
+                    {
+                        comboBoxTipoAct.Focus();
+                    }
+                    else if (fecha == null)
+                    {
+                        dateTimePickerDiaAct.Focus();
+                    }
+                    else if (descripcion == null)
+                    {
+                        textBoxDescripcionAct.Focus();
+                    }
                 }
             }
+            //---------------------------------EDITAR ACTIVIDAD------------------------------
             else
             {
-                
-            }
+                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
+                {
+                    act.nombre = nomAct;
+                    act.lugar = lugar;
+                    act.tipo = tipo;
+                    act.fecha = fecha;
+                    act.hora = hora;
+                    act.descripcion = descripcion;
+                    //libs = null;
+                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                    {
+                        foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                        {
+                            libs.Add(item.nombre);
+                        }
+                    }
+                    else
+                    {
+                        libs = null;
+                    }
+                    act.librerias = libs;
+                   
+                    Boolean encontrado = repetido(act);
 
-            
+                    if (!encontrado)
+                    {
+                        MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (nomAct == "")
+                    {
+                        textBoxNomAct.Focus();
+                    }
+                    else if (lugar == "")
+                    {
+                        textBoxLugarAct.Focus();
+                    }
+                    else if (tipo == "")
+                    {
+                        comboBoxTipoAct.Focus();
+                    }
+                    else if (fecha == null)
+                    {
+                        dateTimePickerDiaAct.Focus();
+                    }
+                }
+            }
+        }
+
+        private void FormActividad_Activated(object sender, EventArgs e)
+        {
+            textBoxNomAct.Focus();
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
