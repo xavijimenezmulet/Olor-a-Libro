@@ -131,5 +131,10 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void FormListaActividades_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }

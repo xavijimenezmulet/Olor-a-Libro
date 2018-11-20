@@ -382,6 +382,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Librerías";
             this.Activated += new System.EventHandler(this.FormListaLibrerias_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormListaLibrerias_FormClosing);
             this.Load += new System.EventHandler(this.FormListaLibrerias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).EndInit();
             this.groupBoxLibrerias.ResumeLayout(false);

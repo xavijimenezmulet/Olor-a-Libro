@@ -325,5 +325,10 @@ namespace Olor_a_Libro
         {
             this.Close();
         }
+
+        private void FormActividad_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }

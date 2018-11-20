@@ -201,6 +201,9 @@ namespace Olor_a_Libro
             Utilitats.guardarTodo();
         }
 
-
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }

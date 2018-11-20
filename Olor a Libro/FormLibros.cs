@@ -159,7 +159,10 @@ namespace Olor_a_Libro
             }
         }
 
-       
+        private void FormLibros_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
     
 }

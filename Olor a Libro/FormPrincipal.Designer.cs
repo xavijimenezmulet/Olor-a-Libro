@@ -97,27 +97,27 @@ namespace Olor_a_Libro
             // 
             this.inicioToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.Sin_titulo_2_copia__1_1;
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources.floppy_disk;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Olor_a_Libro.Properties.Resources._040_fired;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -330,6 +330,7 @@ namespace Olor_a_Libro
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStripMainMenu.ResumeLayout(false);
             this.menuStripMainMenu.PerformLayout();

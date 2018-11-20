@@ -92,5 +92,10 @@ namespace Olor_a_Libro
         {
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void FormEstadisticas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }

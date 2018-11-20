@@ -136,7 +136,12 @@ namespace Olor_a_Libro
 
         private void labelFechaNacimiento_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void FormVerUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
         }
     }
 }

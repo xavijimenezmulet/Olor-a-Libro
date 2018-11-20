@@ -259,5 +259,10 @@ namespace Olor_a_Libro
         {
             textBoxNombreLib.Focus();
         }
+
+        private void FormLibreria_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }

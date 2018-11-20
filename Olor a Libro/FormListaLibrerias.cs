@@ -142,5 +142,10 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void FormListaLibrerias_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        }
     }
 }
