@@ -105,15 +105,18 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
-                String archivo = "";
+                textBoxImgLib.Text = lib.imagen;
+                if (lib.imagen != "")
+                {
+                    pictureBoxImgLib.Image = new Bitmap(lib.imagen);
+                }
+                /* String archivo = "";
                 archivo = CargarImagenes.buscarImagen(lib.imagen);
                 if (archivo != "")
                 {
                 pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
                 textBoxImgLib.Text = archivo;
-                }
-               
-               
+                }*/
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
@@ -142,7 +145,7 @@ namespace Olor_a_Libro
             string direccion = textBoxDirccionLib.Text;
             string telefono = textBoxTelefonoLib.Text;
             string correo = textBoxCorreoLib.Text;
-            string img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
+            string img = textBoxImgLib.Text;
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
@@ -185,10 +188,6 @@ namespace Olor_a_Libro
                     {
                         textBoxTelefonoLib.Focus();
                     }
-                    /*else
-                    {
-                        this.Focus();
-                    }*/
                 }
             }
             //---------------------------------EDITAR LIBRERIA------------------------------
@@ -196,7 +195,6 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    //lib.id = id;
                     lib.nombre = nombre;
                     lib.direccion = direccion;
                     lib.telefono = int.Parse(telefono);
@@ -241,17 +239,25 @@ namespace Olor_a_Libro
 
         private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
-
-            string ruta = "";
-            ruta=CargarImagenes.cargarImagen();
-
-            if (ruta != "")
-            {
-                textBoxImgLib.Text = ruta;
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
-                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            { 
+                // image file path  
+                string filetocopy = open.FileName;
+                string destinationDirectory = "Imagenes\\";
+                string imagen = destinationDirectory + Path.GetFileName(filetocopy);
+                if (!File.Exists(imagen))
+                {
+                    File.Copy(filetocopy, destinationDirectory + Path.GetFileName(filetocopy));
+                }
+                // display image in picture box  
+                pictureBoxImgLib.Image = new Bitmap(open.FileName);
+                textBoxImgLib.Text = imagen;
             }
+            
         }
 
         private void buttonLibros_Click(object sender, EventArgs e)
