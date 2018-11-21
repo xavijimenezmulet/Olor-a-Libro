@@ -315,7 +315,10 @@ namespace Olor_a_Libro
 
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Utilitats.cancelarForm(sender, e))
+            {
+                this.Close();
+            }
         }
     }
 }

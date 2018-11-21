@@ -213,7 +213,10 @@ namespace Olor_a_Libro
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Utilitats.cancelarForm(sender, e))
+            {
+                this.Close();
+            }
         }
 
         private void buttonBuscarImg_Click(object sender, EventArgs e)

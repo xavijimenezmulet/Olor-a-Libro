@@ -124,9 +124,13 @@ namespace Olor_a_Libro
             if (dataGridViewLibrerias.SelectedRows.Count > 0)
             {
                 Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
-                Utilitats.librerias.Remove(l);
-                dataGridViewLibrerias.DataSource = null;
-                dataGridViewLibrerias.DataSource = Utilitats.librerias;
+                String nombre = l.nombre;
+                if (Utilitats.eliminarForm(sender, e, nombre))
+                {
+                    Utilitats.librerias.Remove(l);
+                    dataGridViewLibrerias.DataSource = Utilitats.librerias;
+                    dataGridViewLibrerias.Refresh();
+                }
             }
             else
             {

@@ -171,8 +171,8 @@ namespace Olor_a_Libro
                 if (Utilitats.eliminarForm(sender, e, username ))
                 {
                     Utilitats.usuarios.Remove(user);
-                    dataGridViewUsuarios.DataSource = null;
                     dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+                    dataGridViewUsuarios.Refresh();
                 }
             }
             else
