@@ -245,6 +245,8 @@
     <None Include="Resources\Sin título-2 copia %281%291.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\main_escritorio copia.png" />
+    <None Include="Resources\main.png" />
     <Content Include="Resources\OlorALibro.png" />
     <None Include="Resources\Sin_título-2_copia1.png" />
     <None Include="Resources\Sin_título-2_copia %281%291.png" />

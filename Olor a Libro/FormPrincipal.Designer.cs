@@ -319,8 +319,8 @@ namespace Olor_a_Libro
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.Sin_titulo_1_copia;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImage = global::Olor_a_Libro.Properties.Resources.main;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(769, 512);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
