@@ -131,25 +131,32 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    lib = new Libreria();
-                    lib.id = id;
-                    lib.nombre = nombre;
-                    lib.direccion = direccion;
-                    lib.telefono = int.Parse(telefono);
-                    lib.Correo = correo;
-                    lib.imagen = img;
-
-                    
-                    if (!Utilitats.librerias.Contains(lib))
+                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
-                        Utilitats.librerias.Add(lib);
-                        MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
+                        MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxTelefonoLib.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        this.lib = null;
+                        lib = new Libreria();
+                        lib.id = id;
+                        lib.nombre = nombre;
+                        lib.direccion = direccion;
+                        lib.telefono = telefono;
+                        lib.Correo = correo;
+                        lib.imagen = img;
+
+                        if (!Utilitats.librerias.Contains(lib))
+                        {
+                            Utilitats.librerias.Add(lib);
+                            MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            this.lib = null;
+                        }
                     }
                 }
                 else
@@ -174,39 +181,48 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    lib.nombre = nombre;
-                    lib.direccion = direccion;
-                    lib.telefono = int.Parse(telefono);
-                    lib.Correo = correo;
-                    lib.imagen = img; 
-                   
-
-                    if (Utilitats.librerias.Contains(lib))
+                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
-                        MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
+                        MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxTelefonoLib.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        lib.id = id;
+                        lib.nombre = nombre;
+                        lib.direccion = direccion;
+                        lib.telefono = telefono;
+                        lib.Correo = correo;
+                        lib.imagen = img;
+
+
+                        if (Utilitats.librerias.Contains(lib))
+                        {
+                            MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
                 else
                 {
-                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                if (nombre == "")
-                {
-                    textBoxNombreLib.Focus();
-                }
-                else if (direccion == "")
-                {
-                    textBoxDirccionLib.Focus();
-                }
-                else if (telefono == "")
-                {
-                    textBoxTelefonoLib.Focus();
-                }
+                    if (nombre == "")
+                    {
+                        textBoxNombreLib.Focus();
+                    }
+                    else if (direccion == "")
+                    {
+                        textBoxDirccionLib.Focus();
+                    }
+                    else if (telefono == "")
+                    {
+                        textBoxTelefonoLib.Focus();
+                    }
                 }
             }
         }
