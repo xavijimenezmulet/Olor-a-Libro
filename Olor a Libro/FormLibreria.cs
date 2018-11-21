@@ -110,13 +110,6 @@ namespace Olor_a_Libro
                 {
                     pictureBoxImgLib.Image = new Bitmap(lib.imagen);
                 }
-                /* String archivo = "";
-                archivo = CargarImagenes.buscarImagen(lib.imagen);
-                if (archivo != "")
-                {
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
-                textBoxImgLib.Text = archivo;
-                }*/
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
