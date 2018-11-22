@@ -79,11 +79,12 @@ namespace Olor_a_Libro
         }
         public static void guardarJsonPuntuacion()
         {
-            string arxiuviews = "puntuacion.json";
-            JArray jArrayViews = (JArray)JToken.FromObject(visitas);
-            StreamWriter file = File.CreateText(arxiuviews);
+            string arxiuPuntuacio = "puntuacion.json";
+            //JArray jArrayPuntuacio = (JArray)JToken.FromObject(puntuacion);
+            JObject jArrayPuntuacio = (JObject)JToken.FromObject(puntuacion);
+            StreamWriter file = File.CreateText(arxiuPuntuacio);
             JsonTextWriter writer = new JsonTextWriter(file);
-            jArrayViews.WriteTo(writer);
+            jArrayPuntuacio.WriteTo(writer);
             writer.Close();
         }
 

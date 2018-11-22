@@ -317,6 +317,7 @@
             this.buttonBorrar.TabIndex = 11;
             this.buttonBorrar.Text = "Borrar";
             this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
             // textBoxPuntosComentar
             // 
