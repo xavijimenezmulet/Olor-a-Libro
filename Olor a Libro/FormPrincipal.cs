@@ -42,6 +42,7 @@ namespace Olor_a_Libro
             string arxiuop = "opiniones.json";
             string arxiuact = "actividades.json";
             string arxiuviews = "visitas.json";
+            string arxiuPuntuacio = "puntuacion.json";
 
             if (File.Exists(arxiulib))
             {
@@ -96,6 +97,17 @@ namespace Olor_a_Libro
             else
             {
                 Utilitats.visitas = new BindingList<Visita>();
+            }
+            if (File.Exists(arxiuPuntuacio))
+            {
+                JObject jArrayPuntuacio = JObject.Parse(File.ReadAllText(arxiuPuntuacio));
+                //JArray jArrayPuntuacio = JArray.Parse(File.ReadAllText(arxiuPuntuacio));
+                //Utilitats.puntuacion = jArrayPuntuacio.ToObject<Puntuacion>();
+                Utilitats.puntuacion = jArrayPuntuacio.ToObject<Puntuacion>();
+            }
+            else
+            {
+                Utilitats.puntuacion = new Puntuacion();
             }
         }
         

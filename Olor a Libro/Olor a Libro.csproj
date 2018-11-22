@@ -124,6 +124,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Puntuacion.cs" />
     <Compile Include="SplashInicio.cs">
       <SubType>Form</SubType>
     </Compile>
