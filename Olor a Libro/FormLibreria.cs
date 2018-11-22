@@ -104,7 +104,7 @@ namespace Olor_a_Libro
                 textBoxNombreLib.Text = lib.nombre;
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
-                textBoxCorreoLib.Text = lib.Correo;
+                textBoxCorreoLib.Text = lib.correo;
                 textBoxImgLib.Text = lib.imagen;
                 if (lib.imagen != "")
                 {
@@ -131,7 +131,7 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
+                    if (!telefono.All(Char.IsDigit) || telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
                         MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBoxTelefonoLib.Focus();
@@ -143,7 +143,7 @@ namespace Olor_a_Libro
                         lib.nombre = nombre;
                         lib.direccion = direccion;
                         lib.telefono = telefono;
-                        lib.Correo = correo;
+                        lib.correo = correo;
                         lib.imagen = img;
 
                         if (!Utilitats.librerias.Contains(lib))
@@ -192,7 +192,7 @@ namespace Olor_a_Libro
                         lib.nombre = nombre;
                         lib.direccion = direccion;
                         lib.telefono = telefono;
-                        lib.Correo = correo;
+                        lib.correo = correo;
                         lib.imagen = img;
 
 

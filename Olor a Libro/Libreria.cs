@@ -12,7 +12,7 @@ namespace Olor_a_Libro
         public int id { get; set; }
         public string nombre { get; set; }
         public string direccion { get; set; }
-        public string Correo { get; set; }
+        public string correo { get; set; }
         public string telefono { get; set; }
         public string imagen { get; set; }
         public BindingList<Libro> libros { get; set; } = new BindingList<Libro>();

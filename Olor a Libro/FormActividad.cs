@@ -86,7 +86,7 @@ namespace Olor_a_Libro
             this.Close();
         }
         //GUARDAR TODO
- 
+
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilitats.guardarTodo();
@@ -104,7 +104,7 @@ namespace Olor_a_Libro
                 textBoxID.Text = act.id.ToString();
                 textBoxNomAct.Text = act.nombre;
                 textBoxLugarAct.Text = act.lugar;
-                comboBoxTipoAct.Text = act.tipo; 
+                comboBoxTipoAct.Text = act.tipo;
                 dateTimePickerDiaAct.Value = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
@@ -168,7 +168,7 @@ namespace Olor_a_Libro
         {
             usuariosToolStripMenuItem.ForeColor = Color.Black;
         }
-       
+
         public static Boolean repetido(Actividad act)
         {
             Boolean encontrado = false;
@@ -195,33 +195,53 @@ namespace Olor_a_Libro
             {
                 if (nomAct != "" && lugar != "" && tipo != null && fecha != null && descripcion != "")
                 {
-                    Actividad act = new Actividad();
-                    act.id = id;
-                    act.nombre = nomAct;
-                    act.lugar = lugar;
-                    act.tipo = tipo;
-                    act.fecha = fecha;
-                    act.hora = hora;
-                    act.descripcion = descripcion;
-                    foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                    if (hora.Length == 5 && hora[0].ToString().All(Char.IsDigit) && hora[1].ToString().All(Char.IsDigit) && hora[3].ToString().All(Char.IsDigit) && hora[4].ToString().All(Char.IsDigit))
                     {
-                       libs.Add(item.nombre);
-                    }
-                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
-                    {
-                        act.librerias = libs;
-                    }
-                    Boolean encontrado = repetido(act);
+                        int hores = int.Parse(hora[0].ToString() + hora[1].ToString());
+                        int minuts = int.Parse(hora[3].ToString() + hora[4].ToString());
+                        //-------------COMPROBAR HORA-----------
 
-                    if (!encontrado)
-                    {
-                        Utilitats.actividades.Add(act);
-                        MessageBox.Show("Actividad añadida satisfactoriamente", "Añadir Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
+                        if (hora[2] == ':' && hores < 24 && minuts < 60)
+                        {
+                            Actividad act = new Actividad();
+                            act.id = id;
+                            act.nombre = nomAct;
+                            act.lugar = lugar;
+                            act.tipo = tipo;
+                            act.fecha = fecha;
+                            act.hora = hora;
+                            act.descripcion = descripcion;
+                            foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                            {
+                                libs.Add(item.nombre);
+                            }
+                            if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                            {
+                                act.librerias = libs;
+                            }
+                            Boolean encontrado = repetido(act);
+
+                            if (!encontrado)
+                            {
+                                Utilitats.actividades.Add(act);
+                                MessageBox.Show("Actividad añadida satisfactoriamente", "Añadir Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Formato de hora incorrecto", "Hora incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBoxHoraAct.Focus();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Formato de hora incorrecto", "Hora incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxHoraAct.Focus();
                     }
                 }
                 else
@@ -254,35 +274,55 @@ namespace Olor_a_Libro
             {
                 if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
                 {
-                    act.nombre = nomAct;
-                    act.lugar = lugar;
-                    act.tipo = tipo;
-                    act.fecha = fecha;
-                    act.hora = hora;
-                    act.descripcion = descripcion;
-                    if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                    if (hora.Length == 5 && hora[0].ToString().All(Char.IsDigit) && hora[1].ToString().All(Char.IsDigit) && hora[3].ToString().All(Char.IsDigit) && hora[4].ToString().All(Char.IsDigit))
                     {
-                        foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                        int hores = int.Parse(hora[0].ToString() + hora[1].ToString());
+                        int minuts = int.Parse(hora[3].ToString() + hora[4].ToString());
+                        //-------------COMPROBAR HORA-----------
+
+                        if (hora[2] == ':' && hores < 24 && minuts < 60)
                         {
-                            libs.Add(item.nombre);
+                            act.nombre = nomAct;
+                            act.lugar = lugar;
+                            act.tipo = tipo;
+                            act.fecha = fecha;
+                            act.hora = hora;
+                            act.descripcion = descripcion;
+                            if (listBoxLibreriasAct.SelectedItems.Count > 0)
+                            {
+                                foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
+                                {
+                                    libs.Add(item.nombre);
+                                }
+                            }
+                            else
+                            {
+                                libs = null;
+                            }
+                            act.librerias = libs;
+
+                            Boolean encontrado = repetido(act);
+
+                            if (!encontrado)
+                            {
+                                MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Formato de hora incorrecto", "Hora incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBoxHoraAct.Focus();
                         }
                     }
                     else
                     {
-                        libs = null;
-                    }
-                    act.librerias = libs;
-                   
-                    Boolean encontrado = repetido(act);
-
-                    if (!encontrado)
-                    {
-                        MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Formato de hora incorrecto", "Hora incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxHoraAct.Focus();
                     }
                 }
                 else

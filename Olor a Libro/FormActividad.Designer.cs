@@ -168,6 +168,7 @@
             // 
             this.textBoxHoraAct.Location = new System.Drawing.Point(103, 175);
             this.textBoxHoraAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxHoraAct.MaxLength = 5;
             this.textBoxHoraAct.Name = "textBoxHoraAct";
             this.textBoxHoraAct.Size = new System.Drawing.Size(318, 20);
             this.textBoxHoraAct.TabIndex = 5;
@@ -178,9 +179,9 @@
             this.labelHoraAct.Location = new System.Drawing.Point(5, 179);
             this.labelHoraAct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHoraAct.Name = "labelHoraAct";
-            this.labelHoraAct.Size = new System.Drawing.Size(33, 13);
+            this.labelHoraAct.Size = new System.Drawing.Size(73, 13);
             this.labelHoraAct.TabIndex = 15;
-            this.labelHoraAct.Text = "Hora:";
+            this.labelHoraAct.Text = "Hora (hh:mm):";
             // 
             // textBoxDescripcionAct
             // 
