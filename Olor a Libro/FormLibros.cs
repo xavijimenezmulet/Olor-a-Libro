@@ -93,13 +93,13 @@ namespace Olor_a_Libro
 
         private void FormLibros_Load(object sender, EventArgs e)
         {
-            if(lib.libros.Count > 0)
+            /*if(lib.libros.Count > 0)
             {
-            Utilitats.libros = lib.libros;
-            }
+                Utilitats.libros = lib.libros;
+            }*/
             
             this.StartPosition = FormStartPosition.CenterScreen;
-            dataGridViewLibros.DataSource = Utilitats.libros;
+            dataGridViewLibros.DataSource = lib.libros;
             dataGridViewLibros.Refresh();
         }
 
@@ -113,7 +113,7 @@ namespace Olor_a_Libro
             l.id = id;
             anyadirLibro(l);
 
-            Utilitats.libros.Add(l);
+            lib.libros.Add(l);
             dataGridViewLibros.Refresh();
         }
         private void anyadirLibro(Libro l)
