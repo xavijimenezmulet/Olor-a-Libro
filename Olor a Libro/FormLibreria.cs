@@ -133,7 +133,12 @@ namespace Olor_a_Libro
                 {
                     if (!telefono.All(Char.IsDigit) || telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
-                        MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Introduce un número de telefono válido", "Teléfono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxTelefonoLib.Focus();
+                    }
+                    else if (!correo.Contains('@') || correo.EndsWith("@") || correo.StartsWith("@"))
+                    {
+                        MessageBox.Show("Introduce un correo electrónico válido", "Correo electrónico incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBoxTelefonoLib.Focus();
                     }
                     else
