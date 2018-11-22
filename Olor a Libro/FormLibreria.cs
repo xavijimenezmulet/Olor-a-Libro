@@ -131,7 +131,7 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
+                    if (!telefono.All(Char.IsDigit) || telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
                         MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBoxTelefonoLib.Focus();
