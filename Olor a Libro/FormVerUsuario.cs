@@ -25,6 +25,7 @@ namespace Olor_a_Libro
         }
         public FormVerUsuario(Usuario user)
         {
+            InitializeComponent();
             this.user = user;
         }
         //ACCESO A LOS FORMULARIOS
@@ -110,33 +111,138 @@ namespace Olor_a_Libro
                 textBoxRanking.Text     = this.user.rank;
                 textBoxDescuento.Text   = this.user.descuento.ToString();
             }
+            else
+            {
+                textBoxContrasenya.Text = "user";
+                textBoxPuntos.Text = "0";
+                textBoxRanking.Text = "unranked";
+                textBoxDescuento.Text = "0.0";
+
+            }
 
         }
 
-        public static Boolean repetido(Usuario user)
+   
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            Boolean encontrado = false;
-
-
-            foreach (var item in Utilitats.usuarios)
+            if(Utilitats.cancelarForm(sender, e))
             {
-                Boolean enc = Utilitats.usuarios.Equals(user);
-                if (enc)
+                this.Close();
+            }
+     
+        }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            String username    = textBoxUsuario.Text;
+            String nombre      = textBoxNombre.Text;
+            String apellidos   = textBoxContrasenya.Text;
+            String ciudad      = textBoxCiudad.Text;
+            String contrasenya = textBoxApellidos.Text;
+            int puntos         = int.Parse(textBoxPuntos.Text);
+            String rank        = textBoxRanking.Text;
+            float descuento    = float.Parse(textBoxDescuento.Text);
+
+           if (user == null)
+            {
+                if(username !="" 
+                    && nombre!=""
+                    && apellidos!=""
+                    && ciudad!="")
                 {
-                    encontrado = true;
+                    this.user           = new Usuario();
+                    this.user.username  = username;
+                    this.user.nombre    = nombre;
+                    this.user.apellidos = apellidos;
+                    this.user.ciudad    = ciudad;
+
+                    
+
+                    if (!Utilitats.usuarios.Contains(user))
+                    {
+                        Utilitats.usuarios.Add(user);
+                        MessageBox.Show("Usuario añadido satisfactoriamente", "Añadir Usuario", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Este usuario ya fue añadido", "Usuario repetido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.user = null;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(username == "")
+                    {
+                        textBoxUsuario.Focus();
+                    }
+                    else if(nombre == "")
+                    {
+                        textBoxNombre.Focus();
+                    }
+                    else if(apellidos == "")
+                    {
+                        textBoxContrasenya.Focus();
+                    }
+                    else if(ciudad == "")
+                    {
+                        textBoxCiudad.Focus();
+                    }
                 }
             }
-            return encontrado;
+           else
+            {
+                if (username != ""
+                    && nombre != ""
+                    && apellidos != ""
+                    && ciudad != "")
+                {
+                    this.user.username = username;
+                    this.user.nombre = nombre;
+                    this.user.apellidos = apellidos;
+                    this.user.ciudad = ciudad;
+
+
+
+                    if (Utilitats.usuarios.Contains(user))
+                    {
+                        MessageBox.Show("Usuario modificado satisfactoriamente", "Modificar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al introducir el usuario", "Usuario no introducido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.user = null;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (username == "")
+                    {
+                        textBoxUsuario.Focus();
+                    }
+                    else if (nombre == "")
+                    {
+                        textBoxNombre.Focus();
+                    }
+                    else if (apellidos == "")
+                    {
+                        textBoxContrasenya.Focus();
+                    }
+                    else if (ciudad == "")
+                    {
+                        textBoxCiudad.Focus();
+                    }
+                }
+            }
         }
 
-        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        private void FormVerUsuario_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void labelFechaNacimiento_Click(object sender, EventArgs e)
-        {
-
+            //Utilitats.closeit(sender, e);
         }
     }
 }

@@ -79,8 +79,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,12 +155,6 @@ namespace Olor_a_Libro
          * FORMUSUARIOS_FORMCLOSING: AL CLICKAR LA PESTAÑA DE CERRAR NOS APARECERÁ UN CUADRO DIALOGO
          * PREGUNTANDO SI SALIR SIN GUARDAR CANCELAR O SEGUIR 
          **/
-        private void FormUsuarios_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Preguntar si quiere garbar o no
-            Utilitats.closeit(sender, e);
-
-        }
 
         
         /**
@@ -171,26 +163,22 @@ namespace Olor_a_Libro
          **/
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            
             if (dataGridViewUsuarios.SelectedRows.Count > 0)
             {
                 Usuario user = (Usuario)dataGridViewUsuarios.SelectedRows[0].DataBoundItem;
-                Utilitats.usuarios.Remove(user);
-                dataGridViewUsuarios.DataSource = null;
-                dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+                String username = user.username;
+                if (Utilitats.eliminarForm(sender, e, username ))
+                {
+                    Utilitats.usuarios.Remove(user);
+                    dataGridViewUsuarios.DataSource = Utilitats.usuarios;
+                    dataGridViewUsuarios.Refresh();
+                }
             }
             else
             {
                 MessageBox.Show("Selecciona un usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        /**
-         * BUTTONSALIR_CLICK: AL CLICKAR EL EVENTO SE PORDUCE EL EVENTO FORMCLOSING
-         * SIENDO UN ACCESO DIRECTO DE ESTE
-         **/
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

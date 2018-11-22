@@ -133,72 +133,104 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonviews();
             Utilitats.guardarJsonPuntuacion();
         }
-            //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
-            /*public static void carregarJsons()
+
+        public static Boolean cancelarForm(object sender, EventArgs e)
+        {
+            Boolean verdadero = false;
+            DialogResult respuesta = MessageBox.Show("¿Quieres salir?",
+                                                     "ADVERTENCIA",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+            if(respuesta == DialogResult.Yes)
             {
-                //carregar/crear arxius json
+                verdadero = true;
+            }
 
-                string arxiulib = "librerias.json";
-                string arxiubook = "libros.json";
-                string arxiuuser = "usuarios.json";
-                string arxiuop = "opiniones.json";
-                string arxiuact = "actividades.json";
-                string arxiuviews = "visitas.json";
-
-                if (File.Exists(arxiulib))
-                {
-                    JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiulib));
-                    librerias = jArrayLibs.ToObject<BindingList<Libreria>>();
-                }
-                else
-                {
-                    librerias = new BindingList<Libreria>();
-                }
-                if (File.Exists(arxiubook))
-                {
-                    JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
-                    libros = jArrayBooks.ToObject<BindingList<Libro>>();
-                }
-                else
-                {
-                    libros = new BindingList<Libro>();
-                }
-                if (File.Exists(arxiuuser))
-                {
-                    JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
-                    librerias = jArrayusers.ToObject<BindingList<Libreria>>();
-                }
-                else
-                {
-                    usuarios = new BindingList<Usuario>();
-                }
-                if (File.Exists(arxiuop))
-                {
-                    JArray jArrayops = JArray.Parse(File.ReadAllText(arxiuop));
-                    opiniones = jArrayops.ToObject<BindingList<Opinion>>();
-                }
-                else
-                {
-                    opiniones = new BindingList<Opinion>();
-                }
-                if (File.Exists(arxiuact))
-                {
-                    JArray jArrayacts = JArray.Parse(File.ReadAllText(arxiuact));
-                    actividades = jArrayacts.ToObject<BindingList<Actividad>>();
-                }
-                else
-                {
-                    actividades = new BindingList<Actividad>();
-                }
-                if (File.Exists(arxiuviews))
-                {
-                    JArray jArrayviews = JArray.Parse(File.ReadAllText(arxiuviews));
-                    visitas = jArrayviews.ToObject<BindingList<Visita>>();
-                }
-                else
-                {
-                    visitas = new BindingList<Visita>();
-                }
-            }*/
+            return verdadero;
+            
         }
+
+        public static Boolean eliminarForm(object sender, EventArgs e, String objeto)
+        {
+            Boolean verdadero = false;
+            DialogResult respuesta = MessageBox.Show("Estás a punto de eliminar a " + objeto + " ¿Estás seguro?",
+                                                     "ADVERTENCIA",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                verdadero = true;
+            }
+
+            return verdadero;
+
+        }
+        //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
+        /*public static void carregarJsons()
+        {
+            //carregar/crear arxius json
+
+            string arxiulib = "librerias.json";
+            string arxiubook = "libros.json";
+            string arxiuuser = "usuarios.json";
+            string arxiuop = "opiniones.json";
+            string arxiuact = "actividades.json";
+            string arxiuviews = "visitas.json";
+
+            if (File.Exists(arxiulib))
+            {
+                JArray jArrayLibs = JArray.Parse(File.ReadAllText(arxiulib));
+                librerias = jArrayLibs.ToObject<BindingList<Libreria>>();
+            }
+            else
+            {
+                librerias = new BindingList<Libreria>();
+            }
+            if (File.Exists(arxiubook))
+            {
+                JArray jArrayBooks = JArray.Parse(File.ReadAllText(arxiubook));
+                libros = jArrayBooks.ToObject<BindingList<Libro>>();
+            }
+            else
+            {
+                libros = new BindingList<Libro>();
+            }
+            if (File.Exists(arxiuuser))
+            {
+                JArray jArrayusers = JArray.Parse(File.ReadAllText(arxiuuser));
+                librerias = jArrayusers.ToObject<BindingList<Libreria>>();
+            }
+            else
+            {
+                usuarios = new BindingList<Usuario>();
+            }
+            if (File.Exists(arxiuop))
+            {
+                JArray jArrayops = JArray.Parse(File.ReadAllText(arxiuop));
+                opiniones = jArrayops.ToObject<BindingList<Opinion>>();
+            }
+            else
+            {
+                opiniones = new BindingList<Opinion>();
+            }
+            if (File.Exists(arxiuact))
+            {
+                JArray jArrayacts = JArray.Parse(File.ReadAllText(arxiuact));
+                actividades = jArrayacts.ToObject<BindingList<Actividad>>();
+            }
+            else
+            {
+                actividades = new BindingList<Actividad>();
+            }
+            if (File.Exists(arxiuviews))
+            {
+                JArray jArrayviews = JArray.Parse(File.ReadAllText(arxiuviews));
+                visitas = jArrayviews.ToObject<BindingList<Visita>>();
+            }
+            else
+            {
+                visitas = new BindingList<Visita>();
+            }
+        }*/
+    }
 }

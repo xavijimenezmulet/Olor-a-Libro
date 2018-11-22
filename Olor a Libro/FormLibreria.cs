@@ -79,8 +79,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,33 +105,16 @@ namespace Olor_a_Libro
                 textBoxDirccionLib.Text = lib.direccion;
                 textBoxTelefonoLib.Text = lib.telefono.ToString();
                 textBoxCorreoLib.Text = lib.Correo;
-                String archivo = "";
-                archivo = CargarImagenes.buscarImagen(lib.imagen);
-                if (archivo != "")
+                textBoxImgLib.Text = lib.imagen;
+                if (lib.imagen != "")
                 {
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(archivo);
-                textBoxImgLib.Text = archivo;
+                    pictureBoxImgLib.Image = new Bitmap(lib.imagen);
                 }
-               
-               
                 pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImgLib.Size = new System.Drawing.Size(150, 200);
             }
         }
 
-        public static Boolean repetido(Libreria lib)
-        {
-            Boolean encontrado = false;
-            int i = 0;
-            int x = Utilitats.librerias.Count;
-            while (encontrado == false && i < x) //PROBAR
-            {
-                encontrado = Utilitats.librerias[i].Equals(lib);
-                i++;
-            }
-                       
-            return encontrado;   
-        }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
@@ -144,32 +125,38 @@ namespace Olor_a_Libro
             string direccion = textBoxDirccionLib.Text;
             string telefono = textBoxTelefonoLib.Text;
             string correo = textBoxCorreoLib.Text;
-            string img = CargarImagenes.quitarRuta(textBoxImgLib.Text);
+            string img = textBoxImgLib.Text;
             //---------------------------------AÑADIR LIBRERIA------------------------------
             if (lib == null)
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    lib = new Libreria();
-                    lib.id = id;
-                    lib.nombre = nombre;
-                    lib.direccion = direccion;
-                    lib.telefono = int.Parse(telefono);
-                    lib.Correo = correo;
-                    lib.imagen = img;
-
-                    
-                    Boolean encontrado = repetido(lib);
-
-                    if (!encontrado)
+                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
-                        Utilitats.librerias.Add(lib);
-                        MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
+                        MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxTelefonoLib.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        lib = new Libreria();
+                        lib.id = id;
+                        lib.nombre = nombre;
+                        lib.direccion = direccion;
+                        lib.telefono = telefono;
+                        lib.Correo = correo;
+                        lib.imagen = img;
+
+                        if (!Utilitats.librerias.Contains(lib))
+                        {
+                            Utilitats.librerias.Add(lib);
+                            MessageBox.Show("Libreria añadida satisfactoriamente", "Añadir Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Esta librería ya fue añadida.", "Librería repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            this.lib = null;
+                        }
                     }
                 }
                 else
@@ -187,10 +174,6 @@ namespace Olor_a_Libro
                     {
                         textBoxTelefonoLib.Focus();
                     }
-                    /*else
-                    {
-                        this.Focus();
-                    }*/
                 }
             }
             //---------------------------------EDITAR LIBRERIA------------------------------
@@ -198,62 +181,81 @@ namespace Olor_a_Libro
             {
                 if (nombre != null && direccion != "" && telefono != "")
                 {
-                    //lib.id = id;
-                    lib.nombre = nombre;
-                    lib.direccion = direccion;
-                    lib.telefono = int.Parse(telefono);
-                    lib.Correo = correo;
-                    lib.imagen = img; 
-                    Boolean encontrado = repetido(lib);
-
-                    if (encontrado)
+                    if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
-                        MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.Close();
+                        MessageBox.Show("Numero de telefono incorrecto", "Telefono incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxTelefonoLib.Focus();
                     }
                     else
                     {
-                        MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        lib.id = id;
+                        lib.nombre = nombre;
+                        lib.direccion = direccion;
+                        lib.telefono = telefono;
+                        lib.Correo = correo;
+                        lib.imagen = img;
+
+
+                        if (Utilitats.librerias.Contains(lib))
+                        {
+                            MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
                 else
                 {
-                MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                if (nombre == "")
-                {
-                    textBoxNombreLib.Focus();
-                }
-                else if (direccion == "")
-                {
-                    textBoxDirccionLib.Focus();
-                }
-                else if (telefono == "")
-                {
-                    textBoxTelefonoLib.Focus();
-                }
+                    if (nombre == "")
+                    {
+                        textBoxNombreLib.Focus();
+                    }
+                    else if (direccion == "")
+                    {
+                        textBoxDirccionLib.Focus();
+                    }
+                    else if (telefono == "")
+                    {
+                        textBoxTelefonoLib.Focus();
+                    }
                 }
             }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Utilitats.cancelarForm(sender, e))
+            {
+                this.Close();
+            }
         }
 
         private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
-
-            string ruta = "";
-            ruta=CargarImagenes.cargarImagen();
-
-            if (ruta != "")
-            {
-                textBoxImgLib.Text = ruta;
-                pictureBoxImgLib.Image = System.Drawing.Image.FromFile(ruta);
-                pictureBoxImgLib.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxImgLib.Size = new System.Drawing.Size(100, 150);
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            { 
+                // image file path  
+                string filetocopy = open.FileName;
+                string destinationDirectory = "Imagenes\\";
+                string imagen = destinationDirectory + Path.GetFileName(filetocopy);
+                if (!File.Exists(imagen))
+                {
+                    File.Copy(filetocopy, destinationDirectory + Path.GetFileName(filetocopy));
+                }
+                // display image in picture box  
+                pictureBoxImgLib.Image = new Bitmap(open.FileName);
+                textBoxImgLib.Text = imagen;
             }
+            
         }
 
         private void buttonLibros_Click(object sender, EventArgs e)

@@ -76,8 +76,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,7 +95,7 @@ namespace Olor_a_Libro
         {
             if(lib.libros.Count > 0)
             {
-                Utilitats.libros = lib.libros;
+            Utilitats.libros = lib.libros;
             }
             
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -144,10 +142,10 @@ namespace Olor_a_Libro
             dataGridViewLibros.Refresh();
         }
 
-       /* private void refrescarGrid()
-        {
-            dataGridViewLibros.DataSource = lib.libros;
-        }*/
+        /* private void refrescarGrid()
+         {
+             dataGridViewLibros.DataSource = lib.libros;
+         }*/
 
         private void dataGridViewLibros_SelectionChanged(object sender, EventArgs e)
         {
@@ -166,6 +164,7 @@ namespace Olor_a_Libro
                 }
             }
         }
+        
     }
     
 }

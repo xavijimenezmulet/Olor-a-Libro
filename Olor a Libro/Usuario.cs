@@ -17,6 +17,14 @@ namespace Olor_a_Libro
         public string rank { get; set; }
         public float descuento { get; set; }
 
+        public Usuario()
+        {
+            this.password  = "user";
+            this.puntos    = 0;
+            this.rank      = "unranked";
+            this.descuento = 0.0f;
+        }
+
         public bool Equals(Usuario u)
         {
             bool igual = false;

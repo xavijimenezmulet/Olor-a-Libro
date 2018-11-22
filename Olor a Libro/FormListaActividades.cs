@@ -37,12 +37,12 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirLibreria();
             this.Close();
         }
-        private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.VerActividades();
             this.Close();
-        }
+        }*/
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -71,8 +71,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,14 +120,23 @@ namespace Olor_a_Libro
             if (dataGridViewActividades.SelectedRows.Count > 0)
             {
                 Actividad a = (Actividad)dataGridViewActividades.SelectedRows[0].DataBoundItem;
-                Utilitats.actividades.Remove(a);
-                dataGridViewActividades.DataSource = Utilitats.actividades;
-                dataGridViewActividades.Refresh();
+                String nombre = a.nombre;
+                if (Utilitats.eliminarForm(sender, e, nombre))
+                {
+                    Utilitats.actividades.Remove(a);
+                    dataGridViewActividades.DataSource = Utilitats.actividades;
+                    dataGridViewActividades.Refresh();
+                }
             }
             else
             {
                 MessageBox.Show("Selecciona una activitat", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void anyadirActividadToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MetodosMenu.AnyadirAct();
         }
     }
 }

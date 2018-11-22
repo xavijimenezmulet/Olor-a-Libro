@@ -23,20 +23,13 @@ namespace Olor_a_Libro
         private void FormListaLibrerias_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            //Utilitats.carregarJsons();
         }
         private void FormListaLibrerias_Activated(object sender, EventArgs e)
         {
             //dataGridViewLibrerias.DataSource = null;
             dataGridViewLibrerias.DataSource = Utilitats.librerias;
             dataGridViewLibrerias.Refresh();
-            /*
-            dataGridViewLibrerias.Columns[0].HeaderText = "ID";
-            dataGridViewLibrerias.Columns[1].HeaderText = "Nombre";
-            dataGridViewLibrerias.Columns[2].HeaderText = "Dirección";
-            dataGridViewLibrerias.Columns[3].HeaderText = "Correo";
-            dataGridViewLibrerias.Columns[4].HeaderText = "Telefono";*/
-            //dataGridViewLibrerias.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
         }
         
         //ACCESO A LOS FORMULARIOS
@@ -91,8 +84,6 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MetodosMenu.Inicio();
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,14 +124,19 @@ namespace Olor_a_Libro
             if (dataGridViewLibrerias.SelectedRows.Count > 0)
             {
                 Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
-                Utilitats.librerias.Remove(l);
-                dataGridViewLibrerias.DataSource = null;
-                dataGridViewLibrerias.DataSource = Utilitats.librerias;
+                String nombre = l.nombre;
+                if (Utilitats.eliminarForm(sender, e, nombre))
+                {
+                    Utilitats.librerias.Remove(l);
+                    dataGridViewLibrerias.DataSource = Utilitats.librerias;
+                    dataGridViewLibrerias.Refresh();
+                }
             }
             else
             {
                 MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        
     }
 }

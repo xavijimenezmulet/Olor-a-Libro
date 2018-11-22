@@ -161,51 +161,51 @@ namespace Olor_a_Libro
         {
             this.Hide();
             MetodosMenu.VerLibrerias();
-            this.Close();
+            this.Show();
         }
         private void añadirLibreríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.AnyadirLibreria();
-            this.Close();
+            this.Show();
         }
         private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.VerActividades();
-            this.Close();
+            this.Show();
         }
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.verUsuarios();
-            this.Close();
+            this.Show();
         }
         private void añadirUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.AnyadirUsuarios();
-            this.Close();
+            this.Show();
         }
         private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.Estadisticas();
-            this.Close();
+            this.Show();
         }
 
         private void puntuaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.PuntosAdmin();
-            //this.Close();
+            this.Show();
         }
 
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MetodosMenu.AnyadirAct();
-            //this.Close();
+            this.Show();
         }
         //GUARDAR TODO
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,6 +213,9 @@ namespace Olor_a_Libro
             Utilitats.guardarTodo();
         }
 
-
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utilitats.closeit(sender, e);
+        } 
     }
 }
