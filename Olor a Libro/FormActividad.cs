@@ -185,7 +185,15 @@ namespace Olor_a_Libro
             int id = Utilitats.generarid(new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()));
             String nomAct = textBoxNomAct.Text;
             String lugar = textBoxLugarAct.Text;
-            String tipo = comboBoxTipoAct.SelectedItem.ToString();
+            String tipo = null;
+            if (comboBoxTipoAct.SelectedItem != null)
+            {
+                tipo = comboBoxTipoAct.SelectedItem.ToString(); //comprobar tipo------------
+            }
+            else
+            {
+                tipo = "";
+            }
             DateTime fecha = dateTimePickerDiaAct.Value;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
@@ -193,7 +201,7 @@ namespace Olor_a_Libro
             //---------------------------------AÑADIR ACTIVIDAD-------------------------------
             if (act == null)
             {
-                if (nomAct != "" && lugar != "" && tipo != null && fecha != null && descripcion != "")
+                if (nomAct != "" && lugar != "" && tipo != "" && fecha != null && descripcion != "")
                 {
                     if (hora.Length == 5 && hora[0].ToString().All(Char.IsDigit) && hora[1].ToString().All(Char.IsDigit) && hora[3].ToString().All(Char.IsDigit) && hora[4].ToString().All(Char.IsDigit))
                     {
@@ -218,12 +226,26 @@ namespace Olor_a_Libro
                             if (listBoxLibreriasAct.SelectedItems.Count > 0)
                             {
                                 act.librerias = libs;
-                            }
-                            Boolean encontrado = repetido(act);
 
-                            if (!encontrado)
+                            }
+                            //Boolean encontrado = repetido(act);
+
+                            if (!Utilitats.actividades.Contains(act))
                             {
                                 Utilitats.actividades.Add(act);
+                                if (act.librerias != null)
+                                {
+                                    foreach (String item in act.librerias)
+                                    {
+                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)
+                                        {
+                                            if (item == Utilitats.librerias[i].nombre)
+                                            {
+                                                Utilitats.librerias[i].actividades.Add(nomAct);
+                                            }
+                                        }
+                                    }
+                                }
                                 MessageBox.Show("Actividad añadida satisfactoriamente", "Añadir Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                                 this.Close();
                             }
@@ -244,6 +266,7 @@ namespace Olor_a_Libro
                         textBoxHoraAct.Focus();
                     }
                 }
+
                 else
                 {
                     MessageBox.Show("No ha rellenado los campos", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -272,7 +295,7 @@ namespace Olor_a_Libro
             //---------------------------------EDITAR ACTIVIDAD------------------------------
             else
             {
-                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "")
+                if (nomAct != "" && lugar != "" && fecha != null && descripcion != "" && tipo != "")
                 {
                     if (hora.Length == 5 && hora[0].ToString().All(Char.IsDigit) && hora[1].ToString().All(Char.IsDigit) && hora[3].ToString().All(Char.IsDigit) && hora[4].ToString().All(Char.IsDigit))
                     {
@@ -282,12 +305,14 @@ namespace Olor_a_Libro
 
                         if (hora[2] == ':' && hores < 24 && minuts < 60)
                         {
-                            act.nombre = nomAct;
-                            act.lugar = lugar;
-                            act.tipo = tipo;
-                            act.fecha = fecha;
-                            act.hora = hora;
-                            act.descripcion = descripcion;
+                            Actividad actAux = new Actividad();
+                            actAux.id = act.id;
+                            actAux.nombre = nomAct;
+                            actAux.lugar = lugar;
+                            actAux.tipo = tipo;
+                            actAux.fecha = fecha;
+                            actAux.hora = hora;
+                            actAux.descripcion = descripcion;
                             if (listBoxLibreriasAct.SelectedItems.Count > 0)
                             {
                                 foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
@@ -299,18 +324,38 @@ namespace Olor_a_Libro
                             {
                                 libs = null;
                             }
-                            act.librerias = libs;
+                            actAux.librerias = libs;
 
-                            Boolean encontrado = repetido(act);
-
-                            if (!encontrado)
+                            //Boolean encontrado = repetido(act);
+                            // Utilitats.actividades.
+                            if (Utilitats.actividades.Contains(actAux) && Utilitats.buscarId(sender, e, actAux, new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()))) // detecta la propia actividad que se edita como repetida.
                             {
-                                MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                                this.Close();
+                                MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                             else
                             {
-                                MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                if (actAux.librerias != null)
+                                {
+                                    foreach (String item in act.librerias)
+                                    {
+                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)
+                                        {
+                                            if (item == Utilitats.librerias[i].nombre)
+                                            {
+                                                Utilitats.librerias[i].actividades.Add(nomAct);
+                                            }
+                                        }
+                                    }
+                                }
+                                act.nombre = actAux.nombre;
+                                act.lugar = actAux.lugar;
+                                act.tipo = actAux.tipo;
+                                act.fecha = actAux.fecha;
+                                act.hora = actAux.hora;
+                                act.descripcion = actAux.descripcion;
+                                act.librerias = actAux.librerias;
+                                MessageBox.Show("Actividad modificada satisfactoriamente", "Modificar Actividad", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                this.Close();
                             }
                         }
                         else

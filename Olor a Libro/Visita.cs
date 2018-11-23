@@ -8,15 +8,15 @@ namespace Olor_a_Libro
 {
     public class Visita : IEquatable<Visita>
     {
-        public Usuario user { get; set; }
-        public Actividad activitatvisitada { get; set; }
+        public string user { get; set; }
         public string fecha { get; set; }
+        public int puntuacion { get; set; }
 
         public bool Equals(Visita v)
         {
             bool igual = false;
 
-            if (v.user == this.user && v.activitatvisitada == this.activitatvisitada && v.fecha == this.fecha)
+            if (v.user == this.user && v.fecha == this.fecha)
             {
                 igual = true;
             }

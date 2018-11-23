@@ -17,14 +17,14 @@ namespace Olor_a_Libro
         public DateTime fecha { get; set; } //DataTime
         public string hora { get; set; } //DataTime
         public BindingList<String> librerias { get; set; }
-        //public List<String> librerias { get; set; }
         public BindingList<Opinion> opiniones { get; set; }
+        public BindingList<Visita> visitas { get; set; }
 
         public bool Equals(Actividad a)
         {
             bool igual = false;
 
-            if (a.nombre == this.nombre && a.lugar == this.lugar && a.fecha == this.fecha && a.hora == this.hora)
+            if (a.nombre == this.nombre && a.lugar == this.lugar /*&& a.fecha == this.fecha*/ && a.hora == this.hora)
             {
                 igual = true;
             }

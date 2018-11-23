@@ -165,6 +165,24 @@ namespace Olor_a_Libro
             return verdadero;
 
         }
+        public static bool buscarId(object sender, EventArgs e, Object objeto, BindingList<object> lista)
+        {
+            int total = lista.Count;
+            int id, id2;
+            bool igual = false;
+            id2 = (int)objeto.GetType().GetProperty("id").GetValue(objeto);
+            
+            for(int i = 0; i < total; i++)
+            {
+                id = (int)lista.First().GetType().GetProperty("id").GetValue(lista[i]);
+
+                if (id == id2)
+                {
+                    igual = true;
+                }
+            }
+            return igual;
+        }
         //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
         /*public static void carregarJsons()
         {
