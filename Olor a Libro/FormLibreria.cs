@@ -184,7 +184,7 @@ namespace Olor_a_Libro
             //---------------------------------EDITAR LIBRERIA------------------------------
             else
             {
-                if (nombre != null && direccion != "" && telefono != "")
+                if (nombre != "" && direccion != "" && telefono != "")
                 {
                     if (telefono.Length != 9 || (!telefono.StartsWith("6") && !telefono.StartsWith("9")))
                     {
@@ -193,22 +193,27 @@ namespace Olor_a_Libro
                     }
                     else
                     {
-                        lib.id = id;
-                        lib.nombre = nombre;
-                        lib.direccion = direccion;
-                        lib.telefono = telefono;
-                        lib.correo = correo;
-                        lib.imagen = img;
+                        Libreria libAux = new Libreria();
+                        libAux.id = lib.id;
+                        libAux.nombre = nombre;
+                        libAux.direccion = direccion;
+                        libAux.telefono = telefono;
+                        libAux.correo = correo;
+                        libAux.imagen = img;
 
-
-                        if (Utilitats.librerias.Contains(lib))
+                        if (Utilitats.librerias.Contains(libAux) && Utilitats.buscarId(sender, e, libAux, new BindingList<object>(Utilitats.librerias.Cast<object>().ToList())))
                         {
-                            MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            this.Close();
+                            MessageBox.Show("La llibreria ja existeix.", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                         else
                         {
-                            MessageBox.Show("ERROR", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            lib.nombre = libAux.nombre;
+                            lib.direccion = libAux.direccion;
+                            lib.telefono = libAux.telefono;
+                            lib.correo = libAux.correo;
+                            lib.imagen = libAux.imagen;
+                            MessageBox.Show("Libreria modificada satisfactoriamente", "Modificar Librería", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Close();
                         }
                     }
                 }
