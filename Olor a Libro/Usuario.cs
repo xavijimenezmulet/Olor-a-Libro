@@ -21,7 +21,7 @@ namespace Olor_a_Libro
         {
             this.password  = "user";
             this.puntos    = 0;
-            this.rank      = "unranked";
+            this.rank      = "Unranked";
             this.descuento = 0.0f;
         }
 

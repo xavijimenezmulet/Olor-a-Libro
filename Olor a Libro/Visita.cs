@@ -9,9 +9,8 @@ namespace Olor_a_Libro
     public class Visita : IEquatable<Visita>
     {
         public string user { get; set; }
-        public string fecha { get; set; }
-        public int puntuacion { get; set; }
-
+        public string fecha = DateTime.Now.ToString("yyyyMMdd");
+        
         public bool Equals(Visita v)
         {
             bool igual = false;

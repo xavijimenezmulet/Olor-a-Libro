@@ -13,7 +13,5 @@ namespace Olor_a_Libro
         public int puntosLibreria { get; set; }
         public int puntosLogin { get; set; }
         public int puntosComentar { get; set; }
-
-
     }
 }

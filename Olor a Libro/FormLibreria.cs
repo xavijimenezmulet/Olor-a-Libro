@@ -203,7 +203,7 @@ namespace Olor_a_Libro
 
                         if (Utilitats.librerias.Contains(libAux) && Utilitats.buscarId(sender, e, libAux, new BindingList<object>(Utilitats.librerias.Cast<object>().ToList())))
                         {
-                            MessageBox.Show("La llibreria ja existeix.", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(Esta librería ya fue añadida.", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                         else
                         {

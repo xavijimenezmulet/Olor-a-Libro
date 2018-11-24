@@ -22,6 +22,7 @@ namespace Olor_a_Libro
         public static BindingList<Usuario> usuarios = new BindingList<Usuario>();
         public static BindingList<Visita> visitas = new BindingList<Visita>();
         public static Puntuacion puntuacion = new Puntuacion();
+        
 
         public static void guardarJsonlibs()
         {
