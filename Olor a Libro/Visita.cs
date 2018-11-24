@@ -9,7 +9,7 @@ namespace Olor_a_Libro
     public class Visita : IEquatable<Visita>
     {
         public string user { get; set; }
-        public string fecha = DateTime.Now.ToString("yyyyMMdd");
+        public string fecha { get; set; } //en android habra que hacer algo asi cada vez que creemos una instancia de visita, pero en java: fecha = DateTime.Now.ToString("yyyyMMdd");
         
         public bool Equals(Visita v)
         {
