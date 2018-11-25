@@ -13,6 +13,7 @@ namespace Olor_a_Libro
         public string autor { get; set; }
         public int anyo { get; set; }
         public int precio { get; set; }
+        public string portada { get; set; }
         public List<string> genero { get; set; }
 
         public bool Equals(Libro l)
