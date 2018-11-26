@@ -166,6 +166,7 @@
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
             this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
+            this.verActividadesToolStripMenuItem.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
             // anyadirActividadToolStripMenuItem
             // 
@@ -328,6 +329,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "Ver Actividades";
+            this.toolStripButton2.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
             // toolStripButton3
             // 
