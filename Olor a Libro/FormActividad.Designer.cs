@@ -40,7 +40,6 @@
             this.labelDescripcionAct = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelLibreria = new System.Windows.Forms.Label();
-            this.dateTimePickerDiaAct = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxLugarAct = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
+            this.textBoxDiaAct = new System.Windows.Forms.TextBox();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMainMenu.SuspendLayout();
@@ -84,6 +84,7 @@
             // 
             // groupBoxDatosAct
             // 
+            this.groupBoxDatosAct.Controls.Add(this.textBoxDiaAct);
             this.groupBoxDatosAct.Controls.Add(this.textBoxID);
             this.groupBoxDatosAct.Controls.Add(this.label4);
             this.groupBoxDatosAct.Controls.Add(this.listBoxLibreriasAct);
@@ -95,7 +96,6 @@
             this.groupBoxDatosAct.Controls.Add(this.labelDescripcionAct);
             this.groupBoxDatosAct.Controls.Add(this.textBox1);
             this.groupBoxDatosAct.Controls.Add(this.labelLibreria);
-            this.groupBoxDatosAct.Controls.Add(this.dateTimePickerDiaAct);
             this.groupBoxDatosAct.Controls.Add(this.label3);
             this.groupBoxDatosAct.Controls.Add(this.textBoxLugarAct);
             this.groupBoxDatosAct.Controls.Add(this.label2);
@@ -218,14 +218,6 @@
             this.labelLibreria.Size = new System.Drawing.Size(56, 13);
             this.labelLibreria.TabIndex = 17;
             this.labelLibreria.Text = "Librería/s:";
-            // 
-            // dateTimePickerDiaAct
-            // 
-            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(103, 142);
-            this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerDiaAct.Name = "dateTimePickerDiaAct";
-            this.dateTimePickerDiaAct.Size = new System.Drawing.Size(318, 20);
-            this.dateTimePickerDiaAct.TabIndex = 4;
             // 
             // label3
             // 
@@ -563,6 +555,14 @@
             this.toolStripAccesosDirectos.TabIndex = 1;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
+            // textBoxDiaAct
+            // 
+            this.textBoxDiaAct.Location = new System.Drawing.Point(103, 143);
+            this.textBoxDiaAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDiaAct.Name = "textBoxDiaAct";
+            this.textBoxDiaAct.Size = new System.Drawing.Size(318, 20);
+            this.textBoxDiaAct.TabIndex = 10;
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,7 +601,6 @@
         private System.Windows.Forms.Label labelDescripcionAct;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelLibreria;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDiaAct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxLugarAct;
         private System.Windows.Forms.Label label2;
@@ -643,5 +642,6 @@
         private System.Windows.Forms.ListBox listBoxLibreriasAct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxDiaAct;
     }
 }

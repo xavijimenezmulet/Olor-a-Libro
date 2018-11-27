@@ -105,7 +105,7 @@ namespace Olor_a_Libro
                 textBoxNomAct.Text = act.nombre;
                 textBoxLugarAct.Text = act.lugar;
                 comboBoxTipoAct.Text = act.tipo;
-                dateTimePickerDiaAct.Value = act.fecha;
+                textBoxDiaAct.Text = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
                 listBoxLibreriasAct.ClearSelected();
@@ -194,7 +194,7 @@ namespace Olor_a_Libro
             {
                 tipo = "";
             }
-            DateTime fecha = dateTimePickerDiaAct.Value;
+            String fecha = textBoxDiaAct.Text;
             String hora = textBoxHoraAct.Text;
             String descripcion = textBoxDescripcionAct.Text;
             BindingList<String> libs = new BindingList<String>();
@@ -284,7 +284,7 @@ namespace Olor_a_Libro
                     }
                     else if (fecha == null)
                     {
-                        dateTimePickerDiaAct.Focus();
+                        textBoxDiaAct.Focus();
                     }
                     else if (descripcion == null)
                     {
@@ -387,7 +387,7 @@ namespace Olor_a_Libro
                     }
                     else if (fecha == null)
                     {
-                        dateTimePickerDiaAct.Focus();
+                        textBoxDiaAct.Focus();
                     }
                 }
             }
