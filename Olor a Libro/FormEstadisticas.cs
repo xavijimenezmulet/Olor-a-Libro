@@ -15,12 +15,62 @@ namespace Olor_a_Libro
 {
     public partial class FormEstadisticas : Form
     {
+        Actividad act;
+        public FormEstadisticas(Actividad act)
+        {
+            InitializeComponent();
+            this.act = act;
+            participacionTabla();
+        }
         public FormEstadisticas()
         {
             InitializeComponent();
-        } 
-        //ACCESO A LOS FORMULARIOS
+        }
 
+        //public FormEstadisticas(Actividad act)
+        //{
+        //    InitializeComponent();
+        //    this.act = act;
+        //}
+        public void tablas()
+        {
+            
+        }
+        public void participacionTabla()
+        {
+            int filas = dataGridViewParticipacion.RowCount;
+            DataColumn col = new DataColumn();
+            int i = 0;
+            foreach (var item in Utilitats.actividades)
+            {
+                dataGridViewParticipacion.Rows[i].Cells[1].Value = act.nombre;
+                int participantesActividad = numeroParticipantes(item.visitas);
+                //for (int i = 0; i < filas; i++)
+                //{
+                    dataGridViewParticipacion.Rows[i].Cells[1].Value = participantesActividad;
+                i++;
+               // }
+            }
+            //DataGridView1.Rows[rowindex].Cells[nombrecol].Selected = true;
+
+            
+
+            //dataGridViewParticipacion.Columns[1].
+        }
+        
+        public static int numeroParticipantes(BindingList<Visita> ListaVisitas)
+        {
+            int participantes = 0;
+
+            foreach (var item in ListaVisitas)
+            {
+                participantes = item.user.Count();
+            }
+
+            return participantes;
+        }
+
+        //ACCESO A LOS FORMULARIOS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
