@@ -43,7 +43,7 @@ namespace Olor_a_Libro
             int i = 0;
             foreach (var item in Utilitats.actividades)
             {
-                dataGridViewParticipacion.Rows[i].Cells[1].Value = act.nombre;
+                dataGridViewParticipacion.Rows[i].Cells[0].Value = act.nombre;
                 int participantesActividad = numeroParticipantes(item.visitas);
                 //for (int i = 0; i < filas; i++)
                 //{
