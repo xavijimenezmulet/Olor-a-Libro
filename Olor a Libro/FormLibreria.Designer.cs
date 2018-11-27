@@ -71,8 +71,6 @@
             this.textBoxImgLib = new System.Windows.Forms.TextBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonLibros = new System.Windows.Forms.Button();
-            this.buttonActividades = new System.Windows.Forms.Button();
             this.pictureBoxImgLib = new System.Windows.Forms.PictureBox();
             this.menuStripMainMenu.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
@@ -94,7 +92,7 @@
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStripMainMenu.Size = new System.Drawing.Size(831, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(717, 24);
             this.menuStripMainMenu.TabIndex = 2;
             this.menuStripMainMenu.Text = "Menu Principal";
             // 
@@ -248,7 +246,7 @@
             this.toolStripButtonSalir});
             this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
             this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
-            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(831, 27);
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(717, 27);
             this.toolStripAccesosDirectos.TabIndex = 3;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
@@ -441,6 +439,7 @@
             this.groupBoxLlibreria.Size = new System.Drawing.Size(455, 187);
             this.groupBoxLlibreria.TabIndex = 15;
             this.groupBoxLlibreria.TabStop = false;
+            this.groupBoxLlibreria.Text = "Libreria";
             // 
             // label6
             // 
@@ -472,11 +471,11 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(691, 136);
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.Location = new System.Drawing.Point(333, 291);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.Size = new System.Drawing.Size(119, 35);
+            this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 17;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseCompatibleTextRendering = true;
@@ -485,38 +484,15 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(691, 177);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(493, 291);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(119, 35);
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 18;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonLibros
-            // 
-            this.buttonLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLibros.Location = new System.Drawing.Point(157, 301);
-            this.buttonLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonLibros.Name = "buttonLibros";
-            this.buttonLibros.Size = new System.Drawing.Size(119, 35);
-            this.buttonLibros.TabIndex = 19;
-            this.buttonLibros.Text = "Libros";
-            this.buttonLibros.UseVisualStyleBackColor = true;
-            this.buttonLibros.Click += new System.EventHandler(this.buttonLibros_Click);
-            // 
-            // buttonActividades
-            // 
-            this.buttonActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonActividades.Location = new System.Drawing.Point(493, 301);
-            this.buttonActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonActividades.Name = "buttonActividades";
-            this.buttonActividades.Size = new System.Drawing.Size(119, 35);
-            this.buttonActividades.TabIndex = 20;
-            this.buttonActividades.Text = "Actividades";
-            this.buttonActividades.UseVisualStyleBackColor = true;
             // 
             // pictureBoxImgLib
             // 
@@ -535,9 +511,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(831, 495);
-            this.Controls.Add(this.buttonActividades);
-            this.Controls.Add(this.buttonLibros);
+            this.ClientSize = new System.Drawing.Size(717, 370);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.groupBoxLlibreria);
@@ -603,8 +577,6 @@
         private System.Windows.Forms.GroupBox groupBoxLlibreria;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonLibros;
-        private System.Windows.Forms.Button buttonActividades;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;

@@ -275,11 +275,11 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(164, 383);
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.Location = new System.Drawing.Point(314, 396);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.Size = new System.Drawing.Size(80, 37);
+            this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 8;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
@@ -287,11 +287,11 @@
             // 
             // buttonBorrar
             // 
-            this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(379, 383);
+            this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrar.Location = new System.Drawing.Point(503, 396);
             this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
-            this.buttonBorrar.Size = new System.Drawing.Size(80, 37);
+            this.buttonBorrar.Size = new System.Drawing.Size(75, 23);
             this.buttonBorrar.TabIndex = 9;
             this.buttonBorrar.Text = "Cancelar";
             this.buttonBorrar.UseVisualStyleBackColor = true;

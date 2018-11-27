@@ -15,9 +15,15 @@ namespace Olor_a_Libro
 {
     public partial class FormListaActividades : Form
     {
+        Libreria lib;
         public FormListaActividades()
         {
             InitializeComponent();
+        }
+        public FormListaActividades(Libreria lib)
+        {
+            InitializeComponent();
+            this.lib = lib;
         }
         //ACCESO A LOS FORMULARIOS
 
@@ -89,11 +95,54 @@ namespace Olor_a_Libro
         private void FormListaActividades_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            if (lib != null)
+            {
+                BindingList<Actividad> actsLib = new BindingList<Actividad>();
+                for (int i = 0; i < lib.actividades.Count; i++)
+                {
+                    for (int j = 0; j < Utilitats.actividades.Count; j++)
+                    {
+                        if (lib.actividades[i] == Utilitats.actividades[j].nombre)
+                        {
+                            actsLib.Add(Utilitats.actividades[j]);
+                        }
+                    }
+                }
+
+                dataGridViewActividades.DataSource = actsLib;
+                dataGridViewActividades.Refresh();
+            }
+            else
+            {
+                dataGridViewActividades.DataSource = Utilitats.actividades;
+                dataGridViewActividades.Refresh();
+            }
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
         {
-            dataGridViewActividades.DataSource = Utilitats.actividades;
-            dataGridViewActividades.Refresh();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            if (lib != null)
+            {
+                BindingList<Actividad> actsLib = new BindingList<Actividad>();
+                for (int i = 0; i < lib.actividades.Count; i++)
+                {
+                    for (int j = 0; j < Utilitats.actividades.Count; j++)
+                    {
+                        if (lib.actividades[i] == Utilitats.actividades[j].nombre)
+                        {
+                            actsLib.Add(Utilitats.actividades[j]);
+                        }
+                    }
+                }
+
+                dataGridViewActividades.DataSource = actsLib;
+                dataGridViewActividades.Refresh();
+            }
+            else
+            {
+                dataGridViewActividades.DataSource = Utilitats.actividades;
+                dataGridViewActividades.Refresh();
+            }
         }
         //ABRIR FORM PARA AÑADIR ACTIVIDAD
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -137,6 +186,16 @@ namespace Olor_a_Libro
         private void anyadirActividadToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MetodosMenu.AnyadirAct();
+        }
+
+        private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lib != null)
+            {
+                this.Hide();
+                MetodosMenu.VerActividades();
+                this.Close();
+            }
         }
     }
 }

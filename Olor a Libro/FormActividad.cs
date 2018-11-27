@@ -118,6 +118,7 @@ namespace Olor_a_Libro
                             if (Utilitats.librerias[i].nombre == item)
                             {
                                 listBoxLibreriasAct.SelectedItems.Add(Utilitats.librerias[i]);
+                                Utilitats.librerias[i].actividades.Remove(item); //-----proba per solucionar problemas al editar les llibreries de l'activitat
                             }
                         }
                     }
@@ -233,15 +234,27 @@ namespace Olor_a_Libro
                             if (!Utilitats.actividades.Contains(act))
                             {
                                 Utilitats.actividades.Add(act);
-                                if (act.librerias != null)
+                                //------------------Comprobar---------------------------
+                               if (act.librerias != null)
                                 {
-                                    foreach (String item in act.librerias)
+                                    foreach (String item in act.librerias) //recorre les llibreries asignadesa l'activitat
                                     {
-                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)
+                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)//recorre les llibreries
                                         {
-                                            if (item == Utilitats.librerias[i].nombre)
+                                            if (item == Utilitats.librerias[i].nombre)//per cada lib mira si el nom es el matix que la llibreria de l'activitat
                                             {
-                                                Utilitats.librerias[i].actividades.Add(nomAct);
+                                                bool trobat = false;
+                                                for (int j = 0; j < Utilitats.librerias[i].actividades.Count; j++) //recorre les activitats de la llibreria
+                                                {
+                                                    if (Utilitats.librerias[i].actividades[j] == nomAct) //si la activitat existeix en la llibreria guardem que ja existeix
+                                                    {
+                                                        trobat = true;
+                                                    }
+                                                }
+                                                if (trobat == false) //si no esta ja en la llibreria, l'afegim
+                                                {
+                                                    Utilitats.librerias[i].actividades.Add(nomAct);
+                                                }
                                             }
                                         }
                                     }
@@ -325,10 +338,10 @@ namespace Olor_a_Libro
                                 libs = null;
                             }
                             actAux.librerias = libs;
+                            
 
-                            //Boolean encontrado = repetido(act);
-                            // Utilitats.actividades.
-                            if (Utilitats.actividades.Contains(actAux) && Utilitats.buscarId(sender, e, actAux, new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()))) // detecta la propia actividad que se edita como repetida.
+                            // ----------------buscar si actividad ya existe en la lista sin contarse a si misma  -----------------
+                            if (Utilitats.buscarId(sender, e, actAux, new BindingList<object>(Utilitats.actividades.Cast<object>().ToList()))) // detecta la propia actividad que se edita como repetida.
                             {
                                 MessageBox.Show("Esta actividad ya fue añadida.", "Actividad repetida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
@@ -336,13 +349,24 @@ namespace Olor_a_Libro
                             {
                                 if (actAux.librerias != null)
                                 {
-                                    foreach (String item in act.librerias)
+                                    foreach (String item in act.librerias) //recorre les llibreries asignadesa l'activitat
                                     {
-                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)
+                                        for (int i = 0; i < Utilitats.librerias.Count(); i++)//recorre les llibreries
                                         {
-                                            if (item == Utilitats.librerias[i].nombre)
+                                            if (item == Utilitats.librerias[i].nombre)//per cada lib mira si el nom es el matix que la llibreria de l'activitat
                                             {
-                                                Utilitats.librerias[i].actividades.Add(nomAct);
+                                                bool trobat = false;
+                                                for (int j = 0; j < Utilitats.librerias[i].actividades.Count; j++) //recorre les activitats de la llibreria
+                                                {
+                                                    if (Utilitats.librerias[i].actividades[j] == nomAct) //si la activitat existeix en la llibreria guardem que ja existeix
+                                                    {
+                                                        trobat = true;
+                                                    }
+                                                }
+                                                if (trobat == false) //si no esta ja en la llibreria, l'afegim
+                                                {
+                                                    Utilitats.librerias[i].actividades.Add(nomAct);
+                                                }
                                             }
                                         }
                                     }
