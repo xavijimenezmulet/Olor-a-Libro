@@ -255,7 +255,7 @@ namespace Olor_a_Libro
             { 
                 // image file path  
                 string filetocopy = open.FileName;
-                string destinationDirectory = "Imagenes\\";
+                string destinationDirectory = "Imagenes//";
                 string imagen = destinationDirectory + Path.GetFileName(filetocopy);
                 if (!File.Exists(imagen))
                 {
