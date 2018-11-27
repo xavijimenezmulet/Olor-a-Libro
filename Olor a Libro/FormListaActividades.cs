@@ -98,19 +98,22 @@ namespace Olor_a_Libro
             if (lib != null)
             {
                 BindingList<Actividad> actsLib = new BindingList<Actividad>();
-                for (int i = 0; i < lib.actividades.Count; i++)
+                if (lib.actividades.Count > 0)
                 {
-                    for (int j = 0; j < Utilitats.actividades.Count; j++)
+                    for (int i = 0; i < lib.actividades.Count; i++)
                     {
-                        if (lib.actividades[i] == Utilitats.actividades[j].nombre)
+                        for (int j = 0; j < Utilitats.actividades.Count; j++)
                         {
-                            actsLib.Add(Utilitats.actividades[j]);
+                            if (lib.actividades[i] == Utilitats.actividades[j].nombre)
+                            {
+                                actsLib.Add(Utilitats.actividades[j]);
+                            }
                         }
                     }
-                }
 
-                dataGridViewActividades.DataSource = actsLib;
-                dataGridViewActividades.Refresh();
+                    dataGridViewActividades.DataSource = actsLib;
+                    dataGridViewActividades.Refresh();
+                }
             }
             else
             {
