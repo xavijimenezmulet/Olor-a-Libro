@@ -137,9 +137,9 @@ namespace Olor_a_Libro
         {
             String username    = textBoxUsuario.Text;
             String nombre      = textBoxNombre.Text;
-            String apellidos   = textBoxContrasenya.Text;
+            String apellidos   = textBoxApellidos.Text;
             String ciudad      = textBoxCiudad.Text;
-            String contrasenya = textBoxApellidos.Text;
+            String contrasenya = textBoxContrasenya.Text;
             int puntos         = int.Parse(textBoxPuntos.Text);
             String rank        = textBoxRanking.Text;
             float descuento    = float.Parse(textBoxDescuento.Text);
