@@ -60,6 +60,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.ButtonCancelar = new System.Windows.Forms.Button();
             this.menuStripMainMenu.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
@@ -220,6 +221,7 @@
             // 
             // groupBoxActividades
             // 
+            this.groupBoxActividades.Controls.Add(this.ButtonCancelar);
             this.groupBoxActividades.Controls.Add(this.buttonEditar);
             this.groupBoxActividades.Controls.Add(this.buttonEliminar);
             this.groupBoxActividades.Controls.Add(this.dataGridViewActividades);
@@ -371,6 +373,17 @@
             this.toolStripButton5.Text = "Salir";
             this.toolStripButton5.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // ButtonCancelar
+            // 
+            this.ButtonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancelar.Location = new System.Drawing.Point(586, 154);
+            this.ButtonCancelar.Name = "ButtonCancelar";
+            this.ButtonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.ButtonCancelar.TabIndex = 10;
+            this.ButtonCancelar.Text = "Cancelar";
+            this.ButtonCancelar.UseVisualStyleBackColor = true;
+            this.ButtonCancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
             // FormListaActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,5 +443,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
+        private System.Windows.Forms.Button ButtonCancelar;
     }
 }

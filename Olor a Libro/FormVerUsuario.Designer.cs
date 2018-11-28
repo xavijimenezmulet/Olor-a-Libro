@@ -82,6 +82,7 @@
             // menuStripMainMenu
             // 
             this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Enabled = false;
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.libreriasToolStripMenuItem,
@@ -91,7 +92,7 @@
             this.puntuaciónToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(438, 24);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(381, 24);
             this.menuStripMainMenu.TabIndex = 1;
             this.menuStripMainMenu.Text = "Menu Principal";
             // 
@@ -233,6 +234,7 @@
             // toolStripAccesosDirectos
             // 
             this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Enabled = false;
             this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
             this.toolStripSeparator4,
@@ -245,7 +247,7 @@
             this.toolStripButtonSalir});
             this.toolStripAccesosDirectos.Location = new System.Drawing.Point(0, 24);
             this.toolStripAccesosDirectos.Name = "toolStripAccesosDirectos";
-            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(438, 25);
+            this.toolStripAccesosDirectos.Size = new System.Drawing.Size(381, 25);
             this.toolStripAccesosDirectos.TabIndex = 3;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
             // 
@@ -329,8 +331,6 @@
             this.groupBoxUsuario.Controls.Add(this.textBoxPuntos);
             this.groupBoxUsuario.Controls.Add(this.textBoxDescuento);
             this.groupBoxUsuario.Controls.Add(this.labelDescuento);
-            this.groupBoxUsuario.Controls.Add(this.buttonCancelar);
-            this.groupBoxUsuario.Controls.Add(this.buttonAceptar);
             this.groupBoxUsuario.Controls.Add(this.textBoxCiudad);
             this.groupBoxUsuario.Controls.Add(this.labelCiudad);
             this.groupBoxUsuario.Controls.Add(this.textBoxRanking);
@@ -380,8 +380,8 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(341, 55);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(215, 397);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 9;
@@ -391,8 +391,8 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(341, 18);
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.Location = new System.Drawing.Point(66, 397);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 8;
@@ -518,10 +518,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(438, 384);
+            this.ClientSize = new System.Drawing.Size(381, 443);
             this.Controls.Add(this.groupBoxUsuario);
             this.Controls.Add(this.toolStripAccesosDirectos);
             this.Controls.Add(this.menuStripMainMenu);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonAceptar);
             this.Name = "FormVerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Olor a Libro: Ver Usuario";

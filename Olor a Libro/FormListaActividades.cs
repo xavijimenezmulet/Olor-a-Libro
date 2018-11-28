@@ -114,11 +114,14 @@ namespace Olor_a_Libro
                     dataGridViewActividades.DataSource = actsLib;
                     dataGridViewActividades.Refresh();
                 }
+                menuStripMainMenu.Enabled = false;
+                toolStripAccesosDirectos.Enabled = false;
             }
             else
             {
                 dataGridViewActividades.DataSource = Utilitats.actividades;
                 dataGridViewActividades.Refresh();
+                ButtonCancelar.Visible = false;
             }
         }
         private void FormListaActividades_Activated(object sender, EventArgs e)
@@ -197,6 +200,14 @@ namespace Olor_a_Libro
             {
                 this.Hide();
                 MetodosMenu.VerActividades();
+                this.Close();
+            }
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            if (Utilitats.cancelarForm(sender, e))
+            {
                 this.Close();
             }
         }

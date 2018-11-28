@@ -118,7 +118,7 @@ namespace Olor_a_Libro
                             if (Utilitats.librerias[i].nombre == item)
                             {
                                 listBoxLibreriasAct.SelectedItems.Add(Utilitats.librerias[i]);
-                                Utilitats.librerias[i].actividades.Remove(act.nombre); //-----proba per solucionar problemas al editar les llibreries de l'activitat
+                                //Utilitats.librerias[i].actividades.Remove(act.nombre); //-----proba per solucionar problemas al editar les llibreries de l'activitat
                             }
                         }
                     }
@@ -347,7 +347,7 @@ namespace Olor_a_Libro
                             else
                             {
                                 //-----------borrem la activitat de les anteriors llibreries------------ ya esta hecho en el load
-                                /*if (act.librerias != null)
+                                if (act.librerias != null)
                                 {
                                     foreach (String item in act.librerias)
                                     {
@@ -355,12 +355,11 @@ namespace Olor_a_Libro
                                         {
                                             if (Utilitats.librerias[i].nombre == item)
                                             {
-
-                                                Utilitats.librerias[i].actividades.Remove(item);
+                                               Utilitats.librerias[i].actividades.Remove(act.nombre);
                                             }
                                         }
                                     }
-                                }*/
+                                }
                                 //----------comprobacio si les llibreries ja contenen la activitat i la afegim si no es aixi----------------
                                 if (libs != null)
                                 {

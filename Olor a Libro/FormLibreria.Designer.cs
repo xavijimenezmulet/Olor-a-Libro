@@ -81,6 +81,7 @@
             // menuStripMainMenu
             // 
             this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Enabled = false;
             this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem1,
@@ -233,6 +234,7 @@
             // toolStripAccesosDirectos
             // 
             this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Enabled = false;
             this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,

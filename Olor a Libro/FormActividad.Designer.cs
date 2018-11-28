@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
+            this.textBoxDiaAct = new System.Windows.Forms.TextBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
@@ -75,7 +76,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripAccesosDirectos = new System.Windows.Forms.ToolStrip();
-            this.textBoxDiaAct = new System.Windows.Forms.TextBox();
             this.groupBoxDatosAct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMainMenu.SuspendLayout();
@@ -108,6 +108,14 @@
             this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 310);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
+            // 
+            // textBoxDiaAct
+            // 
+            this.textBoxDiaAct.Location = new System.Drawing.Point(103, 143);
+            this.textBoxDiaAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDiaAct.Name = "textBoxDiaAct";
+            this.textBoxDiaAct.Size = new System.Drawing.Size(318, 20);
+            this.textBoxDiaAct.TabIndex = 10;
             // 
             // textBoxID
             // 
@@ -445,6 +453,7 @@
             // menuStripMainMenu
             // 
             this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Enabled = false;
             this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
@@ -538,6 +547,7 @@
             // toolStripAccesosDirectos
             // 
             this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Enabled = false;
             this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
@@ -554,14 +564,6 @@
             this.toolStripAccesosDirectos.Size = new System.Drawing.Size(648, 27);
             this.toolStripAccesosDirectos.TabIndex = 1;
             this.toolStripAccesosDirectos.Text = "Accesos Directos";
-            // 
-            // textBoxDiaAct
-            // 
-            this.textBoxDiaAct.Location = new System.Drawing.Point(103, 143);
-            this.textBoxDiaAct.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxDiaAct.Name = "textBoxDiaAct";
-            this.textBoxDiaAct.Size = new System.Drawing.Size(318, 20);
-            this.textBoxDiaAct.TabIndex = 10;
             // 
             // FormActividad
             // 
