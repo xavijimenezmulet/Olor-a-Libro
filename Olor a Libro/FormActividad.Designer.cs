@@ -113,9 +113,11 @@
             // 
             this.textBoxDiaAct.Location = new System.Drawing.Point(103, 143);
             this.textBoxDiaAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDiaAct.MaxLength = 10;
             this.textBoxDiaAct.Name = "textBoxDiaAct";
             this.textBoxDiaAct.Size = new System.Drawing.Size(318, 20);
-            this.textBoxDiaAct.TabIndex = 10;
+            this.textBoxDiaAct.TabIndex = 4;
+            this.textBoxDiaAct.Text = "dd/mm/aaa";
             // 
             // textBoxID
             // 
