@@ -46,6 +46,7 @@
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
+            this.ButtonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
@@ -60,7 +61,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.ButtonCancelar = new System.Windows.Forms.Button();
             this.menuStripMainMenu.SuspendLayout();
             this.groupBoxActividades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
@@ -234,6 +234,17 @@
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades";
             // 
+            // ButtonCancelar
+            // 
+            this.ButtonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancelar.Location = new System.Drawing.Point(586, 154);
+            this.ButtonCancelar.Name = "ButtonCancelar";
+            this.ButtonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.ButtonCancelar.TabIndex = 10;
+            this.ButtonCancelar.Text = "Volver";
+            this.ButtonCancelar.UseVisualStyleBackColor = true;
+            this.ButtonCancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
             // buttonEditar
             // 
             this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -372,17 +383,6 @@
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "Salir";
             this.toolStripButton5.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // ButtonCancelar
-            // 
-            this.ButtonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCancelar.Location = new System.Drawing.Point(586, 154);
-            this.ButtonCancelar.Name = "ButtonCancelar";
-            this.ButtonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.ButtonCancelar.TabIndex = 10;
-            this.ButtonCancelar.Text = "Cancelar";
-            this.ButtonCancelar.UseVisualStyleBackColor = true;
-            this.ButtonCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // FormListaActividades
             // 

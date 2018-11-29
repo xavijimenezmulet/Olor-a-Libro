@@ -206,10 +206,7 @@ namespace Olor_a_Libro
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
-            if (Utilitats.cancelarForm(sender, e))
-            {
-                this.Close();
-            }
+            this.Close();
         }
     }
 }
