@@ -105,7 +105,7 @@ namespace Olor_a_Libro
                 textBoxNomAct.Text = act.nombre;
                 textBoxLugarAct.Text = act.lugar;
                 comboBoxTipoAct.Text = act.tipo;
-                dateTimePickerDiaAct.Value = act.fecha;
+                //dateTimePickerDiaAct.Value = act.fecha;
                 textBoxHoraAct.Text = act.hora;
                 textBoxDescripcionAct.Text = act.descripcion;
                 listBoxLibreriasAct.ClearSelected();
@@ -216,7 +216,7 @@ namespace Olor_a_Libro
                             act.nombre = nomAct;
                             act.lugar = lugar;
                             act.tipo = tipo;
-                            act.fecha = fecha;
+                            //act.fecha = fecha;
                             act.hora = hora;
                             act.descripcion = descripcion;
                             foreach (Libreria item in listBoxLibreriasAct.SelectedItems)
@@ -310,7 +310,7 @@ namespace Olor_a_Libro
                             actAux.nombre = nomAct;
                             actAux.lugar = lugar;
                             actAux.tipo = tipo;
-                            actAux.fecha = fecha;
+                            //actAux.fecha = fecha;
                             actAux.hora = hora;
                             actAux.descripcion = descripcion;
                             if (listBoxLibreriasAct.SelectedItems.Count > 0)

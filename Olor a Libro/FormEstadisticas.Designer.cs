@@ -240,6 +240,7 @@
             this.dataGridViewParticipacion.ReadOnly = true;
             this.dataGridViewParticipacion.Size = new System.Drawing.Size(262, 124);
             this.dataGridViewParticipacion.TabIndex = 4;
+            this.dataGridViewParticipacion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewParticipacion_CellMouseClick);
             // 
             // Actividad
             // 

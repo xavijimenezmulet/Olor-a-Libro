@@ -27,49 +27,6 @@ namespace Olor_a_Libro
             InitializeComponent();
         }
 
-        //public FormEstadisticas(Actividad act)
-        //{
-        //    InitializeComponent();
-        //    this.act = act;
-        //}
-        public void tablas()
-        {
-            
-        }
-        public void participacionTabla()
-        {
-            int filas = dataGridViewParticipacion.RowCount;
-            DataColumn col = new DataColumn();
-            int i = 0;
-            foreach (var item in Utilitats.actividades)
-            {
-                dataGridViewParticipacion.Rows[i].Cells[0].Value = act.nombre;
-                int participantesActividad = numeroParticipantes(item.visitas);
-                //for (int i = 0; i < filas; i++)
-                //{
-                    dataGridViewParticipacion.Rows[i].Cells[1].Value = participantesActividad;
-                i++;
-               // }
-            }
-            //DataGridView1.Rows[rowindex].Cells[nombrecol].Selected = true;
-
-            
-
-            //dataGridViewParticipacion.Columns[1].
-        }
-        
-        public static int numeroParticipantes(BindingList<Visita> ListaVisitas)
-        {
-            int participantes = 0;
-
-            foreach (var item in ListaVisitas)
-            {
-                participantes = item.user.Count();
-            }
-
-            return participantes;
-        }
-
         //ACCESO A LOS FORMULARIOS
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -121,7 +78,7 @@ namespace Olor_a_Libro
 
         private void toolStripButtonInicio_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
         }
         private void anyadirActividadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,8 +97,54 @@ namespace Olor_a_Libro
         private void FormEstadisticas_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            participacionTabla();
         }
 
-       
+        /*Función para rellenar la tabla Participación de actividades*/
+        private void participacionTabla()
+        {
+            foreach (var item in Utilitats.actividades)
+            {
+
+                int participantesActividad = numeroParticipantes(item.visitas);
+                dataGridViewParticipacion.Rows.Add(item.nombre, participantesActividad);
+            }
+        }
+
+        /* Función para calcular el número de participantes de una actividad */
+        private static int numeroParticipantes(BindingList<Visita> ListaVisitas)
+        {
+            int participantes = 0;
+
+            if (ListaVisitas != null)
+            {
+                foreach (var item in ListaVisitas)
+                {
+                    if (item.user != "")
+                    {
+                        participantes++;
+                    }
+
+                }
+            }
+
+            return participantes;
+        }
+
+        private void dataGridViewParticipacion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridViewPuntosUsuario.SelectedRows.Count > 0)
+            {
+                //Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
+                //FormLibreria fLibreria = new FormLibreria(l);
+                //fLibreria.ShowDialog();
+
+            }
+        }
+        private void buscarUsers()
+        {
+
+        }
+
     }
 }
