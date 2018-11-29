@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxLibros = new System.Windows.Forms.GroupBox();
+            this.buttonSalir = new System.Windows.Forms.Button();
             this.listBoxGeneros = new System.Windows.Forms.ListBox();
             this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.textBoxAnyoEdicion = new System.Windows.Forms.TextBox();
@@ -71,7 +72,9 @@
             this.añadirUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonSalir = new System.Windows.Forms.Button();
+            this.labelPortada = new System.Windows.Forms.Label();
+            this.buttonBuscarImg = new System.Windows.Forms.Button();
+            this.textBoxPortada = new System.Windows.Forms.TextBox();
             this.groupBoxLibros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibros)).BeginInit();
@@ -81,8 +84,11 @@
             // 
             // groupBoxLibros
             // 
+            this.groupBoxLibros.Controls.Add(this.labelPortada);
             this.groupBoxLibros.Controls.Add(this.buttonSalir);
+            this.groupBoxLibros.Controls.Add(this.buttonBuscarImg);
             this.groupBoxLibros.Controls.Add(this.listBoxGeneros);
+            this.groupBoxLibros.Controls.Add(this.textBoxPortada);
             this.groupBoxLibros.Controls.Add(this.textBoxPrecio);
             this.groupBoxLibros.Controls.Add(this.textBoxAnyoEdicion);
             this.groupBoxLibros.Controls.Add(this.textBoxAutor);
@@ -103,6 +109,17 @@
             this.groupBoxLibros.TabIndex = 8;
             this.groupBoxLibros.TabStop = false;
             this.groupBoxLibros.Text = "Libros";
+            // 
+            // buttonSalir
+            // 
+            this.buttonSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalir.Location = new System.Drawing.Point(598, 164);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalir.TabIndex = 22;
+            this.buttonSalir.Text = "Salir";
+            this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBoxGeneros
             // 
@@ -200,7 +217,8 @@
             // 
             this.pictureBoxLibro.Location = new System.Drawing.Point(443, 17);
             this.pictureBoxLibro.Name = "pictureBoxLibro";
-            this.pictureBoxLibro.Size = new System.Drawing.Size(102, 150);
+            this.pictureBoxLibro.Size = new System.Drawing.Size(137, 193);
+            this.pictureBoxLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLibro.TabIndex = 11;
             this.pictureBoxLibro.TabStop = false;
             // 
@@ -221,7 +239,7 @@
             // buttonEditar
             // 
             this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditar.Location = new System.Drawing.Point(579, 78);
+            this.buttonEditar.Location = new System.Drawing.Point(598, 82);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 5;
@@ -232,7 +250,7 @@
             // buttonEliminar
             // 
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.Location = new System.Drawing.Point(579, 121);
+            this.buttonEliminar.Location = new System.Drawing.Point(598, 124);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminar.TabIndex = 6;
@@ -243,7 +261,7 @@
             // buttonAnyadir
             // 
             this.buttonAnyadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnyadir.Location = new System.Drawing.Point(579, 35);
+            this.buttonAnyadir.Location = new System.Drawing.Point(598, 35);
             this.buttonAnyadir.Name = "buttonAnyadir";
             this.buttonAnyadir.Size = new System.Drawing.Size(75, 23);
             this.buttonAnyadir.TabIndex = 4;
@@ -499,16 +517,33 @@
             this.puntuaciónToolStripMenuItem.Text = "Puntuación";
             this.puntuaciónToolStripMenuItem.Click += new System.EventHandler(this.puntuaciónToolStripMenuItem_Click);
             // 
-            // buttonSalir
+            // labelPortada
             // 
-            this.buttonSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalir.Location = new System.Drawing.Point(579, 161);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalir.TabIndex = 22;
-            this.buttonSalir.Text = "Salir";
-            this.buttonSalir.UseVisualStyleBackColor = true;
-            this.buttonSalir.Click += new System.EventHandler(this.button1_Click);
+            this.labelPortada.AutoSize = true;
+            this.labelPortada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPortada.Location = new System.Drawing.Point(19, 252);
+            this.labelPortada.Name = "labelPortada";
+            this.labelPortada.Size = new System.Drawing.Size(44, 13);
+            this.labelPortada.TabIndex = 25;
+            this.labelPortada.Text = "Portada";
+            // 
+            // buttonBuscarImg
+            // 
+            this.buttonBuscarImg.Location = new System.Drawing.Point(443, 247);
+            this.buttonBuscarImg.Name = "buttonBuscarImg";
+            this.buttonBuscarImg.Size = new System.Drawing.Size(26, 23);
+            this.buttonBuscarImg.TabIndex = 26;
+            this.buttonBuscarImg.Text = "...";
+            this.buttonBuscarImg.UseVisualStyleBackColor = true;
+            this.buttonBuscarImg.Click += new System.EventHandler(this.buttonBuscarImg_Click);
+            // 
+            // textBoxPortada
+            // 
+            this.textBoxPortada.Location = new System.Drawing.Point(90, 248);
+            this.textBoxPortada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxPortada.Name = "textBoxPortada";
+            this.textBoxPortada.Size = new System.Drawing.Size(312, 20);
+            this.textBoxPortada.TabIndex = 24;
             // 
             // FormLibros
             // 
@@ -582,5 +617,8 @@
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.Button buttonSalir;
+        private System.Windows.Forms.Label labelPortada;
+        private System.Windows.Forms.Button buttonBuscarImg;
+        private System.Windows.Forms.TextBox textBoxPortada;
     }
 }

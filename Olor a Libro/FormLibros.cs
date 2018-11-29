@@ -127,6 +127,7 @@ namespace Olor_a_Libro
             {
                 l.genero.Add(item);
             }
+            l.portada = textBoxPortada.Text;
         }
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
@@ -162,6 +163,11 @@ namespace Olor_a_Libro
                 {
                     listBoxGeneros.SelectedItems.Add(item);
                 }
+                if (lib.imagen != "")
+                {
+                    pictureBoxLibro.Image = new Bitmap(l.portada);
+                }
+                textBoxPortada.Text = l.portada;
             }
         }
 
@@ -170,6 +176,29 @@ namespace Olor_a_Libro
             if (Utilitats.cancelarForm(sender, e))
             {
                 this.Close();
+            }
+        }
+
+        private void buttonBuscarImg_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // image file path  
+                string filetocopy = open.FileName;
+                string destinationDirectory = "Imagenes//";
+                string imagen = destinationDirectory + Path.GetFileName(filetocopy);
+                if (!File.Exists(imagen))
+                {
+                    File.Copy(filetocopy, destinationDirectory + Path.GetFileName(filetocopy));
+                }
+                // display image in picture box  
+                pictureBoxLibro.Image = new Bitmap(open.FileName);
+
+                textBoxPortada.Text = imagen;
             }
         }
     }
