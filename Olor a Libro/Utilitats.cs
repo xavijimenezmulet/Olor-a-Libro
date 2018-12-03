@@ -22,7 +22,8 @@ namespace Olor_a_Libro
         public static BindingList<Usuario> usuarios = new BindingList<Usuario>();
         public static BindingList<Visita> visitas = new BindingList<Visita>();
         public static Puntuacion puntuacion = new Puntuacion();
-        
+        public static Rango rango = new Rango();
+
 
         public static void guardarJsonlibs()
         {
@@ -88,6 +89,16 @@ namespace Olor_a_Libro
             jArrayPuntuacio.WriteTo(writer);
             writer.Close();
         }
+        public static void guardarJsonRangos()
+        {
+            string arxiurangos = "rangos.json";
+            //JArray jArrayPuntuacio = (JArray)JToken.FromObject(puntuacion);
+            JObject jArrayRangos = (JObject)JToken.FromObject(rango);
+            StreamWriter file = File.CreateText(arxiurangos);
+            JsonTextWriter writer = new JsonTextWriter(file);
+            jArrayRangos.WriteTo(writer);
+            writer.Close();
+        }
 
         //------------------METODE PER GENERAR ID------------------------------------------
         public static int generarid(BindingList<object> lista)
@@ -133,6 +144,7 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonact();
             Utilitats.guardarJsonviews();
             Utilitats.guardarJsonPuntuacion();
+            Utilitats.guardarJsonRangos();
         }
 
         public static Boolean cancelarForm(object sender, EventArgs e)

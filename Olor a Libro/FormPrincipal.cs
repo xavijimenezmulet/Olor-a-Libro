@@ -43,6 +43,7 @@ namespace Olor_a_Libro
             string arxiuact = "actividades.json";
             string arxiuviews = "visitas.json";
             string arxiuPuntuacio = "puntuacion.json";
+            string arxiurangos = "rangos.json";
 
             if (File.Exists(arxiulib))
             {
@@ -108,6 +109,15 @@ namespace Olor_a_Libro
             else
             {
                 Utilitats.puntuacion = new Puntuacion();
+            }
+            if (File.Exists(arxiurangos))
+            {
+                JObject jArrayRangos = JObject.Parse(File.ReadAllText(arxiurangos));
+                Utilitats.rango = jArrayRangos.ToObject<Rango>();
+            }
+            else
+            {
+                Utilitats.rango = new Rango();
             }
         }
         

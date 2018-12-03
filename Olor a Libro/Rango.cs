@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Olor_a_Libro
 {
-    public static class Rango
+    public class Rango
     {
-        public static BindingList<string> rangos = new BindingList<string>() { "Unranked", "Soldado raso lector", "Sargento lector", "Teniente lector", "Mayor lector", "Teniente coronel lector", "Coronel lector", "General-mayor lector", "General-teniente lector", "General coronel lector", "Generalísimo lector" };
+        public BindingList<string> rangos = new BindingList<string>() { "Unranked", "Soldado raso lector", "Sargento lector", "Teniente lector", "Mayor lector", "Teniente coronel lector", "Coronel lector", "General-mayor lector", "General-teniente lector", "General coronel lector", "Generalísimo lector" };
 
-        public static string setRango(int puntos)
+        public string setRango(int puntos)
         {
             string rango;
 

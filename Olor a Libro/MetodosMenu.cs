@@ -13,6 +13,7 @@ namespace Olor_a_Libro
         {
             FormPrincipal fPrincipal = new FormPrincipal();
             fPrincipal.ShowDialog();
+           
         }
 
         public static void VerLibrerias()
