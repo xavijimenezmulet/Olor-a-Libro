@@ -46,6 +46,7 @@
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxActividades = new System.Windows.Forms.GroupBox();
+            this.ButtonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.dataGridViewActividades = new System.Windows.Forms.DataGridView();
@@ -166,6 +167,7 @@
             this.verActividadesToolStripMenuItem.Name = "verActividadesToolStripMenuItem";
             this.verActividadesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verActividadesToolStripMenuItem.Text = "Ver Actividades";
+            this.verActividadesToolStripMenuItem.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
             // anyadirActividadToolStripMenuItem
             // 
@@ -219,6 +221,7 @@
             // 
             // groupBoxActividades
             // 
+            this.groupBoxActividades.Controls.Add(this.ButtonCancelar);
             this.groupBoxActividades.Controls.Add(this.buttonEditar);
             this.groupBoxActividades.Controls.Add(this.buttonEliminar);
             this.groupBoxActividades.Controls.Add(this.dataGridViewActividades);
@@ -230,6 +233,17 @@
             this.groupBoxActividades.TabIndex = 9;
             this.groupBoxActividades.TabStop = false;
             this.groupBoxActividades.Text = "Actividades";
+            // 
+            // ButtonCancelar
+            // 
+            this.ButtonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancelar.Location = new System.Drawing.Point(586, 154);
+            this.ButtonCancelar.Name = "ButtonCancelar";
+            this.ButtonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.ButtonCancelar.TabIndex = 10;
+            this.ButtonCancelar.Text = "Volver";
+            this.ButtonCancelar.UseVisualStyleBackColor = true;
+            this.ButtonCancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // buttonEditar
             // 
@@ -328,6 +342,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "Ver Actividades";
+            this.toolStripButton2.Click += new System.EventHandler(this.verActividadesToolStripMenuItem_Click);
             // 
             // toolStripButton3
             // 
@@ -428,5 +443,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
+        private System.Windows.Forms.Button ButtonCancelar;
     }
 }

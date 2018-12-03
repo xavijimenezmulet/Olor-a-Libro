@@ -60,6 +60,8 @@
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntuaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrerias)).BeginInit();
             this.groupBoxLibrerias.SuspendLayout();
             this.toolStripAccesosDirectos.SuspendLayout();
@@ -102,6 +104,8 @@
             // 
             // groupBoxLibrerias
             // 
+            this.groupBoxLibrerias.Controls.Add(this.button2);
+            this.groupBoxLibrerias.Controls.Add(this.button1);
             this.groupBoxLibrerias.Controls.Add(this.buttonEditar);
             this.groupBoxLibrerias.Controls.Add(this.buttonEliminar);
             this.groupBoxLibrerias.Controls.Add(this.dataGridViewLibrerias);
@@ -369,6 +373,28 @@
             this.menuStripMainMenu.TabIndex = 1;
             this.menuStripMainMenu.Text = "Menu Principal";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(584, 152);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Libros";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(584, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Actividades";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormListaLibrerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,5 +453,7 @@
         private System.Windows.Forms.ToolStripMenuItem puntuaciónToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripMainMenu;
         private System.Windows.Forms.ToolStripMenuItem anyadirActividadToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

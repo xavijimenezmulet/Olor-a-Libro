@@ -137,6 +137,33 @@ namespace Olor_a_Libro
                 MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLibrerias.SelectedRows.Count > 0)
+            {
+                Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
+                FormLibros libros = new FormLibros(l);
+                libros.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLibrerias.SelectedRows.Count > 0)
+            {
+                Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
+                FormListaActividades listaActividades = new FormListaActividades(l);
+                listaActividades.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una llibreria", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

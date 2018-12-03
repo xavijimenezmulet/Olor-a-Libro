@@ -182,19 +182,42 @@ namespace Olor_a_Libro
         {
             int total = lista.Count;
             int id, id2;
+            string nombre, nombre2, lugar, lugar2, hora, hora2;
             bool igual = false;
             id2 = (int)objeto.GetType().GetProperty("id").GetValue(objeto);
-            
-            for(int i = 0; i < total; i++)
+            nombre2 = (string)objeto.GetType().GetProperty("nombre").GetValue(objeto);
+            lugar2 = (string)objeto.GetType().GetProperty("lugar").GetValue(objeto);
+            hora2 = (string)objeto.GetType().GetProperty("hora").GetValue(objeto);
+
+            for (int i = 0; i < total; i++)
             {
                 id = (int)lista.First().GetType().GetProperty("id").GetValue(lista[i]);
+                nombre = (string)lista.First().GetType().GetProperty("nombre").GetValue(lista[i]);
+                lugar = (string)lista.First().GetType().GetProperty("lugar").GetValue(lista[i]);
+                hora = (string)lista.First().GetType().GetProperty("hora").GetValue(lista[i]);
 
-                if (id == id2)
+                if (id != id2 && nombre == nombre2 && lugar == lugar2 && hora == hora2)
                 {
                     igual = true;
                 }
             }
             return igual;
+        }
+        public static void actsLibs()
+        {
+            for (int i = 0; i < librerias.Count; i++)
+            {
+                for (int j = 0; j < librerias[i].actividades.Count; j++)
+                {
+                    for (int k = 0; k < actividades.Count; k++)
+                    {
+                        if (librerias[i].actividades[j] == actividades[k].nombre)
+                        {
+
+                        }
+                    }
+                }
+            }
         }
         //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
         /*public static void carregarJsons()

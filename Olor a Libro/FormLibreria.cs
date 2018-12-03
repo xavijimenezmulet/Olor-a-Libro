@@ -201,7 +201,7 @@ namespace Olor_a_Libro
                         libAux.correo = correo;
                         libAux.imagen = img;
 
-                        if (Utilitats.librerias.Contains(libAux) && Utilitats.buscarId(sender, e, libAux, new BindingList<object>(Utilitats.librerias.Cast<object>().ToList())))
+                        if (Utilitats.buscarId(sender, e, libAux, new BindingList<object>(Utilitats.librerias.Cast<object>().ToList())))
                         {
                             MessageBox.Show("Esta librería ya fue añadida.", "Error al modificar la librería", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
@@ -255,7 +255,7 @@ namespace Olor_a_Libro
             { 
                 // image file path  
                 string filetocopy = open.FileName;
-                string destinationDirectory = "Imagenes\\";
+                string destinationDirectory = "Imagenes//";
                 string imagen = destinationDirectory + Path.GetFileName(filetocopy);
                 if (!File.Exists(imagen))
                 {

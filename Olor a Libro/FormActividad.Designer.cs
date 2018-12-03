@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosAct = new System.Windows.Forms.GroupBox();
+            this.textBoxDiaAct = new System.Windows.Forms.TextBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxLibreriasAct = new System.Windows.Forms.ListBox();
@@ -40,7 +41,6 @@
             this.labelDescripcionAct = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelLibreria = new System.Windows.Forms.Label();
-            this.dateTimePickerDiaAct = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxLugarAct = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,6 +84,7 @@
             // 
             // groupBoxDatosAct
             // 
+            this.groupBoxDatosAct.Controls.Add(this.textBoxDiaAct);
             this.groupBoxDatosAct.Controls.Add(this.textBoxID);
             this.groupBoxDatosAct.Controls.Add(this.label4);
             this.groupBoxDatosAct.Controls.Add(this.listBoxLibreriasAct);
@@ -95,7 +96,6 @@
             this.groupBoxDatosAct.Controls.Add(this.labelDescripcionAct);
             this.groupBoxDatosAct.Controls.Add(this.textBox1);
             this.groupBoxDatosAct.Controls.Add(this.labelLibreria);
-            this.groupBoxDatosAct.Controls.Add(this.dateTimePickerDiaAct);
             this.groupBoxDatosAct.Controls.Add(this.label3);
             this.groupBoxDatosAct.Controls.Add(this.textBoxLugarAct);
             this.groupBoxDatosAct.Controls.Add(this.label2);
@@ -108,6 +108,16 @@
             this.groupBoxDatosAct.Size = new System.Drawing.Size(431, 310);
             this.groupBoxDatosAct.TabIndex = 3;
             this.groupBoxDatosAct.TabStop = false;
+            // 
+            // textBoxDiaAct
+            // 
+            this.textBoxDiaAct.Location = new System.Drawing.Point(103, 143);
+            this.textBoxDiaAct.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDiaAct.MaxLength = 10;
+            this.textBoxDiaAct.Name = "textBoxDiaAct";
+            this.textBoxDiaAct.Size = new System.Drawing.Size(318, 20);
+            this.textBoxDiaAct.TabIndex = 4;
+            this.textBoxDiaAct.Text = "dd/mm/aaa";
             // 
             // textBoxID
             // 
@@ -219,14 +229,6 @@
             this.labelLibreria.TabIndex = 17;
             this.labelLibreria.Text = "Librería/s:";
             // 
-            // dateTimePickerDiaAct
-            // 
-            this.dateTimePickerDiaAct.Location = new System.Drawing.Point(103, 142);
-            this.dateTimePickerDiaAct.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerDiaAct.Name = "dateTimePickerDiaAct";
-            this.dateTimePickerDiaAct.Size = new System.Drawing.Size(318, 20);
-            this.dateTimePickerDiaAct.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -275,11 +277,11 @@
             // 
             // buttonAceptar
             // 
-            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAceptar.Location = new System.Drawing.Point(164, 383);
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.Location = new System.Drawing.Point(314, 396);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.Size = new System.Drawing.Size(80, 37);
+            this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 8;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
@@ -287,11 +289,11 @@
             // 
             // buttonBorrar
             // 
-            this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(379, 383);
+            this.buttonBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrar.Location = new System.Drawing.Point(503, 396);
             this.buttonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrar.Name = "buttonBorrar";
-            this.buttonBorrar.Size = new System.Drawing.Size(80, 37);
+            this.buttonBorrar.Size = new System.Drawing.Size(75, 23);
             this.buttonBorrar.TabIndex = 9;
             this.buttonBorrar.Text = "Cancelar";
             this.buttonBorrar.UseVisualStyleBackColor = true;
@@ -453,6 +455,7 @@
             // menuStripMainMenu
             // 
             this.menuStripMainMenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStripMainMenu.Enabled = false;
             this.menuStripMainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
@@ -546,6 +549,7 @@
             // toolStripAccesosDirectos
             // 
             this.toolStripAccesosDirectos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripAccesosDirectos.Enabled = false;
             this.toolStripAccesosDirectos.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripAccesosDirectos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
@@ -601,7 +605,6 @@
         private System.Windows.Forms.Label labelDescripcionAct;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelLibreria;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDiaAct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxLugarAct;
         private System.Windows.Forms.Label label2;
@@ -643,5 +646,6 @@
         private System.Windows.Forms.ListBox listBoxLibreriasAct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxDiaAct;
     }
 }
