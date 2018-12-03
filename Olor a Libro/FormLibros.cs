@@ -109,25 +109,50 @@ namespace Olor_a_Libro
         {
             
             Libro l = new Libro();
-            int id = Utilitats.generarid(new BindingList<object>(Utilitats.libros.Cast<object>().ToList()));
-            l.id = id;
+            
             anyadirLibro(l);
-
-            lib.libros.Add(l);
-            dataGridViewLibros.Refresh();
+            if(l != null)
+            {
+                int id = Utilitats.generarid(new BindingList<object>(lib.libros.Cast<object>().ToList()));
+                l.id = id;
+                if (!lib.libros.Contains(l))
+                {
+                    lib.libros.Add(l);
+                    dataGridViewLibros.Refresh();
+                    MessageBox.Show("Libro añadido correctamente", "Libro Añadido", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Este libro ya fue añadido.", "Libro repetido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            
         }
         private void anyadirLibro(Libro l)
         {
-            l.titulo = textBoxTitulo.Text;
-            l.autor = textBoxAutor.Text;
-            l.anyo = int.Parse(textBoxAnyoEdicion.Text);
-            l.precio = int.Parse(textBoxPrecio.Text);
-            l.genero = new List<String>();
-            foreach (string item in listBoxGeneros.SelectedItems)
+            string titulo = textBoxTitulo.Text; 
+            string autor = textBoxAutor.Text;
+            string anyo = textBoxAnyoEdicion.Text;
+            string precio = textBoxPrecio.Text;
+            string portada = textBoxPortada.Text;
+            if(titulo != "" && autor!="" && anyo != "" && precio != "" && portada != "" && listBoxGeneros.SelectedItems != null)
             {
-                l.genero.Add(item);
+                l.titulo = titulo;
+                l.autor = autor;
+                l.anyo = int.Parse(anyo);
+                l.precio = int.Parse(precio);
+                l.genero = new List<String>();
+                foreach (string item in listBoxGeneros.SelectedItems)
+                {
+                    l.genero.Add(item);
+                }
+                l.portada = portada;
             }
-            l.portada = textBoxPortada.Text;
+            else
+            {
+                MessageBox.Show("Falta un campo por rellenar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            
         }
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
