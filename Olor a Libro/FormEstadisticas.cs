@@ -97,7 +97,13 @@ namespace Olor_a_Libro
         private void FormEstadisticas_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+
             participacionTabla();
+            dataGridViewParticipacion.Refresh();
+
+            tablaRank();
+            dataGridViewRank.Refresh();
+
         }
 
         /*Función para rellenar la tabla Participación de actividades*/
@@ -131,19 +137,67 @@ namespace Olor_a_Libro
             return participantes;
         }
 
-        private void dataGridViewParticipacion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        /*Función para buscar los y poner los users de la actividad*/
+        private void buscarUsers(BindingList <Visita> v)
         {
-            if (dataGridViewPuntosUsuario.SelectedRows.Count > 0)
+            Usuario u = new Usuario();
+
+            if (v != null)
             {
-                //Libreria l = (Libreria)dataGridViewLibrerias.SelectedRows[0].DataBoundItem;
-                //FormLibreria fLibreria = new FormLibreria(l);
-                //fLibreria.ShowDialog();
+                foreach (var item1 in v)
+                {
+
+                    foreach (var item2 in Utilitats.usuarios)
+                    {
+                        if (item1.user.Equals(item2.username))
+                        {
+                            dataGridViewPuntosUsuario.Rows.Add(item2.username, item2.puntos);
+                        }
+                    }
+                }
+            }
+        }
+
+        /*Función para seleccionar una fila de Participación para rellenar la tabla de puntos usuarios*/
+        private void dataGridViewParticipacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string value = dataGridViewParticipacion.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Usuario u = new Usuario();
+
+            foreach (var item in Utilitats.actividades)
+            {
+                if (item.nombre.Equals(value))
+                {
+                    vaciarTabla();
+                    buscarUsers(item.visitas);
+                    
+                }
+            }
+        }
+
+        /*Función para vaciar la tabla puntos usuarios*/
+        private void vaciarTabla()
+        {
+            int r = dataGridViewPuntosUsuario.RowCount;
+            if (r != 0)
+            {
+                int i = 0;
+                while (i < r)
+                {
+                    dataGridViewPuntosUsuario.Rows.Remove(dataGridViewPuntosUsuario.Rows[i]);
+                    r = dataGridViewPuntosUsuario.RowCount;
+                }
 
             }
         }
-        private void buscarUsers()
-        {
 
+        /*Función para rellenar la última tabla*/
+        private void tablaRank()
+        {
+            foreach (var item in Utilitats.usuarios)
+            {
+                dataGridViewRank.Rows.Add(item.username, item.puntos, item.rank);
+            }
         }
 
     }
