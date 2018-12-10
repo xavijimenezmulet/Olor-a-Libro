@@ -24,7 +24,7 @@ namespace Olor_a_Libro
         {
             bool igual = false;
 
-            if (a.nombre == this.nombre && a.lugar == this.lugar /*&& a.fecha == this.fecha*/ && a.hora == this.hora)
+            if (a.nombre == this.nombre && a.lugar == this.lugar && a.fecha == this.fecha && a.hora == this.hora)
             {
                 igual = true;
             }
