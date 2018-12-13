@@ -226,7 +226,7 @@ namespace Olor_a_Libro
             return igual;
         }
 
-        public static void actsLibs()
+       /* public static void actsLibs()
         {
             for (int i = 0; i < librerias.Count; i++)
             {
@@ -241,7 +241,7 @@ namespace Olor_a_Libro
                     }
                 }
             }
-        }
+        }*/
         //----------------METODE PER CARREGAR JSONS A LES LLISTES---------------
         /*public static void carregarJsons()
         {
