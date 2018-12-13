@@ -180,29 +180,52 @@ namespace Olor_a_Libro
         }
         public static bool buscarId(object sender, EventArgs e, Object objeto, BindingList<object> lista)
         {
+            
             int total = lista.Count;
             int id, id2;
-            string nombre, nombre2, lugar, lugar2, hora, hora2;
+            string nombre, nombre2, lugar, lugar2 = "", hora, hora2 = "", fecha, fecha2, direccion, direccion2 ="";
             bool igual = false;
             id2 = (int)objeto.GetType().GetProperty("id").GetValue(objeto);
             nombre2 = (string)objeto.GetType().GetProperty("nombre").GetValue(objeto);
-            lugar2 = (string)objeto.GetType().GetProperty("lugar").GetValue(objeto);
-            hora2 = (string)objeto.GetType().GetProperty("hora").GetValue(objeto);
+            if (objeto is Actividad)
+            {
+                lugar2 = (string)objeto.GetType().GetProperty("lugar").GetValue(objeto);
+                hora2 = (string)objeto.GetType().GetProperty("hora").GetValue(objeto);
+                fecha2 = (string)objeto.GetType().GetProperty("fecha").GetValue(objeto);
+            }
+            else if (objeto is Libreria)
+            {
+                direccion2 = (string)objeto.GetType().GetProperty("direccion").GetValue(objeto);
+            }
 
             for (int i = 0; i < total; i++)
             {
                 id = (int)lista.First().GetType().GetProperty("id").GetValue(lista[i]);
                 nombre = (string)lista.First().GetType().GetProperty("nombre").GetValue(lista[i]);
-                lugar = (string)lista.First().GetType().GetProperty("lugar").GetValue(lista[i]);
-                hora = (string)lista.First().GetType().GetProperty("hora").GetValue(lista[i]);
-
-                if (id != id2 && nombre == nombre2 && lugar == lugar2 && hora == hora2)
+                if (objeto is Actividad)
                 {
-                    igual = true;
+                    lugar = (string)lista.First().GetType().GetProperty("lugar").GetValue(lista[i]);
+                    hora = (string)lista.First().GetType().GetProperty("hora").GetValue(lista[i]);
+                    fecha = (string)objeto.GetType().GetProperty("fecha").GetValue(lista[i]);
+                    if (id != id2 && nombre == nombre2 && lugar == lugar2 && hora == hora2)
+                    {
+                        igual = true;
+                    }
                 }
+                else if (objeto is Libreria)
+                {
+                    direccion = (string)objeto.GetType().GetProperty("direccion").GetValue(lista[i]);
+                    if (id != id2 && nombre == nombre2 && direccion == direccion2)
+                    {
+                        igual = true;
+                    }
+                }
+
+               
             }
             return igual;
         }
+
         public static void actsLibs()
         {
             for (int i = 0; i < librerias.Count; i++)
