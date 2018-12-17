@@ -129,6 +129,7 @@ namespace Olor_a_Libro
         {
             dataGridViewUsuarios.DataSource = Utilitats.usuarios;
             dataGridViewUsuarios.Refresh();
+            dataGridViewUsuarios.Columns[4].Visible = false;
         }
         /**
          * BUTTONANYADIR_CLICK: NOS ABRE UN FORMULARIOA FORMVERUSUARIO PARA PODER AÑADIR UN
@@ -185,6 +186,11 @@ namespace Olor_a_Libro
             {
                 MessageBox.Show("Selecciona un usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void dataGridViewUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+     
         }
     }
 }
