@@ -11,10 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * CLASE UTILITATS (NOS SERVIRÁ PARA GARGAR LOS JSON EN LISTAS Y PODER TRABAJAR CON ELLOS)
+ **/ 
 namespace Olor_a_Libro
 {
     public static class Utilitats
     {
+        //ATRIBUTOS DE UTILITATS
         public static BindingList<Libreria> librerias = new BindingList<Libreria>();
         public static BindingList<Libro> libros = new BindingList<Libro>();
         public static BindingList<Opinion> opiniones = new BindingList<Opinion>();
@@ -24,7 +28,9 @@ namespace Olor_a_Libro
         public static Puntuacion puntuacion = new Puntuacion();
         public static Rango rango = new Rango();
 
-
+        /**
+         * NOS GUARDA EL JSON DE LIBRERIAS
+         **/
         public static void guardarJsonlibs()
         {
             string arxiulib = "librerias.json";
@@ -34,6 +40,10 @@ namespace Olor_a_Libro
             jArrayLibs.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE LIBROS
+         **/ 
         public static void guardarJsonbooks()
         {
             string arxiubook = "libros.json";
@@ -43,6 +53,10 @@ namespace Olor_a_Libro
             jArrayBooks.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE USUARIOS
+         **/ 
         public static void guardarJsonusers()
         {
             string arxiuuser = "usuarios.json";
@@ -52,6 +66,10 @@ namespace Olor_a_Libro
             jArrayUsers.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE OPINIONES
+         **/
         public static void guardarJsonop()
         {
             string arxiuop = "opiniones.json";
@@ -61,6 +79,10 @@ namespace Olor_a_Libro
             jArrayOps.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE ACTIVIDADES
+         **/ 
         public static void guardarJsonact()
         {
             string arxiuact = "actividades.json";
@@ -70,6 +92,10 @@ namespace Olor_a_Libro
             jArrayAct.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE VISITAS
+         **/ 
         public static void guardarJsonviews()
         {
             string arxiuviews = "visitas.json";
@@ -79,6 +105,10 @@ namespace Olor_a_Libro
             jArrayViews.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE PUNTUACION
+         **/ 
         public static void guardarJsonPuntuacion()
         {
             string arxiuPuntuacio = "puntuacion.json";
@@ -89,6 +119,10 @@ namespace Olor_a_Libro
             jArrayPuntuacio.WriteTo(writer);
             writer.Close();
         }
+
+        /**
+         * NOS GUARDA EL JSON DE RANGOS
+         **/ 
         public static void guardarJsonRangos()
         {
             string arxiurangos = "rangos.json";
@@ -100,7 +134,9 @@ namespace Olor_a_Libro
             writer.Close();
         }
 
-        //------------------METODE PER GENERAR ID------------------------------------------
+        /**
+         * AUTOGENERA UN ID AUTOINCREMENTAL
+         **/ 
         public static int generarid(BindingList<object> lista)
         {
             int total = lista.Count;
@@ -117,6 +153,9 @@ namespace Olor_a_Libro
             return valor;
         }
 
+        /**
+         * DIALOGO QUE REUTILIZAMOS A LA HORA DE CERRAR UN FORMULARIO
+         **/ 
         public static void closeit(object sender, FormClosingEventArgs e)
         {
             //Preguntar si quiere garbar o no
@@ -135,6 +174,9 @@ namespace Olor_a_Libro
             }
         }
 
+        /**
+         * NOS GUARDA ABSOLUTAMENTE TODAS LAS LISTAS EN LOS JSON
+         **/ 
         public static void guardarTodo()
         {
             Utilitats.guardarJsonlibs();
@@ -147,6 +189,9 @@ namespace Olor_a_Libro
             Utilitats.guardarJsonRangos();
         }
 
+        /**
+         * REUTILIZAMOS AL CANCELAR UN FORMULARIO EL DIALOGRESULT
+         **/ 
         public static Boolean cancelarForm(object sender, EventArgs e)
         {
             Boolean verdadero = false;
@@ -163,6 +208,10 @@ namespace Olor_a_Libro
             
         }
 
+        /**
+         * REUTILIZAMOS AL ELIMINAR UN ELEMENTO DE LA LISTA EL DIALOGRESULT 
+         * @parametro (String objeto) LE PASAMOS EL STRING QUE ES EL NOMBRE DE EL ELEMENTO DE LA LISTA
+         **/ 
         public static Boolean eliminarForm(object sender, EventArgs e, String objeto)
         {
             Boolean verdadero = false;
@@ -178,6 +227,10 @@ namespace Olor_a_Libro
             return verdadero;
 
         }
+        /**
+         * NOS BUSCA SI EL ID EXISTE O NO Y NOS DEVUELVE UN BOOLEANO, TODO ESTO A PARTIR DE UN OBJETO Y LA LISTA DEL
+         * MISMO TIPO DE OBJECTO
+         **/ 
         public static bool buscarId(object sender, EventArgs e, Object objeto, BindingList<object> lista)
         {
             

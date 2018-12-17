@@ -17,18 +17,22 @@ using System.Windows.Forms;
 * @authors:
 * @JoelGalimany @AinhoaGarcía @GermanGómez @XavierJimenez
 * Creación:            10/10/2018
-* Ultima modificacióN: 18/11/2018 
+* Ultima modificacióN: 17/12/2018 (Introducción comentarios)
 **/
 namespace Olor_a_Libro
 {
     public partial class FormPrincipal : Form
     {
-        
+        //CONSTRUCTOR 
         public FormPrincipal()
         {
             InitializeComponent();
         }
 
+        /**
+         * NOS CARGA LA PRIMERA VEZ QUE SE ABRE TODOS LOS JSON Y ASÍ PODEMOS TRABAJAR CON ELLOS EN 
+         * UTILITATS 
+         **/
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -121,6 +125,9 @@ namespace Olor_a_Libro
             }
         }
         
+        /**
+         * ENLACES DE MENUS DONDE APLICAMOS LOS COLORES EN CASA UNA DE LAS OPCIONES
+         **/
         public void archivoToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
         {
             archivoToolStripMenuItem.ForeColor = Color.Black;
@@ -161,7 +168,9 @@ namespace Olor_a_Libro
             usuariosToolStripMenuItem.ForeColor = Color.White;
         }
 
-        //ACCESO A LOS FORMULARIOS
+        /**
+         *  ACCESO A LOS FORMULARIOS
+         **/
                
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -217,12 +226,19 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirAct();
             this.Show();
         }
-        //GUARDAR TODO
+        
+        /**
+         * NOS GUARDA TODOS LOS DATOS QUE TENGAMOS MODIFICADOS EN EL MOMENTO A LOS JSON
+         **/
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilitats.guardarTodo();
         }
 
+        /**
+         * AL CERRAR NOS PREGUNTARÁ SI QUEREMOS SALIR GUARDANDO O NO O CANCELAR REUTILIZANDO EL METODO
+         * EN UTILITATS
+         **/
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Utilitats.closeit(sender, e);

@@ -4,11 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/**
+ * CLASE METODOSMENU
+ **/
 namespace Olor_a_Libro
 {
     public static class MetodosMenu
     {
 
+        /**
+         * TODOS LOS METODOS NOS ABREN PARA REUTILIZAR CODIGO SU RESPECTIVO FORMULARIO
+         **/ 
         public static void Inicio()
         {
             FormPrincipal fPrincipal = new FormPrincipal();

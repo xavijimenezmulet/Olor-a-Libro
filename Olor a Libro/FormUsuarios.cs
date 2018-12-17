@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * FORMULARIO DE USUARIOS
+ **/
 namespace Olor_a_Libro
 {
     public partial class FormUsuarios : Form
@@ -27,8 +30,9 @@ namespace Olor_a_Libro
         {
 
         }
-        //ACCESO A LOS FORMULARIOS
-
+        /**
+         *ACCESO A LOS FORMULARIOS
+         **/
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -87,7 +91,9 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirAct();
             this.Close();
         }
-        //GUARDAR TODO
+        /**
+         * NOS LO GUARDA TODO
+         **/
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {

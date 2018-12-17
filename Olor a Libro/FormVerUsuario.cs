@@ -28,8 +28,9 @@ namespace Olor_a_Libro
             InitializeComponent();
             this.user = user;
         }
-        //ACCESO A LOS FORMULARIOS
-
+        /*
+         * ACCESO A LOS FORMULARIOS
+         **/
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -90,13 +91,18 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirAct();
             this.Close();
         }
-        //GUARDAR TODO
-
+        /**
+         * GUARDAR TODO
+         **/
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilitats.guardarTodo();
         }
 
+        /**
+         * LOAD DE USUARIO AL CARGAR POR PRIMERA VEZ SE NOS CENTRA SI NOS VIENE POR PARAMETRO UN USUARIO(EDITAR)
+         * NOS MOSTRARÁ LOS DATOS DE EL USUARIO A EDITAR SI NO NOS CARGARÁ PARA UN USUARIO NUEVO
+         **/ 
         private void FormVerUsuario_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -123,16 +129,22 @@ namespace Olor_a_Libro
         }
 
    
-
+        /**
+         * NOS CIERRA EL FORMULARIO SIN GUARDAR NADA
+         **/ 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             if(Utilitats.cancelarForm(sender, e))
             {
-                this.Close();
+                this.Close(); 
             }
      
         }
 
+        /**
+         * AL ACEPTAR NOS GUARDA EL USUARIO A LA LISTA DE USUARIOS DE UTILITATS EN CASO DE ERRORES 
+         * SE INFORMA MEDIANTE MESSAGEBOX AL ADMIN
+         **/ 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             String username    = textBoxUsuario.Text;
