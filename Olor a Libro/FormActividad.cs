@@ -98,7 +98,7 @@ namespace Olor_a_Libro
             listBoxLibreriasAct.DataSource = null;
             listBoxLibreriasAct.DataSource = Utilitats.librerias;
             listBoxLibreriasAct.DisplayMember = "nombre";
-
+            //------------Cargar actividad-----------
             if (act != null)
             {
                 textBoxID.Text = act.id.ToString();
@@ -118,7 +118,6 @@ namespace Olor_a_Libro
                             if (Utilitats.librerias[i].nombre == item)
                             {
                                 listBoxLibreriasAct.SelectedItems.Add(Utilitats.librerias[i]);
-                                //Utilitats.librerias[i].actividades.Remove(act.nombre); //-----proba per solucionar problemas al editar les llibreries de l'activitat
                             }
                         }
                     }

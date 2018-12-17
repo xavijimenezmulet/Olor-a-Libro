@@ -43,12 +43,7 @@ namespace Olor_a_Libro
             MetodosMenu.AnyadirLibreria();
             this.Close();
         }
-        /*private void verActividadesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MetodosMenu.VerActividades();
-            this.Close();
-        }*/
+
         private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();

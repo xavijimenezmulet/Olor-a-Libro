@@ -97,7 +97,7 @@ namespace Olor_a_Libro
         private void FormLibreria_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            
+            //------------------------Cargar Libreria------------------------------------
             if(lib != null)
             {
                 textBoxID.Text = lib.id.ToString();
@@ -244,7 +244,7 @@ namespace Olor_a_Libro
                 this.Close();
             }
         }
-
+        //--------------------------AÑADIR IMAGEN A LA LIBRERIA---------------------------
         private void buttonBuscarImg_Click(object sender, EventArgs e)
         {
             // open file dialog   
@@ -257,6 +257,7 @@ namespace Olor_a_Libro
                 string filetocopy = open.FileName;
                 string destinationDirectory = "Imagenes//";
                 string imagen = destinationDirectory + Path.GetFileName(filetocopy);
+                //------------Guardamos una copia de la imagen en nuestro directorio-----------
                 if (!File.Exists(imagen))
                 {
                     File.Copy(filetocopy, destinationDirectory + Path.GetFileName(filetocopy));
