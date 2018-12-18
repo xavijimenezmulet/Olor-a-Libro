@@ -194,6 +194,7 @@ namespace Olor_a_Libro
         /*Función para rellenar la última tabla*/
         private void tablaRank()
         {
+            IEnumerable<Usuario> usuari = Utilitats.usuarios.OrderBy<Usuario, int>(u => u.puntos).Reverse();
             foreach (var item in Utilitats.usuarios)
             {
                 dataGridViewRank.Rows.Add(item.username, item.puntos, item.rank);
