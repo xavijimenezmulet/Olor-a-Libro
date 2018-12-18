@@ -217,7 +217,7 @@ namespace Olor_a_Libro
                             int anyo = int.Parse(fecha[6].ToString() + fecha[7].ToString() + fecha[8].ToString() + fecha[9].ToString());
                             int dia = int.Parse(fecha[0].ToString() + fecha[1].ToString());
                             int mes = int.Parse(fecha[3].ToString() + fecha[4].ToString());
-                            if (fecha[2] == '/' && fecha[5] == '/' && anyo > chkanyo && dia <= 31 && dia > 00 && mes <= 12 && mes > 00)
+                            if (fecha[2] == '/' && fecha[5] == '/' && anyo >= chkanyo && dia <= 31 && dia > 00 && mes <= 12 && mes > 00)
                             {
                                 if (((mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 08 || mes == 10 || mes == 12)  && dia <= 31) || ((mes == 02 || mes == 04 || mes == 06 || mes == 09 || mes == 11) && dia <= 30))
                                 {
